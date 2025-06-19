@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<Sounds>
+
+		<!-- ================= S-8 ======================================= -->
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_S8_Fire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Rockets\s8_fire_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Rockets\s8_fire_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Rockets\s8_fire_3.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+	</Sounds>
+
+
+</Definitions>

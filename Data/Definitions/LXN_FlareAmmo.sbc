@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_Flares</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>5000</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>100</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Missile</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>0</MissileMass>
+                <MissileExplosionRadius>0</MissileExplosionRadius>
+                <MissileModelName></MissileModelName>
+                <MissileAcceleration>5</MissileAcceleration>
+                <MissileInitialSpeed>15</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileHealthDamage>0</MissileHealthDamage>
+                <MissileTrailEffect>Explosion_Debris</MissileTrailEffect>
+				<MissileGravityEnabled>false</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_CountermeasureMag</SubtypeId>
+            </Id>
+            <DisplayName>Flare Canister</DisplayName>
+            <Icon>Textures\Icons\LXN_FlareLauncher_item.dds</Icon>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>50</Mass>
+            <Volume>50</Volume>
+            <Model>Models\Small\LXN_FlareLauncher_item.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>60</Capacity>
+            <AmmoDefinitionId Subtype="LXN_Flares" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_FlareCanister_Recipe</SubtypeId>
+            </Id>
+            <DisplayName>Flare Canister</DisplayName>
+            <Icon>Textures\Icons\LXN_FlareLauncher_item.dds</Icon>
+            <Prerequisites>
+                <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="0.5" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_CountermeasureMag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	
+	</Blueprints>
+	
+	<Sounds>
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_FlareSound_1</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>300</MaxDistance>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_01.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_02.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_03.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_04.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_05.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_06.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_07.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_08.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_09.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_10.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_11.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_12.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_13.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_14.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_15.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_16.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_17.wav</Start>
+                </Wave>
+                <!-- <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_18.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_19.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_20.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_21.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\Flares\ARC_FlareSound_22.wav</Start>
+                </Wave> -->
+            </Waves>
+        </Sound>
+	</Sounds>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_FlareDispenser</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="1500" ShootSoundName="LXN_FlareSound_1" FlightSoundName="ShipLargeThrusterHydrogenIdle" ShotsInBurst="20" />
+            <DeviateShotAngle>5</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_CountermeasureMag" />
+            </AmmoMagazines>
+            <ReloadTime>5000</ReloadTime>
+        </Weapon>
+	</Weapons>
+
+</Definitions>

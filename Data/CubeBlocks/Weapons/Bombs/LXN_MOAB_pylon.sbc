@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_MOAB_pylon</SubtypeId>
+			</Id>
+			<DisplayName>GBU-43/B MOAB</DisplayName>
+			<Description>The MOAB (Massive Ordnance Air Blast) is a large, powerful bomb that is designed to create a massive explosion. It is not a penetrator weapon and is primarily an air burst bomb intended for soft to medium surface targets covering extended areas and targets in a contained environment such as a deep canyon or within a cave system.</Description>
+			<Icon>Textures\Icons\LXN_MOAB_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="18"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_MOAB_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="491" />
+				<Component Subtype="LXN_NATO_ExportDocuments_01" Count="10" />
+				<Component Subtype="LXN_MOABMag1Comp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="LXN_MOABMag1Comp" Index="0" />
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_MOAB_pylon</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_MOABMount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="18.00"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

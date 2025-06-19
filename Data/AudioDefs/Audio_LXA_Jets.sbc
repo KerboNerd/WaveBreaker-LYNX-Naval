@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<Sounds>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAOJetEngine</SubtypeId>
+			</Id>
+			<Category>BLOCK</Category>
+			<MaxDistance>150</MaxDistance>
+			<Volume>0.5</Volume>
+			<Loopable>true</Loopable>
+			<UpdateDistance>120</UpdateDistance>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\Jets\LXA_GENX_Startup.wav</Start>
+					<Loop>Audio\Jets\LXA_GENX_Running.wav</Loop>
+					<End>Audio\Jets\LXA_GENX_Shutdown.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAJetThruster</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>450</MaxDistance>
+			<!--PitchVariation>100</PitchVariation>-->
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="25" Distance="450" Sound="LXAJetThrusterNear" />
+				<DistantSound DistanceCrossfade="25" Distance="1500" Sound="LXAJetThrusterFar" />
+				<DistantSound DistanceCrossfade="25" Distance="3500" Sound="LXAJetThrusterEmpty" />
+			</DistantSounds>
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>0.25</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_GENX_Running.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAJetThrusterNear</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>1500</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>0.125</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_GENX_Running.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAJetThrusterFar</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>3500</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_GENX_Far.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<!--"Empty"
+		sound fixes constant sounds stuck looping at long range-->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAJetThrusterEmpty</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>4000</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>0</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_GENX_Far.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+
+		<!-- ================= NK-32 ======================================= -->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAAL41Near</SubtypeId>
+			</Id>
+			<Category>SHIP</Category>
+			<MaxDistance>6000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<!-- <PreventSynchronization>15</PreventSynchronization> -->
+			<Volume>0.4</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_AL41_Distance_Close.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAAL41Mid</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>6000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<!-- <PreventSynchronization>15</PreventSynchronization> -->
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_AL41_Distance_Mid.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXAAL41Far</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>6000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<!-- <PreventSynchronization>15</PreventSynchronization> -->
+			<Volume>2</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXA_AL41_Distance_Far.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXNAL41Audio</SubtypeId>
+            </Id>
+            <Category>SHIP_JET</Category>
+            <MaxDistance>3000</MaxDistance>
+            <!--PitchVariation>100</PitchVariation>-->
+            <RealisticFilter>realShipFilter</RealisticFilter>
+            <PreventSynchronization>15</PreventSynchronization>
+            <Volume>1</Volume>
+            <Loopable>true</Loopable>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="200" Distance="200" Sound="LXAAL41Near"/>
+                <DistantSound DistanceCrossfade="500" Distance="1500" Sound="LXAAL41Mid"/>
+				<DistantSound DistanceCrossfade="800" Distance="2500" Sound="LXNJetThrusterEmpty"/> 
+            </DistantSounds>
+            <Waves>
+                <Wave Type="D3">
+                    <Loop>Audio\Jets\LXN_AL41_DryThrust.wav</Loop>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_AL41_BurnerThrust</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>100</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_AL41_BurnerThrust.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_AL41_Generator</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>6000</MaxDistance>
+			<Volume>0.6</Volume>
+			<Loopable>true</Loopable>
+			<!-- <UpdateDistance>120</UpdateDistance> -->
+			<RealisticFilter>realShipFilter</RealisticFilter>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="1000" Distance="2500" Sound="LXAAL41Far"/>
+				<DistantSound DistanceCrossfade="1000" Distance="4000" Sound="LXNJetThrusterEmpty"/> 
+            </DistantSounds>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\Jets\LXN_AL41_Startup.wav</Start>
+					<Loop>Audio\Jets\LXN_AL41_DryThrust.wav</Loop>
+					<End>Audio\Jets\LXN_AL41_Shutdown.wav</End>
+				</Wave>
+			</Waves>
+		</Sound>
+
+
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_Startup</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_Startup.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_Shutdown</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_Shutdown.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_Idle</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_Idle.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_RampUp</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_RampUp.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_RampDown</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_RampDown.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_DryThrust</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_DryThrust.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_EngageBurner</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_EngageBurner.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_DisengageBurner</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_DisengageBurner.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_BurnerThrust</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>100</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_BurnerThrust.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_Shutdown</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_Shutdown.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_NK32_Audio</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>450</MaxDistance>
+			<!--PitchVariation>100</PitchVariation>-->
+			<RealisticFilter>realShipFilter</RealisticFilter>
+            <!-- <DistantSounds>
+                <DistantSound DistanceCrossfade="1000" Distance="350" Sound="LXAAL41Near"/>
+                <DistantSound DistanceCrossfade="1000" Distance="3000" Sound="LXAAL41Mid"/>
+                <DistantSound DistanceCrossfade="1000" Distance="5000" Sound="LXAAL41Far"/>
+				<DistantSound DistanceCrossfade="1000" Distance="10000" Sound="LXNJetThrusterEmpty"/> 
+            </DistantSounds> -->
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Jets\LXN_NK32_DryThrust.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_NK32_Generator</SubtypeId>
+            </Id>
+            <Category>BLOCK</Category>
+            <MaxDistance>6000</MaxDistance>
+            <Volume>1</Volume>
+            <Loopable>true</Loopable>
+            <!-- <UpdateDistance>20</UpdateDistance> -->
+            <RealisticFilter>realShipFilter</RealisticFilter>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="200" Distance="200" Sound="LXAAL41Near"/>
+                <DistantSound DistanceCrossfade="500" Distance="1500" Sound="LXAAL41Mid"/>
+                <DistantSound DistanceCrossfade="1000" Distance="2500" Sound="LXAAL41Far"/>
+				<DistantSound DistanceCrossfade="1000" Distance="4000" Sound="LXNJetThrusterEmpty"/> 
+            </DistantSounds>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Jets\LXN_NK32_Startup.wav</Start>
+                    <Loop>Audio\Jets\LXN_NK32_DryThrust.wav</Loop>
+                    <End>Audio\Jets\LXN_NK32_Shutdown.wav</End>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_NK32_Generator</SubtypeId>
+            </Id>
+            <Category>SHIP_JET</Category>
+            <MaxDistance>450</MaxDistance>
+            <!--PitchVariation>100</PitchVariation>-->
+            <RealisticFilter>realShipFilter</RealisticFilter>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="25" Distance="1500" Sound="LXAAL41Near"/>
+                <DistantSound DistanceCrossfade="25" Distance="2500" Sound="LXAAL41Mid"/>
+                <DistantSound DistanceCrossfade="25" Distance="5000" Sound="LXAAL41Far"/>
+				<DistantSound DistanceCrossfade="25" Distance="3500" Sound="LXNJetThrusterEmpty"/> 
+            </DistantSounds>
+            <PreventSynchronization>15</PreventSynchronization>
+            <Volume>1</Volume>
+            <Loopable>true</Loopable>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Jets\LXN_NK32_Startup.wav</Start>
+                    <Loop>Audio\Jets\LXN_NK32_DryThrust.wav</Loop>
+                    <End>Audio\Jets\LXN_NK32_Shutdown.wav</End>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<!-- ================= RWS ======================================= -->
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_RWS_BurnerWarning_01</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>300</MaxDistance>
+			<PitchVariation>0</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1.5</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\RWS\LXN_RWS_BurnerWarning_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_RWS_EngineFire_01</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>100</MaxDistance>
+			<PitchVariation>50</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<PreventSynchronization>0</PreventSynchronization>
+			<Volume>1.5</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\RWS\LXN_RWS_EngineFire_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+
+
+		<!-- ================= MACH EFFECT SOUNDS ======================================= -->
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_SonicBoom_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="100" Distance="300" Sound="LXN_SonicBoom_01_Far" />
+            </DistantSounds>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Jets\LXN_SonicBoom_01_Close.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_SonicBoom_01_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>5000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Jets\LXN_SonicBoom_01_Far.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<!-- ================= MISSILE SOUNDS ======================================= -->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_MissileDetach_01</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>50</MaxDistance>
+			<Volume>1</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Missiles\Arc_MissileDetach_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_MissileTravelSoundFar_01</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>800</MaxDistance>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Missiles\Arc_MissileTravel_01_Far.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_MissileTravelSound_01</SubtypeId>
+			</Id>
+			<Category>SHIP_JET</Category>
+			<MaxDistance>500</MaxDistance>
+			<!--PitchVariation>100</PitchVariation>-->
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<DistantSounds>
+				<DistantSound DistanceCrossfade="100" Distance="800" Sound="LXN_MissileTravelSoundFar_01" />
+			</DistantSounds>
+			<PreventSynchronization>15</PreventSynchronization>
+			<Volume>0.8</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Missiles\Arc_MissileTravel_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+	</Sounds>
+
+
+</Definitions>

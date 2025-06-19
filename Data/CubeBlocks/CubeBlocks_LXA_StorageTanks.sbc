@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <!-- >>>>>> FLUID CONTAINERS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>> BIG WATER TANK 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>LXN_FluidTank_01_CrudeOil</SubtypeId>
+      </Id>
+      <DisplayName>Industrial 5x5 Fluid Container [Crude Oil]</DisplayName>
+      <Icon>Textures\Icons\LXN_FluidTank_01.dds</Icon>
+      <Description>A fluid container is a storage device designed to hold and transport various
+        liquids and gases. It can be used in a variety of settings, including industrial,
+        commercial, and residential applications.</Description>
+      <Public>true</Public>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Large\LXA_FluidTank_01.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5000" />
+        <Component Subtype="InteriorPlate" Count="2000" />
+        <Component Subtype="LargeTube" Count="100" />
+        <Component Subtype="SmallTube" Count="500" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="SteelPlate" Count="120" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" />
+        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" />
+        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" />
+        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00" />
+      </MountPoints>
+      <BlockPairName>LXN_FluidTank_01_CrudeOil</BlockPairName>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>1000000</Capacity>
+      <InventoryMaxVolume>1</InventoryMaxVolume>
+      <InventorySize>
+        <X>5</X>
+        <Y>5</Y>
+        <Z>5</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>GARG_CrudeOil</SubtypeId>
+      </StoredGasId>
+      <BlueprintClasses>
+      </BlueprintClasses>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>
+      <LeakPercent>0.0025</LeakPercent>
+      <GasExplosionMaxRadius>5</GasExplosionMaxRadius>
+      <GasExplosionNeededVolumeToReachMaxRadius>1000000</GasExplosionNeededVolumeToReachMaxRadius>
+      <GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+      <GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+      <GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+      <TieredUpdateTimes>
+        <unsignedInt>100</unsignedInt>
+        <unsignedInt>300</unsignedInt>
+        <unsignedInt>600</unsignedInt>
+      </TieredUpdateTimes>
+      <IsAirTight>false</IsAirTight>
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>

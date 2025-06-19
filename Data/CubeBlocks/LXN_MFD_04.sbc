@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+			<Id>
+				<TypeId>MyProgrammableBlock</TypeId>
+				<SubtypeId>LXN_MFD_04</SubtypeId>
+			</Id>
+			<DisplayName>LXNMFD-04 Programmable MFD</DisplayName>
+			<Description>Shows you things. Also looks cool.</Description>
+			<Icon>Textures\Icons\MFD\LXN_MFD_04.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\MFD\LXN_MFD_04.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="Display" Count="3" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\MFD\LXN_MFD_04_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\MFD\LXN_MFD_04_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_MFD_04</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<ScreenAreas>
+				<ScreenArea Name="CockpitScreen_01" DisplayName="Center Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_02" DisplayName="Top Left Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_03" DisplayName="Top Right Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_04" DisplayName="Bottom Left Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_05" DisplayName="Bottom Right Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+			</ScreenAreas>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>1</PCU>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

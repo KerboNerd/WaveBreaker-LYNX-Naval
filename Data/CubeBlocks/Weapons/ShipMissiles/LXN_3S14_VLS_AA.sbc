@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_3S14_VLS_AA</SubtypeId>
+			</Id>
+			<DisplayName>3S14 UKSK AA VLS</DisplayName>
+			<Description>
+				The 3S14 UKSK is a universal vertical launching system designed for deploying multiple missile types including the P-800 Oniks anti-ship cruise missile, 3M22 Zircon hypersonic missile, and Kalibr cruise missiles. Engineered for naval surface combatants, this versatile system provides formidable anti-surface, anti-ship, and land-attack capabilities. With missiles ranging from supersonic to hypersonic speeds and ranges up to 15 km, it delivers powerful strikes against various target types.
+				Integration with advanced targeting systems is required for optimal performance.
+				The system's flexibility allows ships to carry a mix of missile types to address different tactical situations and threats.
+				Requires a Radar to designate targets.
+				15,000m max range, 500m minimum range.
+			</Description>
+			<Icon>Textures\Icons\Weapons\Missiles\LXN_3S14_VLS.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="4" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Missiles\LXN_3S14_VLS.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_3S14_VLS_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_3S14_VLS_AA</BlockPairName>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_3S14VLS" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.06" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.06" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.06" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.06" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" Default="true" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

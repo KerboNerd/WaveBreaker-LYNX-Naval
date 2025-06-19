@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LXN_CarrierRamp_01</SubtypeId>
+			</Id>
+			<DisplayName>Russian Carrier Ramp Block 1</DisplayName>
+			<Description>yeet a jet</Description>
+			<Icon>Textures\Icons\LXN_CarrierRamp_01.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="5" z="12"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Large\LXN_CarrierRamp_01.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="500"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="0.70"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="12.00" EndY="0.70"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="12.00" EndY="0.70"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="12.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_CarrierRamp_01</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

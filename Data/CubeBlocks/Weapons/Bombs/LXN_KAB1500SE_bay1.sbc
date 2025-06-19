@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_KAB1500SE_bay1</SubtypeId>
+			</Id>
+			<DisplayName>KAB-1500S-E Guided Bomb [BAY-1]</DisplayName>
+			<Description>The KAB-1500S-E is a precision-guided bomb that is part of the KAB-1500 family of bombs. It is designed for the Russian Aerospace Forces to carry out precision attacks using 24-channel GLONASS and is equivalent to the United States Air Force (USAF) Joint Direct Attack Munition (JDAM) family of Global Positioning System (GPS) guided weapons.</Description>
+			<Icon>Textures\Icons\Weapons\Bombs\Cubes\LXN_KAB1500SE_bay1.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="10"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Bombs\LXN_KAB1500SE_bay1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75" />
+				<Component Subtype="LXN_KAB1500SEMagComp" Count="2" />
+			</Components>
+			<CriticalComponent Subtype="LXN_KAB1500SEMagComp" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Bombs\LXN_KAB1500SE_bay1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Bombs\LXN_KAB1500SE_bay1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Bombs\LXN_KAB1500SE_bay1_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_KAB1500SE_bay1</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_KAB1500SEMount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="10.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="10.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="10.00" Default="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_R77_Bay1</SubtypeId>
+			</Id>
+			<DisplayName>R-77 BVRAAM (BAY-1)</DisplayName>
+			<Description>The R-77 missile, also known as the AA-12 Adder, is a long-range air-to-air missile developed by Russia.
+				12,000m max range, 3,000m minimum range.
+			</Description>
+			<Icon>Textures\Icons\Weapons\Missiles\LXN_R77_Bay1.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="8"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Missiles\LXN_R77_Bay1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="8" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_R77MagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_R77_Bay1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_R77_Bay1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_R77_Bay1_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_R77_Bay1</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_R77Mount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="8.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="8.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="8.00" Default="true"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

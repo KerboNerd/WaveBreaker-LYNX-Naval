@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+
+    <!-- Metal Drum -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_MetalDrum_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Metal Drum</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+        <Item Amount="5" TypeId="Component" SubtypeId="Construction" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_MetalDrum_Component" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+
+
+    <!-- Oil -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_Oil_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Treated Naphtha</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_CrudeOil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_Oil_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <!-- Untreated Naphtha -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_UntreatedNaphtha_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Untreated Naphtha</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_Oil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedNaphtha_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <!-- Treated Naphtha -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_Naphtha_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Treated Naphtha</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedNaphtha_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_Naphtha_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <!-- Untreated Kerosene -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_UntreatedKerosene_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Untreated Kerosene</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_Oil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedKerosene_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <!-- Treated Kerosene -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_Kerosene_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Treated Kerosene</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedKerosene_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_Kerosene_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <!-- Untreated Diesel -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_UntreatedDiesel_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Untreated Diesel</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_Oil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedDiesel_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <!-- Treated Diesel -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_Diesel_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Treated Diesel</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedDiesel_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_Diesel_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <!-- Untreated Gas Oil -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_UntreatedGasOil_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Untreated Gas Oil</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_Oil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedGasOil_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <!-- Treated Gas Oil -->
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_GasOil_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Treated Gas Oil</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LXN_UntreatedGasOil_Component" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_GasOil_Component" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+
+
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_NATO_ExportDocuments_01_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Export Documents [NATO]</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_NATO_ExportDocuments_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_NATO_ExportDocuments_01" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_RUS_ExportDocuments_01_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Export Documents [RUS]</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_NATO_ExportDocuments_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_RUS_ExportDocuments_01" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_RUS_MissileAvionics_01_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>Russian Missile Avionics</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_RUS_MissileAvionics_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_RUS_MissileAvionics_01" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_NATO_BombComp_01_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>MOAB Aero Components</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_NATO_BombComp_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_NATO_BombComp_01" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_NATO_BombComp_02_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>MOAB Aero Components</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_NATO_BombComp_02.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_NATO_BombComp_02" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LXN_NATO_CruiseComp_01_Recipe</SubtypeId>
+      </Id>
+      <DisplayName>AGM-84 SLAM-ER Rocket Motor</DisplayName>
+      <Icon>Textures\Icons\Components\LXN_NATO_CruiseComp_01.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="LXN_NATO_CruiseComp_01" />
+      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+
+
+
+
+
+    <Blueprint>
+        <Id>
+            <TypeId>BlueprintDefinition</TypeId>
+            <SubtypeId>LXN_EnrichedUranium_01_Recipe</SubtypeId>
+        </Id>
+        <DisplayName>Enriched Uranium</DisplayName>
+        <Icon>Textures\Icons\Components\LXN_EnrichedUranium_icon.dds</Icon>
+        <Prerequisites>
+            <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
+        <BaseProductionTimeInSeconds>10000</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+
+  </Blueprints>
+</Definitions>

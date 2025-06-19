@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LXN_CarrierProp_01_thruster</SubtypeId>
+			</Id>
+			<DisplayName>AXIOM Helicarrier Propulsion Unit</DisplayName>
+			<Description>Forged from the crucible of international cooperation, this propulsion system is the brainchild of the finest minds from the Soviet Union, the United States, and other global powers. It propels the KIROV Helicarriers with unparalleled efficiency, standing as a monumental testament to human ingenuity and a symbol of unity in the pursuit of technological supremacy.</Description>
+			<Icon>Textures\Icons\LXN_CarrierProp_01_thruster.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="7" y="7" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\LXN_HeliCarrierStuff\LXN_CarrierProp_01_thruster.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="15" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="MetalGrid" Count="20" />
+				<Component Subtype="LargeTube" Count="15" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="InteriorPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.50" StartY="0.50" EndX="6.50" EndY="6.50"/>
+				<MountPoint Side="Back" StartX="0.50" StartY="0.50" EndX="6.50" EndY="6.50"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.50" EndX="1.00" EndY="6.50" Default="true"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.50" EndX="1.00" EndY="6.50"/>
+				<MountPoint Side="Top" StartX="0.50" StartY="0.00" EndX="6.50" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.50" StartY="0.00" EndX="6.50" EndY="1.00"/>
+			</MountPoints>
+			<UseModelIntersection>true</UseModelIntersection>
+			<BlockPairName>LXN_CarrierProp_01_thruster</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<!-- Power of the thruster: 2.5MN -->
+			<ForceMagnitude>25000000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Oxygen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>25</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1.5</SlowdownFactor>
+			<MinPlanetaryInfluence>0.1</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>0.95</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0.44</FlameDamageLengthScale>
+			<FlameLengthScale>1</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+				<W>-0.9</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<Z>0.5</Z>
+				<W>0.4</W>
+			</FlameFullColor>
+			<FlamePointMaterial>CAPJetThrustPoint</FlamePointMaterial>
+			<FlameLengthMaterial>CAPJetThrust</FlameLengthMaterial>
+			<FlameFlare>LargeGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>1500</FlameVisibilityDistance>
+			<FlameGlareQuerySize>1</FlameGlareQuerySize>
+			<PrimarySound>LXNAL41Audio</PrimarySound>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>AirVent</TypeId>
+					<SubtypeId>LXN_CarrierProp_01_intake</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>LXN_CarrierProp_01_mantlet1</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+			<IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<MirroringZ>Y</MirroringZ>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\LXN_HeliCarrierStuff\LXN_CarrierProp_01_thruster_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\LXN_HeliCarrierStuff\LXN_CarrierProp_01_thruster_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\LXN_HeliCarrierStuff\LXN_CarrierProp_01_thruster_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

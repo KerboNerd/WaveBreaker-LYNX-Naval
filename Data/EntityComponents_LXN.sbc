@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <EntityComponents>
+
+        <EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+        <Id>
+            <TypeId>ModStorageComponent</TypeId>
+            <SubtypeId>AerodynamicControlSurfaces</SubtypeId>
+        </Id>
+        <RegisteredStorageGuids>
+            <guid>b90f1f1d-920c-4fc9-a05e-1ffeb58ffaf2</guid>
+        </RegisteredStorageGuids>
+        </EntityComponent>
+
+    </EntityComponents>
+
+</Definitions>

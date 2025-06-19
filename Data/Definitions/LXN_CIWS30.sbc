@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_CIWS30Ammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>86</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName></MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_CIWS30Mag</SubtypeId>
+            </Id>
+            <DisplayName>30mm CIWS Magazine</DisplayName>
+            <Icon>Textures\icons\LXN_JetFuelTank_1x1.dds</Icon>
+            <Model></Model>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>350</Mass>
+            <Volume>200</Volume>
+            <Capacity>500</Capacity>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <AmmoDefinitionId Subtype="LXN_CIWS30Ammo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_CIWS30_BP</SubtypeId>
+            </Id>
+            <DisplayName>30mm CIWS</DisplayName>
+            <Icon>Textures\icons\LXN_JetFuelTank_1x1.dds</Icon>
+            <Prerequisites>
+                <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="3" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_CIWS30Mag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_CIWS30_BP" />
+    </BlueprintClassEntries>
+</Definitions>

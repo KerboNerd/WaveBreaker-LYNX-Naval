@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>TerminalBlock</TypeId>
+				<SubtypeId>LXN_Aero_SukhoiCanard_02</SubtypeId>
+			</Id>
+			<DisplayName>Sukhoi Canard Small</DisplayName>
+			<Icon>Textures\Icons\Aero\LXN_Aero_SukhoiCanard_02.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Aero\SG\LXN_Aero_SukhoiCanard_02.mwm</Model>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Aero\SG\LXN_Aero_SukhoiCanard_02_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Aero\SG\LXN_Aero_SukhoiCanard_02_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Aero\SG\LXN_Aero_SukhoiCanard_02_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringX>Z</MirroringX>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Motor" Count="5" />
+				<Component Subtype="SteelPlate" Count="2" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<DamageEffectId>214</DamageEffectId>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<RequiredPowerInput>0.001</RequiredPowerInput>
+			<ModExtensions>
+				<ModComponents>
+					<GameLogicComponent Name="ControlSurfaceComponent" />
+				</ModComponents>
+				<Group Name="ControlSurfaces">
+					<Decimal Name="Area" Value="20" />
+					<Decimal Name="AngleAdjust" Value="0" />
+					<Decimal Name="ROTY" Value ="0"/>
+					<Decimal Name="ROTZ" Value ="0"/>
+					<Decimal Name="POSX" Value ="0"/>
+					<Decimal Name="POSY" Value ="0"/>
+					<Decimal Name="POSZ" Value ="0"/>
+					<Text Name="SubpartModel" Value="Models\Aero\SG\LXN_Aero_SukhoiCanard_02_wing.mwm" />
+					<Integer Name="ModPublishId" Value="3051441217"/>
+				</Group>
+				<Group Name="Aerodynamic">
+					<Vector3D Name="SurfaceNormal" X="0" Y="3" Z="-2" />
+				</Group>
+			</ModExtensions>
+			<MountPoints>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+			</MountPoints>
+			<MirroringZ>X</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

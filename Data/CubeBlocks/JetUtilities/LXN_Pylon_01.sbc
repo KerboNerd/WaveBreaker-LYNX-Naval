@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>LXN_Pylon_01</SubtypeId>
+			</Id>
+			<DisplayName>Triple-Mount Missile Pylon</DisplayName>
+			<Description>Advanced triple-mount pylon designed for rapid missile deployment and increased payload capacity.</Description>
+			<Icon>Textures\Icons\LXN_Pylon_01.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Small\LXN_Pylon_01.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="2" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="Motor" Count="1" />
+				<Component Subtype="InteriorPlate" Count="2" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_Pylon_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_Pylon_01_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_Pylon_01_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_Pylon_01</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+			<DestroySound>PoofExplosionCat1</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

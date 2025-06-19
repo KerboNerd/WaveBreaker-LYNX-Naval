@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<CubeBlocks>
+			<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+				<Id>
+					<TypeId>Reactor</TypeId>
+					<SubtypeId>LXN_NavalReactor_01</SubtypeId>
+				</Id>
+				<DisplayName>Naval Reactor "Soviet Atom" BW-027</DisplayName>
+				<Icon>Textures\Icons\LXN_NavalReactor_01.dds</Icon>
+				<Description>
+					Unleash the formidable power of the Naval Reactor 'Soviet Atom' BW-027, a prodigious creation forged in the crucible of Soviet brilliance and tenacity.
+					With the heart of a titan, it pulses with a staggering 700MW of unyielding energy, propelling our fleet with the unwavering might of the Motherland.
+
+					Fuel: Enriched Uranium
+				</Description>
+				<CubeSize>Large</CubeSize>
+				<GuiVisible>false</GuiVisible>
+				<BlockTopology>TriangleMesh</BlockTopology>
+				<Size x="3" y="6" z="3" />
+				<ModelOffset x="0" y="0" z="0" />
+				<Model>Models\Large\LXN_NavalReactor_01.mwm</Model>
+				<Components>
+					<Component Subtype="SteelPlate" Count="2100" />
+					<Component Subtype="Construction" Count="180" />
+					<Component Subtype="MetalGrid" Count="100" />
+					<Component Subtype="LargeTube" Count="100" />
+					<Component Subtype="Superconductor" Count="300" />
+					<Component Subtype="Reactor" Count="5000" />
+					<Component Subtype="Motor" Count="150" />
+					<Component Subtype="Computer" Count="300" />
+					<Component Subtype="SteelPlate" Count="500" />
+				</Components>
+				<CriticalComponent Subtype="Computer" Index="0" />
+				<BlockPairName>LXN_NavalReactor_01</BlockPairName>
+				<MirroringY>Z</MirroringY>
+				<EdgeType>Light</EdgeType>
+				<BuildTimeSeconds>120</BuildTimeSeconds>
+				<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+				<MaxPowerOutput>700</MaxPowerOutput>
+				<InventorySize>
+					<X>2</X>
+					<Y>2</Y>
+					<Z>2</Z>
+				</InventorySize>
+				<!--
+					Values are volume fill ratio, means how much fuel reactor pulls from conveyor system to the inventory.
+					If volume fill ratio is bellow minimum, reactor starts pulling fuel up to maximum value.
+					Warning: Changing these values will affect performance.
+					-->
+						<InventoryFillFactorMin>0.001</InventoryFillFactorMin>
+						<InventoryFillFactorMax>0.002</InventoryFillFactorMax>
+						<!--
+							This is how much of fuel is pulled from conveyor system in one tick.
+							It's in minutes, means that it will pull X minutes of fuel in one tick.
+							Warning: Changing this value will affect performance.
+							-->
+								<FuelPullAmountFromConveyorInMinutes>1.0</FuelPullAmountFromConveyorInMinutes>
+								<FuelInfos>
+									<FuelInfo>
+										<Id>
+											<TypeId>Component</TypeId>
+											<SubtypeId>LXN_EnrichedUranium_01</SubtypeId>
+										</Id>
+									</FuelInfo>
+								</FuelInfos>
+								<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+								<DamageEffectName>Damage_Reactor_Damaged</DamageEffectName>
+								<DamagedSound>ParticleReactor</DamagedSound>
+								<EmissiveColorPreset>Default</EmissiveColorPreset>
+								<DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+								<DestroySound>WepLrgWarheadExpl</DestroySound>
+								<PCU>50</PCU>
+								<IsAirTight>false</IsAirTight>
+								<TieredUpdateTimes>
+									<unsignedInt>900</unsignedInt>
+									<unsignedInt>1800</unsignedInt>
+									<unsignedInt>3600</unsignedInt>
+								</TieredUpdateTimes>
+								<TargetingGroups>
+									<string>PowerSystems</string>
+								</TargetingGroups>
+								<MountPoints>
+									<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="6.00"/>
+									<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="6.00"/>
+									<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="6.00"/>
+									<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="6.00"/>
+									<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+									<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+								</MountPoints>
+								<BuildProgressModels>
+									<Model BuildPercentUpperBound="0.33" File="Models\Large\LXN_NavalReactor_01_BS1.mwm"/>
+									<Model BuildPercentUpperBound="0.67" File="Models\Large\LXN_NavalReactor_01_BS2.mwm"/>
+									<Model BuildPercentUpperBound="1.00" File="Models\Large\LXN_NavalReactor_01_BS3.mwm"/>
+								</BuildProgressModels>
+							</Definition>
+						</CubeBlocks>
+					</Definitions>

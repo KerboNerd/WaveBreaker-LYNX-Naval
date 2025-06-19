@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_S400Ammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>86</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\Small\LXN_S400_missile1.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+        <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_Energy</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>0.0002</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>0.0001</MaxTrajectory>
+                <BackkickForce>0</BackkickForce>
+            </BasicProperties>
+            <ProjectileProperties>
+                <ProjectileHitImpulse>0</ProjectileHitImpulse>
+                <ProjectileMassDamage>0</ProjectileMassDamage>
+                <ProjectileHealthDamage>0</ProjectileHealthDamage>
+                <ProjectileMaterial>GunBullet</ProjectileMaterial>
+                <ProjectileTrailScale>0</ProjectileTrailScale>
+                <ProjectileTrailProbability>0</ProjectileTrailProbability>
+            </ProjectileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_S400Mag</SubtypeId>
+            </Id>
+            <DisplayName>S-400(48N6DM) Missile</DisplayName>
+            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>  
+            </Size>
+            <Mass>1900</Mass>
+            <Volume>1410</Volume>
+            <Model>Models\Small\LXN_S400_missile1.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_S400Ammo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_Blank</SubtypeId>
+            </Id>
+            <DisplayName>Blank</DisplayName>
+            <Icon>Textures\GUI\Icons\component\BatteryComponent.dds</Icon>
+            <Size>
+                <X>0.25</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>1</Volume>
+            <Model>Models\Components\PowerCellComponent.mwm</Model>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_Energy" />
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>LXN_S400MagComp</SubtypeId>
+            </Id>
+            <DisplayName>S-400(48N6DM) Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
+            <Model>Models\Small\LXN_S400_missile1.mwm</Model>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>  
+            </Size>
+            <Mass>1900</Mass>
+            <Volume>1410</Volume>
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_S400_CompBP</SubtypeId>
+            </Id>
+            <DisplayName>S-400 48N6DM Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
+            <Prerequisites>
+                <Item Amount="25" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="12.5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="1.35" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="6.3" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="LXN_S400MagComp" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_S400_BP</SubtypeId>
+            </Id>
+            <DisplayName>S-400 48N6DM Missile</DisplayName>
+            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
+            <Prerequisites>
+                <Item Amount="25" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="12.5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="1.35" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="6.3" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_S400Mag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_S400_CompBP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_S400_BP" />
+    </BlueprintClassEntries>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_S400</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
+            <DeviateShotAngle>0.1</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_S400Mag" />
+            </AmmoMagazines>
+            <ReloadTime>8000</ReloadTime>
+        </Weapon>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_S400_x4</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
+            <DeviateShotAngle>0.1</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_S400Mag" />
+            </AmmoMagazines>
+            <ReloadTime>8000</ReloadTime>
+        </Weapon>
+	</Weapons>
+	
+	<CategoryClasses>
+			<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+				<Id>
+					<TypeId>GuiBlockCategoryDefinition</TypeId>
+					<SubtypeId/>
+				</Id>
+					<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+					<Name>ShipWeapons</Name>
+					<SearchBlocks>false</SearchBlocks>
+					<IsShipCategory>true</IsShipCategory>
+					<IsBlockCategory>false</IsBlockCategory>
+					<IsToolCategory>true</IsToolCategory>
+					<ItemIds>
+						<string>LXN_S400Mount</string>
+					</ItemIds>	
+			</Category>
+
+            <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+                <TypeId>GuiBlockCategoryDefinition</TypeId>
+                <SubtypeId />
+            </Id>
+            <DisplayName>L.Y.N.X Missile Systems</DisplayName>
+            <Name>LXN_MissileSystems</Name>
+            <ItemIds>
+                <string>ConveyorSorter/LXN_S400_4x_tube</string>
+                <string>ConveyorSorter/LXN_S400_tube</string>
+                <string>ConveyorSorter/LXN_S400Ship</string>
+            </ItemIds>
+            </Category>
+
+	</CategoryClasses>
+</Definitions>

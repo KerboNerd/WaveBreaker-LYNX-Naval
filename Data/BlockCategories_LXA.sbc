@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId />
+      </Id>
+      <DisplayName>L.Y.N.X Naval Division</DisplayName>
+      <Name>LXN</Name>
+      <ItemIds>
+
+        <!-- <string>ConveyorSorter/LXA_AWACS_Dish_01</string> -->
+
+        <string>Thrust/LXN_VectorProp_01</string>
+        <string>Thrust/LXN_ShipProp_01</string>
+
+        <string>OxygenTank/LXN_JetFuelTank_1x1</string>
+        <string>OxygenTank/LXN_JetFuelTank_1x2</string>
+        <string>OxygenTank/LXN_JetFuelTank_1x4</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x2</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x3</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x5</string>
+
+        <string>Conveyor/LXN_SmallConveyor_Straight</string>
+        <string>Conveyor/LXN_SmallConveyor_Corner</string>
+        <string>Conveyor/LXN_SmallConveyor_Junction</string>
+        <string>Conveyor/LXN_SmallConveyor_JunctionT</string>
+        <string>Conveyor/LXN_SmallConveyor_JunctionX</string>
+        <string>Conveyor/LXN_SmallConveyor_CornerCurved</string>
+        <string>Conveyor/LXN_SmallConveyor_Straightx3</string>
+        <string>Conveyor/LXN_SmallConveyor_Straightx5</string>
+
+        <string>ConveyorSorter/LXN_RadarTower_1</string>
+        
+        <string>CubeBlock/LXN_CarrierRamp_01</string>
+        <string>CubeBlock/LXN_CarrierRamp_02</string>
+        <string>CubeBlock/LXN_CarrierRamp_03</string>
+
+        <string>CubeBlock/LXN_SGWindow_1_1</string>
+        <string>CubeBlock/LXN_SGWindow_1_2</string>
+        <string>CubeBlock/LXN_SGWindow_1_3</string>
+        <string>CubeBlock/LXN_SGWindow_1_4</string>
+        <string>CubeBlock/LXN_SGWindow_1_5</string>
+        <string>CubeBlock/LXN_SGWindow_1_5invert</string>
+        <string>CubeBlock/LXN_SGWindow_1_6</string>
+        <string>CubeBlock/LXN_SGWindow_2_1</string>
+        <string>CubeBlock/LXN_SGWindow_2_2</string>
+        <string>CubeBlock/LXN_SGWindow_2_3</string>
+        <string>CubeBlock/LXN_SGWindow_2_4</string>
+        <string>CubeBlock/LXN_SGWindow_2_5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block1</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block2</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block3</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block4</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block6</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope1</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope2</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope3</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope4</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope6</string>
+
+        <string>HydrogenEngine/LXN_KGS_TankEngine_01</string>
+
+        <string>Reactor/LXN_NavalReactor_01</string> 
+
+        <string>OxygenFarm/LXN_HydrogenGenerator_01</string>
+
+        <string>ConveyorSorter/LXN_CIWS30_01</string>
+		
+        <string>CubeBlock/LXN_SmallBlockMantlet_01</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_02</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_03</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_04</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_05</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_06</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_07</string>
+        <string>CubeBlock/LXN_SmallBlockMantlet_08</string>
+        
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId />
+      </Id>
+      <DisplayName>L.Y.N.X Jet Systems</DisplayName>
+      <Name>LXN_JetSystems</Name>
+      <ItemIds>
+
+        <string>CubeBlock/LXN_JetSystems_01</string>
+        <string>HydrogenEngine/LXA_GENX8_Generator</string>
+        <string>AirVent/LXA_GENX8_Intake</string>
+        <string>Thrust/LXA_GENX8_Thruster</string>
+
+        <string>HydrogenEngine/LNX_NK32_01_Generator</string>
+        <string>AirVent/LXN_NK32_01_Intake</string>
+        <string>Thrust/LXN_NK32_01_Thruster</string>
+
+        <string>HydrogenEngine/LNX_SATURN_AL41F1_Generator</string>
+        <string>AirVent/LNX_SATURN_AL41F1_Intake</string>
+        <string>Thrust/LNX_SATURN_AL41F1_Thruster</string>
+        <string>Thrust/LNX_SATURN_AL41F1_Thruster_2</string>
+
+        <string>HydrogenEngine/LXN_D30F6_Generator</string>
+        <string>AirVent/LXN_D30F6_Intake</string>
+        <string>Thrust/LXN_D30F6_Thruster</string>
+
+        <string>OxygenTank/LXN_FuelPylon_01</string>
+
+        <!-- <string>ShipConnector/LXA_RefuelingProbe_01</string>
+        <string>Conveyor/LXA_RefuelingProbe_02</string>
+        <string>ShipConnector/LXA_RefuelingProbe_03</string>
+        <string>LandingGear/LXA_RefuelingProbe_04</string>
+        <string>ShipConnector/LXA_RefuelingProbe_05</string>
+        <string>ShipConnector/LXA_RefuelingProbe_06</string>
+        <string>ShipConnector/LXA_RefuelingProbe_07</string>
+
+        <string>ExtendedPistonBase/LXN_RefuelingBoom_01</string>
+        <string>PistonTop/LXN_RefuelingBoom_01_end</string>
+        <string>ShipConnector/LXN_RefuelingBoom_01_connector</string> -->
+
+        <string>MyProgrammableBlock/LXN_MFD_01</string>
+        <string>MyProgrammableBlock/LXN_MFD_02</string>
+        <string>MyProgrammableBlock/LXN_MFD_04</string>
+
+        <string>CameraBlock/LXN_JetCamera_01</string>
+        <string>CameraBlock/LXN_JetCamera_02</string>
+        <string>CameraBlock/LXN_JetCamera_03</string>
+        <string>CameraBlock/LXN_JetCamera_04</string>
+        <string>CameraBlock/LXN_JetCamera_05</string>
+        <string>CameraBlock/LXN_JetCamera_06</string>
+
+        <string>CameraBlock/LXN_JetCamera_06</string>
+
+        <string>CubeBlock/LXN_57intake_01</string>
+        <string>CubeBlock/LXN_57intake_01inverse</string>
+        <string>CubeBlock/LXN_57intake_02</string>
+        <string>CubeBlock/LXN_57intake_03</string>
+
+        <string>CubeBlock/LXN_27intake_01</string>
+        <string>CubeBlock/LXN_27intake_02</string>
+        <string>CubeBlock/LXN_27intake_03</string>
+        <string>CubeBlock/LXN_27intake_04</string>
+
+        <string>CubeBlock/LXN_MigIntake_01</string>
+        <string>CubeBlock/LXN_MigIntake_02</string>
+        <string>CubeBlock/LXN_MigIntake_03</string>
+        <string>CubeBlock/LXN_MigIntake_04</string>
+        <string>CubeBlock/LXN_MigIntake_05</string>
+        
+        <string>ConveyorSorter/LXN_SideByelkaRadar_01</string>
+        <string>ConveyorSorter/LXN_EOTS_01</string>
+
+        <string>CubeBlock/LXN_RedStarDeco_01</string>
+
+        <string>ConveyorSorter/LXN_L256M10_pylon</string>
+        <string>ConveyorSorter/LXN_L256M10offset_pylon</string>
+        <string>ConveyorSorter/LXN_L256M10offset2_pylon</string>
+        <string>ConveyorSorter/LXN_SkyShadowPod_pylon</string>
+        <string>ConveyorSorter/LXN_IntegratedECM_System</string>
+
+        <string>ConveyorSorter/LXN_SniperPod_01</string>
+
+        <string>MotorSuspension/LXN_LGearSuspension_01</string>
+        <string>MotorSuspension/LXN_LGearSuspension_01bigger</string>
+        <string>MotorSuspension/LXN_LGearSuspension_02</string>
+        <string>MotorSuspension/LXN_LGearSuspension_03</string>
+        <string>MotorSuspension/LXN_LGearSuspension_03bigger</string>
+
+        <string>Wheel/LXN_LGearWheel_01</string>
+        <string>Wheel/LXN_LGearWheel_02</string>
+        <string>Wheel/LXN_LGearWheel_03</string>
+        <string>Wheel/LXN_LGearWheel_03bigger</string>
+        <string>Wheel/LXN_LGearWheel_01bigger</string>
+		
+        <string>LXN_Aero_SukhoiCanard_01</string>
+        <string>LXN_Aero_SukhoiCanard_02</string>
+        <string>LXN_Aero_SukhoiCanard_03</string>
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId />
+      </Id>
+      <DisplayName>L.Y.N.X Missile Systems</DisplayName>
+      <Name>LXN_MissileSystems</Name>
+      <ItemIds>
+
+        <string>ConveyorSorter/LXN_AIM120_01_pylon</string>
+        <string>ConveyorSorter/LXN_AIM260_pylon</string>
+        <string>ConveyorSorter/LXN_R77_pylon</string>
+        <string>ConveyorSorter/LXN_R77_Bay1</string>
+        <string>ConveyorSorter/LXN_R77_Bay2</string>
+        <string>ConveyorSorter/LXN_RVVAEPD_pylon</string>
+        <string>ConveyorSorter/LXN_R37M_pylon</string>
+        <string>ConveyorSorter/LXN_R27ER_pylon</string>
+
+        <string>ConveyorSorter/LXN_R73M_pylon</string>
+        <string>ConveyorSorter/LXN_R73Msmalloffset_pylon</string>
+        <string>ConveyorSorter/LXN_R73Msmalloffsetmirror_pylon</string>
+
+        <string>ConveyorSorter/LXN_R73M_bay1</string>
+        <string>ConveyorSorter/LXN_R73M_bay2</string>
+        <string>ConveyorSorter/LXN_R73M_bay2mirror</string>
+
+        <string>ConveyorSorter/LXN_IRIST_pylon</string>
+        <string>ConveyorSorter/LXN_IRISTsmalloffset_pylon</string>
+        <string>ConveyorSorter/LXN_IRISTsmalloffsetmirror_pylon</string>
+
+        <string>ConveyorSorter/LXN_Meteor_pylon</string>
+        <string>ConveyorSorter/LXN_Brimstone_pylon</string>
+        <string>ConveyorSorter/LXN_Brimstone_pylon_cluster</string>
+        <string>ConveyorSorter/LXN_AGM84_pylon</string>
+        <string>ConveyorSorter/LXN_S1M_pylon</string>
+        <string>ConveyorSorter/LXN_MOAB_pylon</string>
+        <string>ConveyorSorter/LXN_KAB1500SE_pylon</string>
+        <string>ConveyorSorter/LXN_KAB1500SE_bay1</string>
+        <string>ConveyorSorter/LXN_KAB500KR_pylon</string>
+        <string>ConveyorSorter/LXN_FAB500_pylon</string>
+        <string>ConveyorSorter/LXN_YAB10_pylon</string>
+
+        <string>ConveyorSorter/LXN_P270Moskit_pylon</string>
+        <string>ConveyorSorter/LXN_P270MoskitJet_pylon</string>
+
+        <string>ConveyorSorter/LXN_KH31AD_pylon</string>
+        
+        <string>ConveyorSorter/LXN_ZirconMissileLG_VLS</string>
+        <string>ConveyorSorter/LXN_OniksMissileLG_VLS</string>
+        <string>ConveyorSorter/LXN_FutlyarTorpedo_01</string>
+        <string>ConveyorSorter/LXN_FutlyarShipTorpedo_01</string>
+        <string>ConveyorSorter/LXN_FutlyarShipTorpedo_02</string>
+        <string>ConveyorSorter/LXN_3S14_VLS_AS</string>
+        <string>ConveyorSorter/LXN_3S14_VLS_AA</string>
+
+        <string>Conveyor/LXN_b8m1_pod</string>
+
+        <string>Conveyor/LXN_Pylon_01</string>
+		
+		<string>ConveyorSorter/LXN_RBU6000</string>
+		
+		<string>ConveyorSorter/LXN_JetRadar_Zaslon_1</string>
+		<string>ConveyorSorter/LXN_GravestoneRadar_01</string>
+        
+      </ItemIds>
+    </Category>
+
+  </CategoryClasses>
+</Definitions>

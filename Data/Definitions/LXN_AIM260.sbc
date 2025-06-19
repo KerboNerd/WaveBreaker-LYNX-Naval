@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_AIM260Ammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>86</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\Small\LXN_AIM260_missile1.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+                <MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+                <MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+    <AmmoMagazines>
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_AIM260Mag</SubtypeId>
+            </Id>
+            <DisplayName>AIM-260 JATM Missile</DisplayName>
+            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>180</Mass>
+            <Volume>100</Volume>
+            <Model>Models\Small\LXN_AIM260_missile1.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_AIM260Ammo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+    </AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>LXN_AIM260_Comp</SubtypeId>
+            </Id>
+            <DisplayName>AGM-260 Missile [Comp]</DisplayName>
+            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
+            <Model>Models\Small\LXN_AIM260_missile1.mwm</Model>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>180</Mass>
+            <Volume>100</Volume>
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+
+    <Blueprints>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_AIM260_CompBP</SubtypeId>
+            </Id>
+            <DisplayName>AIM-260 JATM Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
+            <Prerequisites>
+                <Item Amount="35" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="18" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Platinum" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+                <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
+                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_GuidanceSystem" /> -->
+                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_Warhead" /> -->
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="LXN_AIM260_Comp" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_AIM260_BP</SubtypeId>
+            </Id>
+            <DisplayName>AIM-260 JATM Missile</DisplayName>
+            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
+            <Prerequisites>
+                <Item Amount="35" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="18" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Platinum" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+                <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_AIM260Mag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AIM260_CompBP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AIM260_BP" />
+    </BlueprintClassEntries>
+
+    <Weapons>
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_AIM260Mount</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
+            <DeviateShotAngle>0.1</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_AIM260Mag" />
+            </AmmoMagazines>
+            <ReloadTime>8000</ReloadTime>
+        </Weapon>
+    </Weapons>
+
+    <CategoryClasses>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+                <TypeId>GuiBlockCategoryDefinition</TypeId>
+                <SubtypeId/>
+            </Id>
+            <DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+            <Name>ShipWeapons</Name>
+            <SearchBlocks>false</SearchBlocks>
+            <IsShipCategory>true</IsShipCategory>
+            <IsBlockCategory>false</IsBlockCategory>
+            <IsToolCategory>true</IsToolCategory>
+            <ItemIds>
+                <string>LXN_AIM260Mount</string>
+            </ItemIds>
+        </Category>
+
+    </CategoryClasses>
+</Definitions>

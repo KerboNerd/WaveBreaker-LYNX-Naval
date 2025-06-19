@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_RBU6000</SubtypeId>
+			</Id>
+			<DisplayName>RBU-6000 Depth Charge Turret</DisplayName>
+			<Description>
+				The RBU-6000 Depth Charge Turret is a specialized anti-submarine warfare system, equipped with multiple barrels for launching depth charges. This advanced system is designed to counter underwater threats by deploying high-explosive charges that detonate at predetermined depths. The RBU-6000's rapid-fire capability ensures a dense pattern of detonations, maximizing the probability of neutralizing enemy submarines.
+				Operates independently without the need for external targeting information.
+				Effective range up to 1000m, optimized for various depth settings and threat scenarios.
+				Maximum deployment depth of 500m, with adjustable settings for shallow or deep water engagement.
+			</Description>
+			<Icon>Textures\Icons\Weapons\Turrets\LXN_RBU6000.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Turrets\LXN_RBU6000.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_RBU6000MagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_RBU6000</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_RBU6000" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

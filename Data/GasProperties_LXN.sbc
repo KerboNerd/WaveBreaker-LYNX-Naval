@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GasProperties>
+
+    <!-- COMMON LIQUIDS =============================================================================== -->
+
+    <!-- >>>>>> WATER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_LiquidWater</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0001</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> LIQUID HYDROGEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_LH2</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0028</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- UNCOMMON LIQUIDS =============================================================================== -->
+
+    <!-- >>>>>> WATER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_CrudeOil</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0387</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+  <!-- COMMON GASSES =============================================================================== -->
+
+    <!-- >>>>>> OXYGEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_OxygenGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> PROPANE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_PropaneGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0000125</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+    
+    <!-- >>>>>> NITROGEN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_NitrogenGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.000001</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> CHLORINE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_ChlorineGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0000122</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> HELIUM <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_HeliumGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0000000494</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> AMMONIA <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_AmmoniaGas</SubtypeId>
+      </Id>
+      <EnergyDensity>5.6</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> ARGON <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_ArgonGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> TRICHLOROSILANE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_TrichlorosilaneGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> HYDROGEN CHLORIDE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_HydrogenChlorideGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.0036</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+  <!-- ADVANCED GASSES =============================================================================== -->
+
+    <!-- >>>>>> SILANE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_SilaneGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.67</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> FLUORINE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_FluorineGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> BORON TRIFLUORIDE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_BoronTrifluorideGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> PHOSPHINE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_PhosphineGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> ARSENIC <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_ArsenicGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+  <!-- RARE GASSES =============================================================================== -->
+
+    <!-- >>>>>> ANTIMONY <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_AntimonyGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> KRYPTON <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_KryptonGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.00000389</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> NEON <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_NeonGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0.000000253</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+    <!-- >>>>>> XENON <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Gas>
+      <Id>
+        <TypeId>MyObjectBuilder_GasProperties</TypeId>
+        <SubtypeId>GARG_XenonGas</SubtypeId>
+      </Id>
+      <EnergyDensity>0</EnergyDensity>
+      <!-- MWh/litres -->
+    </Gas>
+
+
+  </GasProperties>
+</Definitions>

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_FAB500_pylon</SubtypeId>
+			</Id>
+			<DisplayName>FAB-500 M-62 Unguided Bomb</DisplayName>
+			<Description>The FAB-500 M-62 is a Soviet-designed 500-kilogram (1,100 lb) general-purpose air-dropped bomb with a high-explosive warhead.</Description>
+			<Icon>Textures\Icons\Cubes\LXN_FAB500_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_FAB500_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25" />
+				<Component Subtype="LXN_FAB500MagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="LXN_FAB500MagComp" Index="0" />
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_FAB500_pylon</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_FAB500Mount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

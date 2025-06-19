@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_MigFlares</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>5000</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>100</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Missile</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>0</MissileMass>
+                <MissileExplosionRadius>0</MissileExplosionRadius>
+                <MissileModelName></MissileModelName>
+                <MissileAcceleration>5</MissileAcceleration>
+                <MissileInitialSpeed>15</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileHealthDamage>0</MissileHealthDamage>
+                <MissileTrailEffect>Explosion_Debris</MissileTrailEffect>
+				<MissileGravityEnabled>false</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_MigCountermeasureMag</SubtypeId>
+            </Id>
+            <DisplayName>Mikoyan Flare Canister</DisplayName>
+            <Icon>Textures\Icons\Countermeasures\LXN_MigFlareLauncher_01.dds</Icon>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>50</Mass>
+            <Volume>50</Volume>
+            <Model>Models\Countermeasures\LXN_MigFlareLauncher_01.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>40</Capacity>
+            <AmmoDefinitionId Subtype="LXN_MigFlares" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_MigFlareCanister_Recipe</SubtypeId>
+            </Id>
+            <DisplayName>Mikoyan Flare Canister</DisplayName>
+            <Icon>Textures\Icons\Countermeasures\LXN_MigFlareLauncher_01.dds</Icon>
+            <Prerequisites>
+                <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="0.5" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MigCountermeasureMag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_MigFlareCanister_Recipe" />
+    </BlueprintClassEntries>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_MigFlareDispenser</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="1500" ShootSoundName="LXN_FlareSound_1" FlightSoundName="ShipLargeThrusterHydrogenIdle" ShotsInBurst="20" />
+            <DeviateShotAngle>5</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_MigCountermeasureMag" />
+            </AmmoMagazines>
+            <ReloadTime>5000</ReloadTime>
+        </Weapon>
+	</Weapons>
+
+</Definitions>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Ammos>
+		<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+			<Id>
+				<TypeId>AmmoDefinition</TypeId>
+				<SubtypeId>LXN_MAWSAmmo</SubtypeId>
+			</Id>
+			<BasicProperties>
+				<DesiredSpeed>900</DesiredSpeed>
+				<SpeedVariance>0</SpeedVariance>
+				<MaxTrajectory>3500</MaxTrajectory>
+				<BackkickForce>0</BackkickForce>
+				<PhysicalMaterial>CAPRadar</PhysicalMaterial>
+			</BasicProperties>
+			<ProjectileProperties>
+				<ProjectileTrailScale>0</ProjectileTrailScale>
+				<ProjectileTrailProbability>0</ProjectileTrailProbability>
+				<ProjectileTrailColor x="0" y="0" z="0"/>
+				<ProjectileHitImpulse>0</ProjectileHitImpulse>
+				<ProjectileMassDamage>0</ProjectileMassDamage>
+				<ProjectileExplosionDamage>0</ProjectileExplosionDamage>
+				<ProjectileHealthDamage>0</ProjectileHealthDamage>
+				<ProjectileExplosionRadius>0</ProjectileExplosionRadius>
+				<HeadShot>true</HeadShot>
+			</ProjectileProperties>
+		</Ammo>
+	</Ammos>
+	
+	<AmmoMagazines>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>LXN_MAWSMag</SubtypeId>
+			</Id>
+			<DisplayName>Radar Battery</DisplayName>
+			<Icon>Textures\Icons\Cubes\LXN_FAB500_pylon.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.24</Z>
+			</Size>
+			<Mass>5</Mass>
+			<Volume>10</Volume>
+			<Model>Models\Small\LXN_FAB500_pylon.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>200</Capacity>
+			<AmmoDefinitionId Subtype="LXN_MAWSAmmo"/>
+
+			<MinimumOfferAmount>50</MinimumOfferAmount>
+			<MaximumOfferAmount>500</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>false</CanPlayerOrder>
+		</AmmoMagazine>
+	</AmmoMagazines>
+	
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>LXN_MAWSBP</SubtypeId>
+			</Id>
+			<DisplayName>Radar Battery</DisplayName>
+			<Icon>Textures\Icons\Cubes\LXN_FAB500_pylon.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Iron"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MAWSMag"/>
+			<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+		</Blueprint>
+	
+	</Blueprints>
+
+	
+	<Weapons>
+		<Weapon>
+			<Id>
+				<TypeId>WeaponDefinition</TypeId>
+				<SubtypeId>LXN_MAWSWeapon</SubtypeId>
+			</Id>
+			<ProjectileAmmoData RateOfFire="1" ShootSoundName="RadarSilent" ShotsInBurst="200"/>
+			<ReleaseTimeAfterFire>154</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0</DeviateShotAngle>
+			<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+			<MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+			<NoAmmoSoundName>RadarSilent</NoAmmoSoundName>
+			<SecondarySoundName>RadarSilent</SecondarySoundName>
+
+			<AmmoMagazines>
+				<AmmoMagazine Subtype="LXN_MAWSMag"/>
+			</AmmoMagazines>
+			<ReloadTime>0</ReloadTime>
+            
+		</Weapon>
+	</Weapons>
+
+</Definitions>

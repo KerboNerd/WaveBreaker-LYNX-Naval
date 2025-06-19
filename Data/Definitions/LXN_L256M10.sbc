@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Weapons>
+		<Weapon>
+			<Id>
+				<TypeId>WeaponDefinition</TypeId>
+				<SubtypeId>LXN_L256M10Mount</SubtypeId>
+			</Id>
+			<ProjectileAmmoData RateOfFire="1" ShootSoundName="WepShipGatlingShot" ShotsInBurst="1" />
+			<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0</DeviateShotAngle>
+			<MuzzleFlashLifeSpan>0</MuzzleFlashLifeSpan>
+			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>
+			<AmmoMagazines>
+				<AmmoMagazine Subtype="Energy" />
+			</AmmoMagazines>
+			<ReloadTime>0</ReloadTime>
+		</Weapon>
+	</Weapons>
+
+	<CategoryClasses>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+			<Name>ShipWeapons</Name>
+			<SearchBlocks>false</SearchBlocks>
+			<IsShipCategory>true</IsShipCategory>
+			<IsBlockCategory>false</IsBlockCategory>
+			<IsToolCategory>true</IsToolCategory>
+			<ItemIds>
+				<string>LXN_L256M10Mount</string>
+			</ItemIds>
+		</Category>
+	</CategoryClasses>
+</Definitions>

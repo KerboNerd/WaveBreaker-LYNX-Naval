@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_S400_tube</SubtypeId>
+			</Id>
+			<DisplayName>S-400 "Triumf" Missile System</DisplayName>
+			<Description>The S-400 missile system is a modern air defense system developed by Russia's Almaz Central Design Bureau. It is capable of destroying all types of aerodynamic targets and ballistic missiles with a broad launch range. 
+				Requires a Radar to designate targets.
+				20,000m max range, 500m minimum range.
+			</Description>
+			<Icon>Textures\Icons\LXN_S400_tube.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="15"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_S400_tube.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_S400MagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_S400_tube_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_S400_tube_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_S400_tube_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_S400_tube</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_S400" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="15.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="15.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="15.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="15.00"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

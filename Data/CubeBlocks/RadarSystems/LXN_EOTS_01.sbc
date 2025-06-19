@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_EOTS_01</SubtypeId>
+			</Id>
+			<DisplayName>101KS Atoll Eletro-Optical Pod</DisplayName>
+			<Description>The 101KS Atoll is an electro-optical system designed to provide jets with advanced targeting capabilities. It includes IRST (Infrared Search and Track), laser rangefinding, and targeting functionalities.
+				Range: 10 km
+				Power usage : 200kW
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\LXN_EOTS_01.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<IsStandAlone>false</IsStandAlone>
+			<HasPhysics>false</HasPhysics>
+			<UseModelIntersection>true</UseModelIntersection>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_EOTS_01.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="Detector" Count="1" />
+				<Component Subtype="RadioCommunication" Count="1" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>LXN_EOTS_01</BlockPairName>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MaxRangeMeters>20000</MaxRangeMeters>
+			<AiEnabled>false</AiEnabled>
+			<IdlePower>.10</IdlePower>
+			<UsePower>20</UsePower>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>100</PCU>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_EOTS_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_EOTS_01_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_EOTS_01_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

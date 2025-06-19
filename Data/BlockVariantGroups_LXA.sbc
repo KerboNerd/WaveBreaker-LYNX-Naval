@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlockVariantGroups>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXN_JetFuelTank_Group"/>
+			<Icon>Textures\Icons\LXN_JetFuelTank_1x1.dds</Icon>
+			<DisplayName>Jet-Fuel Tanks</DisplayName>
+			<Description>Tanks to put the stuff fueling jet engines in.</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_1x1"/>
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_1x2"/>
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_1x4"/>
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_2x2"/>
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_2x3"/>
+				<Block Type="MyObjectBuilder_OxygenTank" Subtype="LXN_JetFuelTank_2x5"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXN_SmallConveyor_Group"/>
+			<Icon>Textures\Icons\LXN_SmallConveyor_Straight.dds</Icon>
+			<DisplayName>Small Conveyors</DisplayName>
+			<Description>Convey the conveyable. Is that even a word? Who knows.</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_Straight"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_Corner"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_Junction"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_JunctionT"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_JunctionX"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_CornerCurved"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_Straightx3"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXN_SmallConveyor_Straightx5"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXN_AerialRefueling_Group"/>
+			<Icon>Textures\Icons\LXA_RefuelingProbe_01.dds</Icon>
+			<DisplayName>Aerial Refueling</DisplayName>
+			<Description>Aerial refueling, also known as in-flight refueling or air-to-air refueling, is a complex process that allows one aircraft (the tanker) to transfer fuel to another aircraft (the receiver) while both are flying.</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXA_RefuelingProbe_01"/>
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="LXA_RefuelingProbe_02"/>
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXA_RefuelingProbe_03"/>
+				<Block Type="MyObjectBuilder_LandingGearDefinition" Subtype="LXA_RefuelingProbe_04"/>
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXA_RefuelingProbe_05"/>
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXA_RefuelingProbe_06"/>
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXA_RefuelingProbe_07"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXN_AerialRefuelingBoom_Group"/>
+			<Icon>Textures\Icons\LXN_RefuelingBoom_01_connector.dds</Icon>
+			<DisplayName>Aerial Refueling Boom</DisplayName>
+			<Description>Aerial refueling, also known as in-flight refueling or air-to-air refueling, is a complex process that allows one aircraft (the tanker) to transfer fuel to another aircraft (the receiver) while both are flying.</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_ExtendedPistonBaseDefinition" Subtype="LXN_RefuelingBoom_01"/>
+				<Block Type="MyObjectBuilder_PistonTop" Subtype="LXN_RefuelingBoom_01_end"/>
+				<Block Type="MyObjectBuilder_ShipConnectorDefinition" Subtype="LXN_RefuelingBoom_01_connector"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_JetCamera_Group"/>
+			<Icon>Textures\Icons\LXN_JetCamera_02.dds</Icon>
+			<DisplayName>Flush Jet Camera</DisplayName>
+			<Description>Camera innit</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_01"/>
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_02"/>
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_03"/>
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_04"/>
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_05"/>
+				<Block Type="MyObjectBuilder_CameraBlockDefinition" Subtype="LXN_JetCamera_06"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_57intake_Group"/>
+			<Icon>Textures\Icons\LXN_57intake_01.dds</Icon>
+			<DisplayName>57 Intake Mantlets</DisplayName>
+			<Description>mantlets innit</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_57intake_01"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_57intake_01inverse"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_57intake_02"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_57intake_03"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_BlockMantlets_Group"/>
+			<Icon>Textures\Icons\LXN_SmallBlockMantlet_01.dds</Icon>
+			<DisplayName>L.Y.N.X Block Mantlets</DisplayName>
+			<Description>Block Mantlets</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_01"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_02"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_03"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_04"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_05"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_06"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_07"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SmallBlockMantlet_08"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_27intake_Group"/>
+			<Icon>Textures\Icons\LXN_27intake_01.dds</Icon>
+			<DisplayName>L.Y.N.X SU-27 Intake Mantlets</DisplayName>
+			<Description>Jet Mantlets</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_27intake_01"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_27intake_02"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_27intake_03"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_27intake_04"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_CarrierRamp_Group"/>
+			<Icon>Textures\Icons\LXN_CarrierRamp_01.dds</Icon>
+			<DisplayName>L.Y.N.X Russian Carrier Ramp</DisplayName>
+			<Description>yeet a jet</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_CarrierRamp_01"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_CarrierRamp_02"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_CarrierRamp_03"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_SGWindows1_Group"/>
+			<Icon>Textures\Icons\SGWindows\Cubes\LXN_SGWindow_1_1.dds</Icon>
+			<DisplayName>L.Y.N.X SG Windows 1</DisplayName>
+			<Description>out da window</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_1"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_2"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_3"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_4"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_5"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_5invert"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_1_6"/>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_2_1"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_2_2"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_2_3"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_2_4"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindow_2_5"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_SGWindows2_Group"/>
+			<Icon>Textures\Icons\SGWindows\Cubes\LXN_SGWindowCAP_Block6.dds</Icon>
+			<DisplayName>L.Y.N.X SG Windows 2</DisplayName>
+			<Description>out da window</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block1"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block2"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block3"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block4"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block5"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Block6"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_SGWindows3_Group"/>
+			<Icon>Textures\Icons\SGWindows\Cubes\LXN_SGWindowCAP_Slope6.dds</Icon>
+			<DisplayName>L.Y.N.X SG Windows 3</DisplayName>
+			<Description>out da window</Description>
+			<Blocks>
+
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope1"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope2"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope3"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope4"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope5"/>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LXN_SGWindowCAP_Slope6"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_L256M10_Group"/>
+			<Icon>Textures\Icons\LXN_L256M10_pylon.dds</Icon>
+			<DisplayName>L256M10 ECM Pod</DisplayName>
+			<Description>ee cee emm</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_L256M10_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_L256M10offset_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_L256M10offset2_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_L256M10smalloffset_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_L256M10smalloffsetmirror_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_R73M_Group"/>
+			<Icon>Textures\Icons\LXN_R73M_pylon.dds</Icon>
+			<DisplayName>R-73M SRAAM</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_R73M_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73Msmalloffset_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73Msmalloffsetmirror_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_IRIST_Group"/>
+			<Icon>Textures\Icons\LXN_IRIST_pylon.dds</Icon>
+			<DisplayName>IRIS-T SRAAM</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_IRIST_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_IRISTsmalloffset_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_IRISTsmalloffsetmirror_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+
+  </BlockVariantGroups>
+</Definitions>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_L256M10_pylon</SubtypeId>
+			</Id>
+			<DisplayName>L-265M10 Khibiny (ECM) System</DisplayName>
+			<Description>The Khibiny is a sophisticated ECM pod designed to disrupt enemy radar and communications, providing protection for the aircraft carrying it.
+				300kW Passive Power Draw
+				1,000m max range
+			</Description>
+			<Icon>Textures\Icons\LXN_L256M10_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Countermeasures\LXN_L256M10_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />
+				<Component Subtype="Construction" Count="3" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="SteelPlate" Count="3" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Countermeasures\LXN_L256M10_pylon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Countermeasures\LXN_L256M10_pylon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Countermeasures\LXN_L256M10_pylon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_L256M10_pylon</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_L256M10Mount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>200</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

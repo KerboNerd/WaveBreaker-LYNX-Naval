@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_JetRadar_Zaslon_1</SubtypeId>
+			</Id>
+			<DisplayName>SBI-16 Zaslon Radar System [Encased]</DisplayName>
+			<Description>
+				The SBI-16 Zaslon, aka. "Flash Dance", is a state-of-the-art fire-control radar system, is renowned for its superior air-to-air and surface-to-air detection capabilities. It features a unique look down/shoot down capability, offering unparalleled situational awareness and threat assessment for military aircraft.
+				RANGE: 20km
+				POWER: 1MW
+			</Description>
+			<Icon>Textures\Icons\TargetingSystems\LXN_JetRadar_Zaslon_1.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TargetingSystems\LXN_JetRadar_Zaslon_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />
+				<Component Subtype="Detector" Count="5" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Girder" Count="2" />
+				<Component Subtype="Computer" Count="5" />q
+				<Component Subtype="SteelPlate" Count="2"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\TargetingSystems\LXN_SniperPod_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\TargetingSystems\LXN_SniperPod_01_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\TargetingSystems\LXN_SniperPod_01_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_JetRadar_Zaslon_1</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.1</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

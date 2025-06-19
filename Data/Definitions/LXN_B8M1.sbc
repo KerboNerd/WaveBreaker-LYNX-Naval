@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>S8KOMammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>2000</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>1000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Missile</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>12</MissileMass>
+                <MissileExplosionRadius>1</MissileExplosionRadius>
+                <MissileModelName>Models\Weapons\Rockets\LXN_s8kom_rocket.mwm</MissileModelName>
+                <MissileAcceleration>0</MissileAcceleration>
+                <MissileInitialSpeed>400</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileHealthPool>1500</MissileHealthPool>
+                <MissileTrailEffect>Smoke_Missile</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+        <!-- ADD MORE MISSILES -->
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>S8KOMmag</SubtypeId>
+            </Id>
+            <DisplayName>S-8KOM Rocket Ammo</DisplayName>
+            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
+            <Size>
+                <X>0.127</X> <!-- Diameter of S-8KOM rocket -->
+                <Y>0.8</Y> <!-- Length of S-8KOM rocket -->
+                <Z>0.127</Z> <!-- Diameter of S-8KOM rocket -->
+            </Size>
+            <Mass>20</Mass> <!-- Mass of S-8KOM rocket -->
+            <Volume>3.8</Volume> <!-- Approximate volume based on dimensions and shape -->
+            <Model>Models\Weapons\Rockets\LXN_s8kom_rocket.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="S8KOMammo" />
+            <MinimalPricePerUnit>1</MinimalPricePerUnit>
+            <MinimumOfferAmount>0</MinimumOfferAmount>
+            <MaximumOfferAmount>0</MaximumOfferAmount>
+            <MinimumOrderAmount>0</MinimumOrderAmount>
+            <MaximumOrderAmount>0</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>0</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>0</MaximumAcquisitionAmount>
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>S8KOMmagComp</SubtypeId>
+            </Id>
+            <DisplayName>S-8KOM Rocket [Comp]</DisplayName>
+            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
+            <Model>Models\Weapons\Rockets\LXN_s8kom_rocket.mwm</Model>
+            <Size>
+                <X>0.127</X> <!-- Diameter of S-8KOM rocket -->
+                <Y>0.8</Y> <!-- Length of S-8KOM rocket -->
+                <Z>0.127</Z> <!-- Diameter of S-8KOM rocket -->
+            </Size>
+            <Mass>20</Mass> <!-- Mass of S-8KOM rocket -->
+            <Volume>3.8</Volume> <!-- Approximate volume based on dimensions and shape -->
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>S8KOMbpComp</SubtypeId>
+            </Id>
+            <DisplayName>S-8KOM Rocket [Comp.]</DisplayName>
+            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
+            <Prerequisites>
+                <Item Amount="2.1" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="0.1" TypeId="Component" SubtypeId="Computer" />
+                <Item Amount="0.4" TypeId="Component" SubtypeId="Construction" />
+                <Item Amount="0.05" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="0.07" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <!-- Total mass: Iron(2.1*7) + Nickel(0.3*8.9) + Computer(0.1*0.2) + ConstructionComponent(0.4*8) + Silicon(0.05*2.33) + Magnesium(0.07*1.74) = 14.7 + 2.67 + 0.02 + 3.2 + 0.1165 + 0.1218 = 20.8303kg -->
+            <Result Amount="1" TypeId="Component" SubtypeId="S8KOMmagComp" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>S8KOMbp</SubtypeId>
+            </Id>
+            <DisplayName>S-8KOM Rocket</DisplayName>
+            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
+            <Prerequisites>
+                <Item Amount="2.1" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="0.1" TypeId="Component" SubtypeId="Computer" />
+                <Item Amount="0.4" TypeId="Component" SubtypeId="Construction" />
+                <Item Amount="0.05" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="0.07" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <!-- Total mass: Iron(2.1*7) + Nickel(0.3*8.9) + Computer(0.1*0.2) + ConstructionComponent(0.4*8) + Silicon(0.05*2.33) + Magnesium(0.07*1.74) = 14.7 + 2.67 + 0.02 + 3.2 + 0.1165 + 0.1218 = 20.8303kg -->
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="S8KOMmag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="S8KOMbpComp" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="S8KOMbp" />
+    </BlueprintClassEntries>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>B81Mpod</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="400" ShootSoundName="HydraRocketShot" FlightSoundName="MissileFlightSound" ShotsInBurst="0" />
+            <DeviateShotAngle>0.5</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="S8KOMmag" />
+            </AmmoMagazines>
+            <ReloadTime>2000</ReloadTime>
+        </Weapon>
+	</Weapons>
+    
+</Definitions>

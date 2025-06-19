@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_R37M_pylon</SubtypeId>
+			</Id>
+			<DisplayName>R-37M LRAAM</DisplayName>
+			<Description>The R-37M is a long-range air-to-air missile designed for engaging high-value targets, such as AWACS and refueling aircraft, at long distances. It's known for its extended range, large warhead, and the capability to engage targets at high altitudes.
+				RADAR: SBI-16 Zaslon
+				RANGE: 18km Max / 5km Min
+			</Description>
+			<Icon>Textures\Icons\LXN_R37M_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_R37M_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="LXN_R37MMagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_R37M_pylon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_R37M_pylon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_R37M_pylon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_R37M_pylon</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_R37MMount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>Wheel</TypeId>
+				<SubtypeId>LXN_LGearWheel_01bigger</SubtypeId>
+			</Id>
+			<DisplayName>Aircraft Landing Gear Wheel [Single-Double-Bigger]</DisplayName>
+			<Icon>Textures\Icons\LandingGears\LXN_LGearWheel_01bigger.dds</Icon>
+			<Description>A standard landing gear wheel for aircraft.</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\LandingGears\LXN_LGearWheel_01bigger.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<WheelPlacementCollider>
+				<ColliderDiameter>0.5</ColliderDiameter>
+				<ColliderHeight>0.5</ColliderHeight>
+				<ColliderOffset>0</ColliderOffset>
+			</WheelPlacementCollider>
+			<BlockPairName>LXN_LGearWheel_01bigger</BlockPairName>
+			<DeformationRatio>0.3</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<EdgeType>Light</EdgeType>
+			<Public>true</Public>
+			<BuildTimeSeconds>5</BuildTimeSeconds>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Medium</DestroyEffect>
+			<DestroySound>PoofExplosionCat2</DestroySound>
+			<PCU>25</PCU>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.50" StartY="0.50" EndX="1.50" EndY="1.50"/>
+				<MountPoint Side="Bottom" StartX="0.50" StartY="0.50" EndX="1.50" EndY="1.50"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

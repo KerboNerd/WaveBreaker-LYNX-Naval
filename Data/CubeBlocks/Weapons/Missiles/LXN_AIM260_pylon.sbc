@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_AIM260_pylon</SubtypeId>
+			</Id>
+			<DisplayName>AIM-260 JATM</DisplayName>
+			<Description>The AIM-260 JATM is an advanced air-to-air missile developed to outperform and replace the AIM-120 AMRAAM. It offers superior range, speed, and target engagement capabilities. Designed to counter sophisticated air threats and electronic warfare tactics, it ensures air dominance in highly contested environments.
+				Requires AESA Radar (WC) to designate targets.
+				20,000m max range, 5000m minimum range.
+			</Description>
+			<Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_AIM260_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="LXN_AIM260_Comp" Count="1" />
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Computer" Count="50" />
+				<Component Subtype="SteelPlate" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="LXN_AIM260_Comp" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_AIM260_pylon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_AIM260_pylon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_AIM260_pylon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_AIM260_pylon</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_AIM260Mount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.02" StartY="0.00" EndX="0.98" EndY="5.00" Default="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

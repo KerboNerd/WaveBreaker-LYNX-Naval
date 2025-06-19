@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_ZirconMissileLG_VLS</SubtypeId>
+			</Id>
+			<DisplayName>"Zircon" Hypersonic Missile VLS</DisplayName>
+			<Description>
+				The Zircon VLS is a cutting-edge vertical launching system engineered for deploying the 3M22 Zircon hypersonic cruise missile. Developed to engage high-value maritime and land targets with unparalleled speed, the system boasts capabilities that redefine modern naval warfare. With a speed exceeding Mach 8 and a range of up to 20 km, it ensures rapid and precise target engagement.
+				Integration with advanced targeting systems is required for optimal performance.
+				Hypersonic velocity allows for minimal reaction time for enemy defenses, making the Zircon a formidable threat against sophisticated air defense systems.
+				Requires a Radar to designate targets.
+				20,000m max range, 5,000m minimum range.
+			</Description>
+			<Icon>Textures\Icons\LXN_ZirconMissileLG_VLS.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="4" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Large\LXN_ZirconMissileLG_VLS.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_ZirconVLSMagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_ZirconMissileLG_VLS</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_ZirconVLS" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

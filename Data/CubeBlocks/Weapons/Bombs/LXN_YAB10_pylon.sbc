@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_YAB10_pylon</SubtypeId>
+			</Id>
+			<DisplayName>YAB-10 Atom Bomb</DisplayName>
+			<Description>The YAB (Yadernyy Aviatsionnaya Bomba) is a Soviet-made hydrogen bomb designed for devastating strikes.
+				This formidable weapon utilizes the immense energy of nuclear fusion, making it an unparalleled force on the battlefield.
+				Its design is an evolution of Soviet aviation bombs, advancing beyond the legacy of the FAB and KAB series with enhanced power and precision.
+				The YAB represents the pinnacle of destructive technology in modern warfare.
+				Yield: 10 Kt
+			</Description>
+			<Icon>Textures\Icons\Weapons\Bombs\LXN_YAB10_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Bombs\LXN_YAB10_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="LXN_YAB10MagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="LXN_YAB10MagComp" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Bombs\LXN_YAB10_pylon_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_YAB10_pylon</BlockPairName>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_YAB10Mount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

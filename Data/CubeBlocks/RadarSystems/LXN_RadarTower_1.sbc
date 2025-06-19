@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_RadarTower_1</SubtypeId>
+			</Id>
+			<DisplayName>AN/LXN-47/62 Radome Tower</DisplayName>
+			<Description>Designed to detect, track, and engage aircraft, cruise missiles, and ballistic missiles. It plays a crucial role in providing situational awareness and guiding missiles to threats.
+				Range: 20 km
+				Power usage : 10 MW
+			</Description>
+			<Icon>Textures\Icons\LXN_RadarTower_1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="9" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Large\LXN_RadarTower_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2500" />
+				<Component Subtype="Construction" Count="400" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="200" />
+				<Component Subtype="SmallTube" Count="800" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.05" EndX="5.00" EndY="1.94"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.05" EndX="5.00" EndY="1.94"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.05" EndX="5.00" EndY="1.94"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.05" EndX="5.00" EndY="1.94"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00" Default="true"/>
+			</MountPoints>
+			<BlockPairName>LXN_RadarTower_1</BlockPairName>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MaxRangeMeters>25000</MaxRangeMeters>
+			<AiEnabled>false</AiEnabled>
+			<IdlePower>.10</IdlePower>
+			<UsePower>120</UsePower>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>500</PCU>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Large\LXN_RadarTower_1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Large\LXN_RadarTower_1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Large\LXN_RadarTower_1_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

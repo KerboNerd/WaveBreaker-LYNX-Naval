@@ -1,0 +1,74 @@
+﻿
+namespace Scripts
+{
+    partial class Parts
+    {
+        internal Parts()
+        {
+            // naming convention: WeaponDefinition Name
+            //
+            // Enable your definitions using the follow syntax:
+            // PartDefinitions(Your1stDefinition, Your2ndDefinition, Your3rdDefinition);
+            
+            PartDefinitions(
+                LXN_R77,
+                LXN_R77_bay1,
+                LXN_R77_bay2,
+                LXN_RVVAEPD,
+                LXN_R37M,
+                LXN_R27ER,
+                LXN_R27ET,
+                LXN_R73M,
+                LXN_R73M_bay1, 
+                LXN_R73M_bay2,
+                LXN_R73M_bay3,
+                LXN_R73M_bay2mirror,
+                LXN_AGM84, 
+                LXN_AIM120,
+                LXN_AIM260, 
+                LXN_Meteor,
+                LXN_IRIST, 
+                LXN_Brimstone, 
+                LXN_BrimstoneCluster, 
+                LXN_FlareDispenser, 
+                LXN_FlareDispenser2,
+                LXN_MigFlareDispenser, 
+                LXN_S400, 
+                LXN_S400x4,
+                LXN_S400Ship,
+                LXN_S1M, 
+                LXN_MOAB,
+                LXN_KAB1500SE,
+                LXN_KAB1500SE_bay1,
+                LXN_KAB500KR, 
+                LXN_FAB500,
+                LXN_YAB10,
+                LXN_RadarTower_01,
+                LXN_ByelkaSideRadar_01,
+                LXN_EOTS_01,
+                LXN_L256M10_ECM,
+                LXN_L256M10offset_ECM,
+                LXN_SkyShadow_ECM,
+                LXN_IntegratedECM_System_ECM,
+                LXN_MoskitTube_01,
+                LXN_MoskitJet_01,
+                LXN_KH31AD,
+                LXN_KH31PK,
+                LXN_ZirconVLS,
+                LXN_OniksVLS,
+                LXN_Futlyar_01,
+                LXN_FutlyarShip_01,
+                LXN_FutlyarShip_02,
+                LXN_RBU6000_01,
+                LXN_MAWS,
+                LXN_SniperPod_01,
+                LXN_b8m1,
+                LXN_GravestoneRadar_01,
+                LXN_ZaslonRadar_01,
+                LXN_CIWS30_01,
+                LXN_3S14VLS_AA,
+                LXN_3S14VLS_AS
+            );
+        }
+    }
+} 

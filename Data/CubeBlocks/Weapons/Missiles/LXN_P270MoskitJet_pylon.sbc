@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_P270MoskitJet_pylon</SubtypeId>
+			</Id>
+			<DisplayName>P-270 "Moskit" Pylon</DisplayName>
+			<Description>
+				The P-270 "Moskit" Double Missile Tube is a state-of-the-art naval weapon system, equipped with two supersonic ramjet-powered Moskit cruise missiles. This formidable system is designed to strike surface vessels with unprecedented speed and accuracy, utilizing the Moskit’s Mach 3 capability at low altitudes. The double tube configuration allows for a rapid salvo, increasing the likelihood of overwhelming enemy defenses.
+				Requires a target designation system for precise attacks.
+				15km max range, adaptable for various operational scenarios and launch angles.
+				15,000m max range, 5,000m minimum range.
+			</Description>
+			<Icon>Textures\Icons\LXN_P270MoskitJet_missile1.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="12"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_P270MoskitJet_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_MoskitMagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_P270MoskitJet_pylon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_P270MoskitJet_pylon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_P270MoskitJet_pylon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_P270MoskitJet_pylon</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_MoskitJet" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="12.00" Default="true"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

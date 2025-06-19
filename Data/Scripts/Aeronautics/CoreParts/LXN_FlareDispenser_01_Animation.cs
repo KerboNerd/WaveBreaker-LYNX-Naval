@@ -1,0 +1,2852 @@
+﻿using System.Collections.Generic;
+using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition.AnimationDef;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.RelMove.MoveType;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.RelMove;
+namespace Scripts
+{ // Don't edit above this line
+    partial class Parts
+    {
+        private AnimationDef LXN_FlareDispenser_01_Animation => new AnimationDef
+        {
+
+
+           
+            AnimationSets = new[]
+            {
+				#region Muzzles Animations
+
+
+
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap1"),
+                    BarrelId = "muzzle_missile_1", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap2"),
+                    BarrelId = "muzzle_missile_2", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap3"),
+                    BarrelId = "muzzle_missile_3", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap4"),
+                    BarrelId = "muzzle_missile_4", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap5"),
+                    BarrelId = "muzzle_missile_5", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap6"),
+                    BarrelId = "muzzle_missile_6", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap7"),
+                    BarrelId = "muzzle_missile_7", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap8"),
+                    BarrelId = "muzzle_missile_8", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap9"),
+                    BarrelId = "muzzle_missile_9", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap10"),
+                    BarrelId = "muzzle_missile_10", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap11"),
+                    BarrelId = "muzzle_missile_11", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap12"),
+                    BarrelId = "muzzle_missile_12", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap13"),
+                    BarrelId = "muzzle_missile_13", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap14"),
+                    BarrelId = "muzzle_missile_14", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap15"),
+                    BarrelId = "muzzle_missile_15", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap16"),
+                    BarrelId = "muzzle_missile_16", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap17"),
+                    BarrelId = "muzzle_missile_17", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap18"),
+                    BarrelId = "muzzle_missile_18", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap19"),
+                    BarrelId = "muzzle_missile_19", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap20"),
+                    BarrelId = "muzzle_missile_20", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap21"),
+                    BarrelId = "muzzle_missile_21", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap22"),
+                    BarrelId = "muzzle_missile_22", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap23"),
+                    BarrelId = "muzzle_missile_23", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap24"),
+                    BarrelId = "muzzle_missile_24", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap25"),
+                    BarrelId = "muzzle_missile_25", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap26"),
+                    BarrelId = "muzzle_missile_26", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap27"),
+                    BarrelId = "muzzle_missile_27", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap28"),
+                    BarrelId = "muzzle_missile_28", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap29"),
+                    BarrelId = "muzzle_missile_29", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap30"),
+                    BarrelId = "muzzle_missile_30", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap31"),
+                    BarrelId = "muzzle_missile_31", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap32"),
+                    BarrelId = "muzzle_missile_32", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap33"),
+                    BarrelId = "muzzle_missile_33", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap34"),
+                    BarrelId = "muzzle_missile_34", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap35"),
+                    BarrelId = "muzzle_missile_35", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap36"),
+                    BarrelId = "muzzle_missile_36", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap37"),
+                    BarrelId = "muzzle_missile_37", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap38"),
+                    BarrelId = "muzzle_missile_38", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap39"),
+                    BarrelId = "muzzle_missile_39", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap40"),
+                    BarrelId = "muzzle_missile_40", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap41"),
+                    BarrelId = "muzzle_missile_41", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap42"),
+                    BarrelId = "muzzle_missile_42", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap43"),
+                    BarrelId = "muzzle_missile_43", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap44"),
+                    BarrelId = "muzzle_missile_44", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap45"),
+                    BarrelId = "muzzle_missile_45", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap46"),
+                    BarrelId = "muzzle_missile_46", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap47"),
+                    BarrelId = "muzzle_missile_47", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap48"),
+                    BarrelId = "muzzle_missile_48", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap49"),
+                    BarrelId = "muzzle_missile_49", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap50"),
+                    BarrelId = "muzzle_missile_50", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap51"),
+                    BarrelId = "muzzle_missile_51", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap52"),
+                    BarrelId = "muzzle_missile_52", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap53"),
+                    BarrelId = "muzzle_missile_53", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap54"),
+                    BarrelId = "muzzle_missile_54", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap55"),
+                    BarrelId = "muzzle_missile_55", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap56"),
+                    BarrelId = "muzzle_missile_56", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap57"),
+                    BarrelId = "muzzle_missile_57", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap58"),
+                    BarrelId = "muzzle_missile_58", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap59"),
+                    BarrelId = "muzzle_missile_59", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("cap60"),
+                    BarrelId = "muzzle_missile_60", //only used for firing, use "Any" for all muzzles
+                    StartupFireDelay = 0,
+                    AnimationDelays = Delays(FiringDelay : 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0, StopFiringDelay: 0, StopTrackingDelay:0, InitDelay:0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(),
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+                        // Reloading, Firing, Tracking, Overheated, TurnOn, TurnOff, BurstReload, NoMagsToLoad, PreFire, EmptyOnGameLoad, StopFiring, StopTracking, LockDelay, Init
+                        [Firing] =
+                            new[]
+                            {
+
+                               new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 900, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+                },
+
+               
+
+
+				#endregion
+
+
+            }
+        };
+    }
+}

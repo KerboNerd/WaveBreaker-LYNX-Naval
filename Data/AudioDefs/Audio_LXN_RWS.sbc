@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <Sounds>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_RadarTowerPing_01_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\RWS\LXN_RWS_RadarTowerPing_01_Muffled.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_RadarTowerPing_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="400" Distance="500" Sound="ArcLXN_AGM_Explosion_01_Far" />
+            </DistantSounds>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\RWS\LXN_RWS_RadarTowerPing_01_Normal.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_ECMPing_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>300</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1.5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\RWS\LXN_RWS_RadarTowerPing_01_Normal.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_DIRCM_Sound_01</SubtypeId>
+            </Id>
+            <Category>SHIP_JET</Category>
+            <MaxDistance>200</MaxDistance>
+            <PitchVariation>0</PitchVariation>
+            <RealisticFilter>realShipFilter</RealisticFilter>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Loopable>true</Loopable>
+            <Waves>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_01.wav</Loop>
+                </Wave>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_02.wav</Loop>
+                </Wave>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_03.wav</Loop>
+                </Wave>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_04.wav</Loop>
+                </Wave>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_05.wav</Loop>
+                </Wave>
+                <Wave Type="D3">
+                    <Loop>Audio\DIRCM\ARC_DIRCM_Sound_06.wav</Loop>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+
+		<Sound>
+			<Id>
+				<TypeId>AudioDefinition</TypeId>
+				<SubtypeId>LXN_Jester_Stall_01</SubtypeId>
+			</Id>
+			<Category>Sb</Category>
+			<MaxDistance>200</MaxDistance>
+			<Volume>1.00</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\RWS\wereslow3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\wereslow4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\wereslow5.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\wereslow18.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\wereslow19.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>AudioDefinition</TypeId>
+				<SubtypeId>LXN_Jester_Joker_01</SubtypeId>
+			</Id>
+			<Category>Sb</Category>
+			<MaxDistance>200</MaxDistance>
+			<Volume>1.00</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker1.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker2.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker3.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker4.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker5.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker6.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker7.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker8.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker9.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker10.wav</Start>
+				</Wave>
+				<Wave Type="D3">
+					<Start>Audio\RWS\joker11.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>AudioDefinition</TypeId>
+				<SubtypeId>LXN_SDSArmed_01</SubtypeId>
+			</Id>
+			<Category>Sb</Category>
+			<MaxDistance>200</MaxDistance>
+			<Volume>1.00</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\RWS\selfDestructSystem_Armed.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<Sound>
+			<Id>
+				<TypeId>AudioDefinition</TypeId>
+				<SubtypeId>LXN_SDSDisarmed_01</SubtypeId>
+			</Id>
+			<Category>Sb</Category>
+			<MaxDistance>200</MaxDistance>
+			<Volume>1.00</Volume>
+			<Loopable>false</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\RWS\selfDestructSystem_Disarmed.wav</Start>
+				</Wave>
+			</Waves>
+		</Sound>
+
+
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_EngineFlameout_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1.5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\RWS\LXN_RWS_RadarTowerPing_01_Normal.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+
+    </Sounds>
+
+
+
+    <!-- SOUND BLOCK CONFIGS ==================================== -->
+    <SoundCategories>
+
+        <SoundCategory>
+            <Id>
+                <TypeId>SoundCategoryDefinition</TypeId>
+                <SubtypeId>LXN_Jester_Stall_01</SubtypeId>
+            </Id>
+            <Sounds>
+                <SoundDesc Id="LXN_Jester_Stall_01" SoundName="LYNX Jester Stall Warning"/>
+            </Sounds>
+        </SoundCategory>
+        <SoundCategory>
+            <Id>
+                <TypeId>SoundCategoryDefinition</TypeId>
+                <SubtypeId>LXN_SDSArmed_01</SubtypeId>
+            </Id>
+            <Sounds>
+                <SoundDesc Id="LXN_SDSArmed_01" SoundName="LYNX SDS Armed"/>
+            </Sounds>
+        </SoundCategory>
+        <SoundCategory>
+            <Id>
+                <TypeId>SoundCategoryDefinition</TypeId>
+                <SubtypeId>LXN_SDSDisarmed_01</SubtypeId>
+            </Id>
+            <Sounds>
+                <SoundDesc Id="LXN_SDSDisarmed_01" SoundName="LYNX SDS Disarmed"/>
+            </Sounds>
+        </SoundCategory>
+
+
+    </SoundCategories>
+
+</Definitions>

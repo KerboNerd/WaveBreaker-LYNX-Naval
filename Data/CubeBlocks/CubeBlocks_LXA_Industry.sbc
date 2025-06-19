@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <!-- >>>>>> OIL STUFF <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>> OIL DERRICK 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>LXN_OilDerrick_01</SubtypeId>
+      </Id>
+      <DisplayName>Oil Derrick Structure</DisplayName>
+      <Icon>Textures\Icons\LXN_OilDerrick_01.dds</Icon>
+      <Description>An oil derrick is a tall, tower-like structure used in the extraction of
+        petroleum from underground reservoirs, serving as the primary support for drilling equipment
+        and providing stability during drilling operations.</Description>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="9" y="30" z="9" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Large\LXN_OilDerrick_01.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="1500" />
+        <Component Subtype="MetalGrid" Count="400" />
+        <Component Subtype="InteriorPlate" Count="2000" />
+        <Component Subtype="SteelPlate" Count="8000" />
+        <Component Subtype="Girder" Count="300" />
+        <Component Subtype="SmallTube" Count="600" />
+        <Component Subtype="LargeTube" Count="200" />
+        <Component Subtype="Motor" Count="50" />
+        <Component Subtype="Display" Count="20" />
+        <Component Subtype="BulletproofGlass" Count="100" />
+        <Component Subtype="Computer" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.00" StartY="0.05" EndX="9.00" EndY="0.95" Default="true" />
+        <MountPoint Side="Back" StartX="0.00" StartY="0.05" EndX="9.00" EndY="0.95" />
+        <MountPoint Side="Left" StartX="0.00" StartY="0.05" EndX="9.00" EndY="0.95" />
+        <MountPoint Side="Right" StartX="0.00" StartY="0.05" EndX="9.00" EndY="0.95" />
+        <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="9.00" EndY="9.00" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="9.00" EndY="9.00" />
+      </MountPoints>
+      <BuildProgressModels>
+
+      </BuildProgressModels>
+      <BlockPairName>LXN_OilDerrick_01</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+      <PowerInput>0.00025</PowerInput>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>25</PCU>
+    </Definition>
+
+    <!-- >>>>>> DISTILLATION TOWER 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+      <Id>
+        <TypeId>Assembler</TypeId>
+        <SubtypeId>LXN_DistillationTower_01</SubtypeId>
+      </Id>
+      <DisplayName>Distillation Tower</DisplayName>
+      <Icon>Textures\Icons\LXN_DistillationTower_01.dds</Icon>
+      <Description>A distillation tower is a vertical structure used to separate a mixture of
+        liquids, such as crude oil, into its individual components through a process of heating,
+        evaporation, and condensation, allowing for the collection of purified substances at
+        different levels within the tower. Power Consumption: 80MW</Description>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Large\LXN_DistillationTower_01.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="300" />
+        <Component Subtype="InteriorPlate" Count="500" />
+        <Component Subtype="SteelPlate" Count="2000" />
+        <Component Subtype="MetalGrid" Count="100" />
+        <Component Subtype="SmallTube" Count="150" />
+        <Component Subtype="LargeTube" Count="50" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Display" Count="10" />
+        <Component Subtype="Computer" Count="15" />
+        <Component Subtype="Girder" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" />
+        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" />
+        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" />
+        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.00" Default="true" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="5.00" />
+      </MountPoints>
+      <BlockPairName>LXN_DistillationTower_01</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>100</InventoryMaxVolume>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.01</StandbyPowerConsumption>
+      <OperationalPowerConsumption>80</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>GARG_OilDistillation</Class>
+      </BlueprintClasses>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockAssembler</PrimarySound>
+      <ActionSound>BlockAssemblerProcess</ActionSound>
+      <DestroyEffect>Explosion_Missile</DestroyEffect>
+      <DestroySound>WepSmallMissileExpl</DestroySound>
+      <PCU>40</PCU>
+      <IsAirTight>true</IsAirTight>
+      <TieredUpdateTimes>
+        <unsignedInt>60</unsignedInt>
+        <unsignedInt>120</unsignedInt>
+        <unsignedInt>240</unsignedInt>
+      </TieredUpdateTimes>
+    </Definition>
+
+
+    <!-- >>>>>> HYDROTREATMENT PLANT 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+      <Id>
+        <TypeId>Assembler</TypeId>
+        <SubtypeId>LXN_HydrotreatmentPlant_01</SubtypeId>
+      </Id>
+      <DisplayName>Distillation Tower</DisplayName>
+      <Icon>Textures\Icons\LXN_HydrotreatmentPlant_01.dds</Icon>
+      <Description>A hydrotreatment plant is a facility that uses high-pressure hydrogen and
+        catalysts to remove impurities, such as sulfur, nitrogen, and metals, from hydrocarbon
+        feedstocks like crude oil. The process improves the quality of the feedstocks, making them
+        suitable for further refining or for use as cleaner-burning fuels in various industries.
+        Power Consumption: 100MW</Description>
+      <CubeSize>Large</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="13" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Large\LXN_HydrotreatmentPlant_01.mwm</Model>
+      <Components>
+        <Component Subtype="Construction" Count="400" />
+        <Component Subtype="InteriorPlate" Count="800" />
+        <Component Subtype="SteelPlate" Count="3000" />
+        <Component Subtype="MetalGrid" Count="150" />
+        <Component Subtype="SmallTube" Count="200" />
+        <Component Subtype="LargeTube" Count="80" />
+        <Component Subtype="Motor" Count="30" />
+        <Component Subtype="Display" Count="15" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="Girder" Count="120" />
+        <Component Subtype="BulletproofGlass" Count="60" />
+      </Components>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.15" Default="true" />
+        <MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.15" />
+        <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.15" />
+        <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="5.00" EndY="1.15" />
+        <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00" />
+      </MountPoints>
+      <BlockPairName>LXN_HydrotreatmentPlant_01</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>100</InventoryMaxVolume>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.01</StandbyPowerConsumption>
+      <OperationalPowerConsumption>100</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>GARG_OilHydrotreatment</Class>
+      </BlueprintClasses>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockAssembler</PrimarySound>
+      <ActionSound>BlockAssemblerProcess</ActionSound>
+      <DestroyEffect>Explosion_Missile</DestroyEffect>
+      <DestroySound>WepSmallMissileExpl</DestroySound>
+      <PCU>40</PCU>
+      <IsAirTight>true</IsAirTight>
+      <TieredUpdateTimes>
+        <unsignedInt>60</unsignedInt>
+        <unsignedInt>120</unsignedInt>
+        <unsignedInt>240</unsignedInt>
+      </TieredUpdateTimes>
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>

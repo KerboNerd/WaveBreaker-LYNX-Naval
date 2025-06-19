@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_IRISTsmalloffsetmirror_pylon</SubtypeId>
+			</Id>
+			<DisplayName>IRIS-T SRAAM [OFFSET-MIRROR]</DisplayName>
+			<Description>The IRIS-T is a short-range air-to-air missile renowned for its agility. With infrared homing guidance and high acceleration, it is ideal for close-quarters combat where rapid target acquisition and high maneuverability are crucial.
+				Does NOT require a radar lock!
+				5,000m max range, 500m minimum range.
+			</Description>
+			<Icon>Textures\Icons\LXN_IRIST_pylon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="LXN_IRISTMagComp" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_IRISTsmalloffsetmirror_pylon</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_IRISTMount" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+			<MirroringBlock>LXN_IRISTsmalloffset_pylon</MirroringBlock>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

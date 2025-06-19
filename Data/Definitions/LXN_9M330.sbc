@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_9M330Ammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>86</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\Ammo\TT9M331L.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_9M330Mag</SubtypeId>
+            </Id>
+            <DisplayName>9M330 Missile</DisplayName>
+            <Icon>Textures\GUI\Icons\Ammo\TT9M331G.dds</Icon>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>  
+            </Size>
+            <Mass>86</Mass>
+            <Volume>47</Volume>
+            <Model>Models\Ammo\TT9M331L.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_9M330Ammo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>LXN_9M330MagComp</SubtypeId>
+            </Id>
+            <DisplayName>9M330 Missile [Comp.]</DisplayName>
+            <Icon>Textures\GUI\Icons\Ammo\TT9M331G.dds</Icon>
+            <Model>Models\Ammo\TT9M331L.mwm</Model>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>  
+            </Size>
+            <Mass>86</Mass>
+            <Volume>47</Volume>
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+	
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_9M330_CompBP</SubtypeId>
+            </Id>
+            <DisplayName>9M330 Missile [Comp.]</DisplayName>
+            <Icon>Textures\GUI\Icons\Ammo\TT9M331G.dds</Icon>
+            <Prerequisites>
+                <Item Amount="43" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="21.5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="2.32" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="10.8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="LXN_9M330MagComp" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_9M330_BP</SubtypeId>
+            </Id>
+            <DisplayName>9M330 Missile</DisplayName>
+            <Icon>Textures\GUI\Icons\Ammo\TT9M331G.dds</Icon>
+            <Prerequisites>
+                <Item Amount="43" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="21.5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="2.32" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="10.8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_9M330Mag" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_9M330_CompBP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_9M330_BP" />
+    </BlueprintClassEntries>
+    
+</Definitions>

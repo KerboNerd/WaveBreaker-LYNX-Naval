@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<Sounds>
+
+		<!-- ================= S-400 ======================================= -->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_S400_Travel</SubtypeId>
+			</Id>
+			<Category>SHIP</Category>
+			<MaxDistance>5000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<!-- <PreventSynchronization>15</PreventSynchronization> -->
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Missiles\S400\Arc_S400_Travel_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_S400_Explosion</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <!-- <DistantSounds>
+                <DistantSound DistanceCrossfade="10" Distance="200" Sound="WepShipGatlingShotDistant1" />
+            </DistantSounds> -->
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Explosion_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Explosion_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_S400_Fire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <!-- <DistantSounds>
+                <DistantSound DistanceCrossfade="10" Distance="200" Sound="WepShipGatlingShotDistant1" />
+            </DistantSounds> -->
+            <Volume>2</Volume>
+            <Waves>
+                <!-- <Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Fire_01.wav</Start>
+                </Wave> -->
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Fire_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_S400_Launch</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <!-- <DistantSounds>
+                <DistantSound DistanceCrossfade="10" Distance="200" Sound="WepShipGatlingShotDistant1" />
+            </DistantSounds> -->
+            <Volume>1.5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Launch_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Launch_02.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\S400\Arc_S400_Launch_03.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<!-- ================= RBU-6000 ======================================= -->
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_RBU6000_Fire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="50" Distance="300" Sound="LXN_RBU6000_FireMuffled" />
+            </DistantSounds>
+            <Volume>2</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire3.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire4.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire5.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire6.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire7.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire8.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_RBU6000_FireMuffled</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <!-- <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+            <DynamicMusicAmount>3</DynamicMusicAmount> -->
+            <Volume>2</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire1_muffled.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire2_muffled.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\RBU6000\Arc_RBU6000_Fire3_muffled.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<!-- ================= ZIRCON ======================================= -->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_ZirconScram_Travel</SubtypeId>
+			</Id>
+			<Category>SHIP</Category>
+			<MaxDistance>5000</MaxDistance>
+			<PitchVariation>100</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<Volume>1</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Missiles\Zircon\Arc_ZirconScram_Travel_01.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+		<!-- ================= VLS ======================================= -->
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_VLS_Ignition</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>2</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\VLS\Arc_VLSIgnition_01.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_VLS_Launch</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1.5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\VLS\Arc_VLSLaunch_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\VLS\Arc_VLSLaunch_02.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\VLS\Arc_VLSLaunch_03.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<!-- ================= TORPEDO ======================================= -->
+
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>LXN_Torpedo_Travel</SubtypeId>
+			</Id>
+			<Category>SHIP</Category>
+			<MaxDistance>1000</MaxDistance>
+			<PitchVariation>200</PitchVariation>
+			<RealisticFilter>realShipFilter</RealisticFilter>
+			<Volume>0.7</Volume>
+			<Loopable>true</Loopable>
+			<Waves>
+				<Wave Type="D3">
+					<Loop>Audio\Torpedoes\Futlyar\Arc_TorpedoTravel_01_muffled.wav</Loop>
+				</Wave>
+			</Waves>
+		</Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_Torpedo_Explosion</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Torpedoes\Futlyar\ArcLXN_Torpedo_Explosion_01_Muffled.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_Torpedo_Fire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\Torpedoes\Futlyar\Arc_TorpedoIgnition_01_muffled.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_SubTorpedo_Launch</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Torpedoes\Futlyar\Arc_TorpedoSubLaunch_01_muffled.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_ShipTorpedo_Launch</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Torpedoes\Futlyar\Arc_TorpedoRail_01_normal.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<!-- ================= TOR ======================================= -->
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_TOR_ColdLaunch</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>2</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_ColdLaunch_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_ColdLaunch_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_ColdLaunch_3.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_TOR_Turn</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>200</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1</Volume>
+            <Waves>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_Turn.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_TOR_Fire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <Volume>1.5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_Fire_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_Fire_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Missiles\TOR\TOR_Fire_3.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+	</Sounds>
+
+
+</Definitions>

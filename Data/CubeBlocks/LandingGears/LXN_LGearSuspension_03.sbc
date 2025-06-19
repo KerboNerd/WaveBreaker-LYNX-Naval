@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+			<Id>
+				<TypeId>MotorSuspension</TypeId>
+				<SubtypeId>LXN_LGearSuspension_03</SubtypeId>
+			</Id>
+			<DisplayName>Aircraft Landing Gear [Single-Double]</DisplayName>
+			<Icon>Textures\Icons\LandingGears\LXN_LGearSuspension_03.dds</Icon>
+			<Description>A standard landing gear suspension for aircraft.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\LandingGears\LXN_LGearSuspension_03.mwm</Model>
+			<UseModelIntersection>true</UseModelIntersection>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<DeformationRatio>0.1</DeformationRatio>
+			<UsesDeformation>false</UsesDeformation>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="LargeTube" Count="6" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LXN_LGearSuspension_03</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>5</BuildTimeSeconds>
+			<PrimarySound>BlockWheel3x3</PrimarySound>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0.15</RequiredPowerInput>
+			<RequiredIdlePowerInput>0.002</RequiredIdlePowerInput>
+			<MaxForceMagnitude>1E9</MaxForceMagnitude>
+			<DangerousTorqueThreshold>3.36E+07</DangerousTorqueThreshold>
+			<PropulsionForce>1200</PropulsionForce>
+			<RotorPart>LXN_LGearWheel_03</RotorPart>
+			<!-- The max angle (radians) that steer angle slider can go to. -->
+			<MaxSteer>1</MaxSteer>
+			<!-- Min/Max height sets the physical boundaries of the suspension as well as the height slider limits. -->
+			<MinHeight>-0.4</MinHeight>
+			<MaxHeight>0.2</MaxHeight>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<SafetyDetach>5</SafetyDetach>
+			<SafetyDetachMax>5</SafetyDetachMax>
+			<AxleFriction>20000</AxleFriction>
+			<SteeringSpeed>0.01</SteeringSpeed>
+			<AirShockMinSpeed>10</AirShockMinSpeed>
+			<AirShockMaxSpeed>25</AirShockMaxSpeed>
+			<AirShockActivationDelay>60</AirShockActivationDelay>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.03" StartY="0.03" EndX="0.97" EndY="0.97" Default="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
+			<Id>
+				<TypeId>OxygenFarm</TypeId>
+				<SubtypeId>LXN_HydrogenGenerator_01</SubtypeId>
+			</Id>
+			<DisplayName>Air Separation Unit (ASU)</DisplayName>
+			<Icon>Textures\Icons\Machines\LXN_HydrogenGenerator_01.dds</Icon>
+			<Description>The Air Separation Unit (ASU) is a critical component in the production of hydrogen. It works by separating atmospheric gases, primarily extracting oxygen and hydrogen, which are essential for various industrial processes. This unit is designed for large-scale operations, ensuring a steady and efficient supply of hydrogen. Its robust construction and advanced technology make it a reliable choice for any industrial setup requiring high volumes of hydrogen gas.
+				Output: 100 L/s
+			</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="9" />
+			<Center x="2" y="2" z="4" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Machines\LXN_HydrogenGenerator_01.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="650" />
+				<Component Subtype="LargeTube" Count="120" />
+				<Component Subtype="SmallTube" Count="325" />
+				<Component Subtype="Construction" Count="500" />
+				<Component Subtype="Computer" Count="100" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="9.00" EndY="5.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="9.00" EndY="5.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="5.00" EndY="9.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="9.00" Default="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Machines\LXN_HydrogenGenerator_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Machines\LXN_HydrogenGenerator_01_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Machines\LXN_HydrogenGenerator_01_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_HydrogenGenerator_01</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<PanelOrientation>
+				<X>0</X>
+				<Y>-1</Y>
+				<Z>0</Z>
+			</PanelOrientation>
+			<TwoSidedPanel>true</TwoSidedPanel>
+			<PanelOffset>0</PanelOffset>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
+			<ProducedGas>
+				<Id>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</Id>
+				<MaxOutputPerSecond>100.0</MaxOutputPerSecond>
+			</ProducedGas>
+			<OperationalPowerConsumption>1</OperationalPowerConsumption>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

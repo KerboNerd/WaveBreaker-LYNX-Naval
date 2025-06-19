@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>LXN_IndustrialJet_Intake</SubtypeId>
+			</Id>
+			<DisplayName>Solovyev NX-Industra Turbofan Intake</DisplayName>
+			<Description>Intake unit designed for the Solovyev NX-Industra Turbofan Generator. Optimizes air intake for
+				maximum combustion efficiency.
+				Set to Depressurize mode when used with Turbo-Fan Thrusters for optimal performance.
+			Max Intake Capacity: 2,500L/s</Description>
+			<Icon>Textures\Icons\Jet Engines\LXN_IndustrialJet_Intake.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Propulsion\Jets\LXN_IndustrialJet_Intake.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="80" />
+				<Component Subtype="Construction" Count="50" />
+				<Component Subtype="Motor" Count="32" />
+				<Component Subtype="Computer" Count="50" />
+				<Component Subtype="InteriorPlate" Count="20" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>LXN_IndustrialJet_Intake</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ResourceSourceGroup>Battery</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<OperationalPowerConsumption>0.75</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.75</StandbyPowerConsumption>
+			<VentilationCapacityPerSecond>2500.5</VentilationCapacityPerSecond>
+			<RotationSpeed>50</RotationSpeed>
+			<SpinUpSpeed>2</SpinUpSpeed>
+			<SpinDownSpeed>1</SpinDownSpeed>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<PressurizeSound>BlockAirVentExhale</PressurizeSound>
+			<DepressurizeSound>BlockAirVentDepressurize</DepressurizeSound>
+			<IdleSound>BlockAirVentIdle</IdleSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<MirroringZ>Y</MirroringZ>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Propulsion\Jets\LXN_IndustrialJet_Intake_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Propulsion\Jets\LXN_IndustrialJet_Intake_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Propulsion\Jets\LXN_IndustrialJet_Intake_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

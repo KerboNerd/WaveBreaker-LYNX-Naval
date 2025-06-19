@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_S400_4x_tube</SubtypeId>
+			</Id>
+			<DisplayName>S-400 "Triumf" Missile System 4-Mount</DisplayName>
+			<Description>The S-400 missile system is a modern air defense system developed by Russia's Almaz Central Design Bureau. It is capable of destroying all types of aerodynamic targets and ballistic missiles with a broad launch range.
+				Requires a Radar to designate targets.
+				20,000m max range, 500m minimum range.
+			</Description>
+			<Icon>Textures\Icons\Weapons\Missiles\LXN_S400_4x_tube.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="7" y="4" z="15"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Missiles\LXN_S400_4x_tube.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="800" />
+				<Component Subtype="Construction" Count="400" />
+				<Component Subtype="SmallTube" Count="100" />
+				<Component Subtype="LargeTube" Count="40" />
+				<Component Subtype="MetalGrid" Count="200" />
+				<Component Subtype="Computer" Count="50" />
+				<Component Subtype="LXN_S400MagComp" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_S400_4x_tube_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_S400_4x_tube_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_S400_4x_tube_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_S400_4x_tube</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_S400_x4" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="2.50" StartY="0.00" EndX="4.50" EndY="15.00" Default="true"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

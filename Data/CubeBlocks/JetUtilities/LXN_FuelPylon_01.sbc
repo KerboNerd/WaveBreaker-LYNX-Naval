@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>LXN_FuelPylon_01</SubtypeId>
+			</Id>
+			<DisplayName>Stealth Fuel Drop Tank</DisplayName>
+			<Description>Hydrogen Tank - Holds 225,000L of Hydrogen</Description>
+			<Icon>Textures\Icons\LXN_FuelPylon_01.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="11"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_FuelPylon_01.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="4" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="SmallTube" Count="4" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="InteriorPlate" Count="2" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>LXN_FuelPylon_01</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="2.50" EndX="1.00" EndY="8.50" Default="true"/>
+			</MountPoints>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<OperationalPowerConsumption>0.0002</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.0000002</StandbyPowerConsumption>
+			<Capacity>225000</Capacity>
+			<InventoryMaxVolume>0.12</InventoryMaxVolume>
+			<InventorySize>
+				<X>2</X>
+				<Y>2</Y>
+				<Z>2</Z>
+			</InventorySize>
+			<StoredGasId>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Hydrogen</SubtypeId>
+			</StoredGasId>
+			<BlueprintClasses>
+				<Class>HydrogenBottles</Class>
+			</BlueprintClasses>
+			<BuildTimeSeconds>12</BuildTimeSeconds>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepLrgWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<LeakPercent>0.025</LeakPercent>
+			<GasExplosionMaxRadius>3</GasExplosionMaxRadius>
+			<GasExplosionNeededVolumeToReachMaxRadius>150000</GasExplosionNeededVolumeToReachMaxRadius>
+			<GasExplosionDamageMultiplier>0.00025</GasExplosionDamageMultiplier>
+			<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+			<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>300</unsignedInt>
+				<unsignedInt>600</unsignedInt>
+			</TieredUpdateTimes>
+			<UseModelIntersection>true</UseModelIntersection>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_FuelPylon_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_FuelPylon_01_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_FuelPylon_01_BS3.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>LXN_D30F6_Intake</SubtypeId>
+			</Id>
+			<DisplayName>Solovyev D30F6 Turbofan Intake</DisplayName>
+			<Description>Intake unit designed for the Solovyev D30F6 Turbofan Generator. Facilitates oxygen intake for
+				efficient combustion.
+				Configure to Depressurize mode when paired with Turbo-Fan Thrusters.
+			Max Intake Capacity: 1,200L/s</Description>
+			<Icon>Textures\Icons\Jet Engines\LXN_D30F6_Intake.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Propulsion\Jets\LXN_D30F6_Intake.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="50" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="InteriorPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BlockPairName>LXN_D30F6_Intake</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ResourceSourceGroup>Battery</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<OperationalPowerConsumption>0.75</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.75</StandbyPowerConsumption>
+			<VentilationCapacityPerSecond>1200.5</VentilationCapacityPerSecond>
+			<RotationSpeed>50</RotationSpeed>
+			<SpinUpSpeed>2</SpinUpSpeed>
+			<SpinDownSpeed>1</SpinDownSpeed>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<PressurizeSound>BlockAirVentExhale</PressurizeSound>
+			<DepressurizeSound>BlockAirVentDepressurize</DepressurizeSound>
+			<IdleSound>BlockAirVentIdle</IdleSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<MirroringZ>Y</MirroringZ>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Propulsion\Jets\LXN_D30F6_Intake_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Propulsion\Jets\LXN_D30F6_Intake_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Propulsion\Jets\LXN_D30F6_Intake_BS3.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

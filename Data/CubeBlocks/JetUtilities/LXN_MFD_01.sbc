@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+			<Id>
+				<TypeId>MyProgrammableBlock</TypeId>
+				<SubtypeId>LXN_MFD_01</SubtypeId>
+			</Id>
+			<DisplayName>LXNMFD-01 Programmable MFD</DisplayName>
+			<Description>Shows you things. Also looks cool.</Description>
+			<Icon>Textures\Icons\LXN_MFD_01.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Small\LXN_MFD_01.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="Display" Count="3" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BuildProgressModels>
+			</BuildProgressModels>
+			<BlockPairName>LXN_MFD_01</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<ScreenAreas>
+				<ScreenArea Name="CockpitScreen_01" DisplayName="Left Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_02" DisplayName="Center Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+				<ScreenArea Name="CockpitScreen_03" DisplayName="Right Screen" TextureResolution="512" ScreenWidth="1" ScreenHeight="1" />
+			</ScreenAreas>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>100</PCU>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

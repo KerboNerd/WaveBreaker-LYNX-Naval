@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+			<Id>
+				<TypeId>HydrogenEngine</TypeId>
+				<SubtypeId>LXN_IndustrialJet_Generator</SubtypeId>
+			</Id>
+			<DisplayName>Solovyev NX-Industra Turbofan Generator</DisplayName>
+			<Description>The Solovyev NX-Industra Turbofan Generator is crafted for industrial-grade applications, offering next-generation technology with unmatched power and efficiency in energy production.
+				Max Power: 5.2MW
+			Max Input: 2,500L/s</Description>
+			<Icon>Textures\Icons\Jet Engines\LXN_IndustrialJet_Generator.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="9"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Propulsion\Jets\LXN_IndustrialJet_Generator.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="25" />
+				<Component Subtype="Construction" Count="100" />
+				<Component Subtype="LargeTube" Count="12" />
+				<Component Subtype="Computer" Count="100" />
+				<Component Subtype="SmallTube" Count="50" />
+				<Component Subtype="PowerCell" Count="20" />
+				<Component Subtype="Motor" Count="82" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="InteriorPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="PowerCell" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Propulsion\Jets\LXN_IndustrialJet_Generator_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Propulsion\Jets\LXN_IndustrialJet_Generator_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Propulsion\Jets\LXN_IndustrialJet_Generator_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_IndustrialJet_Generator</BlockPairName>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>AirVent</TypeId>
+					<SubtypeId>LXN_IndustrialJet_Intake</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>LXN_IndustrialJet_Thruster</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<DamageEffectName>AryxASP_DamageFire</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<ResourceSinkGroup>Generators</ResourceSinkGroup>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<MaxPowerOutput>5.2</MaxPowerOutput>
+			<FuelCapacity>45000</FuelCapacity>
+			<IsAirTight>false</IsAirTight>
+			<!--PrimarySound>AryxASP_EngineSound</PrimarySound-->
+			<AnimationSpeed>100</AnimationSpeed>
+			<AnimationSpinUpSpeed>5</AnimationSpinUpSpeed>
+			<AnimationSpinDownSpeed>10</AnimationSpinDownSpeed>
+			<PCU>25</PCU>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>GasProperties</TypeId>
+						<SubtypeId>Hydrogen</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<FuelProductionToCapacityMultiplier>0.00665</FuelProductionToCapacityMultiplier>
+			<TargetingGroups>
+				<string>PowerSystems</string>
+			</TargetingGroups>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="9.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="9.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="9.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="9.00"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

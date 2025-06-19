@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_KALIBRAmmo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>86</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\Weapons\Missiles\LXN_OniksMissileLG_stage1.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_KALIBRMag</SubtypeId>
+            </Id>
+            <DisplayName>3M-54 "KALIBR" Anti-Ship Cruise Missile</DisplayName>
+            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_KALIBR_STAGE3.dds</Icon>
+            <Size>
+                <X>8.22</X>
+                <Y>0.533</Y>
+                <Z>0.533</Z>
+            </Size>
+            <Mass>2300</Mass>
+            <Volume>1915</Volume>
+            <Model>Models\Weapons\Missiles\LXN_OniksMissileLG_stage1.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_KALIBRAmmo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>LXN_KALIBRMagComp</SubtypeId>
+            </Id>
+            <DisplayName>3M-54 "KALIBR" Anti-Ship Cruise Missile [Comp]</DisplayName>
+            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_KALIBR_STAGE3.dds</Icon>
+            <Model>Models\Weapons\Missiles\LXN_OniksMissileLG_stage1.mwm</Model>
+            <Size>
+                <X>8.22</X>
+                <Y>0.533</Y>
+                <Z>0.533</Z>
+            </Size>
+            <Mass>2300</Mass>
+            <Volume>1915</Volume>
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_KALIBR_CompBP</SubtypeId>
+            </Id>
+            <DisplayName>3M-54 "KALIBR" Anti-Ship Cruise Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_KALIBR_STAGE3.dds</Icon>
+            <Prerequisites>
+                <Item Amount="250" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="60" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="120" TypeId="Ingot" SubtypeId="Platinum" />
+                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_GuidanceSystem" />   -->
+                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_Warhead" />   -->
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="LXN_KALIBRMagComp" />
+            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_KALIBR_BP</SubtypeId>
+            </Id>
+            <DisplayName>3M-54 "KALIBR" Anti-Ship Cruise Missile</DisplayName>
+            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_KALIBR_STAGE3.dds</Icon>
+            <Prerequisites>
+                <Item Amount="250" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="60" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="120" TypeId="Ingot" SubtypeId="Platinum" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_KALIBRMag" />
+            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KALIBR_CompBP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KALIBR_BP" />
+    </BlueprintClassEntries>
+
+</Definitions>

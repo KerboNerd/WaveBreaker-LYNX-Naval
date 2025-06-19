@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <BlueprintClasses>
+
+        <!-- >>>>>> OIL DISTILLATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>GARG_OilDistillation</SubtypeId>
+            </Id>
+            <DisplayName>Oil Distillation</DisplayName>
+            <Description>
+                Distill the darn oil, filthy American!
+            </Description>
+            <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+            <HighlightIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</HighlightIcon>
+            <FocusIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</FocusIcon>
+            <InputConstraintIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</InputConstraintIcon>
+        </Class>
+        <!-- >>>>>> OIL DISTILLATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>GARG_OilHydrotreatment</SubtypeId>
+            </Id>
+            <DisplayName>Oil Hydrotreatment</DisplayName>
+            <Description>
+                Hydrotreatment is a process that uses hydrogen and catalysts under high pressure to
+                remove impurities from hydrocarbon feedstocks, improving their quality for further
+                refining or cleaner-burning fuel applications.
+            </Description>
+            <Icon>Textures\Icons\Components\LXN_Component_Drum_01.dds</Icon>
+            <HighlightIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</HighlightIcon>
+            <FocusIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</FocusIcon>
+            <InputConstraintIcon>Textures\Icons\Components\LXN_Component_Drum_01.dds</InputConstraintIcon>
+        </Class>
+
+    </BlueprintClasses>
+
+
+    <BlueprintClassEntries>
+
+        <Entry Class="SimpleComponents" BlueprintSubtypeId="LXN_MetalDrum_Recipe" />
+
+        <Entry Class="GARG_OilDistillation" BlueprintSubtypeId="LXN_UntreatedNaphtha_Recipe" />
+        <Entry Class="GARG_OilDistillation" BlueprintSubtypeId="LXN_UntreatedKerosene_Recipe" />
+        <Entry Class="GARG_OilDistillation" BlueprintSubtypeId="LXN_UntreatedDiesel_Recipe" />
+        <Entry Class="GARG_OilDistillation" BlueprintSubtypeId="LXN_UntreatedGasOil_Recipe" />
+
+        <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_Naphtha_Recipe" />
+        <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_Kerosene_Recipe" />
+        <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_Diesel_Recipe" />
+        <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_GasOil_Recipe" />
+
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AGM84_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AIM120_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_Brimstone_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_FAB500_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_IRIST_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KAB500KR_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KAB1500SE_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_Meteor_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_MOAB_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R27ER_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R37M_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R73M_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R77_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_RVVAEPD_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_S1M_BP" />
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_S400_BP" />
+
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_FlareCanister_Recipe" />
+
+        <Entry Class="Components" BlueprintSubtypeId="LXN_EnrichedUranium_01_Recipe" />
+        
+
+
+    </BlueprintClassEntries>
+
+</Definitions>

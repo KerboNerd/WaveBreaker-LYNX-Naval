@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_b8m1_pod</SubtypeId>
+			</Id>
+			<DisplayName>B-8M1 Rocket Pod</DisplayName>
+			<Description>The B-8M1 is a Russian unguided rocket pod, widely used for ground attack missions. 
+			It is capable of launching S-8 rockets, offering a versatile solution for engaging soft and armored targets. 
+			The pod is designed to be mounted on a variety of platforms, providing significant firepower to support combined arms operations.
+				Effective engagement range varies with rocket type used.
+			</Description>
+			<Icon>Textures\Icons\Weapons\Rockets\LXN_b8m1_pod.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Weapons\Rockets\LXN_b8m1_pod.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="S8KOMmagComp" Count="20" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00" Default="true"/>
+			</MountPoints>
+			<BlockPairName>LXN_b8m1_pod</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<Center x="0" y="0" z="1" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="B81Mpod" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.095</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Rockets\LXN_b8m1_pod_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Rockets\LXN_b8m1_pod_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Rockets\LXN_b8m1_pod_BS3.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
