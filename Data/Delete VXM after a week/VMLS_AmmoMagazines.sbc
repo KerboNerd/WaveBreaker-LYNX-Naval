@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <AmmoMagazines>    
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>VMLS_MagazineLarge</SubtypeId>
+            </Id>
+            <DisplayName>HE VXM-08 Missile</DisplayName>
+            <Icon>Textures\GUI\Icons\MLS_MissileAmmo.png</Icon>
+            <Size>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </Size>
+            <Mass>70</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Ammo\MLS_MissileAmmo.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="VMLS_Ammo" />
+        </AmmoMagazine>
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>SwarmVMLS_MagazineLarge</SubtypeId>
+            </Id>
+            <DisplayName>Decoy VXM-08 Missile</DisplayName>
+            <Icon>Textures\GUI\Icons\MLS_MissileAmmo.png</Icon>
+            <Size>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </Size>
+            <Mass>70</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Ammo\MLS_MissileAmmo.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="SwarmVMLS_Ammo" />
+        </AmmoMagazine>
+    </AmmoMagazines>
+</Definitions>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BlockVariantGroups>
+    <BlockVariantGroup>
+        <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TTMK15SUBGroup" />
+        <Icon>Textures\GUI\Icons\TTMK15Square.dds</Icon>
+        <DisplayName>DisplayName_BlockGroup_TTMK15SUBGroup</DisplayName>
+        <Description>TTMK15SUB</Description>
+        <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="TTMK15Square" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="TTMK15Sloped" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="TTMK15Sloped1x2" />
+        </Blocks>
+    </BlockVariantGroup>
+  </BlockVariantGroups>
+  <BlockPositions>
+   <BlockPosition>
+      <Name>TTMK15SUBGroup</Name>  // where this is the pairname of the block you want shown.
+      <Position>
+        <X>3</X>
+        <Y>3</Y>
+      </Position>
+    </BlockPosition>
+ </BlockPositions>
+</Definitions>

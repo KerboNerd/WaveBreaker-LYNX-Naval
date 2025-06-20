@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+ <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <AmmoMagazines>
+	<!-- Torpedo -->
+
+   <AmmoMagazine>
+     <Id>
+     <TypeId>AmmoMagazine</TypeId>
+     <SubtypeId>TTMK15Torpedo</SubtypeId>
+     </Id>
+     <DisplayName>Mark 15 torpedo</DisplayName>
+     <Icon>Textures\GUI\Icons\Ammo\TTMK15Torpedo.dds</Icon>
+     <Size>
+     <X>5.8</X>
+     <Y>0.53</Y>
+     <Z>0.53</Z>
+     </Size>
+     <Mass>3000</Mass>
+     <Volume>375</Volume>
+     <Model>Models\Ammo\TTMK15Torpedo.mwm</Model>
+     <PhysicalMaterial>Ammo</PhysicalMaterial>
+     <Capacity>1</Capacity>
+     <AmmoDefinitionId Subtype="Blank" />
+   </AmmoMagazine>
+
+   <AmmoMagazine>
+     <Id>
+     <TypeId>AmmoMagazine</TypeId>
+     <SubtypeId>TTMK13Torpedo</SubtypeId>
+     </Id>
+     <DisplayName>Mark 13 torpedo</DisplayName>
+     <Icon>Textures\GUI\Icons\Ammo\TTMK13Torpedo.dds</Icon>
+     <Size>
+     <X>5.8</X>
+     <Y>0.53</Y>
+     <Z>0.53</Z>
+     </Size>
+     <Mass>1676</Mass>
+     <Volume>375</Volume>
+     <Model>Models\Ammo\TTMK13Torpedo.mwm</Model>
+     <PhysicalMaterial>Ammo</PhysicalMaterial>
+     <Capacity>1</Capacity>
+     <AmmoDefinitionId Subtype="Blank" />
+   </AmmoMagazine>
+<!-- Torpedo -->
+   <AmmoMagazine>
+     <Id>
+     <TypeId>AmmoMagazine</TypeId>
+     <SubtypeId>TTMK6DepthCharge</SubtypeId>
+     </Id>
+     <DisplayName>Mark 6 Depth Charge</DisplayName>
+     <Icon>Textures\GUI\Icons\Ammo\TTMK6DepthCharge.dds</Icon>
+     <Size>
+     <X>5.8</X>
+     <Y>0.53</Y>
+     <Z>0.53</Z>
+     </Size>
+     <Mass>1676</Mass>
+     <Volume>375</Volume>
+     <Model>Models\Ammo\TTMK6DepthCharge.mwm</Model>
+     <PhysicalMaterial>Ammo</PhysicalMaterial>
+     <Capacity>1</Capacity>
+     <AmmoDefinitionId Subtype="Blank" />
+   </AmmoMagazine>
+
+   <AmmoMagazine>
+     <Id>
+     <TypeId>AmmoMagazine</TypeId>
+     <SubtypeId>TTMKVIDC</SubtypeId>
+     </Id>
+     <DisplayName>Mark XI DC</DisplayName>
+     <Icon>Textures\GUI\Icons\Ammo\TTMKVIIDCAIR.dds</Icon>
+     <Size>
+     <X>5.8</X>
+     <Y>0.53</Y>
+     <Z>0.53</Z>
+     </Size>
+     <Mass>1676</Mass>
+     <Volume>375</Volume>
+     <Model>Models\Ammo\TTMKVIIDCAIRMount.mwm</Model>
+     <PhysicalMaterial>Ammo</PhysicalMaterial>
+     <Capacity>1</Capacity>
+     <AmmoDefinitionId Subtype="Blank" />
+   </AmmoMagazine>
+  </AmmoMagazines>
+
+
+</Definitions>

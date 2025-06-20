@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+ <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <BlueprintClassEntries>
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK15Torpedo" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK13Torpedo" />
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK6DepthCharge" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMKVIDC" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK15Torpedo" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK13Torpedo" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK6DepthCharge" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMKVIDC" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TT40MM_Shell" />
+
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/TTMK37Director" />
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK15" />
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK15Triple" />
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK6ChargeRack" />
+
+  <Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/TTPYLONMK13" />
+  <Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/TTPYLONMKVIIDCAIR" />
+
+   </BlueprintClassEntries>
+</Definitions>

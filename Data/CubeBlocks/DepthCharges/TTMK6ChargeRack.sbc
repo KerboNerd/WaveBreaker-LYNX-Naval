@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMK6ChargeRack</SubtypeId>
+			</Id>
+			<DisplayName>Mark 6 Depth Charge Rack *Early WIP</DisplayName>
+			<Description>TBA</Description>
+			<Icon>Textures\GUI\Icons\TTMK6ChargeRack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMK6ChargeRack.mwm</Model>
+			<Components>
+					<Component Count="60" Subtype="SteelPlate"/>
+					<Component Count="40" Subtype="Construction"/>
+					<Component Count="20" Subtype="LargeTube" />
+					<Component Count="10" Subtype="MetalGrid" />
+					<Component Count="30" Subtype="Computer"/>
+					<Component Count="10" Subtype="Motor"/>
+					<Component Count="20" Subtype="Construction"/>
+					<Component Count="60" Subtype="SteelPlate"/>
+			</Components>
+						<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>TTMK6ChargeRack</BlockPairName>
+			<MirroringX>Z</MirroringX>
+			<MirroringZ>X</MirroringZ>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<RequiredPowerInput>0.00002</RequiredPowerInput>
+			<PCU>20</PCU>
+			            <TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

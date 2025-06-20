@@ -8,7 +8,6 @@
 			</Id>
 			<DisplayName>S-400 "Triumf" Naval Missile System</DisplayName>
 			<Description>The S-400 Naval variant is an advanced ship-launched air defense system designed by Russia's Almaz Central Design Bureau. It effectively neutralizes aerodynamic targets and ballistic threats across extensive ranges.
-				Requires ship-mounted Radar for target acquisition.
 				20,000m maximum operational range, 500m minimum engagement distance.
 			</Description>
 			<Icon>Textures\Icons\Weapons\Missiles\LXN_S400Ship.dds</Icon>
