@@ -217,7 +217,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_OniksLG_Primary, LXN_OniksLG_Secondary, LXN_OniksLG_Tertiary, LXN_OniksLG_Frags,
+                LXN_OniksLG_Primary, LXN_OniksLG_Secondary, LXN_OniksLG_Frags,
             },
             Animations = LXN_OniksVLS_Anim,
             //Upgrades = UpgradeModules,
