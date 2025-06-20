@@ -38,7 +38,7 @@ namespace Scripts {
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, Projectiles, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                 },
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
@@ -60,6 +60,19 @@ namespace Scripts {
                 ShootBlanks = false, // Do not generate projectiles when shooting
                 FocusOnly = false, // This weapon can only track focus targets.
                 EvictUniqueTargets = false, // if this is set it will evict any weapons set to UniqueTargetPerWeapon unless they to have this set
+                //Communications = new CommunicationDef
+                //{
+                //    StoreTargets = false, // Pushes its current target to the grid/construct so that other slaved weapons can fire on it.
+                //    StorageLimit = 0, // The limit at which this weapon will no longer export targets onto the channel.
+                //    StorageLocation = "AESA_Storage", // This location ID is used either by the master weapon (if ExportTargets = true) or the slave weapon (if its false).  This is shared across the conncted grids.
+                //    Mode = LocalNetwork, // NoComms, BroadCast, LocalNetwork, Repeater, Relay, Jamming
+                //    Security = Secure, // Public, Private, Secure
+                //    BroadCastChannel = "", // If defined you will broadcast to all other scanners on this channel.
+                //    BroadCastRange = 0, // This is the range that you will broadcast up too.  Note that this value applies to both the sender and receiver, both range requirements must be met. 
+                //    JammingStrength = 0, // If Mode is set to jamming, then this value will decrease the "range" of broadcasts.  Strength falls off at sqr of the distance.
+                //    RelayChannel = "", // If defined this channel will be used to relay any targets it seems on the broadcast channel.
+                //    RelayRange = 0, // This defines the range that any broadcasts will be relayed.  Note that this channel id is seen as the "broadcast" channel for all receivers, broadcast range requirements apply. 
+                //},
             },
             HardPoint = new HardPointDef
             {
@@ -87,7 +100,7 @@ namespace Scripts {
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = false, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
-                    LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected.
+                    LockOnFocus = true, // If enabled, weapon will only fire at targets that have been HUD selected.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
                     OverrideLeads = true, // Disable target leading on fixed weapons, or allow it for turrets.
                     DefaultLeadGroup = 0, // Default LeadGroup setting, range 0-5, 0 is disables lead group.  Only useful for fixed weapons or weapons set to OverrideLeads.

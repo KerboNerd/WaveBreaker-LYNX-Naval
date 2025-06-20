@@ -9,6 +9,7 @@
 			<DisplayName>R-37M LRAAM</DisplayName>
 			<Description>The R-37M is a long-range air-to-air missile designed for engaging high-value targets, such as AWACS and refueling aircraft, at long distances. It's known for its extended range, large warhead, and the capability to engage targets at high altitudes.
 				RADAR: SBI-16 Zaslon
+				TRACK FIELD: 60°
 				RANGE: 18km Max / 5km Min
 			</Description>
 			<Icon>Textures\Icons\LXN_R37M_pylon.dds</Icon>
