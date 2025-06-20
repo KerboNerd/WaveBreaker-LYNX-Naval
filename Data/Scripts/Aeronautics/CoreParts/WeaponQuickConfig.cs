@@ -9,9 +9,14 @@ public static class MissileConfig
     // Air to Ground Missiles 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float AGM84SLAMMER_Health = 180; // Health of the AGM-84 SLAMMER missile
+    public static int AGM84SLAMMER_BoosterTime = 3; // Seconds
+    public static float AGM84SLAMMER_BoosterAccel = 43; // Meters Per Second
+    public static float AGM84SLAMMER_SkimmingAltitude = 50f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachAltitude = 10f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachDistance = 300f; // Meters
     public static float AGM84SLAMMER_MaxRange = 15000f; // Max Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MinRange = 5000f; // Min Range of the AGM-84 SLAMMER missile
-    public static float AGM84SLAMMER_MaxSpeed = 236f * speedLimiterFactor; // Max Speed of the AGM-84 SLAMMER missile
+    public static float AGM84SLAMMER_MaxSpeed = 300f * speedLimiterFactor; // Max Speed of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_Inventory = 0.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float AGM84SLAMMER_Mass = 674.5f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,24 +168,37 @@ public static class MissileConfig
     public static float Zircon_Mass = 1800f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Oniks_Health = 60; // Health of the Oniks missile
+    public static int Oniks_BoosterTime = 8; // Seconds
+    public static float Oniks_BoosterAccel = 15; // Meters Per Second
+    public static float Oniks_SkimmingAltitude = 15f; // Meters
+    public static float Oniks_TerminalApproachAltitude = 7f; // Meters
+    public static float Oniks_TerminalApproachDistance = 300f; // Meters
     public static float Oniks_MaxRange = 15000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 5000f; // Min Range of the Oniks missile
-    public static float Oniks_MaxSpeed = 850f * speedLimiterFactor; // Max Speed of the Oniks missile
+    public static float Oniks_MaxSpeed = 800f * speedLimiterFactor; // Max Speed of the Oniks missile
     public static float Oniks_Inventory = 2.520f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Kalibr_Health = 40; // Health of the Kalibr missile
     public static int Kalibr_BoosterTime = 15; // Seconds
-    public static float Kalibr_BoosterAccel = 40; // Meters Per Second
+    public static float Kalibr_BoosterAccel = 45; // Meters Per Second
+    public static float Kalibr_SkimmingAltitude = 50f; // Meters
+    public static float Kalibr_TerminalApproachAltitude = 5f; // Meters
+    public static float Kalibr_TerminalApproachDistance = 300f; // Meters
     public static float Kalibr_MaxRange = 15000f; // Max Range of the Kalibr missile
     public static float Kalibr_MinRange = 3000f; // Min Range of the Kalibr missile
-    public static float Kalibr_MaxSpeed = 850f * speedLimiterFactor; // Max Speed of the Kalibr missile
+    public static float Kalibr_MaxSpeed = 1000f * speedLimiterFactor; // Max Speed of the Kalibr missile
     public static float Kalibr_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Moskit_Health = 80; // Health of the Moskit missile
+    public static int Moskit_BoosterTime = 4; // Seconds
+    public static float Moskit_BoosterAccel = 128; // Meters Per Second
+    public static float Moskit_SkimmingAltitude = 20f; // Meters
+    public static float Moskit_TerminalApproachAltitude = 7f; // Meters
+    public static float Moskit_TerminalApproachDistance = 300f; // Meters
     public static float Moskit_MaxRange = 15000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
-    public static float Moskit_MaxSpeed = 680f * speedLimiterFactor; // Max Speed of the Moskit missile
+    public static float Moskit_MaxSpeed = 1100f * speedLimiterFactor; // Max Speed of the Moskit missile
     public static float Moskit_Inventory = 4.370f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Moskit_Mass = 4000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
