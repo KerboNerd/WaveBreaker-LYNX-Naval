@@ -1505,7 +1505,7 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "LXN_ZirconScram_Travel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
                 HitSound = "ArcLXN_Missile_Explosion_01",
                 ShotSound = "LXN_S400_Fire",
                 ShieldHitSound = "ArcLXN_Missile_Explosion_01",

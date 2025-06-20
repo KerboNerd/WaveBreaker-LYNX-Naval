@@ -67,7 +67,14 @@ namespace Scripts
                 LXN_ZaslonRadar_01,
                 LXN_CIWS30_01,
                 LXN_3S14VLS_AA,
-                LXN_3S14VLS_AS
+                LXN_3S14VLS_AS,
+                TTMK15,
+                TTMK15Triple,
+                TTMK15Sub,
+                TTPYLONMK13,
+                TTMK37Director,
+                TTMK6ChargeRack,
+                TTMKXIDC
             );
         }
     }
