@@ -7,8 +7,8 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>L.Y.N.X Naval Division</DisplayName>
-      <Name>LXN</Name>
+      <DisplayName>WB Naval Division</DisplayName>
+      <Name>WBLYNX_Nav</Name>
       <ItemIds>
 
         <!-- <string>ConveyorSorter/LXA_AWACS_Dish_01</string> -->
@@ -79,6 +79,8 @@
         <string>CubeBlock/LXN_SmallBlockMantlet_06</string>
         <string>CubeBlock/LXN_SmallBlockMantlet_07</string>
         <string>CubeBlock/LXN_SmallBlockMantlet_08</string>
+		
+		<string>ConveyorSorter/TTMK6ChargeRack</string> 
         
       </ItemIds>
     </Category>
@@ -88,8 +90,8 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>L.Y.N.X Jet Systems</DisplayName>
-      <Name>LXN_JetSystems</Name>
+      <DisplayName>WB Jet Systems</DisplayName>
+      <Name>WBLYNX_Jet</Name>
       <ItemIds>
 
         <string>CubeBlock/LXN_JetSystems_01</string>
@@ -189,8 +191,8 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>L.Y.N.X Missile Systems</DisplayName>
-      <Name>LXN_MissileSystems</Name>
+      <DisplayName>WB Missile Systems</DisplayName>
+      <Name>WBLYNX_Mis</Name>
       <ItemIds>
 
         <string>ConveyorSorter/LXN_AIM120_01_pylon</string>
@@ -238,6 +240,10 @@
         <string>ConveyorSorter/LXN_FutlyarShipTorpedo_02</string>
         <string>ConveyorSorter/LXN_3S14_VLS_AS</string>
         <string>ConveyorSorter/LXN_3S14_VLS_AA</string>
+		
+		<string>ConveyorSorter/LXN_S400_4x_tube</string>
+        <string>ConveyorSorter/LXN_S400_tube</string>
+        <string>ConveyorSorter/LXN_S400Ship</string>
 
         <string>Conveyor/LXN_b8m1_pod</string>
 
@@ -248,6 +254,32 @@
 		<string>ConveyorSorter/LXN_JetRadar_Zaslon_1</string>
 		<string>ConveyorSorter/LXN_GravestoneRadar_01</string>
         
+      </ItemIds>
+    </Category>
+	
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+        <DisplayName>WB Torpedo Systems</DisplayName>
+      <Name>WBTT_Torp</Name>
+      <ItemIds>
+        <string>ConveyorSorter/TTMK6ChargeRack</string>
+
+        <string>ConveyorSorter/TTMK15</string>
+        <string>ConveyorSorter/TTMK15Triple</string>
+
+        <string>ConveyorSorter/TTMK15Square</string>
+        <string>ConveyorSorter/TTMK15Sloped</string>
+        <string>ConveyorSorter/TTMK15Sloped1x2</string>        
+
+        <string>ConveyorSorter/TTMK6ChargeRack</string>     
+
+        <string>LargeMissileTurret/TTMK37Director</string>   
+              <string>ConveyorSorter/TTPYLONMK13</string>
+              <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
+
       </ItemIds>
     </Category>
 

@@ -215,19 +215,5 @@
 					</ItemIds>	
 			</Category>
 
-            <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-            <Id>
-                <TypeId>GuiBlockCategoryDefinition</TypeId>
-                <SubtypeId />
-            </Id>
-            <DisplayName>L.Y.N.X Missile Systems</DisplayName>
-            <Name>LXN_MissileSystems</Name>
-            <ItemIds>
-                <string>ConveyorSorter/LXN_S400_4x_tube</string>
-                <string>ConveyorSorter/LXN_S400_tube</string>
-                <string>ConveyorSorter/LXN_S400Ship</string>
-            </ItemIds>
-            </Category>
-
 	</CategoryClasses>
 </Definitions>

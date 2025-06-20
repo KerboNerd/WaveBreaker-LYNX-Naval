@@ -11,7 +11,6 @@
 				The 3S14 UKSK is a universal vertical launching system designed for deploying multiple missile types including the P-800 Oniks anti-ship cruise missile, 3M22 Zircon hypersonic missile, and Kalibr cruise missiles. Engineered for naval surface combatants, this versatile system provides formidable anti-surface, anti-ship, and land-attack capabilities. With missiles ranging from supersonic to hypersonic speeds and ranges up to 15 km, it delivers powerful strikes against various target types.
 				Integration with advanced targeting systems is required for optimal performance.
 				The system's flexibility allows ships to carry a mix of missile types to address different tactical situations and threats.
-				Requires a Radar to designate targets.
 				15,000m max range, 500m minimum range.
 			</Description>
 			<Icon>Textures\Icons\Weapons\Missiles\LXN_3S14_VLS.dds</Icon>
