@@ -235,6 +235,24 @@
 				<Block Type="ConveyorSorter" Subtype="LXN_R73M_pylon"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_R73Msmalloffset_pylon"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_R73Msmalloffsetmirror_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73M_bay1"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73M_bay2"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73M_bay2mirror"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R73M_bay3"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_R77_Group"/>
+			<Icon>Textures\Icons\LXN_R77_pylon.dds</Icon>
+			<DisplayName>R-77 BVRAAM</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_R77_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R77_Bay2"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_RVVAEPD_pylon"/>
 
 			</Blocks>
 		</BlockVariantGroup>
@@ -249,6 +267,107 @@
 				<Block Type="ConveyorSorter" Subtype="LXN_IRIST_pylon"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_IRISTsmalloffset_pylon"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_IRISTsmalloffsetmirror_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_Brimstone_Group"/>
+			<Icon>Textures\Icons\LXN_Brimstone_pylon.dds</Icon>
+			<DisplayName>AGM-114L Brimstone</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_Brimstone_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_Brimstone_pylon_cluster"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_R27ER_Group"/>
+			<Icon>Textures\Icons\LXN_R27ER_pylon.dds</Icon>
+			<DisplayName>R-27ER MRAAM</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_R27ER_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_R27ET_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_KH31AD_Group"/>
+			<Icon>Textures\Icons\LXN_KH31AD_pylon.dds</Icon>
+			<DisplayName>Kh-31AD Air-To-Surface Missile</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_KH31AD_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_KH31PK_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LNX_S400_4x_Group"/>
+			<Icon>Textures\Icons\Weapons\Missiles\LXN_S400_4x_tube.dds</Icon>
+			<DisplayName>S-400 "Triumf" Missile System 4-Mount</DisplayName>
+			<Description>mizzle</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_S400_4x_tube"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_S400_tube"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_S400Ship"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_FAB500_Group"/>
+			<Icon>Textures\Icons\LXN_FAB500_pylon.dds</Icon>
+			<DisplayName>FAB-500 M-62 Unguided Bomb</DisplayName>
+			<Description>bomba</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_FAB500_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_KAB500KR_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_KAB1500SE_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_KAB1500SE_bay1"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_MOAB_pylon"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_3S14_VLS_Group"/>
+			<Icon>Textures\Icons\Weapons\Missiles\LXN_3S14_VLS.dds</Icon>
+			<DisplayName>3S14 UKSK AA VLS</DisplayName>
+			<Description>bomba</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="LXN_3S14_VLS_AA"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_3S14_VLS_AS"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_P270Moskit_pylon"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_OniksMissileLG_VLS"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_ZirconMissileLG_VLS"/>
+
+			</Blocks>
+		</BlockVariantGroup>
+		
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LXA_TTMK15_Group"/>
+			<Icon>Textures\GUI\Icons\TTMK15.dds</Icon>
+			<DisplayName>Mark 15 Quintuple Torpedo Tubes</DisplayName>
+			<Description>bomba</Description>
+			<Blocks>
+
+				<Block Type="ConveyorSorter" Subtype="TTMK15"/>
+				<Block Type="ConveyorSorter" Subtype="TTMK15Triple"/>
+				<Block Type="ConveyorSorter" Subtype="TTMK15Square"/>
+				<Block Type="ConveyorSorter" Subtype="TTMK15Sloped"/>
+				<Block Type="ConveyorSorter" Subtype="TTMK15Sloped1x2"/>
 
 			</Blocks>
 		</BlockVariantGroup>

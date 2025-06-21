@@ -3,7 +3,7 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CubeBlocks>
 
-    <!-- <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
         <TypeId>ConveyorSorter</TypeId>
         <SubtypeId>LXA_AWACS_Dish_01</SubtypeId>
@@ -24,12 +24,12 @@
       <ModelOffset x="0" y="0" z="0" />
       <Model>Models\Small\AWACS_Dish_01.mwm</Model>
       <Components>
-        <Component Subtype="SteelPlate" Count="220" />
-        <Component Subtype="Construction" Count="80" />
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Computer" Count="30" />
         <Component Subtype="MetalGrid" Count="10" />
         <Component Subtype="LargeTube" Count="4" />
         <Component Subtype="Motor" Count="6" />
-        <Component Subtype="Computer" Count="200" />
+        <Component Subtype="Construction" Count="20" />
       </Components>
       <CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
@@ -55,7 +55,7 @@
       <PCU>50</PCU>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
-    </Definition> -->
+    </Definition>
 
   </CubeBlocks>
 </Definitions>

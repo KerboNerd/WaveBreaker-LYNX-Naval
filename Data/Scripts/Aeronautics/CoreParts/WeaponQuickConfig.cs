@@ -118,7 +118,7 @@ public static class MissileConfig
     public static float AIM260_Mass = 180f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float R37M_Health = 230; // Health of the R-37M missile
-    public static float R37M_MaxRange = 25000f; // Max Range of the R-37M missile
+    public static float R37M_MaxRange = 20000f; // Max Range of the R-37M missile
     public static float R37M_MinRange = 8000f; // Min Range of the R-37M missile
     public static float R37M_MaxSpeed = 2058f * speedLimiterFactor; // Max Speed of the R-37M missile - MACH 6
     public static float R37M_Inventory = 0.500f * inventoryMultiplier; // Inventory capacity in kL.
@@ -131,7 +131,7 @@ public static class MissileConfig
     public static float S1M_MaxRange = 20000f; // Max Range of the S-1M missile
     public static float S1M_MinRange = 8000f; // Min Range of the S-1M missile  
     public static float S1M_MaxSpeed = 826f * speedLimiterFactor; // Max Speed of the S-1M missile
-    public static float S1M_Inventory = 2.500f * inventoryMultiplier; // Inventory capacity in kL.
+    public static float S1M_Inventory = 1.200f * inventoryMultiplier; // Inventory capacity in kL.
     public static float S1M_Mass = 2500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
