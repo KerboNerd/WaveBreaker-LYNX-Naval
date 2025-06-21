@@ -515,7 +515,7 @@ namespace LYNX_Aeronautics
                     var hitNormal = hit.Normal;
                     if (hitNormal.LengthSquared() > 0.5) // Valid normal
                     {
-                        markPosition += hitNormal * 0.5; // 50cm offset from surface
+                        markPosition += hitNormal * 0.5f; // 50cm offset from surface
                     }
                     
                     // Try to get information about what we hit
@@ -545,8 +545,8 @@ namespace LYNX_Aeronautics
                         }
                         else if (hitEntity is IMyCharacter)
                         {
-                            var character = hitEntity as IMyCharacter;
-                            targetInfo = $"Character: {character.DisplayName}";
+                            var hitCharacter = hitEntity as IMyCharacter;
+                            targetInfo = $"Character: {hitCharacter.DisplayName}";
                         }
                         else
                         {
@@ -576,7 +576,7 @@ namespace LYNX_Aeronautics
                         var hitNormal = hit.Normal;
                         if (hitNormal.LengthSquared() > 0.5)
                         {
-                            markPosition += hitNormal * 0.5;
+                            markPosition += hitNormal * 0.5f;
                         }
                         
                         targetInfo = "Nearby Surface";
