@@ -80,7 +80,7 @@
         <string>CubeBlock/LXN_SmallBlockMantlet_07</string>
         <string>CubeBlock/LXN_SmallBlockMantlet_08</string>
 		
-		<string>ConveyorSorter/TTMK6ChargeRack</string> 
+        <string>LargeMissileTurret/TTMK37Director</string>   		
         
       </ItemIds>
     </Category>
@@ -276,7 +276,6 @@
 
         <string>ConveyorSorter/TTMK6ChargeRack</string>     
 
-        <string>LargeMissileTurret/TTMK37Director</string>   
               <string>ConveyorSorter/TTPYLONMK13</string>
               <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
 
