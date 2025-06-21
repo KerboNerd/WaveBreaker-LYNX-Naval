@@ -56,60 +56,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
     </AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_AIM260_Comp</SubtypeId>
-            </Id>
-            <DisplayName>AGM-260 Missile [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
-            <Model>Models\Small\LXN_AIM260_missile1.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>180</Mass>
-            <Volume>100</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-
-    <Blueprints>
-        <Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_AIM260_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>AIM-260 JATM Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_AIM260_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="35" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="18" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="50" TypeId="Ingot" SubtypeId="Platinum" />
-                <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
-                <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_GuidanceSystem" /> -->
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_Warhead" /> -->
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_AIM260_Comp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
+	<Blueprints>
         <Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

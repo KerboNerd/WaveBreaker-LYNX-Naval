@@ -55,56 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_MOABMag1Comp</SubtypeId>
-            </Id>
-            <DisplayName>GBU-43/B MOAB [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_MOAB_pylon.dds</Icon>
-            <Model>Models\Small\LXN_MOAB_missile.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>9800</Mass>
-            <Volume>7600</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_MOAB_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>GBU-43/B MOAB [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_MOAB_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="1500" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="300" TypeId="Ingot" SubtypeId="Magnesium" />
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_GuidanceSystem" /> -->
-                <!-- <Item Amount="10" TypeId="Component" SubtypeId="Nato_Warhead" /> -->
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_MOABMag1Comp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

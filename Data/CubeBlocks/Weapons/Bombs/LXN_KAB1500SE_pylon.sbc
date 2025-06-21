@@ -15,10 +15,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_KAB1500SE_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="75" />
-				<Component Subtype="LXN_KAB1500SEMagComp" Count="1" />
+			<Components>
+				<Component Subtype="SteelPlate" Count="9" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="SmallTube" Count="4" />
 			</Components>
-			<CriticalComponent Subtype="LXN_KAB1500SEMagComp" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 			</BuildProgressModels>
 			<BlockPairName>LXN_KAB1500SE_pylon</BlockPairName>

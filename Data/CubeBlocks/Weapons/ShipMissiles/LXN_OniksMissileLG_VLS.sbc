@@ -21,12 +21,14 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_OniksMissileLG_VLS.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="100" />
-				<Component Subtype="Construction" Count="1" />
-				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="LXN_OniksVLSMagComp" Count="1" />
+				<Component Subtype="SteelPlate" Count="150" />
+				<Component Subtype="Computer" Count="20" />
+				<Component Subtype="SmallTube" Count="14" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="MetalGrid" Count="20" />
+				<Component Subtype="Construction" Count="18" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 			</BuildProgressModels>
 			<BlockPairName>LXN_OniksMissileLG_VLS</BlockPairName>

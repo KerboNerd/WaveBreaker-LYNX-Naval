@@ -59,58 +59,7 @@
             <MaximumAcquisitionAmount>0</MaximumAcquisitionAmount>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>S8KOMmagComp</SubtypeId>
-            </Id>
-            <DisplayName>S-8KOM Rocket [Comp]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
-            <Model>Models\Weapons\Rockets\LXN_s8kom_rocket.mwm</Model>
-            <Size>
-                <X>0.127</X> <!-- Diameter of S-8KOM rocket -->
-                <Y>0.8</Y> <!-- Length of S-8KOM rocket -->
-                <Z>0.127</Z> <!-- Diameter of S-8KOM rocket -->
-            </Size>
-            <Mass>20</Mass> <!-- Mass of S-8KOM rocket -->
-            <Volume>3.8</Volume> <!-- Approximate volume based on dimensions and shape -->
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>S8KOMbpComp</SubtypeId>
-            </Id>
-            <DisplayName>S-8KOM Rocket [Comp.]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Rockets\LXN_s8kom_rocket.dds</Icon>
-            <Prerequisites>
-                <Item Amount="2.1" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="0.1" TypeId="Component" SubtypeId="Computer" />
-                <Item Amount="0.4" TypeId="Component" SubtypeId="Construction" />
-                <Item Amount="0.05" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="0.07" TypeId="Ingot" SubtypeId="Magnesium" />
-            </Prerequisites>
-            <!-- Total mass: Iron(2.1*7) + Nickel(0.3*8.9) + Computer(0.1*0.2) + ConstructionComponent(0.4*8) + Silicon(0.05*2.33) + Magnesium(0.07*1.74) = 14.7 + 2.67 + 0.02 + 3.2 + 0.1165 + 0.1218 = 20.8303kg -->
-            <Result Amount="1" TypeId="Component" SubtypeId="S8KOMmagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

@@ -56,54 +56,7 @@
         </AmmoMagazine>
 	</AmmoMagazines>
 
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_RBU6000MagComp</SubtypeId>
-            </Id>
-            <DisplayName>RBU-6000 Charge Missile [Comp]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Turrets\rbu6000_missile.dds</Icon>
-            <Model>Models\Weapons\Turrets\rbu6000_missile.mwm</Model>
-            <Size>
-                <X>0.2</X>
-                <Y>0.2</Y>
-                <Z>1.0</Z>  
-            </Size>
-            <Mass>110</Mass>
-            <Volume>64</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_RBU6000_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>RBU-6000 Charge Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Turrets\rbu6000_missile.dds</Icon>
-            <Prerequisites>
-                <Item Amount="25" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="12.5" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="1.35" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_RBU6000MagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

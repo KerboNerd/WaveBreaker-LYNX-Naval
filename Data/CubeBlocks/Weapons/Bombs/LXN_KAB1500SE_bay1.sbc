@@ -15,10 +15,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Bombs\LXN_KAB1500SE_bay1.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="75" />
-				<Component Subtype="LXN_KAB1500SEMagComp" Count="2" />
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SmallTube" Count="10" />
 			</Components>
-			<CriticalComponent Subtype="LXN_KAB1500SEMagComp" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Bombs\LXN_KAB1500SE_bay1_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Bombs\LXN_KAB1500SE_bay1_BS2.mwm"/>

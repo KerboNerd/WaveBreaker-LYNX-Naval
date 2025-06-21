@@ -18,11 +18,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SteelPlate" Count="3" />
+				<Component Subtype="Computer" Count="1" />
 				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="LXN_IRISTMagComp" Count="1" />
+				<Component Subtype="Construction" Count="2" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_IRISTsmalloffsetmirror_pylon_BS2.mwm"/>

@@ -93,56 +93,8 @@
             <AmmoDefinitionId Subtype="LXN_Energy" />
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_S400MagComp</SubtypeId>
-            </Id>
-            <DisplayName>S-400(48N6DM) Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
-            <Model>Models\Small\LXN_S400_missile1.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>  
-            </Size>
-            <Mass>1900</Mass>
-            <Volume>1410</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
 	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_S400_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>S-400 48N6DM Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
-            <Prerequisites>
-                <Item Amount="25" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="12.5" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="1.35" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="6.3" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_S400MagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

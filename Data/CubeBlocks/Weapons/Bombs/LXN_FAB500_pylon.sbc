@@ -15,10 +15,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_FAB500_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="25" />
-				<Component Subtype="LXN_FAB500MagComp" Count="1" />
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="SmallTube" Count="3" />
 			</Components>
-			<CriticalComponent Subtype="LXN_FAB500MagComp" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 			</BuildProgressModels>
 			<BlockPairName>LXN_FAB500_pylon</BlockPairName>

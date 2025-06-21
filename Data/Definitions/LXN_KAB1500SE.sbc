@@ -55,56 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_KAB1500SEMagComp</SubtypeId>
-            </Id>
-            <DisplayName>KAB1500S-E Bomb [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_KAB1500SE_pylon.dds</Icon>
-            <Model>Models\Small\LXN_KAB1500SE_missile.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>1500</Mass>
-            <Volume>1160</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_KAB1500SE_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>KAB1500S-E Bomb</DisplayName>
-            <Icon>Textures\Icons\LXN_KAB1500SE_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="70" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="35" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="15" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="12" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="2" TypeId="Ingot" SubtypeId="Uranium" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_KAB1500SEMagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

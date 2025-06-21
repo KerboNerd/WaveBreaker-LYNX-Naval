@@ -55,58 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_OniksVLSMagComp</SubtypeId>
-            </Id>
-            <DisplayName>P-800 "Oniks" Anti-Ship Cruise Missile [Comp]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Missiles\LXN_OniksMissileLG_stage2.dds</Icon>
-            <Model>Models\Weapons\Missiles\LXN_OniksMissileLG_stage1.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>3000</Mass>
-            <Volume>2520</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_OniksVLS_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>P-800 "Oniks" Anti-Ship Cruise Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\Weapons\Missiles\LXN_OniksMissileLG_stage2.dds</Icon>
-            <Prerequisites>
-                <Item Amount="250" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="60" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="120" TypeId="Ingot" SubtypeId="Platinum" />
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_GuidanceSystem" />   -->
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_Warhead" />   -->
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_OniksVLSMagComp" />
-            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

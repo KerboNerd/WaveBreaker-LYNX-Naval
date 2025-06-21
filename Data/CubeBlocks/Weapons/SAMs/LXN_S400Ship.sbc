@@ -17,15 +17,14 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_S400Ship.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="800" />
-				<Component Subtype="Construction" Count="400" />
-				<Component Subtype="SmallTube" Count="100" />
-				<Component Subtype="LargeTube" Count="40" />
-				<Component Subtype="MetalGrid" Count="200" />
-				<Component Subtype="Computer" Count="50" />
-				<Component Subtype="LXN_S400MagComp" Count="8" />
+				<Component Subtype="SteelPlate" Count="400" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="SmallTube" Count="30" />
+				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="MetalGrid" Count="25" />
+				<Component Subtype="Construction" Count="50" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_S400Ship_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_S400Ship_BS2.mwm"/>

@@ -55,54 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_FAB500MagComp</SubtypeId>
-            </Id>
-            <DisplayName>FAB-500 M-62 Bomb [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_FAB500_pylon.dds</Icon>
-            <Model>Models\Small\LXN_FAB500_missile.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>500</Mass>
-            <Volume>190</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_FAB500_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>FAB-500 M-62 Bomb [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_FAB500_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="40" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_FAB500MagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

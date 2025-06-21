@@ -55,59 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_R37MMagComp</SubtypeId>
-            </Id>
-            <DisplayName>R-37M Missile [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_R37M_pylon.dds</Icon>
-            <Model>Models\Small\LXN_R37M_missile.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>600</Mass>
-            <Volume>500</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_R37M_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>R-37M Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_R37M_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="28" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="14" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="8" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="25" TypeId="Ingot" SubtypeId="Platinum" />
-                <Item Amount="12" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_GuidanceSystem" />   -->
-                <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_Warhead" />   -->
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_R37MMagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

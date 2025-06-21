@@ -20,12 +20,14 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_P270MoskitJet_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="200" />
-				<Component Subtype="Construction" Count="1" />
-				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="LXN_MoskitMagComp" Count="1" />
+				<Component Subtype="SteelPlate" Count="14" />
+				<Component Subtype="Computer" Count="7" />
+				<Component Subtype="MetalGrid" Count="4" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Motor" Count="3" />
+				<Component Subtype="Construction" Count="12" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_P270MoskitJet_pylon_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_P270MoskitJet_pylon_BS2.mwm"/>

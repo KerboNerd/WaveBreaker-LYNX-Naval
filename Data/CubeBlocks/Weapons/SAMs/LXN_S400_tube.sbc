@@ -19,11 +19,13 @@
 			<Model>Models\Small\LXN_S400_tube.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="100" />
-				<Component Subtype="Construction" Count="1" />
-				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="LXN_S400MagComp" Count="1" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="SmallTube" Count="10" />
+				<Component Subtype="LargeTube" Count="6" />
+				<Component Subtype="MetalGrid" Count="8" />
+				<Component Subtype="Construction" Count="12" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Small\LXN_S400_tube_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Small\LXN_S400_tube_BS2.mwm"/>

@@ -19,11 +19,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Rockets\LXN_b8m1_pod.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="25" />
-				<Component Subtype="Construction" Count="1" />
-				<Component Subtype="S8KOMmagComp" Count="20" />
+				<Component Subtype="SteelPlate" Count="6" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="Construction" Count="2" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00" Default="true"/>
 			</MountPoints>

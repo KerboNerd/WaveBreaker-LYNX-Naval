@@ -18,12 +18,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_R77_Bay2.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="8" />
-				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="Computer" Count="2" />
 				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="LXN_R77MagComp" Count="3" />
+				<Component Subtype="Construction" Count="2" />
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.33" File="Models\Weapons\Missiles\LXN_R77_Bay2_BS1.mwm"/>
 				<Model BuildPercentUpperBound="0.67" File="Models\Weapons\Missiles\LXN_R77_Bay2_BS2.mwm"/>

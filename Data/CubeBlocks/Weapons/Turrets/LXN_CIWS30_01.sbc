@@ -27,15 +27,13 @@
 				<ModelOffset x="0" y="0" z="0"/>
 				<Model>Models\Weapons\Turrets\LXN_CIWS30_01.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="30" />
-					<Component Subtype="Construction" Count="40" />
-					<Component Subtype="Detector" Count="20" />
-					<Component Subtype="RadioCommunication" Count="20" />
-					<Component Subtype="MetalGrid" Count="2" />
+					<Component Subtype="SteelPlate" Count="240" />
+					<Component Subtype="Construction" Count="16" />
+					<Component Subtype="MetalGrid" Count="10" />
 					<Component Subtype="SmallTube" Count="8" />
-					<Component Subtype="Computer" Count="300" />
+					<Component Subtype="Computer" Count="3" />
 					<Component Subtype="Motor" Count="8" />
-					<Component Subtype="SteelPlate" Count="30" />
+					<Component Subtype="SteelPlate" Count="10" />
 				</Components>
 				<CriticalComponent Subtype="Computer" Index="0" />
 				<MountPoints>

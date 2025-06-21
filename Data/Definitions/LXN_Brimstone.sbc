@@ -55,55 +55,7 @@
             <CanPlayerOrder>true</CanPlayerOrder>
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_BrimstoneMagComp</SubtypeId>
-            </Id>
-            <DisplayName>Brimstone Missile [Comp]</DisplayName>
-            <Icon>Textures\Icons\LXN_Brimstone_pylon.dds</Icon>
-            <Model>Models\Small\LXN_Brimstone_missile.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>
-            </Size>
-            <Mass>50</Mass>
-            <Volume>46</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
-	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_Brimstone_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>Brimstone Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_Brimstone_pylon.dds</Icon>
-            <Prerequisites>
-                <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="4" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_BrimstoneMagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

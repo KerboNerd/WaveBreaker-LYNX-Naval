@@ -15,11 +15,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_MOAB_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="491" />
-				<Component Subtype="LXN_NATO_ExportDocuments_01" Count="10" />
-				<Component Subtype="LXN_MOABMag1Comp" Count="1" />
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="Construction" Count="60" />
+				<Component Subtype="SmallTube" Count="90" />
 			</Components>
-			<CriticalComponent Subtype="LXN_MOABMag1Comp" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 			</BuildProgressModels>
 			<BlockPairName>LXN_MOAB_pylon</BlockPairName>
