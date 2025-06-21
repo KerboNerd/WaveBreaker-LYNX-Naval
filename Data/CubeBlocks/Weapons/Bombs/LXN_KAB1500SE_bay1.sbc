@@ -15,7 +15,6 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Bombs\LXN_KAB1500SE_bay1.mwm</Model>
 			<Components>
-			<Components>
 				<Component Subtype="SteelPlate" Count="30" />
 				<Component Subtype="Computer" Count="2" />
 				<Component Subtype="Construction" Count="20" />

@@ -15,7 +15,6 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_KAB1500SE_pylon.mwm</Model>
 			<Components>
-			<Components>
 				<Component Subtype="SteelPlate" Count="9" />
 				<Component Subtype="Computer" Count="3" />
 				<Component Subtype="Construction" Count="4" />
