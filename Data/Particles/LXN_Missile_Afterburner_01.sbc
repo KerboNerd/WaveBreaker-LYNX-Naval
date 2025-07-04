@@ -274,7 +274,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>800</ValueFloat>
+                  <ValueFloat>300</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -701,17 +701,17 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>1000</ValueFloat>
+                  <ValueFloat>500</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>5</Time>
-                  <ValueFloat>1000</ValueFloat>
+                  <ValueFloat>500</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>10</Time>
-                  <ValueFloat>200</ValueFloat>
+                  <ValueFloat>100</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -1144,7 +1144,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>500</ValueFloat>
+                  <ValueFloat>200</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
