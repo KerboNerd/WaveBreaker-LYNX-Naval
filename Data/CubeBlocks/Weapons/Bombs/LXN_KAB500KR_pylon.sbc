@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>KAB-500Kr Guided Bomb</DisplayName>
 			<Description>The KAB-500Kr is a guided bomb developed by the Soviet Air Force in the 1980s. It is an electro-optical TV-guided fire and forget bomb that remains in service with the CIS and various export customers. The KAB-500Kr is analogous to the American GBU-15 weapon.</Description>
-			<Icon>Textures\Icons\Cubes\LXN_KAB500KR_pylon.dds</Icon>
+			<Icon>Textures\Icons\LXN_KAB500KR_pylon.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="3"/>
@@ -22,6 +22,7 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Small\LXN_KAB500KR_pylon_BS1.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>LXN_KAB500KR_pylon</BlockPairName>
 			<Center x="0" y="0" z="0" />

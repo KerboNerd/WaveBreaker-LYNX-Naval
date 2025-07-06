@@ -61,19 +61,14 @@ namespace Scripts
             NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
             Sync = new SynchronizeDef
             {
-                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
-            },
-            ObjectsHit = new ObjectsHitDef
-            {
-                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
-                CountBlocks = false, // Counts individual blocks, not just entities hit.
+                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 10f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -102,19 +97,6 @@ namespace Scripts
                     GroupSize = 5, // Number of spawns in each group
                     GroupDelay = 120, // Delay between each group.
                 },
-            },
-            Pattern = new PatternDef
-            {
-                Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
-                    "",
-                },
-                Mode = Fragment, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
-                TriggerChance = 1f, // This is %
-                Random = false, // This randomizes the number spawned at once, NOT the list order.
-                RandomMin = 1,
-                RandomMax = 1,
-                SkipParent = false, // Skip the Ammo itself, in the list
-                PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop. Ignored if Random = true.
             },
             DamageScales = new DamageScaleDef
             {
@@ -219,68 +201,6 @@ namespace Scripts
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
-            },
-            Ewar = new EwarDef
-            {
-                Enable = false, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = EnergySink, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
-                Mode = Effect, // Effect , Field
-                Strength = 100f,
-                Radius = 5f, // Meters
-                Duration = 100, // In Ticks
-                StackDuration = true, // Combined Durations
-                Depletable = true,
-                MaxStacks = 10, // Max Debuffs at once
-                NoHitParticle = false,
-                /*
-                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
-                Emp : Targets & Shutdown any Block capable of being powered
-                Offense : Targets & Shutdowns Weaponry
-                Nav : Targets & Shutdown Gyros or Locks them down
-                Dot : Deals Damage to Blocks in radius
-                AntiSmart : Effects & Scrambles the Targeting List of Affected Missiles
-                JumpNull : Shutdown & Stops any Active Jumps, or JumpDrive Units in radius
-                Tractor : Affects target with Physics
-                Pull : Affects target with Physics
-                Push : Affects target with Physics
-                Anchor : Targets & Shutdowns Thrusters
-                
-                */
-                Force = new PushPullDef
-                {
-                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    DisableRelativeMass = false,
-                    TractorRange = 0,
-                    ShooterFeelsForce = false,
-                },
-                Field = new FieldDef
-                {
-                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
-                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
-                    HideModel = false, // Hide the default bubble, or other model if specified.
-                    ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 250f, //range at which fields are triggered
-                    Particle = new ParticleDef // Particle effect to generate at the field's position.
-                    {
-                        Name = "", // SubtypeId of field particle effect.
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1, // Scale of effect.
-                        },
-                    },
-                },
-            },
-            Beams = new BeamDef
-            {
-                Enable = false, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
-                VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
-                ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
-                RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
-                OneParticle = false, // Only spawn one particle hit per beam weapon.
-                FakeVoxelHitTicks = 0, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
             },
             Trajectory = new TrajectoryDef
             {
@@ -325,110 +245,6 @@ namespace Scripts
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
-                // Approaches = new[] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior. Cost level of 4+, or 5+ if used with steering.
-                // {
-                //    /*
-                //     * What are approaches? How do they interact with other config variables?  What problems do they solve? 
-                //     *
-                //     * At the most basic level an "approach" is a collection of variables that allow you, the mod author, to tell the projectile how to "approach"
-                //     * a desired "destination" (aka position) when certain conditions are met and what to then do once it has arrived.  I say "destination/position" and not "target" on
-                //     * purpose, while the desired destination may be the "target" it often is not.  Keep in mind that approaches merely "influence" the projectiles path to
-                //     * a desired position, they do not absolutely determine it.  Instead you are telling the projectile where you want it to go and through which
-                //     * trajectory it should travel to get there, but ultimately you are setting the desired flight path, you are not the pilot.
-                //     *
-                //     * Approaches are an extension of Smarts and these variables are applied ontop of, not in place of, all other config variables. This means anything
-                //     * you set in other parts of the config will still influence approaches and sometimes in unexpected ways (i.e. trackingDelay or not finding a target
-                //     * can delay when an approaches begins).  In a few cases approaches have variables that override/alter/extend how non-approach variables behave.
-                //     *
-                //     * Approaches will not alter the path of a projectile until its start condition is met (and optionally maintained).  Prior to "starting" the
-                //     * projectile will behave as it would have had there was no approach defined.  This is also the case once all approaches have completed. 
-                //     *
-                //     * Approaches require you to think about projectile navigation in an abstract manner.  This is a good time to restate that you are merely "influencing" the
-                //     * projectile, you are not controlling/piloting it.  The battlefield is dynamic, always changing, you are setting objectives and providing rules to follow
-                //     * if certain conditions are met, nothing more.  You must also remember that although you are setting variables like positionB, positionC, elevation, lead
-                //     * upDirection, forwardDirection etc... these variables merely "influence" the projectiles heading relative to its current position and velocity, they do not
-                //     * represent its actual source nor destination positions, directions nor elevation.
-                //     *
-                //     * Said another way, imagine your projectile half way between its launcher and the "target" and it is at this time that your approach "starts".  If you were
-                //     * to then draw this scene out visually, you would draw three spheres representing positions which we will call "projectile current position (aka positionA)", "positionB"
-                //     * and "positionC", where you only get to define the latter two.  You then define two directions, a forward direction and an up direction.  You can
-                //     * also optionally set a desired "elevation" relative to the up direction and a desired "lead" relative to the forward direction, applied to the positionB and/or
-                //     * positionC.  Now draw a 1 and 2 that represents the modified positionB and positionC positions (taking into account elevation, lead, and rotations).  Your
-                //     * projectiles heading will by default attempt to steer to modified C position (2), or alternatively to modified B (1) if you set TrajectoryRelativeToB to true. 
-                //     */
-
-                //    new ApproachDef // * in comments means default
-                //    {
-                //        // Start/End behaviors 
-                //        RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition. 
-                //        Operators = StartEnd_And, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
-                //        CanExpireOnceStarted = true, // This stages values will continue to apply until the end conditions are met.
-                //        ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.  
-
-                //        // Start/End conditions
-                //        StartCondition1 = Lifetime, // Each condition type is either >= or <= the corresponding value defined below.
-                //                                    // Ignore(skip this condition)*, DistanceFromDestination[<=], DistanceToDestination[>=], Lifetime[>=], DeadTime[<=], MinTravelRequired[>=],
-                //                                    // MaxTravelRequired[<=], Spawn(works per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
-                //                                    // NextTimedSpawn[<=], SinceTimedSpawn[>=], RelativeLifetime[>=], RelativeDeadTime[<=], RelativeSpawns[>=], EnemyTargetLoss[>=]
-                //                                    // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
-                //        StartCondition2 = Ignore,
-                //        EndCondition1 = DistanceFromPositionC,
-                //        EndCondition2 = Ignore, 
-
-                //        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                //        Start1Value = 1,
-                //        Start2Value = 0,
-                //        End1Value = 100,
-                //        End2Value = 0, 
-
-                //        // Relative positions and directions
-                //        Forward = ForwardTargetDirection, // ForwardDestinationDirection*, ForwardRelativeToBlock, ForwardRelativeToShooter, ForwardRelativeToGravity, ForwardTargetDirection, ForwardTargetVelocity, ForwardStoredStartPosition, ForwardStoredEndPosition, ForwardStoredStartLocalPosition, ForwardStoredEndLocalPosition, ForwardOriginDirection    
-                //        Up = UpRelativeToGravity, // UpRelativeToBlock*, UpRelativeToShooter, UpRelativeToGravity, UpTargetDirection, UpTargetVelocity, UpStoredStartPosition, UpStoredEndPosition, UpStoredStartLocalPosition, UpStoredEndLocalPosition, UpOriginDirection, UpDestinationDirection
-                //        PositionB = PositionA, // Origin*, Shooter, Target, Surface, MidPoint, PositionA, Nothing, StoredStartPosition, StoredEndPosition, StoredStartLocalPosition, StoredEndLocalPosition
-                //        PositionC = Target,
-                //        Elevation = Surface,
-
-                //        //
-                //        // Control if the vantagepoints update every frame or only at start.
-                //        //
-                //        AdjustForward = true, // adjust forwardDir overtime.
-                //        AdjustUp = false, // adjust upDir overtime
-                //        AdjustPositionB = true, // Updated the position overtime.
-                //        AdjustPositionC = true, // Update the position overtime.
-                //        LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
-                //        LeadRotateElevatePositionC = true, // Add Lead, Rotation and DesiredElevation to PositionC
-                //        TrajectoryRelativeToB = false, // If true the projectiles immediate trajectory will be relative to PositionB instead of PositionC (e.g. quick response to elevation changes relative to PositionB position assuming that position is closer to PositionA)
-                //        ElevationRelativeToC = true, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
-                //        // Tweaks to vantagepoint behavior
-                //        ElevationTolerance = 1, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                //        TrackingDistance = 1, // Minimum travel distance before projectile begins racing to Destination
-                //        DesiredElevation = 30, // The desired elevation relative to source 
-                //        // Storage Values
-                //        StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
-                //        StoredEndId = 0, // Which approach id the the end storage was saved in, if any.
-                //        StoredStartType = PositionA, // Uses same values as source/destination/elevation
-                //        StoredEndType = Target,
-                //        // Controls the leading behavior
-                //        LeadDistance = 40, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met. 
-                //        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
-
-                //        // Modify speed and acceleration ratios while this approach is active
-                //        AccelMulti = 0.02, // Modify default acceleration by this factor
-                //        DeAccelMulti = 0, // Modifies your default deacceleration by this factor
-                //        TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
-                //        SpeedCapMulti = 1, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
-                //    },
-
-                // },
-
-                Mines = new MinesDef  // Note: This is being investigated. Please report to Github, any issues.
-                {
-                    DetectRadius = 0,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
-                    Cloak = false,
-                    Persist = false,
-                },
             },
             AmmoGraphics = new GraphicDef
             {
@@ -563,18 +379,6 @@ namespace Scripts
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
-            Ejection = new EjectionDef // Optional Component, allows generation of Particle or Item (Typically magazine), on firing, to simulate Tank shell ejection
-            {
-                Type = Item, // Particle or Item (Inventory Component)
-                Speed = -1f, // Speed inventory is ejected from in dummy direction
-                SpawnChance = 1f, // chance of triggering effect (0 - 1)
-                CompDef = new ComponentDef
-                {
-                    ItemName = "", //InventoryComponent name
-                    ItemLifeTime = 0, // how long item should exist in world
-                    Delay = 3, // delay in ticks after shot before ejected
-                }
-            }, // Don't edit below this line
         };
  
         private AmmoDef LXN_R73M_PrimaryDrop => new AmmoDef // Your ID, for slotting into the Weapon CS
@@ -599,19 +403,14 @@ namespace Scripts
             NoGridOrArmorScaling = true, // If you enable this you can remove the damagescale section entirely.
             Sync = new SynchronizeDef
             {
-                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
-            },
-            ObjectsHit = new ObjectsHitDef
-            {
-                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
-                CountBlocks = false, // Counts individual blocks, not just entities hit.
+                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 10f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -640,19 +439,6 @@ namespace Scripts
                     GroupSize = 5, // Number of spawns in each group
                     GroupDelay = 120, // Delay between each group.
                 },
-            },
-            Pattern = new PatternDef
-            {
-                Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
-                    "",
-                },
-                Mode = Fragment, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
-                TriggerChance = 1f, // This is %
-                Random = false, // This randomizes the number spawned at once, NOT the list order.
-                RandomMin = 1,
-                RandomMax = 1,
-                SkipParent = false, // Skip the Ammo itself, in the list
-                PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop. Ignored if Random = true.
             },
             DamageScales = new DamageScaleDef
             {
@@ -758,68 +544,6 @@ namespace Scripts
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
-            Ewar = new EwarDef
-            {
-                Enable = false, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = EnergySink, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
-                Mode = Effect, // Effect , Field
-                Strength = 100f,
-                Radius = 5f, // Meters
-                Duration = 100, // In Ticks
-                StackDuration = true, // Combined Durations
-                Depletable = true,
-                MaxStacks = 10, // Max Debuffs at once
-                NoHitParticle = false,
-                /*
-                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
-                Emp : Targets & Shutdown any Block capable of being powered
-                Offense : Targets & Shutdowns Weaponry
-                Nav : Targets & Shutdown Gyros or Locks them down
-                Dot : Deals Damage to Blocks in radius
-                AntiSmart : Effects & Scrambles the Targeting List of Affected Missiles
-                JumpNull : Shutdown & Stops any Active Jumps, or JumpDrive Units in radius
-                Tractor : Affects target with Physics
-                Pull : Affects target with Physics
-                Push : Affects target with Physics
-                Anchor : Targets & Shutdowns Thrusters
-                
-                */
-                Force = new PushPullDef
-                {
-                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    DisableRelativeMass = false,
-                    TractorRange = 0,
-                    ShooterFeelsForce = false,
-                },
-                Field = new FieldDef
-                {
-                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
-                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
-                    HideModel = false, // Hide the default bubble, or other model if specified.
-                    ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 250f, //range at which fields are triggered
-                    Particle = new ParticleDef // Particle effect to generate at the field's position.
-                    {
-                        Name = "", // SubtypeId of field particle effect.
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1, // Scale of effect.
-                        },
-                    },
-                },
-            },
-            Beams = new BeamDef
-            {
-                Enable = false, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
-                VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
-                ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
-                RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
-                OneParticle = false, // Only spawn one particle hit per beam weapon.
-                FakeVoxelHitTicks = 0, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
-            },
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
@@ -862,110 +586,6 @@ namespace Scripts
                     MinTurnSpeed = 0, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
-                },
-                // Approaches = new[] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior. Cost level of 4+, or 5+ if used with steering.
-                // {
-                //    /*
-                //     * What are approaches? How do they interact with other config variables?  What problems do they solve? 
-                //     *
-                //     * At the most basic level an "approach" is a collection of variables that allow you, the mod author, to tell the projectile how to "approach"
-                //     * a desired "destination" (aka position) when certain conditions are met and what to then do once it has arrived.  I say "destination/position" and not "target" on
-                //     * purpose, while the desired destination may be the "target" it often is not.  Keep in mind that approaches merely "influence" the projectiles path to
-                //     * a desired position, they do not absolutely determine it.  Instead you are telling the projectile where you want it to go and through which
-                //     * trajectory it should travel to get there, but ultimately you are setting the desired flight path, you are not the pilot.
-                //     *
-                //     * Approaches are an extension of Smarts and these variables are applied ontop of, not in place of, all other config variables. This means anything
-                //     * you set in other parts of the config will still influence approaches and sometimes in unexpected ways (i.e. trackingDelay or not finding a target
-                //     * can delay when an approaches begins).  In a few cases approaches have variables that override/alter/extend how non-approach variables behave.
-                //     *
-                //     * Approaches will not alter the path of a projectile until its start condition is met (and optionally maintained).  Prior to "starting" the
-                //     * projectile will behave as it would have had there was no approach defined.  This is also the case once all approaches have completed. 
-                //     *
-                //     * Approaches require you to think about projectile navigation in an abstract manner.  This is a good time to restate that you are merely "influencing" the
-                //     * projectile, you are not controlling/piloting it.  The battlefield is dynamic, always changing, you are setting objectives and providing rules to follow
-                //     * if certain conditions are met, nothing more.  You must also remember that although you are setting variables like positionB, positionC, elevation, lead
-                //     * upDirection, forwardDirection etc... these variables merely "influence" the projectiles heading relative to its current position and velocity, they do not
-                //     * represent its actual source nor destination positions, directions nor elevation.
-                //     *
-                //     * Said another way, imagine your projectile half way between its launcher and the "target" and it is at this time that your approach "starts".  If you were
-                //     * to then draw this scene out visually, you would draw three spheres representing positions which we will call "projectile current position (aka positionA)", "positionB"
-                //     * and "positionC", where you only get to define the latter two.  You then define two directions, a forward direction and an up direction.  You can
-                //     * also optionally set a desired "elevation" relative to the up direction and a desired "lead" relative to the forward direction, applied to the positionB and/or
-                //     * positionC.  Now draw a 1 and 2 that represents the modified positionB and positionC positions (taking into account elevation, lead, and rotations).  Your
-                //     * projectiles heading will by default attempt to steer to modified C position (2), or alternatively to modified B (1) if you set TrajectoryRelativeToB to true. 
-                //     */
-
-                //    new ApproachDef // * in comments means default
-                //    {
-                //        // Start/End behaviors 
-                //        RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition. 
-                //        Operators = StartEnd_And, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
-                //        CanExpireOnceStarted = true, // This stages values will continue to apply until the end conditions are met.
-                //        ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.  
-
-                //        // Start/End conditions
-                //        StartCondition1 = Lifetime, // Each condition type is either >= or <= the corresponding value defined below.
-                //                                    // Ignore(skip this condition)*, DistanceFromDestination[<=], DistanceToDestination[>=], Lifetime[>=], DeadTime[<=], MinTravelRequired[>=],
-                //                                    // MaxTravelRequired[<=], Spawn(works per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
-                //                                    // NextTimedSpawn[<=], SinceTimedSpawn[>=], RelativeLifetime[>=], RelativeDeadTime[<=], RelativeSpawns[>=], EnemyTargetLoss[>=]
-                //                                    // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
-                //        StartCondition2 = Ignore,
-                //        EndCondition1 = DistanceFromPositionC,
-                //        EndCondition2 = Ignore, 
-
-                //        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                //        Start1Value = 1,
-                //        Start2Value = 0,
-                //        End1Value = 100,
-                //        End2Value = 0, 
-
-                //        // Relative positions and directions
-                //        Forward = ForwardTargetDirection, // ForwardDestinationDirection*, ForwardRelativeToBlock, ForwardRelativeToShooter, ForwardRelativeToGravity, ForwardTargetDirection, ForwardTargetVelocity, ForwardStoredStartPosition, ForwardStoredEndPosition, ForwardStoredStartLocalPosition, ForwardStoredEndLocalPosition, ForwardOriginDirection    
-                //        Up = UpRelativeToGravity, // UpRelativeToBlock*, UpRelativeToShooter, UpRelativeToGravity, UpTargetDirection, UpTargetVelocity, UpStoredStartPosition, UpStoredEndPosition, UpStoredStartLocalPosition, UpStoredEndLocalPosition, UpOriginDirection, UpDestinationDirection
-                //        PositionB = PositionA, // Origin*, Shooter, Target, Surface, MidPoint, PositionA, Nothing, StoredStartPosition, StoredEndPosition, StoredStartLocalPosition, StoredEndLocalPosition
-                //        PositionC = Target,
-                //        Elevation = Surface,
-
-                //        //
-                //        // Control if the vantagepoints update every frame or only at start.
-                //        //
-                //        AdjustForward = true, // adjust forwardDir overtime.
-                //        AdjustUp = false, // adjust upDir overtime
-                //        AdjustPositionB = true, // Updated the position overtime.
-                //        AdjustPositionC = true, // Update the position overtime.
-                //        LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
-                //        LeadRotateElevatePositionC = true, // Add Lead, Rotation and DesiredElevation to PositionC
-                //        TrajectoryRelativeToB = false, // If true the projectiles immediate trajectory will be relative to PositionB instead of PositionC (e.g. quick response to elevation changes relative to PositionB position assuming that position is closer to PositionA)
-                //        ElevationRelativeToC = true, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
-                //        // Tweaks to vantagepoint behavior
-                //        ElevationTolerance = 1, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                //        TrackingDistance = 1, // Minimum travel distance before projectile begins racing to Destination
-                //        DesiredElevation = 30, // The desired elevation relative to source 
-                //        // Storage Values
-                //        StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
-                //        StoredEndId = 0, // Which approach id the the end storage was saved in, if any.
-                //        StoredStartType = PositionA, // Uses same values as source/destination/elevation
-                //        StoredEndType = Target,
-                //        // Controls the leading behavior
-                //        LeadDistance = 40, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met. 
-                //        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
-
-                //        // Modify speed and acceleration ratios while this approach is active
-                //        AccelMulti = 0.02, // Modify default acceleration by this factor
-                //        DeAccelMulti = 0, // Modifies your default deacceleration by this factor
-                //        TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
-                //        SpeedCapMulti = 1, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
-                //    },
-
-                // },
-
-                Mines = new MinesDef  // Note: This is being investigated. Please report to Github, any issues.
-                {
-                    DetectRadius = 0,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
-                    Cloak = false,
-                    Persist = false,
                 },
             },
             AmmoGraphics = new GraphicDef
@@ -1101,18 +721,6 @@ namespace Scripts
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
-            Ejection = new EjectionDef // Optional Component, allows generation of Particle or Item (Typically magazine), on firing, to simulate Tank shell ejection
-            {
-                Type = Item, // Particle or Item (Inventory Component)
-                Speed = -1f, // Speed inventory is ejected from in dummy direction
-                SpawnChance = 1f, // chance of triggering effect (0 - 1)
-                CompDef = new ComponentDef
-                {
-                    ItemName = "", //InventoryComponent name
-                    ItemLifeTime = 0, // how long item should exist in world
-                    Delay = 3, // delay in ticks after shot before ejected
-                }
-            }, // Don't edit below this line
         };
 
         private AmmoDef LXN_R73M_Secondary => new AmmoDef // Your ID, for slotting into the Weapon CS
@@ -1143,13 +751,8 @@ namespace Scripts
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 5, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
-            },
-            ObjectsHit = new ObjectsHitDef
-            {
-                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
-                CountBlocks = false, // Counts individual blocks, not just entities hit.
+                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 10f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -1178,19 +781,6 @@ namespace Scripts
                     GroupSize = 5, // Number of spawns in each group
                     GroupDelay = 120, // Delay between each group.
                 },
-            },
-            Pattern = new PatternDef
-            {
-                Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
-                    "",
-                },
-                Mode = Fragment, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
-                TriggerChance = 1f, // This is %
-                Random = false, // This randomizes the number spawned at once, NOT the list order.
-                RandomMin = 1,
-                RandomMax = 1,
-                SkipParent = false, // Skip the Ammo itself, in the list
-                PatternSteps = 1, // Number of Ammos activated per round, will progress in order and loop. Ignored if Random = true.
             },
             DamageScales = new DamageScaleDef
             {
@@ -1296,68 +886,6 @@ namespace Scripts
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
-            Ewar = new EwarDef
-            {
-                Enable = false, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = EnergySink, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
-                Mode = Effect, // Effect , Field
-                Strength = 100f,
-                Radius = 5f, // Meters
-                Duration = 100, // In Ticks
-                StackDuration = true, // Combined Durations
-                Depletable = true,
-                MaxStacks = 10, // Max Debuffs at once
-                NoHitParticle = false,
-                /*
-                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
-                Emp : Targets & Shutdown any Block capable of being powered
-                Offense : Targets & Shutdowns Weaponry
-                Nav : Targets & Shutdown Gyros or Locks them down
-                Dot : Deals Damage to Blocks in radius
-                AntiSmart : Effects & Scrambles the Targeting List of Affected Missiles
-                JumpNull : Shutdown & Stops any Active Jumps, or JumpDrive Units in radius
-                Tractor : Affects target with Physics
-                Pull : Affects target with Physics
-                Push : Affects target with Physics
-                Anchor : Targets & Shutdowns Thrusters
-                
-                */
-                Force = new PushPullDef
-                {
-                    ForceFrom = ProjectileLastPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    ForceTo = HitPosition, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    Position = TargetCenterOfMass, // ProjectileLastPosition, ProjectileOrigin, HitPosition, TargetCenter, TargetCenterOfMass
-                    DisableRelativeMass = false,
-                    TractorRange = 0,
-                    ShooterFeelsForce = false,
-                },
-                Field = new FieldDef
-                {
-                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
-                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
-                    GrowTime = 0, // How many ticks it should take the field to grow to full size.
-                    HideModel = false, // Hide the default bubble, or other model if specified.
-                    ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 250f, //range at which fields are triggered
-                    Particle = new ParticleDef // Particle effect to generate at the field's position.
-                    {
-                        Name = "", // SubtypeId of field particle effect.
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1, // Scale of effect.
-                        },
-                    },
-                },
-            },
-            Beams = new BeamDef
-            {
-                Enable = false, // Enable beam behaviour. Please have 3600 RPM, when this Setting is enabled. Please do not fire Beams into Voxels.
-                VirtualBeams = false, // Only one damaging beam, but with the effectiveness of the visual beams combined (better performance).
-                ConvergeBeams = false, // When using virtual beams, converge the visual beams to the location of the real beam.
-                RotateRealBeam = false, // The real beam is rotated between all visual beams, instead of centered between them.
-                OneParticle = false, // Only spawn one particle hit per beam weapon.
-                FakeVoxelHitTicks = 0, // If this beam hits/misses a voxel it assumes it will continue to do so for this many ticks at the same hit length and not extend further within this window.  This can save up to n times worth of cpu.
-            },
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
@@ -1401,14 +929,6 @@ namespace Scripts
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
-                Mines = new MinesDef  // Note: This is being investigated. Please report to Github, any issues.
-                {
-                    DetectRadius = 0,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
-                    Cloak = false,
-                    Persist = false,
-                },
             },
             AmmoGraphics = new GraphicDef
             {
@@ -1436,12 +956,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LXN_MissileTrail_01", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 1),
                         DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.3f,
+                            Scale = 0.2f,
                         },
                     },
                     Hit = new ParticleDef

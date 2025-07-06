@@ -78,5 +78,36 @@
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_9M330_CompBP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_9M330_BP" />
     </BlueprintClassEntries>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_9M330</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
+            <DeviateShotAngle>0.1</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_9M330Mag" />
+            </AmmoMagazines>
+            <ReloadTime>8000</ReloadTime>
+        </Weapon>
+	</Weapons>
+	
+    <CategoryClasses>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+                <TypeId>GuiBlockCategoryDefinition</TypeId>
+                <SubtypeId />
+            </Id>
+            <DisplayName>L.Y.N.X Missile Systems</DisplayName>
+            <Name>LXN_MissileSystems</Name>
+            <ItemIds>
+                <string>ConveyorSorter/LXN_9M330_tube</string>
+            </ItemIds>
+        </Category>
+    </CategoryClasses>
     
 </Definitions>
