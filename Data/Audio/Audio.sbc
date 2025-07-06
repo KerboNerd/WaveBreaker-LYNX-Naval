@@ -1,33 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <Sounds>
-	<Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>16InchFire</SubtypeId>
-      </Id>
-      <Category>WEP_SHIP</Category>
-      <MaxDistance>500</MaxDistance>
-      <Volume>1</Volume>
-	  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
-      <DynamicMusicAmount>5</DynamicMusicAmount>
-	  <SoundLimit>10</SoundLimit>
-      <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\16InchFire1.wav</Start>
-        </Wave>
-		<Wave Type="D3">
-          <Start>Audio\16InchFire2.wav</Start>
-        </Wave>
-		<Wave Type="D3">
-          <Start>Audio\16InchFire3.wav</Start>
-        </Wave>
-      </Waves>
-    </Sound>
-
-
-
 
 	<Sound>
       <Id>
@@ -113,50 +86,6 @@
         </Wave>
       </Waves>
     </Sound>	
-
-
-
-    <!-- bofor -->
-        <Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>TT_40mmBofor</SubtypeId>
-      </Id>
-      <Volume>2.5</Volume>
-      <Category>SHOT</Category>
-      <MaxDistance>400</MaxDistance>
-
-
-      <PreventSynchronization>0</PreventSynchronization>
-      <SoundLimit>10</SoundLimit>
-      <DistantSounds>
-        <DistantSound DistanceCrossfade="10" Distance="400" Sound="TT_40mmBofor_Dist" />
-      </DistantSounds>
-	  <Loopable>false</Loopable>
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\bofor_40mm_close.wav</Start>
-        </Wave>
-	
-      </Waves>
-    </Sound>
-    <Sound>
-      <Id>
-        <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
-        <SubtypeId>TT_40mmBofor_Dist</SubtypeId>
-      </Id>
-      <Category>SHOT</Category>
-      <MaxDistance>1200</MaxDistance>
-      <Volume>1.5</Volume>
-      <Loopable>false</Loopable>	  
-      <Waves>
-        <Wave Type="D3">
-          <Start>Audio\bofor_40mm_far.wav</Start>
-        </Wave>	
-
-      </Waves>
-    </Sound>
-	
 
   </Sounds>
 

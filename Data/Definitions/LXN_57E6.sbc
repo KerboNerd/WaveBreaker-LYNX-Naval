@@ -93,55 +93,8 @@
             <AmmoDefinitionId Subtype="LXN_Energy" />
         </AmmoMagazine>
 	</AmmoMagazines>
-
-    <Components>
-        <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>LXN_57E6MagComp</SubtypeId>
-            </Id>
-            <DisplayName>57E6 Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_57E6_missile.dds</Icon>
-            <Model>Models\57E6\LXN_57E6_missile_2.mwm</Model>
-            <Size>
-                <X>0.24</X>
-                <Y>0.2</Y>
-                <Z>0.2</Z>  
-            </Size>
-            <Mass>86</Mass>
-            <Volume>47</Volume>
-            <IconSymbol>Comp.</IconSymbol>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
-            <DropProbability>1</DropProbability>
-            <Health>1</Health>
-            <MinimumOfferAmount>70</MinimumOfferAmount>
-            <MaximumOfferAmount>700</MaximumOfferAmount>
-            <MinimumOrderAmount>35</MinimumOrderAmount>
-            <MaximumOrderAmount>350</MaximumOrderAmount>
-            <CanPlayerOrder>false</CanPlayerOrder>
-            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
-        </Component>
-    </Components>
 	
 	<Blueprints>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>LXN_57E6_CompBP</SubtypeId>
-            </Id>
-            <DisplayName>57E6 Missile [Comp.]</DisplayName>
-            <Icon>Textures\Icons\LXN_57E6_missile.dds</Icon>
-            <Prerequisites>
-                <Item Amount="43" TypeId="Ingot" SubtypeId="Iron" />
-                <Item Amount="21.5" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="2.32" TypeId="Ingot" SubtypeId="Silicon" />
-                <Item Amount="10.8" TypeId="Ingot" SubtypeId="Magnesium" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Component" SubtypeId="LXN_57E6MagComp" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>

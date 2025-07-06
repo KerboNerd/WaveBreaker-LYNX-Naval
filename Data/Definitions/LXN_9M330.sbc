@@ -17,7 +17,7 @@
             <MissileProperties>
                 <MissileMass>86</MissileMass>
                 <MissileExplosionRadius>9</MissileExplosionRadius>
-                <MissileModelName>Models\Ammo\TT9M331L.mwm</MissileModelName>
+                <MissileModelName>Models\57E6\LXN_57E6_missile_1.mwm</MissileModelName>
                 <MissileAcceleration>50</MissileAcceleration>
                 <MissileInitialSpeed>150</MissileInitialSpeed>
                 <MissileSkipAcceleration>false</MissileSkipAcceleration>
