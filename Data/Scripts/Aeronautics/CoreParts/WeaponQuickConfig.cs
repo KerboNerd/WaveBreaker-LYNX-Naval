@@ -260,6 +260,8 @@ public static class BombsConfig
     public static float FAB500_Mass = 500f; // Mass in kg.
 
     public static float KAB500KR_Health = 200; // Health of the KAB-500KR bomb
+    public static float KAB500KR_MaxRange = 10000f; // Max Range of the KAB-500KR bomb
+    public static float KAB500KR_MinRange = 0f; // Min Range of the KAB-500KR bomb
     public static float KAB500KR_Inventory = 0.310f * inventoryMultiplier; // Inventory capacity in kL.
     public static float KAB500KR_Mass = 500f; // Mass in kg.
 

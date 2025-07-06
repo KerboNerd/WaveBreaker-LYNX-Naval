@@ -44,21 +44,19 @@ namespace Scripts {
                 SubSystems = new[] {
                     Thrust, Utility, Offense, Power, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
                 },
-                ClosestFirst = true, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
+                ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
                 MaxTargetDistance = 15000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
-                TopTargets = 2, // Maximum number of targets to randomize between; 0 = unlimited.
-                CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
-                TopBlocks = 0, // Maximum number of blocks to randomize between; 0 = unlimited.
-                CycleBlocks = 0, // Number of blocks to "cycle" per acquire attempt.
+                TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
+                TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
                 StopTrackingSpeed = 0, // Do not track threats traveling faster than this speed; 0 = unlimited.
                 UniqueTargetPerWeapon = true, // only applies to multi-weapon blocks 
                 MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one, only applies to turreted weapons
-                ShootBlanks = false, // Do not generate projectiles when shooting
+                ShootBlanks = true, // Do not generate projectiles when shooting
                 FocusOnly = true, // This weapon can only track focus targets.
 				EvictUniqueTargets = true, // if this is set it will evict any weapons set to UniqueTargetPerWeapon unless they to have this set
 				
@@ -67,7 +65,7 @@ namespace Scripts {
                     StoreTargets = true, // Pushes its current target to the grid/construct so that other slaved weapons can fire on it.
                     StorageLimit = 1, // The limit at which this weapon will no longer export targets onto the channel.
 					MaxConnections = 0, // 0 is unlimited, this value determines the maximum number of weapons that can link up to another weapon.
-					StoreLimitPerBlock = false, // Setting this to true will switch the StorageLimit from being per Location to per block per Location.
+					StoreLimitPerBlock = true, // Setting this to true will switch the StorageLimit from being per Location to per block per Location.
                     StorageLocation = "SNIPER_Storage", // This location ID is used either by the master weapon (if ExportTargets = true) or the slave weapon (if its false).  This is shared across the conncted grids.
                     Mode = LocalNetwork, // NoComms, BroadCast, LocalNetwork, Repeater, Relay, Jamming
 					TargetPersists = false, // Whether or not the weapon will retain its existing target even if the source of the target releases theirs.
@@ -81,12 +79,12 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "SNIPER Radar", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "SNIPER Pod", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
-                AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
+                AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
                 NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
                 ScanTrackOnly = true, // This weapon only scans and tracks entities, this disables un-needed functionality and customizes for this purpose. 
@@ -105,11 +103,11 @@ namespace Scripts {
                     TurretAttached = true, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = true, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = true, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
-                    LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
+                    LockOnFocus = true, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
                     OverrideLeads = false, // Disable target leading on fixed weapons, or allow it for turrets.
                     DefaultLeadGroup = 0, // Default LeadGroup setting, range 0-5, 0 is disables lead group.  Only useful for fixed weapons or weapons set to OverrideLeads.
-                    TargetGridCenter = true, // Does not target blocks, instead it targets grid center.
+                    TargetGridCenter = false, // Does not target blocks, instead it targets grid center.
                 },
                 HardWare = new HardwareDef
                 {
@@ -140,9 +138,9 @@ namespace Scripts {
                     ConstructPartCap = 0, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
                     RotateBarrelAxis = 0, // For spinning barrels, which axis to spin the barrel around; 0 = none.
                     EnergyPriority = 0, // Deprecated.
-                    MuzzleCheck = false, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
-                    DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
-                    NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution. 
+                    MuzzleCheck = true, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
+                    DisableLosCheck = true, // Do not perform LOS checks at all... not advised for self tracking weapons
+                    NoVoxelLosCheck = true, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution. 
                     Debug = false, // Force enables debug mode.
                     RestrictionRadius = 2.5f, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
                     CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
