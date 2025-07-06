@@ -70,10 +70,9 @@
             <Prerequisites>
                 <Item Amount="2.1" TypeId="Ingot" SubtypeId="Iron" />
                 <Item Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
-                <Item Amount="0.1" TypeId="Component" SubtypeId="Computer" />
-                <Item Amount="0.4" TypeId="Component" SubtypeId="Construction" />
                 <Item Amount="0.05" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="0.07" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="0.15" TypeId="Ingot" SubtypeId="Cobalt" />
             </Prerequisites>
             <!-- Total mass: Iron(2.1*7) + Nickel(0.3*8.9) + Computer(0.1*0.2) + ConstructionComponent(0.4*8) + Silicon(0.05*2.33) + Magnesium(0.07*1.74) = 14.7 + 2.67 + 0.02 + 3.2 + 0.1165 + 0.1218 = 20.8303kg -->
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="S8KOMmag" />

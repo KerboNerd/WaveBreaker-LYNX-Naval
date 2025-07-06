@@ -100,8 +100,7 @@
                 <Item Amount="12" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="30" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="30" TypeId="Ingot" SubtypeId="Platinum" />
-                <Item Amount="5" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
+                <Item Amount="30" TypeId="Ingot" SubtypeId="Cobalt" />
                 <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_GuidanceSystem" />   -->
                 <!-- <Item Amount="1" TypeId="Component" SubtypeId="Sfed_Warhead" />   -->
             </Prerequisites>

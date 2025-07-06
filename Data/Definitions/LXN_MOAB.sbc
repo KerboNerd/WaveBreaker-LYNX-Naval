@@ -67,8 +67,8 @@
                 <Item Amount="1500" TypeId="Ingot" SubtypeId="Iron" />
                 <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="300" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="10" TypeId="Component" SubtypeId="LXN_NATO_BombComp_01" />
-                <Item Amount="10" TypeId="Component" SubtypeId="LXN_NATO_BombComp_02" />
+                <Item Amount="100" TypeId="Ingot" SubtypeId="Cobalt" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Uranium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MOABMag1" />
             <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>

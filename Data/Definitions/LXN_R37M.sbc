@@ -68,8 +68,7 @@
                 <Item Amount="14" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="8" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="25" TypeId="Ingot" SubtypeId="Platinum" />
-                <Item Amount="12" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
+                <Item Amount="25" TypeId="Ingot" SubtypeId="Cobalt" />
                 <!-- <Item Amount="6" TypeId="Component" SubtypeId="LXN_RUS_MissileAvionics_01" />
                 <Item Amount="6" TypeId="Component" SubtypeId="LXN_RUS_ExportDocuments_01" /> -->
             </Prerequisites>

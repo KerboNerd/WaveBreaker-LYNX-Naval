@@ -107,7 +107,7 @@
                 <Item Amount="12.5" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="1.35" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="6.3" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Cobalt" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_S400Mag" />
             <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>

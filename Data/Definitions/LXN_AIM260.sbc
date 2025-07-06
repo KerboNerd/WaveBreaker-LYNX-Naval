@@ -69,7 +69,7 @@
                 <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="18" TypeId="Ingot" SubtypeId="Magnesium" />
-                <Item Amount="50" TypeId="Ingot" SubtypeId="Platinum" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Cobalt" />
                 <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
                 <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
             </Prerequisites>
