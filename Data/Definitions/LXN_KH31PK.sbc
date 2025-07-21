@@ -73,7 +73,7 @@
             </Prerequisites>
             <!-- Total mass of prerequisites should not exceed the missile's logical mass of 450kg to maintain logical consistency. -->
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_KH31PKMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

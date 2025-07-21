@@ -73,7 +73,7 @@
                 <Item Amount="50" TypeId="Ingot" SubtypeId="Cobalt" />                
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_ZirconVLSMag" />
-            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

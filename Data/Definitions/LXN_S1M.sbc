@@ -73,7 +73,7 @@
                 <Item Amount="15" TypeId="Ingot" SubtypeId="Uranium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_S1MMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

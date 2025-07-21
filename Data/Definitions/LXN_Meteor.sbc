@@ -71,7 +71,7 @@
                 <Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MeteorMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

@@ -71,7 +71,7 @@
                 <Item Amount="1" TypeId="Ingot" SubtypeId="Platinum" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_IRISTMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

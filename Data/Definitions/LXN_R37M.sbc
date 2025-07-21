@@ -73,12 +73,11 @@
                 <Item Amount="6" TypeId="Component" SubtypeId="LXN_RUS_ExportDocuments_01" /> -->
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_R37MMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 
     <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R37M_CompBP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_R37M_BP" />
     </BlueprintClassEntries>
 

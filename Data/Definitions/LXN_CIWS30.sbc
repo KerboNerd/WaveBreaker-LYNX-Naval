@@ -71,7 +71,7 @@
                 <Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_CIWS30Mag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

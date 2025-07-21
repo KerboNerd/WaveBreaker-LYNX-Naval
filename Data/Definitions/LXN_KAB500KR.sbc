@@ -70,7 +70,7 @@
                 <Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_KAB500KRMag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>90</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

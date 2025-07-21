@@ -111,7 +111,7 @@
                 <!-- <Item Amount="1" TypeId="Component" SubtypeId="Nato_Warhead" /> -->
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_AIM120Mag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

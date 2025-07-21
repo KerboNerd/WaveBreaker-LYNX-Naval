@@ -74,7 +74,7 @@
                 <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_AIM260Mag" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>90</BaseProductionTimeInSeconds>
         </Blueprint>
     </Blueprints>
 

@@ -71,7 +71,7 @@
                 <Item Amount="50" TypeId="Ingot" SubtypeId="Uranium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MOABMag1" />
-            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 
