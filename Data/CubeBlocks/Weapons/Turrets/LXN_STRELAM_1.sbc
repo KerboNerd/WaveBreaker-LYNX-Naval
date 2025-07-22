@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_STRELAM_1</SubtypeId>
+			</Id>
+			<DisplayName>LYNX-DYNAMICS STRELA-M CIWS</DisplayName>
+			<Description>
+				The STRELA-M is a Russian close-in weapon system (CIWS) inspired by the American RAM design, adapted for use on modern warships.
+				Utilizing a rapid-fire missile launcher, the STRELA-M provides last-ditch defense against incoming anti-ship missiles, aircraft, and fast attack craft.
+				The system features advanced radar and infrared tracking, high-speed target engagement, and automated fire control for maximum effectiveness.
+				Designed for reliability and ease of integration, the STRELA-M ensures robust protection for naval vessels in high-threat environments.
+				Max engagement range: 5000m
+				Ammo: 57E6 Missile
+			</Description>
+			<Icon>Textures\Icons\STRELAM\Cubes\LXN_STRELAM_1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<PlaceDecals>false</PlaceDecals>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\STRELAM\LXN_STRELAM_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="240" />
+				<Component Subtype="Construction" Count="16" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BlockPairName>LXN_STRELAM_1</BlockPairName>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<OverlayTexture>Textures\turret_overlay.dds</OverlayTexture>
+			<WeaponDefinitionId Subtype="Blank"/>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MinElevationDegrees>-25</MinElevationDegrees>
+			<MaxElevationDegrees>85</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<RotationSpeed>0.05</RotationSpeed>
+			<ElevationSpeed>0.03</ElevationSpeed>
+			<IdleRotation>false</IdleRotation>
+			<MaxRangeMeters>1200</MaxRangeMeters>
+			<AiEnabled>false</AiEnabled>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.24719755</MaxFov>
+			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+			<InventoryFillFactorMin>.384</InventoryFillFactorMin>
+			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
+			<IdlePower>.10</IdlePower>
+			<UsePower>120</UsePower>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>225</PCU>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Weapons\Turrets\LXN_CIWS30_01_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Turrets\LXN_CIWS30_01_BS2.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

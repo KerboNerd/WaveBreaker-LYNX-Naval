@@ -62,11 +62,6 @@ namespace Scripts
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
                 Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
-            ObjectsHit = new ObjectsHitDef
-            {
-                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
-                CountBlocks = false, // Counts individual blocks, not just entities hit.
-            },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "R-77 Secondary", // AmmoRound field of the ammo to spawn.
@@ -693,12 +688,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LXN_MissileTrail_01", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 1.4f),
                         DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.3f,
+                            Scale = 0.4f,
                         },
                     },
                     Hit = new ParticleDef

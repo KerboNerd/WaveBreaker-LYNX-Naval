@@ -546,7 +546,7 @@ namespace Scripts
                 TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 80, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 90, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 5f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
@@ -568,7 +568,7 @@ namespace Scripts
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
                     NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
-                    MinTurnSpeed = 0, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
+                    MinTurnSpeed = 20, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
@@ -1227,7 +1227,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "S400 Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 200, // Number of projectiles to spawn.
+                Fragments = 10, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.

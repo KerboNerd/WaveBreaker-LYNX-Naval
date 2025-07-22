@@ -93,8 +93,55 @@
             <AmmoDefinitionId Subtype="LXN_Energy" />
         </AmmoMagazine>
 	</AmmoMagazines>
+
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>LXN_57E6MagComp</SubtypeId>
+            </Id>
+            <DisplayName>57E6 Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\LXN_57E6_missile.dds</Icon>
+            <Model>Models\57E6\LXN_57E6_missile_2.mwm</Model>
+            <Size>
+                <X>0.24</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>  
+            </Size>
+            <Mass>86</Mass>
+            <Volume>47</Volume>
+            <IconSymbol>Comp.</IconSymbol>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>1</MaxIntegrity>
+            <DropProbability>1</DropProbability>
+            <Health>1</Health>
+            <MinimumOfferAmount>70</MinimumOfferAmount>
+            <MaximumOfferAmount>700</MaximumOfferAmount>
+            <MinimumOrderAmount>35</MinimumOrderAmount>
+            <MaximumOrderAmount>350</MaximumOrderAmount>
+            <CanPlayerOrder>false</CanPlayerOrder>
+            <MinimumAcquisitionAmount>5</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
 	
 	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_57E6_CompBP</SubtypeId>
+            </Id>
+            <DisplayName>57E6 Missile [Comp.]</DisplayName>
+            <Icon>Textures\Icons\LXN_57E6_missile.dds</Icon>
+            <Prerequisites>
+                <Item Amount="43" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="21.5" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="2.32" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="10.8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="LXN_57E6MagComp" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>
@@ -109,7 +156,7 @@
                 <Item Amount="10.8" TypeId="Ingot" SubtypeId="Magnesium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_57E6Mag" />
-            <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 
@@ -118,65 +165,4 @@
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_57E6_BP" />
     </BlueprintClassEntries>
 
-	<Weapons>
-		<Weapon>
-            <Id>
-                <TypeId>WeaponDefinition</TypeId>
-                <SubtypeId>LXN_57E6</SubtypeId>
-            </Id>
-            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
-            <DeviateShotAngle>0.1</DeviateShotAngle>
-            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
-            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
-            <AmmoMagazines>
-                <AmmoMagazine Subtype="LXN_57E6Mag" />
-            </AmmoMagazines>
-            <ReloadTime>8000</ReloadTime>
-        </Weapon>
-		<Weapon>
-            <Id>
-                <TypeId>WeaponDefinition</TypeId>
-                <SubtypeId>LXN_57E6_x4</SubtypeId>
-            </Id>
-            <MissileAmmoData RateOfFire="5" ShootSoundName="AIM54Shot" FlightSoundName="CAP_Missile_Fly_Loop" ShotsInBurst="1" />
-            <DeviateShotAngle>0.1</DeviateShotAngle>
-            <DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
-            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
-            <AmmoMagazines>
-                <AmmoMagazine Subtype="LXN_57E6Mag" />
-            </AmmoMagazines>
-            <ReloadTime>8000</ReloadTime>
-        </Weapon>
-	</Weapons>
-	
-	<CategoryClasses>
-			<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-				<Id>
-					<TypeId>GuiBlockCategoryDefinition</TypeId>
-					<SubtypeId/>
-				</Id>
-					<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
-					<Name>ShipWeapons</Name>
-					<SearchBlocks>false</SearchBlocks>
-					<IsShipCategory>true</IsShipCategory>
-					<IsBlockCategory>false</IsBlockCategory>
-					<IsToolCategory>true</IsToolCategory>
-					<ItemIds>
-						<string>LXN_57E6Mount</string>
-					</ItemIds>	
-			</Category>
-
-            <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-            <Id>
-                <TypeId>GuiBlockCategoryDefinition</TypeId>
-                <SubtypeId />
-            </Id>
-            <DisplayName>L.Y.N.X Missile Systems</DisplayName>
-            <Name>LXN_MissileSystems</Name>
-            <ItemIds>
-                <string>ConveyorSorter/LXN_57E6_3xTubes</string>
-            </ItemIds>
-            </Category>
-
-	</CategoryClasses>
 </Definitions>

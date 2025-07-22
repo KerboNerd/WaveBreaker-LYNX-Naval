@@ -396,7 +396,7 @@ namespace Scripts
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
             HardPointUsable = false, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 1, // For energy weapons, how many shots to fire before reloading.
-            IgnoreWater = false, // Whether the projectile should be able to penetrate water when using WaterMod.
+            IgnoreWater = true, // Whether the projectile should be able to penetrate water when using WaterMod.
             IgnoreVoxels = false, // Whether the projectile should be able to penetrate voxels.
             HeatModifier = -1f, // Allows this ammo to modify the amount of heat the weapon produces per shot.
             NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -415,7 +415,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "KALIBR Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 50, // Number of projectiles to spawn.
+                Fragments = 0, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
@@ -523,9 +523,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 10f, // Radius of AOE effect, in meters.
-                    Damage = 12000,
-                    Depth = 8f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 8f, // Radius of AOE effect, in meters.
+                    Damage = 5000,
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -547,7 +547,7 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 0f, // Degrees, Is pointed forward
+                TargetLossDegree = 90f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". 8 seconds converted to ticks.
                 AccelPerSec = MissileConfig.Moskit_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
@@ -575,10 +575,10 @@ namespace Scripts
                     MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
-                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
-                    OffsetRatio = 0.6f, // The ratio to offset the random direction (0 to 1)
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                    OffsetRatio = 0.2f, // The ratio to offset the random direction (0 to 1)
                     OffsetTime = 6, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
-                    OffsetMinRange = 200, // The range from target at which offsets are no longer active
+                    OffsetMinRange = 500, // The range from target at which offsets are no longer active
                     FocusOnly = true, // only target the constructs Ai's focus target
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database).
@@ -733,7 +733,7 @@ namespace Scripts
                         // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                         Start1Value = 0,
                         Start2Value = 0,
-                        End1Value = 2000,
+                        End1Value = 1000,
                         End2Value = 0,
                         End3Value = 0,
                         // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)

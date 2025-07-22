@@ -68,13 +68,12 @@ namespace Scripts
                 LXN_CIWS30_01,
                 LXN_3S14VLS_AA,
                 LXN_3S14VLS_AS,
-                TTMK15,
-                TTMK15Triple,
-                TTMK15Sub,
-                TTPYLONMK13,
-                TTMK37Director,
-                TTMK6ChargeRack,
-                TTMKXIDC
+                LXN_AK130M_1,
+                LXN_AK130M_2,
+                LXN_STRELAM_1,
+                LXN_PALASHM_1,
+                LXN_PALASHM_1_MISSILE,
+                LXN_PALASHM_CAMERA_1
             );
         }
     }

@@ -156,6 +156,17 @@ public static class MissileConfig
     public static float RIM174_SM6_BoosterAccel = 100; // Meters Per Second
     public static float RIM174_SM6_Mass = 1500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // 57E6 Missile
+    public static float S1_57E6_Health = 70; // Health of the 57E6 missile
+    public static float S1_57E6_MaxRange = 10000f; // Max Range of the 57E6 missile (10km)
+    public static float S1_57E6_MinRange = 250f; // Min Range of the 57E6 missile
+    public static float S1_57E6_MaxSpeed = 1220f * speedLimiterFactor; // Max Speed of the 57E6 missile (Mach 3.5)
+    public static float S1_57E6_Inventory = 0.047f * 3 * SAM_InventoryMultiplier; // Inventory capacity in kL.
+    public static float S1_57E6_Mass = 86f; // Mass in kg (86kg for 57E6 missile)
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // STRELA-M CIWS
+    public static uint STRELA_M_ReloadTime = 5 * 60; // Seconds
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
     // Anti-Ship Missiles
@@ -172,7 +183,7 @@ public static class MissileConfig
     public static float Oniks_BoosterAccel = 15; // Meters Per Second
     public static float Oniks_SkimmingAltitude = 15f; // Meters
     public static float Oniks_TerminalApproachAltitude = 7f; // Meters
-    public static float Oniks_TerminalApproachDistance = 300f; // Meters
+    public static float Oniks_TerminalApproachDistance = 800f; // Meters
     public static float Oniks_MaxRange = 15000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 5000f; // Min Range of the Oniks missile
     public static float Oniks_MaxSpeed = 800f * speedLimiterFactor; // Max Speed of the Oniks missile
@@ -180,7 +191,7 @@ public static class MissileConfig
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Kalibr_Health = 40; // Health of the Kalibr missile
-    public static int Kalibr_BoosterTime = 15; // Seconds
+    public static int Kalibr_BoosterTime = 8; // Seconds
     public static float Kalibr_BoosterAccel = 45; // Meters Per Second
     public static float Kalibr_SkimmingAltitude = 50f; // Meters
     public static float Kalibr_TerminalApproachAltitude = 5f; // Meters
@@ -190,12 +201,12 @@ public static class MissileConfig
     public static float Kalibr_MaxSpeed = 1000f * speedLimiterFactor; // Max Speed of the Kalibr missile
     public static float Kalibr_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Moskit_Health = 80; // Health of the Moskit missile
+    public static float Moskit_Health = 10; // Health of the Moskit missile
     public static int Moskit_BoosterTime = 4; // Seconds
     public static float Moskit_BoosterAccel = 128; // Meters Per Second
     public static float Moskit_SkimmingAltitude = 20f; // Meters
-    public static float Moskit_TerminalApproachAltitude = 7f; // Meters
-    public static float Moskit_TerminalApproachDistance = 300f; // Meters
+    public static float Moskit_TerminalApproachAltitude = 5f; // Meters
+    public static float Moskit_TerminalApproachDistance = 500f; // Meters
     public static float Moskit_MaxRange = 15000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
     public static float Moskit_MaxSpeed = 1100f * speedLimiterFactor; // Max Speed of the Moskit missile
@@ -278,9 +289,3 @@ public static class BombsConfig
     public static float YAB10_Inventory = 1.160f * inventoryMultiplier; // Inventory capacity in kL.
     public static float YAB10_Mass = 1500f; // Mass in kg.
 }
-
-
-
-
-
-

@@ -322,7 +322,7 @@ namespace Scripts
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
             HardPointUsable = true, // Whether this is a primary ammo type fired directly by the turret. Set to false if this is a shrapnel ammoType and you don't want the turret to be able to select it directly.
             EnergyMagazineSize = 1, // For energy weapons, how many shots to fire before reloading.
-            IgnoreWater = false, // Whether the projectile should be able to penetrate water when using WaterMod.
+            IgnoreWater = true, // Whether the projectile should be able to penetrate water when using WaterMod.
             IgnoreVoxels = false, // Whether the projectile should be able to penetrate voxels.
             HeatModifier = -1f, // Allows this ammo to modify the amount of heat the weapon produces per shot.
             NpcSafe = false, // This is you tell npc moders that your ammo was designed with them in mind, if they tell you otherwise set this to false.
@@ -341,7 +341,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "KALIBR Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 50, // Number of projectiles to spawn.
+                Fragments = 0, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -434,7 +434,7 @@ namespace Scripts
                 {
                     Enable = false,
                     Radius = 5f, // Meters
-                    Damage = 20000f,
+                    Damage = 12000f,
                     Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -443,9 +443,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 10f, // Radius of AOE effect, in meters.
-                    Damage = 50000,
-                    Depth = 20f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 6f, // Radius of AOE effect, in meters.
+                    Damage = 12000,
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
@@ -475,7 +475,7 @@ namespace Scripts
                 TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 120, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 100, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 2f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
@@ -489,7 +489,7 @@ namespace Scripts
                     MaxTargets = 2, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
-                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
                     OffsetRatio = 0.4f, // The ratio to offset the random direction (0 to 1)
                     OffsetTime = 6, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
                     OffsetMinRange = 200, // The range from target at which offsets are no longer active
@@ -497,7 +497,7 @@ namespace Scripts
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database).
                     NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
-                    MinTurnSpeed = 5, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds
+                    MinTurnSpeed = 30, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic
                 },      
@@ -647,7 +647,7 @@ namespace Scripts
                         // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                         Start1Value = 0,
                         Start2Value = 0,
-                        End1Value = 2000,
+                        End1Value = 3000,
                         End2Value = 0,
                         End3Value = 0,
                         // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -758,7 +758,7 @@ namespace Scripts
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                        Start1Value = 0,
                        Start2Value = 0,
-                       End1Value = MissileConfig.Kalibr_TerminalApproachDistance,
+                       End1Value = MissileConfig.Moskit_TerminalApproachDistance,
                        End2Value = 0,
                        End3Value = 0,
                        // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -793,7 +793,7 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 250, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active

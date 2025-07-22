@@ -863,110 +863,6 @@ namespace Scripts
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
-                //Approaches = new[] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior. Cost level of 4+, or 5+ if used with steering.
-                //{
-                //    /*
-                //     * What are approaches? How do they interact with other config variables?  What problems do they solve? 
-                //     *
-                //     * At the most basic level an "approach" is a collection of variables that allow you, the mod author, to tell the projectile how to "approach"
-                //     * a desired "destination" (aka position) when certain conditions are met and what to then do once it has arrived.  I say "destination/position" and not "target" on
-                //     * purpose, while the desired destination may be the "target" it often is not.  Keep in mind that approaches merely "influence" the projectiles path to
-                //     * a desired position, they do not absolutely determine it.  Instead you are telling the projectile where you want it to go and through which
-                //     * trajectory it should travel to get there, but ultimately you are setting the desired flight path, you are not the pilot.
-                //     *
-                //     * Approaches are an extension of Smarts and these variables are applied ontop of, not in place of, all other config variables. This means anything
-                //     * you set in other parts of the config will still influence approaches and sometimes in unexpected ways (i.e. trackingDelay or not finding a target
-                //     * can delay when an approaches begins).  In a few cases approaches have variables that override/alter/extend how non-approach variables behave.
-                //     *
-                //     * Approaches will not alter the path of a projectile until its start condition is met (and optionally maintained).  Prior to "starting" the
-                //     * projectile will behave as it would have had there was no approach defined.  This is also the case once all approaches have completed. 
-                //     *
-                //     * Approaches require you to think about projectile navigation in an abstract manner.  This is a good time to restate that you are merely "influencing" the
-                //     * projectile, you are not controlling/piloting it.  The battlefield is dynamic, always changing, you are setting objectives and providing rules to follow
-                //     * if certain conditions are met, nothing more.  You must also remember that although you are setting variables like positionB, positionC, elevation, lead
-                //     * upDirection, forwardDirection etc... these variables merely "influence" the projectiles heading relative to its current position and velocity, they do not
-                //     * represent its actual source nor destination positions, directions nor elevation.
-                //     *
-                //     * Said another way, imagine your projectile half way between its launcher and the "target" and it is at this time that your approach "starts".  If you were
-                //     * to then draw this scene out visually, you would draw three spheres representing positions which we will call "projectile current position (aka positionA)", "positionB"
-                //     * and "positionC", where you only get to define the latter two.  You then define two directions, a forward direction and an up direction.  You can
-                //     * also optionally set a desired "elevation" relative to the up direction and a desired "lead" relative to the forward direction, applied to the positionB and/or
-                //     * positionC.  Now draw a 1 and 2 that represents the modified positionB and positionC positions (taking into account elevation, lead, and rotations).  Your
-                //     * projectiles heading will by default attempt to steer to modified C position (2), or alternatively to modified B (1) if you set TrajectoryRelativeToB to true. 
-                //     */
-
-                //    new ApproachDef // * in comments means default
-                //    {
-                //        // Start/End behaviors 
-                //        RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition. 
-                //        Operators = StartEnd_And, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
-                //        CanExpireOnceStarted = true, // This stages values will continue to apply until the end conditions are met.
-                //        ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.  
-
-                //        // Start/End conditions
-                //        StartCondition1 = Lifetime, // Each condition type is either >= or <= the corresponding value defined below.
-                //                                    // Ignore(skip this condition)*, DistanceFromDestination[<=], DistanceToDestination[>=], Lifetime[>=], DeadTime[<=], MinTravelRequired[>=],
-                //                                    // MaxTravelRequired[<=], Spawn(works per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
-                //                                    // NextTimedSpawn[<=], SinceTimedSpawn[>=], RelativeLifetime[>=], RelativeDeadTime[<=], RelativeSpawns[>=], EnemyTargetLoss[>=]
-                //                                    // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
-                //        StartCondition2 = Ignore,
-                //        EndCondition1 = DistanceFromPositionC,
-                //        EndCondition2 = Ignore, 
-
-                //        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                //        Start1Value = 1,
-                //        Start2Value = 0,
-                //        End1Value = 100,
-                //        End2Value = 0, 
-
-                //        // Relative positions and directions
-                //        Forward = ForwardTargetDirection, // ForwardDestinationDirection*, ForwardRelativeToBlock, ForwardRelativeToShooter, ForwardRelativeToGravity, ForwardTargetDirection, ForwardTargetVelocity, ForwardStoredStartPosition, ForwardStoredEndPosition, ForwardStoredStartLocalPosition, ForwardStoredEndLocalPosition, ForwardOriginDirection    
-                //        Up = UpRelativeToGravity, // UpRelativeToBlock*, UpRelativeToShooter, UpRelativeToGravity, UpTargetDirection, UpTargetVelocity, UpStoredStartPosition, UpStoredEndPosition, UpStoredStartLocalPosition, UpStoredEndLocalPosition, UpOriginDirection, UpDestinationDirection
-                //        PositionB = PositionA, // Origin*, Shooter, Target, Surface, MidPoint, PositionA, Nothing, StoredStartPosition, StoredEndPosition, StoredStartLocalPosition, StoredEndLocalPosition
-                //        PositionC = Target,
-                //        Elevation = Surface,
-
-                //        //
-                //        // Control if the vantagepoints update every frame or only at start.
-                //        //
-                //        AdjustForward = true, // adjust forwardDir overtime.
-                //        AdjustUp = false, // adjust upDir overtime
-                //        AdjustPositionB = true, // Updated the position overtime.
-                //        AdjustPositionC = true, // Update the position overtime.
-                //        LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
-                //        LeadRotateElevatePositionC = true, // Add Lead, Rotation and DesiredElevation to PositionC
-                //        TrajectoryRelativeToB = false, // If true the projectiles immediate trajectory will be relative to PositionB instead of PositionC (e.g. quick response to elevation changes relative to PositionB position assuming that position is closer to PositionA)
-                //        ElevationRelativeToC = true, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
-                //        // Tweaks to vantagepoint behavior
-                //        ElevationTolerance = 1, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                //        TrackingDistance = 1, // Minimum travel distance before projectile begins racing to Destination
-                //        DesiredElevation = 30, // The desired elevation relative to source 
-                //        // Storage Values
-                //        StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
-                //        StoredEndId = 0, // Which approach id the the end storage was saved in, if any.
-                //        StoredStartType = PositionA, // Uses same values as source/destination/elevation
-                //        StoredEndType = Target,
-                //        // Controls the leading behavior
-                //        LeadDistance = 40, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met. 
-                //        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
-
-                //        // Modify speed and acceleration ratios while this approach is active
-                //        AccelMulti = 0.02, // Modify default acceleration by this factor
-                //        DeAccelMulti = 0, // Modifies your default deacceleration by this factor
-                //        TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
-                //        SpeedCapMulti = 1, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
-                //    },
-
-                //},
-
-                Mines = new MinesDef  // Note: This is being investigated. Please report to Github, any issues.
-                {
-                    DetectRadius = 0,
-                    DeCloakRadius = 0,
-                    FieldTime = 0,
-                    Cloak = false,
-                    Persist = false,
-                },
             },
             AmmoGraphics = new GraphicDef
             {
@@ -994,8 +890,8 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LXN_MissileTrail_01", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 1.3f),
                         DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {

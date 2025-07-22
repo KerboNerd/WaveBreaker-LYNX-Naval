@@ -701,17 +701,17 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>500</ValueFloat>
+                  <ValueFloat>100</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>5</Time>
-                  <ValueFloat>500</ValueFloat>
+                  <ValueFloat>100</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
                   <Time>10</Time>
-                  <ValueFloat>100</ValueFloat>
+                  <ValueFloat>50</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>LXN_ShipGyro_1_rudder</SubtypeId>
+			</Id>
+			<DisplayName>Naval Ship Gyroscope</DisplayName>
+			<Icon>Textures\Icons\ShipGyro\LXN_ShipGyro_1_rudder.dds</Icon>
+			<Description>A naval ship gyroscope is a device that uses a gyroscope to stabilize the ship's attitude. It is used to keep the ship's attitude stable and to prevent the ship from rolling, pitching, and yawing.</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\ShipGyro\LXN_ShipGyro_1_rudder.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="MetalGrid" Count="50" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="100" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="2.00" Default="true" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\ShipGyro\LXN_ShipGyro_1_rudder_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_ShipGyro_1</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<PrimarySound>BlockGyroscope</PrimarySound>
+			<ResourceSinkGroup>Gyro</ResourceSinkGroup>
+			<ForceMagnitude>3.36E+09</ForceMagnitude> <!-- 1 Gyro is 3.36E+07 -->
+			<RequiredPowerInput>1</RequiredPowerInput> <!-- 1 Gyro is 0.01 -->
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>50</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

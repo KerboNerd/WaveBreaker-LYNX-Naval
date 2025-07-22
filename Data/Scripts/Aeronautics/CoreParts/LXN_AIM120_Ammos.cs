@@ -855,12 +855,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "LXN_MissileTrail_01", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 1.4f),
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.3f,
+                            Scale = 0.4f,
                         },
                     },
                     Hit = new ParticleDef

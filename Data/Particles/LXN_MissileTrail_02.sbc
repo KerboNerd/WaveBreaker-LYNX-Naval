@@ -722,7 +722,7 @@
                 </Key>
                 <Key>
                   <Time>1</Time>
-                  <ValueFloat>500</ValueFloat>
+                  <ValueFloat>100</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
