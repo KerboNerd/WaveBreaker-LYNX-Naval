@@ -10,6 +10,14 @@
     <BlockConfig TypeId="Thrust" SubtypeId="LXN_VectorProp_01" Volume="40"
       FunctionalUnderwater="true" FunctionalAboveWater="false" PlayDamageEffect="false" /> -->
 
+    <BlockConfig TypeId="ConveyorSorter" SubtypeId="TTMK15Square" Volume="10"
+      FunctionalUnderwater="true" FunctionalAboveWater="true" PlayDamageEffect="false" />
+
+    <BlockConfig TypeId="ConveyorSorter" SubtypeId="TTMK15Sloped" Volume="10"
+      FunctionalUnderwater="true" FunctionalAboveWater="true" PlayDamageEffect="false" />
+
+    <BlockConfig TypeId="ConveyorSorter" SubtypeId="TTMK15Sloped1x2" Volume="10"
+      FunctionalUnderwater="true" FunctionalAboveWater="true" PlayDamageEffect="false" />
 
   </BlockConfigs>
   <PlanetConfigs>
