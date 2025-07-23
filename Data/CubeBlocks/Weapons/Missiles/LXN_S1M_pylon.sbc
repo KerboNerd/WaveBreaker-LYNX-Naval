@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_S1M_pylon</SubtypeId>
 			</Id>
-			<DisplayName>S1-M "SIBIRSK" Cruise Missile</DisplayName>
+			<DisplayName>S1-M SIBIRSK Cruise Missile</DisplayName>
 			<Description>In the heart of the new Soviet frontier, where the icy winds of Siberia whispered tales of power and resilience, engineers labored tirelessly to forge an icon of destruction – the Sibirsk S-1M Hypersonic Cruise Missile.
 				Requires AESA Radar (WC) to designate targets
 				15,000m max range, 5,000m minimum range.

@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_R77_Bay2</SubtypeId>
 			</Id>
-			<DisplayName>R-77 BVRAAM (BAY-2)</DisplayName>
+			<DisplayName>R-77 BVRAAM [BAY-2]</DisplayName>
 			<Description>The R-77 missile, also known as the AA-12 Adder, is a long-range air-to-air missile developed by Russia.
 				Requires AESA Radar (WC) to designate targets.
 				12,000m max range, 3,000m minimum range.

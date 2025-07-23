@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_S400_tube</SubtypeId>
 			</Id>
-			<DisplayName>S-400 "Triumf" Missile System</DisplayName>
+			<DisplayName>S-400 Triumf Missile System</DisplayName>
 			<Description>The S-400 missile system is a modern air defense system developed by Russia's Almaz Central Design Bureau. It is capable of destroying all types of aerodynamic targets and ballistic missiles with a broad launch range. 
 				Requires a Radar to designate targets.
 				20,000m max range, 500m minimum range.

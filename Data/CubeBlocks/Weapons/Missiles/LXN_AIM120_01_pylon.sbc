@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_AIM120_01_pylon</SubtypeId>
 			</Id>
-			<DisplayName>AIM-120 Mount</DisplayName>
+			<DisplayName>AIM-120-D Mount</DisplayName>
 			<Description>The AIM-120 Advanced Medium-Range Air-to-Air Missile (AMRAAM) is an American beyond-visual-range air-to-air missile capable of all-weather day-and-night operations.
 			Requires AESA Radar (WC) to designate targets. Ranges: 12km(2km minimum)</Description>
 			<Icon>Textures\Icons\LXN_AIM120_01_pylon.dds</Icon>

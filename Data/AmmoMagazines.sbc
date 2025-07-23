@@ -16,7 +16,7 @@
      <Z>0.53</Z>
      </Size>
      <Mass>3000</Mass>
-     <Volume>375</Volume>
+     <Volume>1575</Volume>
      <Model>Models\Ammo\TTMK15Torpedo.mwm</Model>
      <PhysicalMaterial>Ammo</PhysicalMaterial>
      <Capacity>1</Capacity>
@@ -36,7 +36,7 @@
      <Z>0.53</Z>
      </Size>
      <Mass>1676</Mass>
-     <Volume>375</Volume>
+     <Volume>975</Volume>
      <Model>Models\Ammo\TTMK13Torpedo.mwm</Model>
      <PhysicalMaterial>Ammo</PhysicalMaterial>
      <Capacity>1</Capacity>
@@ -56,7 +56,7 @@
      <Z>0.53</Z>
      </Size>
      <Mass>1676</Mass>
-     <Volume>375</Volume>
+     <Volume>575</Volume>
      <Model>Models\Ammo\TTMK6DepthCharge.mwm</Model>
      <PhysicalMaterial>Ammo</PhysicalMaterial>
      <Capacity>1</Capacity>
