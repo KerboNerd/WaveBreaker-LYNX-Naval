@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_9M723_Launcher_1</SubtypeId>
+			</Id>
+			<DisplayName>9M723 Iskander Launcher</DisplayName>
+			<Description>The 9M723 Iskander is a Russian short-range ballistic missile system designed for precision strikes against strategic ground targets. This mobile launcher provides rapid deployment capability and features advanced inertial navigation with terminal guidance for high accuracy against fortified positions, command centers, and infrastructure targets.
+				10km max range, 5km minimum range.
+			</Description>
+			<Icon>Textures\Icons\9M723_Iskander\Cubes\LXN_9M723_Launcher_1.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\9M723_Iskander\LXN_9M723_Launcher_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="6" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="SteelPlate" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\9M723_Iskander\LXN_9M723_Launcher_1_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_9M723_Launcher_1</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<Center x="0" y="0" z="0" />
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_9M723_1" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="7.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="7.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="7.00" Default="true"/>
+			</MountPoints>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

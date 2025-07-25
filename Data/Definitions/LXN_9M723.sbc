@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_9M723Ammo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>3750</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\9M723_Iskander\LXN_9M723_Missile_2.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_9M723Mag</SubtypeId>
+            </Id>
+            <DisplayName>9M723 "Iskander" Ballistic Missile</DisplayName>
+            <Icon>Textures\Icons\9M723_Iskander\LXN_9M723_Missile_2.dds</Icon>
+            <Size>
+                <X>7.3</X>
+                <Y>0.92</Y>
+                <Z>0.92</Z>
+            </Size>
+            <Mass>3750</Mass>
+            <Volume>4800</Volume>
+            <Model>Models\9M723_Iskander\LXN_9M723_Missile_2.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_9M723Ammo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_9M723_BP</SubtypeId>
+            </Id>
+            <DisplayName>9M723 "Iskander" Ballistic Missile</DisplayName>
+            <Icon>Textures\Icons\9M723_Iskander\LXN_9M723_Missile_2.dds</Icon>
+            <Prerequisites>
+                <Item Amount="250" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="60" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="120" TypeId="Ingot" SubtypeId="Uranium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_9M723Mag" />
+            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_9M723_BP" />
+    </BlueprintClassEntries>
+
+	<Weapons>
+		<Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LXN_9M723_1</SubtypeId>
+            </Id>
+            <MissileAmmoData RateOfFire="400" ShootSoundName="HydraRocketShot" FlightSoundName="MissileFlightSound" ShotsInBurst="0" />
+            <DeviateShotAngle>0.5</DeviateShotAngle>
+            <DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+            <NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="LXN_9M723Mag" />
+            </AmmoMagazines>
+            <ReloadTime>2000</ReloadTime>
+        </Weapon>
+	</Weapons>
+
+</Definitions>

@@ -329,7 +329,7 @@ namespace Scripts
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
             Sync = new SynchronizeDef
             {
-                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
@@ -1003,13 +1003,13 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "LXN_S400_Travel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "ArcLXN_Missile_Explosion_01",
+                TravelSound = "LXN_MissileTravel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                HitSound = "LXN_SmallMissileExplosion",
                 ShotSound = "LXN_VLS_Ignition",
-                ShieldHitSound = "ArcLXN_Missile_Explosion_01",
-                PlayerHitSound = "ArcLXN_Missile_Explosion_01",
-                VoxelHitSound = "ArcLXN_Missile_Explosion_01",
-                FloatingHitSound = "ArcLXN_Missile_Explosion_01",
+                ShieldHitSound = "LXN_SmallMissileExplosion",
+                PlayerHitSound = "LXN_SmallMissileExplosion",
+                VoxelHitSound = "LXN_SmallMissileExplosion",
+                FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
