@@ -200,7 +200,7 @@ namespace Scripts {
             Ammos = new[] {
                 LXN_CIWS30_Ammo, // Must list all primary, shrapnel, and pattern ammos.
             },
-            Animations = LXN_PALASHM_Anim,
+            //Animations = GoalKeeper_Animation,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.
