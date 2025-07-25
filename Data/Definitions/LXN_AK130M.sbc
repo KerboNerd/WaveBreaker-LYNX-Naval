@@ -68,7 +68,7 @@
                 <Z>0.2</Z>
             </Size>
             <Mass>350</Mass>
-            <Volume>200</Volume>
+            <Volume>130</Volume>
             <Capacity>500</Capacity>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL130HEAmmo" />
@@ -93,7 +93,7 @@
                 <Z>0.2</Z>
             </Size>
             <Mass>350</Mass>
-            <Volume>200</Volume>
+            <Volume>130</Volume>
             <Capacity>500</Capacity>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL130AAAmmo" />

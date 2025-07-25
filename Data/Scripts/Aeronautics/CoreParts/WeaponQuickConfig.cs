@@ -15,7 +15,7 @@ public static class MissileConfig
     public static float AGM84SLAMMER_TerminalApproachAltitude = 10f; // Meters
     public static float AGM84SLAMMER_TerminalApproachDistance = 300f; // Meters
     public static float AGM84SLAMMER_MaxRange = 15000f; // Max Range of the AGM-84 SLAMMER missile
-    public static float AGM84SLAMMER_MinRange = 5000f; // Min Range of the AGM-84 SLAMMER missile
+    public static float AGM84SLAMMER_MinRange = 3500f; // Min Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MaxSpeed = 300f * speedLimiterFactor; // Max Speed of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_Inventory = 0.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float AGM84SLAMMER_Mass = 674.5f; // Mass in kg.
@@ -119,7 +119,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float R37M_Health = 130; // Health of the R-37M missile
     public static float R37M_MaxRange = 20000f; // Max Range of the R-37M missile
-    public static float R37M_MinRange = 8000f; // Min Range of the R-37M missile
+    public static float R37M_MinRange = 6000f; // Min Range of the R-37M missile
     public static float R37M_MaxSpeed = 2058f * speedLimiterFactor; // Max Speed of the R-37M missile - MACH 6
     public static float R37M_Inventory = 0.500f * inventoryMultiplier; // Inventory capacity in kL.
     public static float R37M_Mass = 600f; // Mass in kg.
@@ -129,7 +129,7 @@ public static class MissileConfig
     // High Performance Missiles
     public static float S1M_Health = 90; // Health of the S-1M missile
     public static float S1M_MaxRange = 20000f; // Max Range of the S-1M missile
-    public static float S1M_MinRange = 8000f; // Min Range of the S-1M missile  
+    public static float S1M_MinRange = 5000f; // Min Range of the S-1M missile  
     public static float S1M_MaxSpeed = 826f * speedLimiterFactor; // Max Speed of the S-1M missile
     public static float S1M_Inventory = 1.200f * inventoryMultiplier; // Inventory capacity in kL.
     public static float S1M_Mass = 2500f; // Mass in kg.
@@ -139,7 +139,7 @@ public static class MissileConfig
     // Surface to Air Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float S400_Health = 130; // Health of the S-400 missile
-    public static float S400_MaxRange = 15000f; // Max Range of the S-400 missile
+    public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
     public static float S400_MinRange = 500f; // Min Range of the S-400 missile
     public static float S400_MaxSpeed = 1500f * speedLimiterFactor; // Max Speed of the S-400 missile
     public static int S400_BoosterTime = 30; // Seconds
@@ -149,7 +149,7 @@ public static class MissileConfig
     public static float S400_Mass = 1900f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float RIM174_SM6_Health = 120; // Health of the RIM-174 SM6 missile
-    public static float RIM174_SM6_MaxRange = 15000f; // Max Range of the RIM-174 SM6 missile
+    public static float RIM174_SM6_MaxRange = 10000f; // Max Range of the RIM-174 SM6 missile
     public static float RIM174_SM6_MinRange = 300f; // Min Range of the RIM-174 SM6 missile
     public static float RIM174_SM6_MaxSpeed = 1200f * speedLimiterFactor; // Max Speed of the RIM-174 SM6 missile
     public static int RIM174_SM6_BoosterTime = 10; // Seconds
@@ -158,7 +158,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // 57E6 Missile
     public static float S1_57E6_Health = 70; // Health of the 57E6 missile
-    public static float S1_57E6_MaxRange = 10000f; // Max Range of the 57E6 missile (10km)
+    public static float S1_57E6_MaxRange = 7000f; // Max Range of the 57E6 missile (10km)
     public static float S1_57E6_MinRange = 250f; // Min Range of the 57E6 missile
     public static float S1_57E6_MaxSpeed = 1220f * speedLimiterFactor; // Max Speed of the 57E6 missile (Mach 3.5)
     public static float S1_57E6_Inventory = 0.047f * 3 * SAM_InventoryMultiplier; // Inventory capacity in kL.

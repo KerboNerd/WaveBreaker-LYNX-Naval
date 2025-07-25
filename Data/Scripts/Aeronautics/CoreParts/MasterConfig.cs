@@ -73,7 +73,14 @@ namespace Scripts
                 LXN_STRELAM_1,
                 LXN_PALASHM_1,
                 LXN_PALASHM_1_MISSILE,
-                LXN_PALASHM_CAMERA_1
+                LXN_PALASHM_CAMERA_1,
+                TTMK15,
+                TTMK15Triple,
+                TTMK15Sub,
+                TTPYLONMK13,
+                TTMK37Director,
+                TTMK6ChargeRack,
+                TTMKXIDC
             );
         }
     }

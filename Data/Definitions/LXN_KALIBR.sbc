@@ -42,7 +42,7 @@
                 <Z>0.533</Z>
             </Size>
             <Mass>2300</Mass>
-            <Volume>1915</Volume>
+            <Volume>1380</Volume>
             <Model>Models\Weapons\Missiles\LXN_OniksMissileLG_stage1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>

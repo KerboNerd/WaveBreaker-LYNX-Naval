@@ -70,6 +70,11 @@
         <string>OxygenFarm/LXN_HydrogenGenerator_01</string>
 
         <string>ConveyorSorter/LXN_CIWS30_01</string>
+		<string>ConveyorSorter/LXN_PALASHM_1</string>
+		<string>ConveyorSorter/LXN_STRELAM_1</string>
+		<string>ConveyorSorter/LXN_AK130M_1</string>
+		<string>ConveyorSorter/LXN_AK130M_2</string>
+		<string>ConveyorSorter/LXN_RBU6000</string>
 		
         <string>CubeBlock/LXN_SmallBlockMantlet_01</string>
         <string>CubeBlock/LXN_SmallBlockMantlet_02</string>
@@ -232,6 +237,8 @@
         <string>ConveyorSorter/LXN_P270MoskitJet_pylon</string>
 
         <string>ConveyorSorter/LXN_KH31AD_pylon</string>
+		
+		<string>ConveyorSorter/LXN_9M330_tube</string>
         
         <string>ConveyorSorter/LXN_ZirconMissileLG_VLS</string>
         <string>ConveyorSorter/LXN_OniksMissileLG_VLS</string>
@@ -244,6 +251,7 @@
 		<string>ConveyorSorter/LXN_S400_4x_tube</string>
         <string>ConveyorSorter/LXN_S400_tube</string>
         <string>ConveyorSorter/LXN_S400Ship</string>
+		<string>ConveyorSorter/LXN_STRELAM_1</string>
 
         <string>Conveyor/LXN_b8m1_pod</string>
 

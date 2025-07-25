@@ -42,7 +42,7 @@
                 <Z>0.2</Z>
             </Size>
             <Mass>4000</Mass>
-            <Volume>4370</Volume>
+            <Volume>3720</Volume>
             <Model>Models\Small\LXN_P270MoskitJet_missile1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>

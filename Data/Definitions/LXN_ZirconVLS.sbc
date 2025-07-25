@@ -42,7 +42,7 @@
                 <Z>0.2</Z>
             </Size>
             <Mass>1800</Mass>
-            <Volume>3460</Volume>
+            <Volume>3410</Volume>
             <Model>Models\Cubes\large\LXN_ZirconMissileLG_stage1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
