@@ -204,7 +204,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 10, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 5, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 80f, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.S1_57E6_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.S1_57E6_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -383,7 +383,7 @@ namespace Scripts
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
             Sync = new SynchronizeDef
             {
-                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
@@ -779,13 +779,13 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "LXN_S400_Travel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "ArcLXN_Missile_Explosion_01",
-                ShotSound = "LXN_RBU6000_Fire",
-                ShieldHitSound = "ArcLXN_Missile_Explosion_01",
-                PlayerHitSound = "ArcLXN_Missile_Explosion_01",
+                TravelSound = "LXN_MissileTravel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                HitSound = "LXN_SmallMissileExplosion",
+                ShotSound = "LXN_57E6_Fire",
+                ShieldHitSound = "LXN_SmallMissileExplosion",
+                PlayerHitSound = "LXN_SmallMissileExplosion",
                 VoxelHitSound = "",
-                FloatingHitSound = "ArcLXN_Missile_Explosion_01",
+                FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
@@ -825,7 +825,7 @@ namespace Scripts
             NoGridOrArmorScaling = false, // If you enable this you can remove the damagescale section entirely.
             Sync = new SynchronizeDef
             {
-                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
@@ -1151,13 +1151,13 @@ namespace Scripts
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "LXN_S400_Travel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "ArcLXN_Missile_Explosion_01",
+                TravelSound = "LXN_MissileTravel", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                HitSound = "LXN_SmallMissileExplosion",
                 ShotSound = "LXN_RBU6000_Fire",
-                ShieldHitSound = "ArcLXN_Missile_Explosion_01",
-                PlayerHitSound = "ArcLXN_Missile_Explosion_01",
+                ShieldHitSound = "LXN_SmallMissileExplosion",
+                PlayerHitSound = "LXN_SmallMissileExplosion",
                 VoxelHitSound = "",
-                FloatingHitSound = "ArcLXN_Missile_Explosion_01",
+                FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
@@ -1194,7 +1194,7 @@ namespace Scripts
             IgnoreVoxels = false, // Whether the projectile should be able to penetrate voxels.
             Sync = new SynchronizeDef
             {
-                Full = true, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
+                Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
                 PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
@@ -1329,8 +1329,8 @@ namespace Scripts
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
-                    ParticleScale = 0.5f,
-                    CustomParticle = "LXN_BombExplosion_01", // Particle SubtypeID, from your Particle SBC
+                    ParticleScale = 0.6f,
+                    CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
@@ -1390,13 +1390,13 @@ namespace Scripts
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LXN_BombExplosion_01",
+                        Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
                         DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.5f,
+                            Scale = 0.6f,
                             HitPlayChance = 1f,
                         },
                     },
@@ -1478,12 +1478,12 @@ namespace Scripts
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "ArcLXN_Missile_Explosion_01",
-                ShotSound = "LXN_RBU6000_Fire",
-                ShieldHitSound = "ArcLXN_Missile_Explosion_01",
-                PlayerHitSound = "ArcLXN_Missile_Explosion_01",
+                HitSound = "LXN_SmallMissileExplosion",
+                ShotSound = "",
+                ShieldHitSound = "LXN_SmallMissileExplosion",
+                PlayerHitSound = "LXN_SmallMissileExplosion",
                 VoxelHitSound = "",
-                FloatingHitSound = "ArcLXN_Missile_Explosion_01",
+                FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },

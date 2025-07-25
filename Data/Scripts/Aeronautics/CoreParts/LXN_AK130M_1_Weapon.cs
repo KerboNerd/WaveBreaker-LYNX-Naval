@@ -51,8 +51,8 @@ namespace Scripts
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 3000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
-                MinTargetDistance = 500, // Minimum distance at which targets will be automatically shot at.
+                MaxTargetDistance = GunConfig.AK130M_MaxTargetDistance, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MinTargetDistance = GunConfig.AK130M_MinTargetDistance, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 1, // Maximum number of targets to randomize between; 0 = unlimited.
                 CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
                 TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
@@ -101,7 +101,7 @@ namespace Scripts
                     MaxElevation = 80,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
-                    InventorySize = 1.5f, // Inventory capacity in kL.
+                    InventorySize = GunConfig.AK130M_Inventory, // Inventory capacity in kL.
                     IdlePower = 0.4f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
@@ -128,7 +128,7 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 45, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = GunConfig.AK130M_ROF, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
