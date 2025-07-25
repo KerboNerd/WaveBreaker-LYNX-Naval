@@ -172,8 +172,8 @@ public static class MissileConfig
     // Anti-Ship Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Zircon_Health = 20; // Health of the Zircon missile
-    public static float Zircon_MaxRange = 15000f; // Max Range of the Zircon missile
-    public static float Zircon_MinRange = 8000f; // Min Range of the Zircon missile
+    public static float Zircon_MaxRange = 12000f; // Max Range of the Zircon missile
+    public static float Zircon_MinRange = 5000f; // Min Range of the Zircon missile
     public static float Zircon_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the Zircon missile - MACH 9
     public static float Zircon_Inventory = 3.460f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Zircon_Mass = 1800f; // Mass in kg.
@@ -184,10 +184,10 @@ public static class MissileConfig
     public static float Oniks_SkimmingAltitude = 15f; // Meters
     public static float Oniks_TerminalApproachAltitude = 7f; // Meters
     public static float Oniks_TerminalApproachDistance = 800f; // Meters
-    public static float Oniks_MaxRange = 15000f; // Max Range of the Oniks missile
+    public static float Oniks_MaxRange = 10000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 5000f; // Min Range of the Oniks missile
     public static float Oniks_MaxSpeed = 800f * speedLimiterFactor; // Max Speed of the Oniks missile
-    public static float Oniks_Inventory = 2.520f * inventoryMultiplier; // Inventory capacity in kL.
+    public static float Oniks_Inventory = 3.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Kalibr_Health = 40; // Health of the Kalibr missile
@@ -196,7 +196,7 @@ public static class MissileConfig
     public static float Kalibr_SkimmingAltitude = 50f; // Meters
     public static float Kalibr_TerminalApproachAltitude = 5f; // Meters
     public static float Kalibr_TerminalApproachDistance = 300f; // Meters
-    public static float Kalibr_MaxRange = 15000f; // Max Range of the Kalibr missile
+    public static float Kalibr_MaxRange = 10000f; // Max Range of the Kalibr missile
     public static float Kalibr_MinRange = 3000f; // Min Range of the Kalibr missile
     public static float Kalibr_MaxSpeed = 1000f * speedLimiterFactor; // Max Speed of the Kalibr missile
     public static float Kalibr_Mass = 3000f; // Mass in kg.
@@ -207,10 +207,10 @@ public static class MissileConfig
     public static float Moskit_SkimmingAltitude = 20f; // Meters
     public static float Moskit_TerminalApproachAltitude = 5f; // Meters
     public static float Moskit_TerminalApproachDistance = 500f; // Meters
-    public static float Moskit_MaxRange = 15000f; // Max Range of the Moskit missile
+    public static float Moskit_MaxRange = 10000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
     public static float Moskit_MaxSpeed = 1100f * speedLimiterFactor; // Max Speed of the Moskit missile
-    public static float Moskit_Inventory = 4.370f * inventoryMultiplier; // Inventory capacity in kL.
+    public static float Moskit_Inventory = 3.720f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Moskit_Mass = 4000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float RBU6000_Health = 50; // Health of the RBU-6000 missile
@@ -220,8 +220,8 @@ public static class MissileConfig
     public static float RBU6000_Inventory = 0.640f * inventoryMultiplier; // Inventory capacity in kL.
     public static float RBU6000_Mass = 110f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float VLS3S14_MaxRange = 15000f; // Max Range of the 3S14 VLS
-    public static float VLS3S14_MinRange = 500f; // Min Range of the 3S14 VLS
+    public static float VLS3S14_MaxRange = 10000f; // Max Range of the 3S14 VLS
+    public static float VLS3S14_MinRange = 3000f; // Min Range of the 3S14 VLS
     public static float VLS3S14_AA_MaxRange = 8000f; // Max Range of the 3S14 AA VLS
     public static float VLS3S14_AA_MinRange = 500f; // Min Range of the 3S14 AA VLS
     public static float VLS3S14_Inventory = 20.000f * inventoryMultiplier; // Inventory capacity in kL.
@@ -252,7 +252,7 @@ public static class MissileConfig
     // Rockets
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float B8M1_Health = 10; // Health of the B8M1 rocket
-    public static float B8M1_MaxRange = 3000f; // Max Range of the B8M1 rocket
+    public static float B8M1_MaxRange = 4000f; // Max Range of the B8M1 rocket
     public static float B8M1_MinRange = 100f; // Min Range of the B8M1 rocket
     public static float B8M1_MaxSpeed = 500f; // Max Speed of the B8M1 rocket
     public static float B8M1_Inventory = 0.76f * inventoryMultiplier; // Inventory capacity in kL.
@@ -281,7 +281,7 @@ public static class BombsConfig
     public static float KAB1500SM_Mass = 1500f; // Mass in kg.
 
     public static float MOAB_Health = 150; // Health of the MOAB bomb
-    public static float MOAB_Inventory = 7.600f * inventoryMultiplier; // Inventory capacity in kL.
+    public static float MOAB_Inventory = 3.950f * inventoryMultiplier; // Inventory capacity in kL.
     public static float MOAB_Mass = 9800f; // Mass in kg.
 
 
