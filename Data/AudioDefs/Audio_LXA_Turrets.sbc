@@ -37,7 +37,7 @@
             <DistantSounds>
                 <DistantSound DistanceCrossfade="200" Distance="300" Sound="LXN_CIWS30_DistanceFire" />
             </DistantSounds>
-            <Volume>1.0</Volume>
+            <Volume>5</Volume>
             <Waves>
                 <Wave Type="D3">
                     <Start>Audio\CIWS\LXN_CIWS30_Fire.wav</Start>
@@ -55,7 +55,7 @@
             <PreventSynchronization>15</PreventSynchronization>
             <PitchVariation>50</PitchVariation>
             <Loopable>false</Loopable>
-            <Volume>1.0</Volume>
+            <Volume>1.5</Volume>
             <Waves>
                 <Wave Type="D3">
                     <Start>Audio\CIWS\LXN_CIWS30_Spinup.wav</Start>
@@ -73,7 +73,7 @@
             <PreventSynchronization>15</PreventSynchronization>
             <PitchVariation>50</PitchVariation>
             <Loopable>false</Loopable>
-            <Volume>1.0</Volume>
+            <Volume>1.5</Volume>
             <Waves>
                 <Wave Type="D3">
                     <Start>Audio\CIWS\LXN_CIWS30_Spindown.wav</Start>
@@ -142,6 +142,58 @@
                 </Wave>
                 <Wave Type="D3">
                     <Start>Audio\NAVAL130MM\NAVAL130MM_project\LXN_NAVAL130MM_Fire_5.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <!-- ================= NAVAL 220MM GUN ======================================= -->
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_NAVAL220MM_DistanceFire</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>5000</MaxDistance>
+            <PreventSynchronization>15</PreventSynchronization>
+            <PitchVariation>10</PitchVariation>
+            <Loopable>false</Loopable>
+            <Volume>1.0</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_FireFar_1.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_FireFar_2.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_FireFar_3.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>LXN_NAVAL220MM_Audio</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <PreventSynchronization>15</PreventSynchronization>
+            <PitchVariation>10</PitchVariation>
+            <Loopable>false</Loopable>
+            <DistantSounds>
+                <DistantSound DistanceCrossfade="1000" Distance="3000" Sound="LXN_NAVAL220MM_DistanceFire" />
+            </DistantSounds>
+            <Volume>1.0</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_Fire_1.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_Fire_2.wav</Start>
+                </Wave>
+                <Wave Type="D3">
+                    <Start>Audio\NAVAL220MM\LXN_220MM_Fire_3.wav</Start>
                 </Wave>
             </Waves>
         </Sound>
