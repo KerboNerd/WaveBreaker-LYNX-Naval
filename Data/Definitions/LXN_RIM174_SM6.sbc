@@ -35,7 +35,7 @@
                 <SubtypeId>LXN_RIM174_SM6Mag</SubtypeId>
             </Id>
             <DisplayName>RIM-174 "Standard Missile 6" Multi-Role SAM</DisplayName>
-            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_RIM174_SM6_STAGE3.dds</Icon>
+            <Icon>Textures\Icons\Weapons\Missiles\Cubes\LXN_RIM174_SM6_STAGE1.dds</Icon>
             <Size>
                 <X>8.22</X>
                 <Y>0.533</Y>
@@ -63,7 +63,7 @@
                 <SubtypeId>LXN_RIM174_SM6_BP</SubtypeId>
             </Id>
             <DisplayName>RIM-174 "Standard Missile 6" Multi-Role SAM</DisplayName>
-            <Icon>Textures\Icons\Weapons\Missiles\LXN_3M54_RIM174_SM6_STAGE3.dds</Icon>
+            <Icon>Textures\Icons\Weapons\Missiles\Cubes\LXN_RIM174_SM6_STAGE1.dds</Icon>
             <Prerequisites>
                 <Item Amount="250" TypeId="Ingot" SubtypeId="Iron" />
                 <Item Amount="60" TypeId="Ingot" SubtypeId="Nickel" />
@@ -72,7 +72,7 @@
                 <Item Amount="120" TypeId="Ingot" SubtypeId="Cobalt" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_RIM174_SM6Mag" />
-            <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

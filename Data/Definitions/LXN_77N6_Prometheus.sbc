@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>LXN_77N6_PrometheusAmmo</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>900</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>7000</MaxTrajectory>
+                <IsExplosive>false</IsExplosive>
+                <BackkickForce>0</BackkickForce>
+                <PhysicalMaterial>Aim9Mat</PhysicalMaterial>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>1893</MissileMass>
+                <MissileExplosionRadius>9</MissileExplosionRadius>
+                <MissileModelName>Models\77N6_Prometheus\LXN_77N6_Missile1.mwm</MissileModelName>
+                <MissileAcceleration>50</MissileAcceleration>
+                <MissileInitialSpeed>150</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>1500</MissileExplosionDamage>
+                <MissileTrailEffect>Smoke_Missile_AIM9</MissileTrailEffect>
+				<MissileGravityEnabled>true</MissileGravityEnabled>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+
+	<AmmoMagazines>
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>LXN_77N6_PrometheusMag</SubtypeId>
+            </Id>
+            <DisplayName>77N6 "Prometheus" Anti-Ballistic Missile</DisplayName>
+            <Icon>Textures\Icons\77N6_Prometheus\Cubes\LXN_77N6_Missile1.dds</Icon>
+            <Size>
+                <X>7.825</X>
+                <Y>0.6</Y>
+                <Z>0.6</Z>
+            </Size>
+            <Mass>1893</Mass>
+            <Volume>5891</Volume>
+            <Model>Models\77N6_Prometheus\LXN_77N6_Missile1.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="LXN_77N6_PrometheusAmmo" />
+
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+	</AmmoMagazines>
+
+	<Blueprints>
+		<Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LXN_77N6_Prometheus_BP</SubtypeId>
+            </Id>
+            <DisplayName>77N6 "Prometheus" Anti-Ballistic Missile</DisplayName>
+            <Icon>Textures\Icons\77N6_Prometheus\Cubes\LXN_77N6_Missile1.dds</Icon>
+            <Prerequisites>
+                <Item Amount="400" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="120" TypeId="Ingot" SubtypeId="Nickel" />
+                <Item Amount="80" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
+                <Item Amount="200" TypeId="Ingot" SubtypeId="Cobalt" />
+                <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_77N6_PrometheusMag" />
+            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+        </Blueprint>
+	</Blueprints>
+
+    <BlueprintClassEntries>
+        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_77N6_Prometheus_BP" />
+    </BlueprintClassEntries>
+
+</Definitions>

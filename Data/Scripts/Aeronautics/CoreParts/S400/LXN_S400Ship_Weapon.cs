@@ -194,7 +194,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_S400_Primary, LXN_S400_Secondary, LXN_S400_Secondary2, LXN_S400_Cruise, LXN_S400_Frags,
+                LXN_S400_Primary, LXN_S400_Secondary, LXN_S400_Secondary2, LXN_S400_Cruise, LXN_S400_Frags, LXN_77N6_Prometheus_Primary, LXN_77N6_Prometheus_Secondary, LXN_77N6_Prometheus_Secondary2, LXN_77N6_Prometheus_Cruise, LXN_77N6_Prometheus_Frags
             },
             Animations = LXN_S400Ship_Anim,
             //Upgrades = UpgradeModules,

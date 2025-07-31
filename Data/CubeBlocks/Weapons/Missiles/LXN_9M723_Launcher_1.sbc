@@ -25,7 +25,7 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="1.00" File="Models\9M723_Iskander\LXN_9M723_Launcher_1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\9M723_Iskander\LXN_9M723_Launcher_1_BS3.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>LXN_9M723_Launcher_1</BlockPairName>
 			<MirroringY>Z</MirroringY>

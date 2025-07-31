@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_P270Moskit_pylon</SubtypeId>
 			</Id>
-			<DisplayName>P-270 Moskit Double Missile Tube</DisplayName>
+			<DisplayName>P-270 "Moskit" Double Missile Tube</DisplayName>
 			<Description>
 				The P-270 "Moskit" Double Missile Tube is a state-of-the-art naval weapon system, equipped with two supersonic ramjet-powered Moskit cruise missiles. This formidable system is designed to strike surface vessels with unprecedented speed and accuracy, utilizing the Moskit’s Mach 3 capability at low altitudes. The double tube configuration allows for a rapid salvo, increasing the likelihood of overwhelming enemy defenses.
 				Requires a target designation system for precise attacks.
@@ -29,9 +29,8 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Large\LXN_P270Moskit_pylon_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\Large\LXN_P270Moskit_pylon_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Large\LXN_P270Moskit_pylon_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.50" File="Models\Large\LXN_P270Moskit_pylon_BS3.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Large\LXN_P270Moskit_pylon_BS1.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>LXN_P270Moskit_pylon</BlockPairName>
 			<!-- <Center x="0" y="0" z="0" /> -->
@@ -50,9 +49,9 @@
 			</TargetingGroups>
 			<UseModelIntersection>true</UseModelIntersection>
 			<MountPoints>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="4.00" EndY="1.03"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="4.00" EndY="1.03"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00" Default="true"/>
 			</MountPoints>
 			<MirroringZ>Y</MirroringZ>
 			<MirroringY>Z</MirroringY>

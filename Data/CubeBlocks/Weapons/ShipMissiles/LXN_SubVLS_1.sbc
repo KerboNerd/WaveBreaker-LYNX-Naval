@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_SubVLS_1</SubtypeId>
+			</Id>
+			<DisplayName>LYNX-DYNAMICS Pressurized VLS</DisplayName>
+			<Description>
+				Heavy-duty single vertical launch system (VLS) cell for submarines and surface vessels. Features a robust, pressure-sealed armored door that swings open for missile deployment, ensuring watertight integrity and safe operation at depth. Designed for compatibility with large cruise and ballistic missiles.
+				- Suitable for underwater and surface launch.
+				- Secure pressurization for submerged operation.
+				- Large, reinforced swing door for reliable missile ejection.
+				- Ideal for modern naval platforms requiring stealth and survivability.
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\LXN_SubVLS_1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="5" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\SubVLS\LXN_SubVLS_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="MetalGrid" Count="80" />
+				<Component Subtype="LargeTube" Count="30" />
+				<Component Subtype="SmallTube" Count="40" />
+				<Component Subtype="Computer" Count="48" />
+				<Component Subtype="Construction" Count="80" />
+				<Component Subtype="Girder" Count="24" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\SubVLS\LXN_SubVLS_1_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SubVLS\LXN_SubVLS_1_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LXN_SubVLS_1</BlockPairName>
+			<!-- <Center x="0" y="0" z="0" /> -->
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<WeaponDefinitionId Subtype="LXN_Moskit" />
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.135</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>425</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="4.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="5.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="5.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00" Default="true" PressurizedWhenOpen="true"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

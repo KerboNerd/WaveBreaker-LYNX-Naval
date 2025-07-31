@@ -141,9 +141,9 @@ public static class MissileConfig
     public static float S400_Health = 130; // Health of the S-400 missile
     public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
     public static float S400_MinRange = 500f; // Min Range of the S-400 missile
-    public static float S400_MaxSpeed = 1500f * speedLimiterFactor; // Max Speed of the S-400 missile
-    public static int S400_BoosterTime = 30; // Seconds
-    public static float S400_BoosterAccel = 50; // Meters Per Second
+    public static float S400_MaxSpeed = 2200f * speedLimiterFactor; // Max Speed of the S-400 missile
+    public static int S400_BoosterTime = 12; // Seconds
+    public static float S400_BoosterAccel = 60; // Meters Per Second
     public static float S400_Inventory = 1.410f * SAM_InventoryMultiplier; // Inventory capacity in kL.
     public static float S400x4_Inventory = 4 * 1.410f * SAM_InventoryMultiplier;
     public static float S400_Mass = 1900f; // Mass in kg.
@@ -155,6 +155,15 @@ public static class MissileConfig
     public static int RIM174_SM6_BoosterTime = 10; // Seconds
     public static float RIM174_SM6_BoosterAccel = 100; // Meters Per Second
     public static float RIM174_SM6_Mass = 1500f; // Mass in kg.
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // 77N6 "Prometheus" Missile
+    public static float Prometheus_77N6_Health = 160; // Health of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MaxRange = 15000f; // Max Range of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MinRange = 500f; // Min Range of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MaxSpeed = 5500f * speedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
+    public static int Prometheus_77N6_BoosterTime = 10; // Seconds
+    public static float Prometheus_77N6_BoosterAccel = 120; // Meters Per Second
+    public static float Prometheus_77N6_Mass = 1893f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // 57E6 Missile
     public static float S1_57E6_Health = 70; // Health of the 57E6 missile

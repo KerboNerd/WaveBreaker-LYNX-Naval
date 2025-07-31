@@ -431,7 +431,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Radius var" Type="Float">
-              <ValueFloat>0.8</ValueFloat>
+              <ValueFloat>0.3</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
               <ValueFloat>1</ValueFloat>
@@ -464,7 +464,7 @@
               <ValueInt>64</ValueInt>
             </Property>
             <Property AnimationType="Const" Name="Array modulo" Type="Int">
-              <ValueInt>72</ValueInt>
+              <ValueInt>73</ValueInt>
             </Property>
             <Property AnimationType="Animated2D" Name="Color" Type="Vector4">
               <Keys>
@@ -475,20 +475,30 @@
                       <Key>
                         <Time>0</Time>
                         <ValueVector4>
-                          <X>0.05</X>
-                          <Y>0.05</Y>
-                          <Z>0.05</Z>
-                          <W>0.04</W>
+                          <X>0.1</X>
+                          <Y>0.1</Y>
+                          <Z>0.1</Z>
+                          <W>1</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.3532846</Time>
+                        <Time>0.0120026255</Time>
                         <ValueVector4>
-                          <X>0.01</X>
-                          <Y>0.01</Y>
-                          <Z>0.01</Z>
-                          <W>0.01</W>
+                          <X>0.0987997353</X>
+                          <Y>0.0987997353</Y>
+                          <Z>0.0987997353</Z>
+                          <W>0.987997353</W>
+                        </ValueVector4>
+                        <Value2D />
+                      </Key>
+                      <Key>
+                        <Time>0.989751</Time>
+                        <ValueVector4>
+                          <X>0.00102490187</X>
+                          <Y>0.00102490187</Y>
+                          <Z>0.00102490187</Z>
+                          <W>0.0102490187</W>
                         </ValueVector4>
                         <Value2D />
                       </Key>
@@ -515,22 +525,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>0.5</ValueFloat>
+                        <ValueFloat>0.8</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.0120026255</Time>
-                        <ValueFloat>0.487839818</ValueFloat>
+                        <ValueFloat>0.793951869</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.477019459</Time>
-                        <ValueFloat>0.0167187452</ValueFloat>
+                        <Time>0.365415424</Time>
+                        <ValueFloat>0.3024838</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>0</ValueFloat>
+                        <ValueFloat>0.3</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -546,18 +556,9 @@
                 <Key>
                   <Time>0</Time>
                   <ValueVector3>
-                    <X>0</X>
-                    <Y>0</Y>
-                    <Z>0</Z>
-                  </ValueVector3>
-                  <Value2D />
-                </Key>
-                <Key>
-                  <Time>1</Time>
-                  <ValueVector3>
-                    <X>10</X>
-                    <Y>10</Y>
-                    <Z>0</Z>
+                    <X>1</X>
+                    <Y>1</Y>
+                    <Z>10</Z>
                   </ValueVector3>
                   <Value2D />
                 </Key>
@@ -583,7 +584,12 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>5</ValueFloat>
+                  <ValueFloat>3</ValueFloat>
+                  <Value2D />
+                </Key>
+                <Key>
+                  <Time>0.1</Time>
+                  <ValueFloat>0</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -592,7 +598,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>5</ValueFloat>
+                  <ValueFloat>0.5</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -610,7 +616,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>5</ValueFloat>
+                  <ValueFloat>20</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -630,22 +636,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>0</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>0</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>0</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>0</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -654,7 +660,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity" Type="Float">
-              <ValueFloat>2</ValueFloat>
+              <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Animated2D" Name="Radius" Type="Float">
               <Keys>
@@ -668,13 +674,18 @@
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.0160462279</Time>
-                        <ValueFloat>1.14441609</ValueFloat>
+                        <Time>0.0120026255</Time>
+                        <ValueFloat>1.02400529</ValueFloat>
+                        <Value2D />
+                      </Key>
+                      <Key>
+                        <Time>0.9857073</Time>
+                        <ValueFloat>2.97141457</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>3</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -683,13 +694,13 @@
               </Keys>
             </Property>
             <Property AnimationType="Const" Name="Life" Type="Float">
-              <ValueFloat>15</ValueFloat>
+              <ValueFloat>10</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Soft particle distance scale" Type="Float">
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Streak multiplier" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>0.2</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Animation frame time" Type="Float">
               <ValueFloat>0.05</ValueFloat>
@@ -701,17 +712,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>100</ValueFloat>
-                  <Value2D />
-                </Key>
-                <Key>
-                  <Time>5</Time>
-                  <ValueFloat>100</ValueFloat>
-                  <Value2D />
-                </Key>
-                <Key>
-                  <Time>10</Time>
-                  <ValueFloat>50</ValueFloat>
+                  <ValueFloat>300</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -720,16 +721,16 @@
               <ValueString>Atlas_D_01</ValueString>
             </Property>
             <Property AnimationType="Const" Name="OIT weight factor" Type="Float">
-              <ValueFloat>50</ValueFloat>
+              <ValueFloat>10</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Collide" Type="Bool">
               <ValueBool>true</ValueBool>
             </Property>
             <Property AnimationType="Const" Name="SleepState" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Const" Name="Light" Type="Bool">
-              <ValueBool>false</ValueBool>
+              <ValueBool>true</ValueBool>
             </Property>
             <Property AnimationType="Const" Name="VolumetricLight" Type="Bool">
               <ValueBool>true</ValueBool>
@@ -744,7 +745,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>5</Z>
+                <Z>0</Z>
               </ValueVector3>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity var" Type="Float">
@@ -760,7 +761,7 @@
               <ValueFloat>0.01</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Life var" Type="Float">
-              <ValueFloat>5</ValueFloat>
+              <ValueFloat>3</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Streaks" Type="Bool">
               <ValueBool>false</ValueBool>
@@ -860,22 +861,22 @@
               <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Const" Name="Ambient light factor" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>50</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Radius var" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>0.8</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Collision count to kill particle" Type="Int">
-              <ValueInt>2</ValueInt>
+              <ValueInt>1</ValueInt>
             </Property>
             <Property AnimationType="Const" Name="Distance scaling factor" Type="Float">
               <ValueFloat>0</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Motion interpolation" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Const" Name="Camera Soft Radius" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -1177,7 +1178,7 @@
               <ValueVector3>
                 <X>0</X>
                 <Y>0</Y>
-                <Z>1.5</Z>
+                <Z>2</Z>
               </ValueVector3>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity var" Type="Float">

@@ -30,7 +30,7 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_3S14_VLS_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Weapons\Missiles\LXN_3S14_VLS_BS3.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>LXN_3S14_VLS_AS</BlockPairName>
 			<BuildTimeSeconds>15</BuildTimeSeconds>

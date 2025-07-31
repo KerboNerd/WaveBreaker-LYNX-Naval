@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_AK220M_1</SubtypeId>
+			</Id>
+			<DisplayName>LYNX-DYNAMICS AK-220M NAVAL GUN</DisplayName>
+			<Description>
+				The AK-220M is a next-generation Russian 220mm naval gun system, designed for modern surface combatants and coastal defense.
+				This formidable artillery piece features a fully automated loading system and advanced digital fire control, enabling rapid, precise engagement of enemy ships, shore targets, and aerial threats.
+				The AK-220M delivers overwhelming firepower with high-explosive shells, offering extended range and devastating impact.
+				Equipped with stabilization and all-weather targeting, it maintains accuracy in harsh maritime conditions.
+				Max engagement range: 8000m
+				Rate of Fire: 20 rounds/minute
+				Ammo: 220mm HE Magazine
+			</Description>
+			<Icon>Textures\Icons\AK220M\LXN_AK220M_1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<PlaceDecals>false</PlaceDecals>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\AK220M\LXN_AK220M_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="240" />
+				<Component Subtype="Construction" Count="16" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.90" StartY="0.45" EndX="2.10" EndY="2.55" Default="true"/>
+			</MountPoints>
+			<BlockPairName>LXN_AK220M_1</BlockPairName>
+			<UseModelIntersection>true</UseModelIntersection>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<OverlayTexture>Textures\turret_overlay.dds</OverlayTexture>
+			<WeaponDefinitionId Subtype="Blank"/>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MinElevationDegrees>-25</MinElevationDegrees>
+			<MaxElevationDegrees>85</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<RotationSpeed>0.05</RotationSpeed>
+			<ElevationSpeed>0.03</ElevationSpeed>
+			<IdleRotation>false</IdleRotation>
+			<MaxRangeMeters>1200</MaxRangeMeters>
+			<AiEnabled>false</AiEnabled>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.24719755</MaxFov>
+			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+			<InventoryFillFactorMin>.384</InventoryFillFactorMin>
+			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
+			<IdlePower>.10</IdlePower>
+			<UsePower>120</UsePower>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>225</PCU>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\AK130M\LXN_AK130M_1_BS3.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
