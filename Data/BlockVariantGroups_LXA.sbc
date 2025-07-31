@@ -349,6 +349,7 @@
 
 				<Block Type="ConveyorSorter" Subtype="LXN_3S14_VLS_AA"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_3S14_VLS_AS"/>
+				<Block Type="ConveyorSorter" Subtype="LXN_SubVLS_1"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_P270Moskit_pylon"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_OniksMissileLG_VLS"/>
 				<Block Type="ConveyorSorter" Subtype="LXN_ZirconMissileLG_VLS"/>
