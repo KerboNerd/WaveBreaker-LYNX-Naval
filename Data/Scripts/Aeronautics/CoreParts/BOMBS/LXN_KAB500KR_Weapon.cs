@@ -14,13 +14,13 @@ using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.Hardwar
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        WeaponDefinition LXN_KAB1500SE => new WeaponDefinition
+        WeaponDefinition LXN_KAB500KR => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "LXN_KAB1500SE_pylon", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "LXN_KAB500KR_pylon", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
@@ -38,47 +38,41 @@ namespace Scripts {
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Grids, Neutrals, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                 },
                 SubSystems = new[] {
-                    Thrust, Utility, Offense, Power, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
+                    Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
                 },
                 ClosestFirst = false, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
                 IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 30000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = 0, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
-                TopTargets = 1, // Maximum number of targets to randomize between; 0 = unlimited.
-                CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
-                TopBlocks = 0, // Maximum number of blocks to randomize between; 0 = unlimited.
-                CycleBlocks = 0, // Number of blocks to "cycle" per acquire attempt.
+                TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
+                TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
                 StopTrackingSpeed = 0, // Do not track threats traveling faster than this speed; 0 = unlimited.
-                UniqueTargetPerWeapon = false, // only applies to multi-weapon blocks 
-                MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one
-                ShootBlanks = false, // Do not generate projectiles when shooting
-                FocusOnly = false, // This weapon can only track focus targets.
-                EvictUniqueTargets = false, // if this is set it will evict any weapons set to UniqueTargetPerWeapon unless they to have this set
-				Communications = new CommunicationDef 
-                {
-                    StoreTargets = false, // Pushes its current target to the grid/construct so that other slaved weapons can fire on it.
-                    StorageLimit = 0, // The limit at which this weapon will no longer export targets onto the channel.
-                    StorageLocation = "SNIPER_Storage", // This location ID is used either by the master weapon (if ExportTargets = true) or the slave weapon (if its false).  This is shared across the conncted grids.
-                    Mode = LocalNetwork, // NoComms, BroadCast, LocalNetwork, Repeater, Relay, Jamming
-                    Security = Secure, // Public, Private, Secure
-                    BroadCastChannel = "", // If defined you will broadcast to all other scanners on this channel.
-                    BroadCastRange = 0, // This is the range that you will broadcast up too.  Note that this value applies to both the sender and receiver, both range requirements must be met. 
-                    JammingStrength = 0, // If Mode is set to jamming, then this value will decrease the "range" of broadcasts.  Strength falls off at sqr of the distance.
-                    RelayChannel = "", // If defined this channel will be used to relay any targets it seems on the broadcast channel.
-                    RelayRange = 0, // This defines the range that any broadcasts will be relayed.  Note that this channel id is seen as the "broadcast" channel for all receivers, broadcast range requirements apply. 
-                },
+
+				// Communications = new CommunicationDef 
+                // {
+                //     StoreTargets = false, // Pushes its current target to the grid/construct so that other slaved weapons can fire on it.
+                //     StorageLimit = 1, // The limit at which this weapon will no longer export targets onto the channel.
+                //     StorageLocation = "SNIPER_Storage", // This location ID is used either by the master weapon (if ExportTargets = true) or the slave weapon (if its false).  This is shared across the conncted grids.
+                //     Mode = LocalNetwork, // NoComms, BroadCast, LocalNetwork, Repeater, Relay, Jamming
+                //     Security = Secure, // Public, Private, Secure
+                //     BroadCastChannel = "", // If defined you will broadcast to all other scanners on this channel.
+                //     BroadCastRange = 0, // This is the range that you will broadcast up too.  Note that this value applies to both the sender and receiver, both range requirements must be met. 
+                //     JammingStrength = 0, // If Mode is set to jamming, then this value will decrease the "range" of broadcasts.  Strength falls off at sqr of the distance.
+                //     RelayChannel = "", // If defined this channel will be used to relay any targets it seems on the broadcast channel.
+                //     RelayRange = 0, // This defines the range that any broadcasts will be relayed.  Note that this channel id is seen as the "broadcast" channel for all receivers, broadcast range requirements apply. 
+                // },
             },
             HardPoint = new HardPointDef
             {
-                PartName = "KAB1500S-E Guided Bomb", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.01f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 180f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                PartName = "KAB500Kr Guided Bomb", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
+                AimingTolerance = 180, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
@@ -89,14 +83,14 @@ namespace Scripts {
                 {
                     RateOfFire = false, // Enables terminal slider for changing rate of fire.
                     DamageModifier = false, // Enables terminal slider for changing damage per shot.
-                    ToggleGuidance = false, // Enables terminal option to disable smart projectile guidance.
+                    ToggleGuidance = true, // Enables terminal option to disable smart projectile guidance.
                     EnableOverload = false, // Enables terminal option to turn on Overload; this allows energy weapons to double damage per shot, at the cost of quadrupled power draw and heat gain, and 2% self damage on overheat.
                     AlternateUi = false, // This simplifies and customizes the block controls for alternative weapon purposes,   
                     DisableStatus = false, // Do not display weapon status NoTarget, Reloading, NoAmmo, etc..
                 },
                 Ai = new AiDef
                 {
-                    TrackTargets = true, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+                    TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = false, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
@@ -116,7 +110,7 @@ namespace Scripts {
                     MaxElevation = 0,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
-                    InventorySize = BombsConfig.KAB1500SM_Inventory, // Inventory capacity in kL.
+                    InventorySize = BombsConfig.KAB500KR_Inventory, // Inventory capacity in kL.
                     IdlePower = 0f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
@@ -168,7 +162,7 @@ namespace Scripts {
                     MaxActiveProjectiles = 0, // Maximum number of drones in flight (only works for drone launchers)
                     MaxReloads = 0, // Maximum number of reloads in the LIFETIME of a weapon
                     GoHomeToReload = false, // Tells the weapon it must be in the home position before it can reload.
-                    DropTargetUntilLoaded = false, // If true this weapon will drop the target when its out of ammo and until its reloaded.
+                    DropTargetUntilLoaded = true, // If true this weapon will drop the target when its out of ammo and until its reloaded.
                 },
                 Audio = new HardPointAudioDef
                 {
@@ -217,9 +211,9 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_KAB1500SE_Primary, LXN_KAB1500SE_Secondary, LXN_KAB1500SE_Frags,
+                LXN_KAB500KR_Primary, LXN_KAB500KR_Frags,
             },
-            Animations = LXN_KAB1500SE_Anim,
+            Animations = LXN_KAB500KR_Anim,
             //Upgrades = UpgradeModules,
         };
         // Don't edit below this line.
