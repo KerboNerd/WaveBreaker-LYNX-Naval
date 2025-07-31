@@ -6,9 +6,9 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_P270Moskit_pylon</SubtypeId>
 			</Id>
-			<DisplayName>P-270 Moskit Double Missile Tube</DisplayName>
+			<DisplayName>P-270 "Moskit" Double Missile Tube</DisplayName>
 			<Description>
-				The P-270 Moskit Double Missile Tube is a state-of-the-art naval weapon system, equipped with two supersonic ramjet-powered Moskit cruise missiles. This formidable system is designed to strike surface vessels with unprecedented speed and accuracy, utilizing the Moskit’s Mach 3 capability at low altitudes. The double tube configuration allows for a rapid salvo, increasing the likelihood of overwhelming enemy defenses.
+				The P-270 "Moskit" Double Missile Tube is a state-of-the-art naval weapon system, equipped with two supersonic ramjet-powered Moskit cruise missiles. This formidable system is designed to strike surface vessels with unprecedented speed and accuracy, utilizing the Moskit’s Mach 3 capability at low altitudes. The double tube configuration allows for a rapid salvo, increasing the likelihood of overwhelming enemy defenses.
 				Requires a target designation system for precise attacks.
 				15km max range, adaptable for various operational scenarios and launch angles.
 				15,000m max range, 5,000m minimum range.

@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_SubVLS_1</SubtypeId>
 			</Id>
-			<DisplayName>Pressurized Sub VLS</DisplayName>
+			<DisplayName>LYNX-DYNAMICS Pressurized VLS</DisplayName>
 			<Description>
 				Heavy-duty single vertical launch system (VLS) cell for submarines and surface vessels. Features a robust, pressure-sealed armored door that swings open for missile deployment, ensuring watertight integrity and safe operation at depth. Designed for compatibility with large cruise and ballistic missiles.
 				- Suitable for underwater and surface launch.
