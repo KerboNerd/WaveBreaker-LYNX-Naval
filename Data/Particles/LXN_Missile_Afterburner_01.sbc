@@ -670,12 +670,12 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>1</ValueFloat>
+                        <ValueFloat>1.5</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.0120026255</Time>
-                        <ValueFloat>1.02400529</ValueFloat>
+                        <Time>0.017663667</Time>
+                        <ValueFloat>1.52636743</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
