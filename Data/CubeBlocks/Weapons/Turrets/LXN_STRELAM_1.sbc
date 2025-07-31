@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>LXN_STRELAM_1</SubtypeId>
 			</Id>
-			<DisplayName>LYNX-DYNAMICS STRELA-M CIWS</DisplayName>
+			<DisplayName>STRELA-M CIWS</DisplayName>
 			<Description>
 				The STRELA-M is a Russian close-in weapon system (CIWS) inspired by the American RAM design, adapted for use on modern warships.
 				Utilizing a rapid-fire missile launcher, the STRELA-M provides last-ditch defense against incoming anti-ship missiles, aircraft, and fast attack craft.
