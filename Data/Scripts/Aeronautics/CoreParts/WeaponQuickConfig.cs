@@ -235,6 +235,10 @@ public static class MissileConfig
     public static float VLS3S14_AA_MinRange = 500f; // Min Range of the 3S14 AA VLS
     public static float VLS3S14_Inventory = 20.000f * inventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public static float SubVLS_MaxRange = 10000f; // Max Range of the SubVLS
+    public static float SubVLS_MinRange = 300f; // Min Range of the SubVLS
+    public static float SubVLS_Inventory = 20.000f * inventoryMultiplier; // Inventory capacity in kL.
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // 9M330 Missile
     public static float TOR_9M330_Health = 90;
     public static float TOR_9M330_MaxRange = 8000f; // Meters
