@@ -74,7 +74,7 @@
                 <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_77N6_PrometheusMag" />
-            <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>450</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 
