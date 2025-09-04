@@ -18,13 +18,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\TargetingSystems\LXN_GravestoneRadar_01.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="250" />
-				<Component Subtype="Construction" Count="50" />
-				<Component Subtype="Detector" Count="30" />
-				<Component Subtype="RadioCommunication" Count="20" />
-				<Component Subtype="SmallTube" Count="20" />
-				<Component Subtype="Computer" Count="100" />
 				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Computer" Count="100" />
+				<Component Subtype="SmallTube" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="Detector" Count="30" />
+				<Component Subtype="Construction" Count="50" />
+				<Component Subtype="SteelPlate" Count="250" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>

@@ -22,13 +22,13 @@
 			<ThrusterType>Atmospheric</ThrusterType>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<Components>
-				<Component Subtype="SteelPlate" Count="850" />
-				<Component Subtype="Construction" Count="225" />
-				<Component Subtype="LargeTube" Count="120" />
-				<Component Subtype="MetalGrid" Count="70" />
-				<Component Subtype="Motor" Count="270" />
-				<Component Subtype="Construction" Count="60" />
 				<Component Subtype="SteelPlate" Count="150" />
+				<Component Subtype="Construction" Count="60" />
+				<Component Subtype="Motor" Count="270" />
+				<Component Subtype="MetalGrid" Count="70" />
+				<Component Subtype="LargeTube" Count="120" />
+				<Component Subtype="Construction" Count="225" />
+				<Component Subtype="SteelPlate" Count="500" />
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0" />
 			<MountPoints>

@@ -18,15 +18,15 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Large\LXN_RadarTower_1.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="2500" />
-				<Component Subtype="Construction" Count="400" />
+				<Component Subtype="SteelPlate" Count="30" />
 				<Component Subtype="Detector" Count="20" />
 				<Component Subtype="RadioCommunication" Count="20" />
-				<Component Subtype="MetalGrid" Count="200" />
-				<Component Subtype="SmallTube" Count="800" />
-				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Computer" Count="80" />
 				<Component Subtype="Motor" Count="8" />
-				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="MetalGrid" Count="80" />
+				<Component Subtype="SmallTube" Count="100" />
+				<Component Subtype="Construction" Count="100" />
+				<Component Subtype="SteelPlate" Count="750" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>

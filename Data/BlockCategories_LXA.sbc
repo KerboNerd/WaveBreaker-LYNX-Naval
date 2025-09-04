@@ -103,6 +103,10 @@
         <string>HydrogenEngine/LXA_GENX8_Generator</string>
         <string>AirVent/LXA_GENX8_Intake</string>
         <string>Thrust/LXA_GENX8_Thruster</string>
+		
+        <string>HydrogenEngine/LXN_IndustrialJet_Generator</string>
+        <string>AirVent/LXN_IndustrialJet_Intake</string>
+        <string>Thrust/LXN_IndustrialJet_Thruster</string>
 
         <string>HydrogenEngine/LNX_NK32_01_Generator</string>
         <string>AirVent/LXN_NK32_01_Intake</string>

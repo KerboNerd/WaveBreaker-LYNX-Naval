@@ -15,10 +15,10 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_KAB500KR_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="SmallTube" Count="3" />
 				<Component Subtype="Computer" Count="2" />
 				<Component Subtype="Construction" Count="2" />
-				<Component Subtype="SmallTube" Count="3" />
+				<Component Subtype="SteelPlate" Count="5" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

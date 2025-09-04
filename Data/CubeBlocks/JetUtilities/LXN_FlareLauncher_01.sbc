@@ -16,11 +16,11 @@
 			<Model>Models\Small\LXN_FlareLauncher_01.mwm</Model>
 			<Components>
 				<Component Subtype="InteriorPlate" Count="1" />
-				<Component Subtype="Construction" Count="2" />
-				<Component Subtype="MetalGrid" Count="1" />
-				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="Motor" Count="1" />
 				<Component Subtype="Computer" Count="1" />
+				<Component Subtype="Motor" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="MetalGrid" Count="1" />
+				<Component Subtype="Construction" Count="2" />
 				<Component Subtype="InteriorPlate" Count="1" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

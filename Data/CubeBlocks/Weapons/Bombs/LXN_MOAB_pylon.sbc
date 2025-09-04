@@ -15,10 +15,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_MOAB_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="100" />
-				<Component Subtype="Computer" Count="40" />
-				<Component Subtype="Construction" Count="60" />
 				<Component Subtype="SmallTube" Count="90" />
+				<Component Subtype="Computer" Count="20" />
+				<Component Subtype="Motor" Count="10" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="SteelPlate" Count="40" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

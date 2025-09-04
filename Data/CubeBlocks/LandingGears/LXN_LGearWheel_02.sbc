@@ -18,8 +18,8 @@
 			<UseModelIntersection>true</UseModelIntersection>
 			<Components>
 				<Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="Construction" Count="5" />
 				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="Construction" Count="5" />
 				<Component Subtype="SteelPlate" Count="10" />
 			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0" />

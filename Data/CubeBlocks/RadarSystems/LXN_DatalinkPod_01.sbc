@@ -18,10 +18,10 @@
 			<Model>Models\Small\LXN_OmniMAWS_01.mwm</Model>
 			<Components>
 				<Component Subtype="InteriorPlate" Count="1" />
-				<Component Subtype="Construction" Count="3" />
 				<Component Subtype="Detector" Count="1" />
-				<Component Subtype="Motor" Count="2" />
 				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Construction" Count="3" />
 				<Component Subtype="InteriorPlate" Count="2" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

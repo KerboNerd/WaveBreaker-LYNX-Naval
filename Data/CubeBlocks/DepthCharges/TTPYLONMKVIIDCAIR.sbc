@@ -24,9 +24,9 @@
 			<Components>
                 <Component Subtype="SteelPlate" Count="5" />
                 <Component Subtype="Construction" Count="2" />
-                <Component Subtype="MetalGrid" Count="1" />
-                <Component Subtype="LargeTube" Count="2" />
                 <Component Subtype="Computer" Count="5" />
+                <Component Subtype="LargeTube" Count="2" />
+                <Component Subtype="MetalGrid" Count="1" />
                 <Component Subtype="SteelPlate" Count="5" />
             </Components>
       		<CriticalComponent Subtype="Computer" Index="0" />

@@ -22,10 +22,10 @@
 			<Model>Models\Small\LXN_EOTS_01.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="5" />
-				<Component Subtype="Construction" Count="2" />
 				<Component Subtype="Detector" Count="1" />
-				<Component Subtype="RadioCommunication" Count="1" />
 				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="RadioCommunication" Count="1" />
+				<Component Subtype="Construction" Count="2" />
 				<Component Subtype="SteelPlate" Count="5" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

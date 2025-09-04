@@ -18,10 +18,11 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_S1M_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="8" />
+				<Component Subtype="Construction" Count="8" />
 				<Component Subtype="Computer" Count="3" />
-				<Component Subtype="SmallTube" Count="2" />
-				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="Motor" Count="3" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="SteelPlate" Count="8" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

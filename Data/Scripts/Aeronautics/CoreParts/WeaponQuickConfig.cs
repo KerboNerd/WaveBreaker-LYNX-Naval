@@ -128,8 +128,8 @@ public static class MissileConfig
 
     // High Performance Missiles
     public static float S1M_Health = 90; // Health of the S-1M missile
-    public static float S1M_MaxRange = 20000f; // Max Range of the S-1M missile
-    public static float S1M_MinRange = 8000f; // Min Range of the S-1M missile  
+    public static float S1M_MaxRange = 12000f; // Max Range of the S-1M missile
+    public static float S1M_MinRange = 6000f; // Min Range of the S-1M missile  
     public static float S1M_MaxSpeed = 826f * speedLimiterFactor; // Max Speed of the S-1M missile
     public static float S1M_Inventory = 1.200f * inventoryMultiplier; // Inventory capacity in kL.
     public static float S1M_Mass = 2500f; // Mass in kg.

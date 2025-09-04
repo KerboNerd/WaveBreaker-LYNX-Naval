@@ -16,9 +16,9 @@
 			<Model>Models\Small\LXN_MFD_01.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="1" />
-				<Component Subtype="Construction" Count="1" />
-				<Component Subtype="Display" Count="3" />
 				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="Display" Count="3" />
+				<Component Subtype="Construction" Count="1" />
 				<Component Subtype="SteelPlate" Count="1" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

@@ -18,10 +18,10 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_IRIST_pylon.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="3" />
-				<Component Subtype="Computer" Count="1" />
-				<Component Subtype="SmallTube" Count="1" />
 				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="Computer" Count="1" />
+				<Component Subtype="SteelPlate" Count="3" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

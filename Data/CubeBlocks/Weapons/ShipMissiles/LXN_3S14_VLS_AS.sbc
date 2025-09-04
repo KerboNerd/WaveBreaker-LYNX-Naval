@@ -21,12 +21,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_3S14_VLS.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="200" />
-				<Component Subtype="Computer" Count="24" />
-				<Component Subtype="SmallTube" Count="18" />
-				<Component Subtype="LargeTube" Count="10" />
-				<Component Subtype="MetalGrid" Count="25" />
 				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="Computer" Count="25" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="SmallTube" Count="18" />
+				<Component Subtype="MetalGrid" Count="24" />
+				<Component Subtype="SteelPlate" Count="260" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

@@ -21,9 +21,9 @@
 			<Components>
 				<Component Subtype="SteelPlate" Count="2" />
 				<Component Subtype="Detector" Count="5" />
+				<Component Subtype="Computer" Count="5" />
 				<Component Subtype="Motor" Count="2" />
 				<Component Subtype="Girder" Count="2" />
-				<Component Subtype="Computer" Count="5" />q
 				<Component Subtype="SteelPlate" Count="2"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

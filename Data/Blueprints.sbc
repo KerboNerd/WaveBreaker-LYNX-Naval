@@ -13,8 +13,8 @@
           <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
           <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
           <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
-          <Item Amount="2" TypeId="Ingot" SubtypeId="Platinum" />
-          <Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+          <Item Amount="2" TypeId="Ingot" SubtypeId="Silver" />
+          <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
         </Prerequisites>
         <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK15Torpedo" />
         <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
@@ -32,7 +32,7 @@
           <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
           <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
           <Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
-          <Item Amount="1" TypeId="Ingot" SubtypeId="Platinum" />
+          <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
         </Prerequisites>
         <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK13Torpedo" />
         <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>

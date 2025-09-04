@@ -25,13 +25,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\AK130M\LXN_AK130M_1.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="240" />
-				<Component Subtype="Construction" Count="16" />
-				<Component Subtype="MetalGrid" Count="10" />
-				<Component Subtype="SmallTube" Count="8" />
-				<Component Subtype="Computer" Count="3" />
-				<Component Subtype="Motor" Count="8" />
 				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="Construction" Count="16" />
+				<Component Subtype="SteelPlate" Count="240" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>

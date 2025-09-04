@@ -19,10 +19,10 @@
 			<Model>Models\Countermeasures\LXN_L256M10smalloffset_pylon.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="2" />
-				<Component Subtype="Construction" Count="3" />
-				<Component Subtype="MetalGrid" Count="2" />
-				<Component Subtype="LargeTube" Count="1" />
 				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="Construction" Count="3" />
 				<Component Subtype="SteelPlate" Count="3" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

@@ -15,12 +15,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Small\LXN_FuelPylon_01.mwm</Model>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="4" />
-				<Component Subtype="LargeTube" Count="2" />
-				<Component Subtype="SmallTube" Count="4" />
-				<Component Subtype="Computer" Count="4" />
-				<Component Subtype="Construction" Count="4" />
 				<Component Subtype="InteriorPlate" Count="2" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="SmallTube" Count="4" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="InteriorPlate" Count="4" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>LXN_FuelPylon_01</BlockPairName>

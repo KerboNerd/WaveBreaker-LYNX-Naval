@@ -15,7 +15,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Large\LXN_CarrierRamp_03.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="500"/>
+				<Component Subtype="SteelPlate" Count="100"/>
 			</Components>
 			<CriticalComponent Subtype="SteelPlate" Index="0"/>
 			<MountPoints>

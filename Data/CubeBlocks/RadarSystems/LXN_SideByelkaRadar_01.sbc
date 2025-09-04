@@ -19,11 +19,11 @@
 			<Model>Models\Small\LXN_SideByelkaRadar_01.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="Construction" Count="5" />
 				<Component Subtype="Detector" Count="3" />
+				<Component Subtype="Computer" Count="10" />
 				<Component Subtype="RadioCommunication" Count="2" />
 				<Component Subtype="SmallTube" Count="2" />
-				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="Construction" Count="5" />
 				<Component Subtype="SteelPlate" Count="10" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

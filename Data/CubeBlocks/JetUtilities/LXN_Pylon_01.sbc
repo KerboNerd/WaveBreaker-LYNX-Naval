@@ -17,8 +17,8 @@
 			<Model>Models\Small\LXN_Pylon_01.mwm</Model>
 			<Components>
 				<Component Subtype="InteriorPlate" Count="2" />
-				<Component Subtype="Construction" Count="4" />
 				<Component Subtype="Motor" Count="1" />
+				<Component Subtype="Construction" Count="4" />
 				<Component Subtype="InteriorPlate" Count="2" />
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0" />

@@ -18,10 +18,11 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_R73M_bay2mirror.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="12" />
-				<Component Subtype="Computer" Count="6" />
-				<Component Subtype="SmallTube" Count="3" />
 				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="Computer" Count="6" />
+				<Component Subtype="Motor" Count="3" />
+				<Component Subtype="SmallTube" Count="3" />
+				<Component Subtype="SteelPlate" Count="12" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

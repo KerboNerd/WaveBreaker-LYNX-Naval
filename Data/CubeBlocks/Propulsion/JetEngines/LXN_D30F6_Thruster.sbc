@@ -18,12 +18,12 @@
 			<ModelOffset x="0" y="0" z="0" />
 			<Model>Models\Propulsion\Jets\LXN_D30F6_Thruster.mwm</Model>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="15" />
-				<Component Subtype="Construction" Count="15" />
-				<Component Subtype="MetalGrid" Count="20" />
-				<Component Subtype="LargeTube" Count="15" />
-				<Component Subtype="Construction" Count="15" />
 				<Component Subtype="InteriorPlate" Count="10" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="LargeTube" Count="15" />
+				<Component Subtype="MetalGrid" Count="20" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="InteriorPlate" Count="15" />
 			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0" />
 			<MountPoints>

@@ -24,14 +24,14 @@
 			<ModelOffset x="0" y="0" z="0" />
 			<Model>Models\APU\LXN_JetAPU_01.mwm</Model>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="50" /> <!-- 3 kg * 50 = 150 kg -->
-				<Component Subtype="Construction" Count="40" /> <!-- 8 kg * 40 = 320 kg -->
-				<Component Subtype="LargeTube" Count="25" /> <!-- 25 kg * 25 = 625 kg -->
-				<Component Subtype="Motor" Count="15" /> <!-- 24 kg * 15 = 360 kg -->
-				<Component Subtype="Computer" Count="5" /> <!-- 0.2 kg * 5 = 1 kg -->
 				<Component Subtype="PowerCell" Count="10" /> <!-- 25 kg * 10 = 250 kg -->
+				<Component Subtype="Computer" Count="5" /> <!-- 0.2 kg * 5 = 1 kg -->
+				<Component Subtype="Motor" Count="15" /> <!-- 24 kg * 15 = 360 kg -->
+				<Component Subtype="LargeTube" Count="25" /> <!-- 25 kg * 25 = 625 kg -->
+				<Component Subtype="Construction" Count="40" /> <!-- 8 kg * 40 = 320 kg -->
+				<Component Subtype="InteriorPlate" Count="50" /> <!-- 3 kg * 50 = 150 kg -->
 			</Components>
-			<CriticalComponent Subtype="PowerCell" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>

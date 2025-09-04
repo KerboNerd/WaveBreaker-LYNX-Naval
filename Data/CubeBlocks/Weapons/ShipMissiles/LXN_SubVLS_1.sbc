@@ -21,13 +21,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\SubVLS\LXN_SubVLS_1.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="500" />
-				<Component Subtype="MetalGrid" Count="80" />
-				<Component Subtype="LargeTube" Count="30" />
-				<Component Subtype="SmallTube" Count="40" />
-				<Component Subtype="Computer" Count="48" />
-				<Component Subtype="Construction" Count="80" />
 				<Component Subtype="Girder" Count="24" />
+				<Component Subtype="Construction" Count="80" />
+				<Component Subtype="Computer" Count="48" />
+				<Component Subtype="SmallTube" Count="40" />
+				<Component Subtype="LargeTube" Count="30" />
+				<Component Subtype="MetalGrid" Count="20" />
+				<Component Subtype="SteelPlate" Count="180" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

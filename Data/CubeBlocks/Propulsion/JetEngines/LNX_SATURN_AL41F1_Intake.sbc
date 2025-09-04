@@ -18,11 +18,11 @@
 			<ModelOffset x="0" y="0" z="0" />
 			<Model>Models\LXNAVAL\Propulsion\JetEngines\LNX_SATURN_AL41F1_Intake.mwm</Model>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="50" />
-				<Component Subtype="Construction" Count="10" />
-				<Component Subtype="Motor" Count="8" />
-				<Component Subtype="Computer" Count="5" />
 				<Component Subtype="InteriorPlate" Count="10" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="InteriorPlate" Count="50" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
