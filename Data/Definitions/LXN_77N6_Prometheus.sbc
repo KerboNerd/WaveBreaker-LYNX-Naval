@@ -42,7 +42,7 @@
                 <Z>0.6</Z>
             </Size>
             <Mass>1893</Mass>
-            <Volume>5891</Volume>
+            <Volume>2800</Volume>
             <Model>Models\77N6_Prometheus\LXN_77N6_Missile1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
