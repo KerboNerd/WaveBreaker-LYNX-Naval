@@ -1206,7 +1206,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "57E6 Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 200, // Number of projectiles to spawn.
+                Fragments = 50, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -1329,8 +1329,8 @@ namespace Scripts
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
-                    ParticleScale = 0.5f,
-                    CustomParticle = "LXN_BombExplosion_01", // Particle SubtypeID, from your Particle SBC
+                    ParticleScale = 0.2f,
+                    CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
@@ -1390,13 +1390,13 @@ namespace Scripts
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "LXN_BombExplosion_01",
+                        Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
                         DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.5f,
+                            Scale = 0.2f,
                             HitPlayChance = 1f,
                         },
                     },
