@@ -1582,7 +1582,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Enabled" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Animated" Name="Particles per second" Type="Float">
               <Keys>
@@ -2020,7 +2020,7 @@
               <ValueFloat>0.01</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Enabled" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Animated" Name="Particles per second" Type="Float">
               <Keys />
@@ -2448,7 +2448,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Enabled" Type="Bool">
-              <ValueBool>true</ValueBool>
+              <ValueBool>false</ValueBool>
             </Property>
             <Property AnimationType="Animated" Name="Particles per second" Type="Float">
               <Keys>
@@ -3928,7 +3928,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>100</ValueFloat>
+                  <ValueFloat>50</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -4356,7 +4356,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>27</ValueFloat>
+                  <ValueFloat>20</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
@@ -4686,7 +4686,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Const" Name="Life" Type="Float">
-              <ValueFloat>6</ValueFloat>
+              <ValueFloat>8</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Soft particle distance scale" Type="Float">
               <ValueFloat>25</ValueFloat>
@@ -4764,7 +4764,7 @@
             </Property>
             <Property AnimationType="Const" Name="Angle var" Type="Vector3">
               <ValueVector3>
-                <X>0</X>
+                <X>6</X>
                 <Y>0</Y>
                 <Z>0</Z>
               </ValueVector3>
@@ -4804,7 +4804,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>12</ValueFloat>
+                  <ValueFloat>5</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
