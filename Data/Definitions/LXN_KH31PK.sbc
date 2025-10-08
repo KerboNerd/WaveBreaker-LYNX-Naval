@@ -69,7 +69,7 @@
                 <Item Amount="8" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
                 <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
-                <Item Amount="2" TypeId="Ingot" SubtypeId="Uranium" />
+                <Item Amount="2" TypeId="Ingot" SubtypeId="Silver" />
             </Prerequisites>
             <!-- Total mass of prerequisites should not exceed the missile's logical mass of 450kg to maintain logical consistency. -->
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_KH31PKMag" />

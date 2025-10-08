@@ -34,7 +34,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_BrimstoneMag</SubtypeId>
             </Id>
-            <DisplayName>Brimstone Missile</DisplayName>
+            <DisplayName>AGM-114 Brimstone Missile</DisplayName>
             <Icon>Textures\Icons\LXN_Brimstone_pylon.dds</Icon>
             <Size>
                 <X>0.24</X>
@@ -61,7 +61,7 @@
                 <TypeId>BlueprintDefinition</TypeId>
                 <SubtypeId>LXN_Brimstone_BP</SubtypeId>
             </Id>
-            <DisplayName>Brimstone Missile</DisplayName>
+            <DisplayName>AGM-114 Brimstone Missile</DisplayName>
             <Icon>Textures\Icons\LXN_Brimstone_pylon.dds</Icon>
             <Prerequisites>
                 <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
