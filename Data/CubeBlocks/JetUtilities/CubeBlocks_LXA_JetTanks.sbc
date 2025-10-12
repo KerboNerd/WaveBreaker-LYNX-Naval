@@ -17,9 +17,10 @@
 				<ModelOffset x="0" y="0" z="0" />
 				<Model>Models\Small\LXN_JetFuelTank_1x1.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="1" />
-					<Component Subtype="SmallTube" Count="1" />
-					<Component Subtype="Construction" Count="1" />
+					<Component Subtype="SteelPlate" Count="2" />
+					<Component Subtype="SmallTube" Count="2" />
+					<Component Subtype="Construction" Count="4" />
+					<Component Subtype="SteelPlate" Count="2" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
@@ -76,8 +77,9 @@
 				<Model>Models\Small\LXN_JetFuelTank_1x2.mwm</Model>
 				<Components>
 					<Component Subtype="SteelPlate" Count="2" />
-					<Component Subtype="SmallTube" Count="2" />
-					<Component Subtype="Construction" Count="2" />
+					<Component Subtype="SmallTube" Count="4" />
+					<Component Subtype="Construction" Count="6" />
+					<Component Subtype="SteelPlate" Count="4" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
@@ -141,9 +143,10 @@
 				<ModelOffset x="0" y="0" z="0" />
 				<Model>Models\Small\LXN_JetFuelTank_1x4.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="4" />
-					<Component Subtype="SmallTube" Count="4" />
-					<Component Subtype="Construction" Count="4" />
+					<Component Subtype="SteelPlate" Count="6" />
+					<Component Subtype="SmallTube" Count="8" />
+					<Component Subtype="Construction" Count="12" />
+					<Component Subtype="SteelPlate" Count="8" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
@@ -199,9 +202,10 @@
 				<ModelOffset x="0" y="0" z="0" />
 				<Model>Models\Small\LXN_JetFuelTank_2x2.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="4" />
-					<Component Subtype="SmallTube" Count="4" />
-					<Component Subtype="Construction" Count="4" />
+					<Component Subtype="SteelPlate" Count="6" />
+					<Component Subtype="SmallTube" Count="8" />
+					<Component Subtype="Construction" Count="12" />
+					<Component Subtype="SteelPlate" Count="8" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
@@ -257,9 +261,10 @@
 				<ModelOffset x="0" y="0" z="0" />
 				<Model>Models\Small\LXN_JetFuelTank_2x3.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="6" />
-					<Component Subtype="SmallTube" Count="6" />
-					<Component Subtype="Construction" Count="6" />
+					<Component Subtype="SteelPlate" Count="10" />
+					<Component Subtype="SmallTube" Count="12" />
+					<Component Subtype="Construction" Count="18" />
+					<Component Subtype="SteelPlate" Count="12" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
@@ -315,9 +320,10 @@
 				<ModelOffset x="0" y="0" z="0" />
 				<Model>Models\Small\LXN_JetFuelTank_2x5.mwm</Model>
 				<Components>
-					<Component Subtype="SteelPlate" Count="10" />
-					<Component Subtype="SmallTube" Count="10" />
-					<Component Subtype="Construction" Count="10" />
+					<Component Subtype="SteelPlate" Count="16" />
+					<Component Subtype="SmallTube" Count="18" />
+					<Component Subtype="Construction" Count="32" />
+					<Component Subtype="SteelPlate" Count="18" />
 				</Components>
 				<LeakPercent>0.0125</LeakPercent>
 				<GasExplosionMaxRadius>1</GasExplosionMaxRadius>
