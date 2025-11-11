@@ -4,7 +4,7 @@ public static class MissileConfig
 {
     static float inventoryMultiplier = 1;
     static float SAM_InventoryMultiplier = 2;
-    static float speedLimiterFactor = 0.55f;
+    static float speedLimiterFactor = 0.5f;
 
     // Air to Ground Missiles 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
