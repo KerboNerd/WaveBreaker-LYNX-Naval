@@ -14,7 +14,8 @@
 				Equipped with stabilization and all-weather targeting, it maintains accuracy in harsh maritime conditions.
 				Max engagement range: 8000m
 				Rate of Fire: 20 rounds/minute
-				Ammo: 220mm HE Magazine
+				Ammo: 
+				- 220mm HE Magazine
 			</Description>
 			<Icon>Textures\Icons\AK220M\LXN_AK220M_1.dds</Icon>
 			<CubeSize>Large</CubeSize>

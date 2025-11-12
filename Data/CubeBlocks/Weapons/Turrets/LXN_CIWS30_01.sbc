@@ -17,7 +17,8 @@
 					Radar supported: SFED (increase range to 2500m)
 					Rate of Fire: 5800
 					Reload Time: 3 Seconds
-					Ammo: 30mm CIWS ammo box
+					Ammo: 
+					- 30mm CIWS ammo box
 				</Description>
 				<Icon>Textures\Icons\Weapons\Turrets\LXN_CIWS30_01.dds</Icon>
 				<CubeSize>Large</CubeSize>

@@ -14,8 +14,10 @@
 				coastal installations, and naval vessels, the AK-130M-2 delivers exceptional accuracy and destructive capability.
 				The system features enhanced targeting computers and stabilization for improved performance in rough seas.
 				Max engagement range: 6500m
-				Rate of Fire: 90 rounds/minute
-				Ammo: 130mm HE Ammo box
+				Rate of Fire: 80 rounds/minute
+				Ammo: 
+				- 130mm HE Ammo box
+				- 130mm AA Ammo box
 			</Description>
 			<Icon>Textures\Icons\AK130M\Cubes\LXN_AK130M_2.dds</Icon>
 			<CubeSize>Large</CubeSize>

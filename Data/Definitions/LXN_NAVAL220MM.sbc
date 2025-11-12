@@ -44,7 +44,7 @@
             </Size>
             <Mass>350</Mass>
             <Volume>200</Volume>
-            <Capacity>500</Capacity>
+            <Capacity>50</Capacity>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL220HEAmmo" />
 
