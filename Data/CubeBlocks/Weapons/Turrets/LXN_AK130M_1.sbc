@@ -15,7 +15,9 @@
 				The system features enhanced targeting computers and stabilization for improved performance in rough seas.
 				Max engagement range: 6500m
 				Rate of Fire: 40 rounds/minute
-				Ammo: 130mm HE Ammo box
+				Ammo: 
+				- 130mm HE Ammo box
+				- 130mm AA Ammo box
 			</Description>
 			<Icon>Textures\Icons\AK130M\Cubes\LXN_AK130M_1.dds</Icon>
 			<CubeSize>Large</CubeSize>
