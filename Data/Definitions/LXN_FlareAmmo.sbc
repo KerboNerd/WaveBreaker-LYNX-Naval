@@ -44,7 +44,7 @@
             <Volume>50</Volume>
             <Model>Models\Small\LXN_FlareLauncher_item.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
-            <Capacity>60</Capacity>
+            <Capacity>30</Capacity>
             <AmmoDefinitionId Subtype="LXN_Flares" />
 
             <MinimumOfferAmount>50</MinimumOfferAmount>
