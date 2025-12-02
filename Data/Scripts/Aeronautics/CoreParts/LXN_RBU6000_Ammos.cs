@@ -45,7 +45,7 @@ namespace Scripts
             AmmoRound = "RBU6000 Primary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 101*/0, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.RBU6000_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.RBU6000_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -211,7 +211,7 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
-                    MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
+                    MinArmingTime = 180, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = true,
                     NoSound = true,
                     ParticleScale = 1,

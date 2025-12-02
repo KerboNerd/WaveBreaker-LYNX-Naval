@@ -1206,7 +1206,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "57E6 Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 50, // Number of projectiles to spawn.
+                Fragments = 20, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -1496,7 +1496,7 @@ namespace Scripts
             AmmoRound = "57E6 Fragmentation", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 3000, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1200, // Direct damage; one steel plate is worth 100.
             Mass = 50, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.

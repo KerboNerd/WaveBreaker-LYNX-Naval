@@ -3,7 +3,7 @@
 public static class MissileConfig
 {
     static float inventoryMultiplier = 1;
-    static float SAM_InventoryMultiplier = 2;
+    static float SAM_InventoryMultiplier = 3;
     static float speedLimiterFactor = 0.5f;
 
     // Air to Ground Missiles 
@@ -159,8 +159,8 @@ public static class MissileConfig
     // 77N6 "Prometheus" Missile
     public static float Prometheus_77N6_Health = 160; // Health of the 77N6 "Prometheus" missile
     public static float Prometheus_77N6_MaxRange = 15000f; // Max Range of the 77N6 "Prometheus" missile
-    public static float Prometheus_77N6_MinRange = 500f; // Min Range of the 77N6 "Prometheus" missile
-    public static float Prometheus_77N6_MaxSpeed = 5500f * speedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MinRange = 1500f; // Min Range of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
     public static int Prometheus_77N6_BoosterTime = 10; // Seconds
     public static float Prometheus_77N6_BoosterAccel = 120; // Meters Per Second
     public static float Prometheus_77N6_Mass = 1893f; // Mass in kg.
@@ -182,7 +182,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Zircon_Health = 40; // Health of the Zircon missile
     public static float Zircon_MaxRange = 12000f; // Max Range of the Zircon missile
-    public static float Zircon_MinRange = 5000f; // Min Range of the Zircon missile
+    public static float Zircon_MinRange = 5500f; // Min Range of the Zircon missile
     public static float Zircon_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the Zircon missile - MACH 9
     public static float Zircon_Inventory = 3.460f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Zircon_Mass = 1800f; // Mass in kg.
@@ -191,8 +191,8 @@ public static class MissileConfig
     public static int Oniks_BoosterTime = 8; // Seconds
     public static float Oniks_BoosterAccel = 15; // Meters Per Second
     public static float Oniks_SkimmingAltitude = 15f; // Meters
-    public static float Oniks_TerminalApproachAltitude = 7f; // Meters
-    public static float Oniks_TerminalApproachDistance = 800f; // Meters
+    public static float Oniks_TerminalApproachAltitude = 10f; // Meters
+    public static float Oniks_TerminalApproachDistance = 500f; // Meters
     public static float Oniks_MaxRange = 10000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 3000f; // Min Range of the Oniks missile
     public static float Oniks_MaxSpeed = 800f * speedLimiterFactor; // Max Speed of the Oniks missile
@@ -203,7 +203,7 @@ public static class MissileConfig
     public static int Kalibr_BoosterTime = 8; // Seconds
     public static float Kalibr_BoosterAccel = 45; // Meters Per Second
     public static float Kalibr_SkimmingAltitude = 50f; // Meters
-    public static float Kalibr_TerminalApproachAltitude = 7.5f; // Meters
+    public static float Kalibr_TerminalApproachAltitude = 10f; // Meters
     public static float Kalibr_TerminalApproachDistance = 300f; // Meters
     public static float Kalibr_MaxRange = 10000f; // Max Range of the Kalibr missile
     public static float Kalibr_MinRange = 3000f; // Min Range of the Kalibr missile
@@ -214,7 +214,7 @@ public static class MissileConfig
     public static int Moskit_BoosterTime = 4; // Seconds
     public static float Moskit_BoosterAccel = 128; // Meters Per Second
     public static float Moskit_SkimmingAltitude = 20f; // Meters
-    public static float Moskit_TerminalApproachAltitude = 7.5f; // Meters
+    public static float Moskit_TerminalApproachAltitude = 10f; // Meters
     public static float Moskit_TerminalApproachDistance = 500f; // Meters
     public static float Moskit_MaxRange = 10000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile

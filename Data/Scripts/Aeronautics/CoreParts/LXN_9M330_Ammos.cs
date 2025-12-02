@@ -522,7 +522,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 5000,
+                    Damage = 3000,
                     Depth = 3f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
@@ -1013,7 +1013,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 5000,
+                    Damage = 3000,
                     Depth = 3f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
@@ -1243,7 +1243,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "9M330 Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 200, // Number of projectiles to spawn.
+                Fragments = 50, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -1259,7 +1259,7 @@ namespace Scripts
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 50, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    Proximity = 30, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
                     PointAtTarget = true, // Start fragment direction pointing at Target
                     PointType = Lead, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
