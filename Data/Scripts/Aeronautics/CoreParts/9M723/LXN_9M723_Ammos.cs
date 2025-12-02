@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -72,8 +72,8 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "9M723 Cruise", // AmmoRound field of the ammo to spawn.
-                Fragments = 1, // Number of projectiles to spawn.
+                AmmoRound = "MediumAGM Frag", // AmmoRound field of the ammo to spawn. Using fragment stage from KH-31AD anti-ship missile.
+                Fragments = 10, // Number of projectiles to spawn.
                 Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.

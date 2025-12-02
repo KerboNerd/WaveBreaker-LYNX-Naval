@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -45,7 +45,7 @@ namespace Scripts
             AmmoRound = "KH31AD Primary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 180, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (18000 damage, 5m radius).
             Mass = MissileConfig.KH31AD_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.KH31AD_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -198,10 +198,10 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 1.5f, // Radius of AOE effect, in meters.
-                    Damage = 1,
-                    Depth = 1.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Enable = true,
+                    Radius = 5f, // Radius of AOE effect, in meters.
+                    Damage = 18000f, // Explosion damage when projectile dies. 5m radius splash. KH-31AD is smaller air-launched missile (~600 kg, ~90 kg warhead).
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -210,7 +210,7 @@ namespace Scripts
                     //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     //.Exponential drops off exponentially.  Does not scale to max radius
-                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
+                    ArmOnlyOnHit = true, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = true,
                     NoSound = true,
@@ -583,7 +583,7 @@ namespace Scripts
             AmmoRound = "KH31AD Secondary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 180, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (18000 damage, 5m radius).
             Mass = MissileConfig.KH31AD_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.KH31AD_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -1017,7 +1017,7 @@ namespace Scripts
             AmmoRound = "KH31AD Tertiary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 180, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (18000 damage, 5m radius).
             Mass = MissileConfig.KH31AD_Mass * 0.8f, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.KH31AD_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -1555,7 +1555,7 @@ namespace Scripts
             AmmoRound = "KH31AD Cruise", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 180, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (18000 damage, 5m radius).
             Mass = MissileConfig.KH31AD_Mass * 0.6f, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.KH31AD_Health * 0.8f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.

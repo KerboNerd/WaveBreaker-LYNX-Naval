@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -46,7 +46,7 @@ namespace Scripts
             AmmoRound = "Moskit COLD", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (65000 damage, 8m radius).
             Mass = MissileConfig.Moskit_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Moskit_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -63,7 +63,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -389,7 +389,7 @@ namespace Scripts
             AmmoRound = "Moskit Primary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (65000 damage, 8m radius).
             Mass = MissileConfig.Moskit_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Moskit_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -406,7 +406,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -731,7 +731,7 @@ namespace Scripts
             AmmoRound = "Moskit Secondary", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (65000 damage, 8m radius).
             Mass = MissileConfig.Moskit_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Moskit_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -748,7 +748,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -868,8 +868,8 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 8f, // Radius of AOE effect, in meters.
-                    Damage = 5000,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Damage = 65000f, // Explosion damage when projectile dies. 8m radius splash should damage/destroy multiple heavy armor blocks (16,500 HP each). MOSKIT is larger than ONIKS.
+                    Depth = 8f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius

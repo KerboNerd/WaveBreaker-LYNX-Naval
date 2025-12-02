@@ -27,7 +27,7 @@ public static class MissileConfig
     public static float Brimstone_Inventory = 0.046f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Brimstone_Mass = 46f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float KH31AD_Health = 50; // Health of the Kh-31AD missile
+    public static float KH31AD_Health = 70; // Health of the Kh-31AD missile
     public static float KH31AD_MaxRange = 10000f; // Max Range of the Kh-31AD missile
     public static float KH31AD_MinRange = 3000f; // Min Range of the Kh-31AD missile
     public static float KH31AD_MaxSpeed = 1200f * speedLimiterFactor; // Max Speed of the Kh-31AD missile
@@ -187,7 +187,7 @@ public static class MissileConfig
     public static float Zircon_Inventory = 3.460f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Zircon_Mass = 1800f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Oniks_Health = 80; // Health of the Oniks missile
+    public static float Oniks_Health = 100; // Health of the Oniks missile
     public static int Oniks_BoosterTime = 8; // Seconds
     public static float Oniks_BoosterAccel = 15; // Meters Per Second
     public static float Oniks_SkimmingAltitude = 15f; // Meters
@@ -199,7 +199,7 @@ public static class MissileConfig
     public static float Oniks_Inventory = 3.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Kalibr_Health = 50; // Health of the Kalibr missile
+    public static float Kalibr_Health = 90; // Health of the Kalibr missile
     public static int Kalibr_BoosterTime = 8; // Seconds
     public static float Kalibr_BoosterAccel = 45; // Meters Per Second
     public static float Kalibr_SkimmingAltitude = 50f; // Meters

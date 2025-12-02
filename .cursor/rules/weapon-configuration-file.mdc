@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+Always bear in mind, that main weapon balancing is done using the WeaponQuickConfig.cs file.

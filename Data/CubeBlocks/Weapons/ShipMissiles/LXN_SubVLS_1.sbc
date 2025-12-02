@@ -32,7 +32,7 @@
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\SubVLS\LXN_SubVLS_1_BS1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\SubVLS\LXN_SubVLS_1_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\SubVLS\LXN_SubVLS_1_BS1.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>LXN_SubVLS_1</BlockPairName>
 			<!-- <Center x="0" y="0" z="0" /> -->

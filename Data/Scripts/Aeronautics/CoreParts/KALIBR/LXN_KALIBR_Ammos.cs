@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -45,7 +45,7 @@ namespace Scripts
             AmmoRound = "KALIBR COLD", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (40000 damage, 7.5m radius).
             Mass = MissileConfig.Kalibr_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Kalibr_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -62,7 +62,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -113,9 +113,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 1.5f, // Radius of AOE effect, in meters.
-                    Damage = 1,
-                    Depth = 1.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Radius of AOE effect, in meters.
+                    Damage = 40000f, // Explosion damage when projectile dies. 7.5m radius splash. KALIBR has smaller warhead (~200 kg) than ONIKS (~300 kg).
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     ArmOnlyOnHit = true, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
@@ -313,7 +313,7 @@ namespace Scripts
             AmmoRound = "KALIBR HOT", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (40000 damage, 7.5m radius).
             Mass = MissileConfig.Kalibr_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Kalibr_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -330,7 +330,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -443,12 +443,12 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 6f, // Radius of AOE effect, in meters.
-                    Damage = 12000,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Radius of AOE effect, in meters.
+                    Damage = 40000f, // Explosion damage when projectile dies. 7.5m radius splash. KALIBR has smaller warhead (~200 kg) than ONIKS (~300 kg).
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
-                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
+                    ArmOnlyOnHit = true, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,

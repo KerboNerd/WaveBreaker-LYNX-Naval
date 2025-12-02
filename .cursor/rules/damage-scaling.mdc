@@ -1,0 +1,12 @@
+---
+alwaysApply: false
+---
+Space Engineers Damage Scaling Reference:
+1 HP = 1 steel plate (damage is measured in HP/steel plates)
+Large Grid Heavy Armor Block: 16,500 HP
+Large Grid Light Armor Block: 2,500 HP
+Damage scaling guidelines:
+To destroy 1 heavy armor block: ~16,500 damage
+To destroy 1 light armor block: ~2,500 damage
+For splash/AOE damage: scale based on radius and desired effect (e.g., 50,000 damage in 7.5m radius can destroy multiple heavy armor blocks with Linear falloff)
+Use this when configuring weapon damage values for realistic anti-ship missiles and other weapons.

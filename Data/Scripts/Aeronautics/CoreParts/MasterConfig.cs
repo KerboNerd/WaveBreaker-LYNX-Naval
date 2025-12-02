@@ -1,4 +1,4 @@
-﻿
+
 namespace Scripts
 {
     partial class Parts
@@ -76,7 +76,6 @@ namespace Scripts
                 LXN_PALASHM_CAMERA_1,
                 LXN_9M723_1,
                 LXN_AK220M_1,
-                LXN_9M723_1,
                 LXN_SubVLS_1,
                 TTMK15,
                 TTMK15Triple,

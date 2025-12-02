@@ -45,9 +45,9 @@ namespace Scripts
             AmmoRound = "OniksLG COLD", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (50000 damage, 7.5m radius).
             Mass = MissileConfig.Oniks_Mass, // In kilograms; how much force the impact will apply to the target.
-            Health = MissileConfig.Oniks_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = MissileConfig.Oniks_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable. Set to 0 to die on first hit and trigger splash.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -62,13 +62,18 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
-                OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                OnHitDeath = true, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
                 Diameter = 0.5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+            },
+            ObjectsHit = new ObjectsHitDef
+            {
+                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
+                CountBlocks = false, // Counts individual blocks, not just entities hit.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -103,22 +108,22 @@ namespace Scripts
                 ByBlockHit = new ByBlockHitDef
                 {
                     Enable = false,
-                    Radius = 5f, // Meters
-                    Damage = 5f,
-                    Depth = 1f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Meters
+                    Damage = 1000f, // Splash damage on block hit
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 1.5f, // Radius of AOE effect, in meters.
-                    Damage = 1,
-                    Depth = 1.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Radius of AOE effect, in meters.
+                    Damage = 50000f, // Explosion damage when projectile dies. 7.5m radius splash should damage/destroy multiple heavy armor blocks (16,500 HP each).
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
-                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
+                    ArmOnlyOnHit = true, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = true,
                     NoSound = true,
@@ -314,9 +319,9 @@ namespace Scripts
             AmmoRound = "OniksLG HOT", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1, // Direct damage; one steel plate is worth 100. Minimal direct damage - explosion damage handled by EndOfLife (50000 damage, 7.5m radius).
             Mass = MissileConfig.Oniks_Mass, // In kilograms; how much force the impact will apply to the target.
-            Health = MissileConfig.Oniks_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = MissileConfig.Oniks_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable. Set to 0 to die on first hit and trigger splash.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -331,18 +336,23 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
-                OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                OnHitDeath = true, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
                 Diameter = 10, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
+            ObjectsHit = new ObjectsHitDef
+            {
+                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
+                CountBlocks = false, // Counts individual blocks, not just entities hit.
+            },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "OniksLG Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 35, // Number of projectiles to spawn.
+                Fragments = 0, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
@@ -434,22 +444,22 @@ namespace Scripts
                 ByBlockHit = new ByBlockHitDef
                 {
                     Enable = false,
-                    Radius = 8f, // Meters
-                    Damage = 15000f,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Meters
+                    Damage = 1000f, // Splash damage on block hit
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 8f, // Radius of AOE effect, in meters.
-                    Damage = 15000,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 7.5f, // Radius of AOE effect, in meters.
+                    Damage = 50000f, // Explosion damage when projectile dies. 7.5m radius splash should damage/destroy multiple heavy armor blocks (16,500 HP each).
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
-                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
+                    ArmOnlyOnHit = true, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
