@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -1337,7 +1337,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                DesiredSpeed = MissileConfig.S1_57E6_MaxSpeed * 0.8f, // voxel phasing if you go above 5100
+                DesiredSpeed = 0, // Set to 0 to prevent speed matching - inherits booster velocity and slows via drag
                 MaxTrajectory = MissileConfig.S1_57E6_MaxRange, // Max Distance the projectile or beam can Travel.
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0f, // Degrees, Is pointed forward

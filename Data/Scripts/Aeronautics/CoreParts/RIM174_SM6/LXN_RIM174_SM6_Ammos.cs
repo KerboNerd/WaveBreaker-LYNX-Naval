@@ -1,4 +1,4 @@
-﻿using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
@@ -82,7 +82,7 @@ namespace Scripts
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
                 TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both kinds of frags are active
                 {
-                    Enable = false, // Enables TimedSpawns mechanism
+                    Enable = true, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
@@ -224,6 +224,72 @@ namespace Scripts
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
                     NoSteering = true, // this disables target follow and instead travel straight ahead (but will respect offsets).
                     MinTurnSpeed = 0, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
+                    NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
+                },
+                Approaches = new [] // Proximity fuse approach stage
+                {
+                   new ApproachDef
+                   {
+                       RestartCondition = Wait,
+                       Operators = StartEnd_And,
+                       CanExpireOnceStarted = false,
+                       ForceRestart = false,
+                       StartCondition1 = Spawn,
+                       StartCondition2 = Ignore,
+                       EndCondition1 = DistanceToTarget,
+                       EndCondition2 = Ignore,
+                       EndCondition3 = Ignore,
+                       Start1Value = 0,
+                       Start2Value = 0,
+                       End1Value = 10, // 10m proximity fuse
+                       End2Value = 0,
+                       End3Value = 0,
+                       StartEvent = DoNothing,
+                       EndEvent = EndProjectile, // Trigger EndOfLife when proximity reached
+                       Forward = ForwardTargetDirection,
+                       Up = UpRelativeToGravity,
+                       PositionB = PositionA,
+                       PositionC = Target,
+                       Elevation = Nothing,
+                       AdjustForward = true,
+                       AdjustUp = true,
+                       AdjustPositionB = true,
+                       AdjustPositionC = true,
+                       LeadRotateElevatePositionB = true,
+                       LeadRotateElevatePositionC = true,
+                       TrajectoryRelativeToB = false,
+                       ElevationRelativeToC = false,
+                       AngleOffset = 0,
+                       AngleVariance = Random(0, 0),
+                       ElevationTolerance = 0,
+                       TrackingDistance = 0,
+                       DesiredElevation = 0,
+                       StoredStartId = 0,
+                       StoredEndId = 0,
+                       StoredStartType = PositionA,
+                       StoredEndType = Target,
+                       LeadDistance = 0,
+                       PushLeadByTravelDistance = false,
+                       AccelMulti = 1,
+                       DeAccelMulti = 0,
+                       TotalAccelMulti = 0,
+                       SpeedCapMulti = 0,
+                       Orbit = false,
+                       OrbitRadius = 0,
+                       OffsetMinRadius = 0,
+                       OffsetMaxRadius = 0,
+                       OffsetTime = 0,
+                       NoTimedSpawns = false,
+                       DisableAvoidance = false,
+                       IgnoreAntiSmart = false,
+                       HeatRefund = 0,
+                       ReloadRefund = false,
+                       ToggleIngoreVoxels = false,
+                       SelfAvoidance = true,
+                       TargetAvoidance = false,
+                       SelfPhasing = false,
+                       SwapNavigationType = false,
+                   },
                 },
             },
             AmmoGraphics = new GraphicDef
@@ -430,7 +496,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
                 DamageVoxels = false, // Whether to damage voxels.
                 SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 0.5f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+                HealthHitModifier = 100f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
                 VoxelHitModifier = 1, // Voxel damage multiplier; defaults to 1 if zero or less.
                 Characters = 1000f, // Character damage multiplier; defaults to 1 if zero or less.
                 // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
@@ -744,29 +810,43 @@ namespace Scripts
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 10, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "RIM174 Cruise", // AmmoRound field of the ammo to spawn.
-                Fragments = 1, // Number of projectiles to spawn.
-                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                AmmoRound = "RIM174_SM6 Fragmentation", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
+                Fragments = 200, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
+                Degrees = 160, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent.
+                DropVelocity = false, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
-                IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
+                IgnoreArming = false, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
                 ArmWhenHit = false, // Setting this to true will arm the projectile when its shot by other projectiles.
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
+                TimedSpawns = new TimedSpawnDef // Proximity fuse - triggers fragmentation when close to target
+                {
+                    Enable = true, // Enables TimedSpawns mechanism
+                    Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
+                    StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
+                    MaxSpawns = 1, // Max number of fragment children to spawn
+                    Proximity = 80, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
+                    ParentDies = true, // Parent dies once after it spawns its last child (triggers fragmentation).
+                    PointAtTarget = true, // Start fragment direction pointing at Target
+                    PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
+                    DirectAimCone = 160f, //Aim cone used for Direct fire, in degrees
+                    GroupSize = 0, // Number of spawns in each group
+                    GroupDelay = 0, // Delay between each group.
+                },
             },
             DamageScales = new DamageScaleDef
             {
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
                 DamageVoxels = false, // Whether to damage voxels.
                 SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 0.5f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+                HealthHitModifier = 100f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
                 VoxelHitModifier = 1, // Voxel damage multiplier; defaults to 1 if zero or less.
                 Characters = 1000f, // Character damage multiplier; defaults to 1 if zero or less.
                 // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
@@ -825,42 +905,20 @@ namespace Scripts
             },
             AreaOfDamage = new AreaOfDamageDef // Note AOE is only applied to the Player/Grid it hit (and nearby projectiles) not nearby grids/players.
             {
-                ByBlockHit = new ByBlockHitDef
-                {
-                    Enable = false,
-                    Radius = 5f, // Meters
-                    Damage = 20000f,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
-                    MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
-                    //.Linear drops evenly by distance from center out to max radius
-                    //.Curve drops off damage sharply as it approaches the max radius
-                    //.InvCurve drops off sharply from the middle and tapers to max radius
-                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
-                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    //.Exponential drops off exponentially.  Does not scale to max radius
-                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
-                },
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 1.5f, // Radius of AOE effect, in meters.
-                    Damage = 1000,
-                    Depth = 3f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 15f, // Radius of AOE effect, in meters.
+                    Damage = 5000,
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
-                    //.Linear drops evenly by distance from center out to max radius
-                    //.Curve drops off damage sharply as it approaches the max radius
-                    //.InvCurve drops off sharply from the middle and tapers to max radius
-                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
-                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
-                    NoVisuals = true,
-                    NoSound = true,
-                    ParticleScale = 1,
-                    CustomParticle = "", // Particle SubtypeID, from your Particle SBC
+                    NoVisuals = false,
+                    NoSound = false,
+                    ParticleScale = 1.0f,
+                    CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
@@ -870,7 +928,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 90f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = MissileConfig.RIM174_SM6_BoosterTime * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things. Set to 3600 (60 seconds) for cruise stage.
                 AccelPerSec = MissileConfig.RIM174_SM6_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.RIM174_SM6_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.RIM174_SM6_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -911,8 +969,8 @@ namespace Scripts
 
                 Approaches = new [] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior.
                 {
-                   // Terminal Stage
-                new ApproachDef // * in comments means default
+                   // Cruise Stage
+                   new ApproachDef
                    {
                        // Start/End behaviors
                        RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition.
@@ -929,20 +987,18 @@ namespace Scripts
                                                    // RelativeHealthLost[>=], HealthRemaining[<=],
                                                    // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
                        StartCondition2 = Ignore,
-                       EndCondition1 = DistanceFromTarget,
+                       EndCondition1 = DistanceFromTarget, // End cruise stage when close to target (triggers terminal stage)
                        EndCondition2 = Ignore,
                        EndCondition3 = Ignore,
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                        Start1Value = 0,
                        Start2Value = 0,
-                       End1Value = 500,
+                       End1Value = 1000, // End cruise when within 1000m of target (transition to terminal)
                        End2Value = 0,
                        End3Value = 0,
                        // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
                        StartEvent = DoNothing,
                        EndEvent = DoNothing,
-
-                       // Stored "Local" positions are always relative to the shooter and will remain true even if the shooter moves or rotates.
 
                        // Relative positions and directions (relative to projectile current position aka PositionA)
                        Forward = ForwardTargetDirection, // ForwardElevationDirection*, ForwardRelativeToBlock, ForwardRelativeToShooter, ForwardRelativeToGravity, ForwardTargetDirection, ForwardTargetVelocity, ForwardStoredStartPosition, ForwardStoredEndPosition, ForwardStoredStartLocalPosition, ForwardStoredEndLocalPosition, ForwardOriginDirection
@@ -951,11 +1007,9 @@ namespace Scripts
                        PositionC = Target,
                        Elevation = Nothing,
 
-                       //
                        // Control if the vantagepoints update every frame or only at start.
-                       //
                        AdjustForward = true, // adjust forwardDir overtime.
-                       AdjustUp = true, // adjust upDir overtime
+                       AdjustUp = false, // adjust upDir overtime
                        AdjustPositionB = true, // Updated the position overtime.
                        AdjustPositionC = true, // Update the position overtime.
                        LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
@@ -964,7 +1018,7 @@ namespace Scripts
                        ElevationRelativeToC = false, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
                        // Tweaks to vantagepoint behavior
                        AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
-                       AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
+                       AngleVariance = Random(0f, 0f), // added to AngleOffset above, values of 0,0 disables feature
                        ElevationTolerance = 0, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
                        TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
                        DesiredElevation = 0, // The desired elevation relative to reference position
@@ -974,14 +1028,14 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 250, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active
                        AccelMulti = 1, // Modify default acceleration by this factor
                        DeAccelMulti = 0, // Modifies your default deacceleration by this factor
                        TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
-                       SpeedCapMulti = 0.5f, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
+                       SpeedCapMulti = 1.0f, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
 
                        // navigation behavior
                        Orbit = false, // Orbit the Position
@@ -1001,15 +1055,16 @@ namespace Scripts
                        TargetAvoidance = false, // If this and FutureIntersect is enabled then projectiles will actively avoid the target.
                        SelfPhasing = false, // If enabled the projectiles can phase through the parent grids without doing damage or dying.
                        SwapNavigationType = false, // This will swap to other navigation  (i.e. the alternate of what is set in smart, ProNav vs ZeroEffort)
+
                        // Audio/Visual Section
                        AlternateParticle = new ParticleDef // if blank it will use default, must be a default version for this to be useable.
                        {
-                           Name = "LXN_Missile_Afterburner_01",
-                           Offset = Vector(x: 0, y: 0, z: 3f),
+                           Name = "", //LXN_Missile_Afterburner_01
+                           Offset = Vector(x: 0, y: 0, z: 0.5f),
                            DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                            Extras = new ParticleOptionDef
                            {
-                               Scale = 0.7f,
+                               Scale = 0f, //0.7f
                            },
                        },
                        StartParticle = new ParticleDef // Optional particle to play when this stage begins
@@ -1026,7 +1081,7 @@ namespace Scripts
                        AlternateSound = "", // if blank it will use default, must be a default version for this to be useable.
                        ModelRotateTime = 0, // If this value is greater than 0 then the projectile model will rotate to face the target, a value of 1 is instant (in ticks).
                    },
-                },
+            },
 
             },
             AmmoGraphics = new GraphicDef
@@ -1065,13 +1120,13 @@ namespace Scripts
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
                         DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
+                            Scale = 1.2f,
                             HitPlayChance = 1f,
                         },
                     },
@@ -1208,11 +1263,11 @@ namespace Scripts
 
                 TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both ki
                 {
-                    Enable = false, // Enables TimedSpawns mechanism
+                    Enable = true, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 7, // 7m Proximity Fuse // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    Proximity = 10, // 10m Proximity Fuse // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
                     PointAtTarget = true, // Start fragment direction pointing at Target
                     PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
@@ -1327,7 +1382,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                DesiredSpeed = MissileConfig.RIM174_SM6_MaxSpeed * 0.8f, // voxel phasing if you go above 5100
+                DesiredSpeed = 0, // Set to 0 to prevent speed matching - inherits booster velocity and slows via drag
                 MaxTrajectory = MissileConfig.RIM174_SM6_MaxRange, // Max Distance the projectile or beam can Travel.
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 90f, // Degrees, Is pointed forward
@@ -1342,7 +1397,6 @@ namespace Scripts
                     Aggressiveness = 1f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     MaxChaseTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
                 },
             },
             AmmoGraphics = new GraphicDef
@@ -1484,104 +1538,21 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "RIM174_SM6 Fragmentation",
-            BaseDamage = 500,
-            BaseDamageCutoff = 250,
+            BaseDamage = 25000,
+            // BaseDamageCutoff = 0,
             Mass = 15f,
-            NoGridOrArmorScaling = false, 
+            NoGridOrArmorScaling = true,
 
+            Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
+            {
+                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
+            },
             Trajectory = new TrajectoryDef
             {
-                MaxLifeTime = 180,
-                MaxTrajectory = 30f,
-                DesiredSpeed = 300,
-            },
-            DamageScales = new DamageScaleDef
-            {
-                MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
-                DamageVoxels = false, // Whether to damage voxels.
-                SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 2f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
-                VoxelHitModifier = 0, // Voxel damage multiplier; defaults to 1 if zero or less.
-                Characters = -1f, // Character damage multiplier; defaults to 1 if zero or less.
-                // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
-                FallOff = new FallOffDef
-                {
-                    Distance = 0f, // Distance at which damage begins falling off.
-                    MinMultipler = 0.5f, // Value from 0.0001f to 1f where 0.1f would be a min damage of 10% of base damage.
-                },
-                Grids = new GridSizeDef
-                {
-                    Large = 0.2f, // Multiplier for damage against large grids.
-                    Small = -1f, // Multiplier for damage against small grids.
-                },
-                Armor = new ArmorDef
-                {
-                    Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
-                    Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = 0.8f, // Multiplier for damage against heavy armor.
-                    NonArmor = 1.5f, // Multiplier for damage against every else.
-                },
-                Shields = new ShieldDef
-                {
-                    Modifier = 1f, // Multiplier for damage against shields.
-                    Type = Default, // Damage vs healing against shields; Default, Heal
-                    BypassModifier = -1f, // If greater than zero, the percentage of damage that will penetrate the shield.
-                },
-                DamageType = new DamageTypes
-                {
-                    Base = Kinetic,
-                    AreaEffect = Kinetic,
-                    Detonation = Kinetic,
-                    Shield = Kinetic,
-                },
-                Deform = new DeformDef
-                {
-                    DeformType = HitBlock,
-                    DeformDelay = 30,
-                },
-                Custom = new CustomScalesDef
-                {
-                    SkipOthers = NoSkip, // Controls how projectile interacts with other blocks in relation to those defined here, NoSkip, Exclusive, Inclusive.
-                    Types = new[] // List of blocks to apply custom damage multipliers to.
-                   {
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test1",
-                            Modifier = -1f,
-                        },
-                        new CustomBlocksDef
-                        {
-                            SubTypeId = "Test2",
-                            Modifier = -1f,
-                        },
-                    },
-                },
-            },
-            AreaOfDamage = new AreaOfDamageDef // Note AOE is only applied to the Player/Grid it hit (and nearby projectiles) not nearby grids/players.
-            {
-                EndOfLife = new EndOfLifeDef
-                {
-                    Enable = true,
-                    Radius = 10f, // Radius of AOE effect, in meters.
-                    Damage = 500,
-                    Depth = 10f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
-                    MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
-                    //.Linear drops evenly by distance from center out to max radius
-                    //.Curve drops off damage sharply as it approaches the max radius
-                    //.InvCurve drops off sharply from the middle and tapers to max radius
-                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
-                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    //.Exponential drops off exponentially.  Does not scale to max radius
-                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
-                    MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
-                    NoVisuals = false,
-                    NoSound = false,
-                    ParticleScale = 1,
-                    CustomParticle = "", // Particle SubtypeID, from your Particle SBC
-                    CustomSound = "", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
-                },
+                MaxLifeTime = 60, // Increased lifetime for fragments to reach more missiles
+                MaxTrajectory = 300f, // Increased range for better coverage of missile clusters
+                DesiredSpeed = 300, // Higher speed for better hit probability against fast-moving missiles
             },
             AmmoGraphics = new GraphicDef
             {
@@ -1591,8 +1562,8 @@ namespace Scripts
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 10f,
-                        Width = 0.1f,
+                        Length = 20f,
+                        Width = 0.2f,
                         Color = Color(red: 5, green: 2, blue: 1f, alpha: 1),
                         Textures = new[] {"ProjectileTrailLine",},
                     },
