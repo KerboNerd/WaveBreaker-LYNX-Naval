@@ -549,7 +549,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Const" Name="Bounciness" Type="Float">
-              <ValueFloat>0.3</ValueFloat>
+              <ValueFloat>0.05</ValueFloat>
             </Property>
             <Property AnimationType="Animated" Name="Emitter size" Type="Vector3">
               <Keys>
@@ -584,12 +584,17 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>3</ValueFloat>
+                  <ValueFloat>30</ValueFloat>
                   <Value2D />
                 </Key>
                 <Key>
-                  <Time>0.1</Time>
-                  <ValueFloat>0</ValueFloat>
+                  <Time>0.2</Time>
+                  <ValueFloat>10</ValueFloat>
+                  <Value2D />
+                </Key>
+                <Key>
+                  <Time>0.4</Time>
+                  <ValueFloat>2</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -679,13 +684,13 @@
                         <Value2D />
                       </Key>
                       <Key>
-                        <Time>0.9857073</Time>
-                        <ValueFloat>2.97141457</ValueFloat>
+                        <Time>0.9822578</Time>
+                        <ValueFloat>7.88307858</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>3</ValueFloat>
+                        <ValueFloat>8</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -867,10 +872,10 @@
               <ValueFloat>0.8</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
-              <ValueFloat>1</ValueFloat>
+              <ValueFloat>0.5</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Collision count to kill particle" Type="Int">
-              <ValueInt>1</ValueInt>
+              <ValueInt>2</ValueInt>
             </Property>
             <Property AnimationType="Const" Name="Distance scaling factor" Type="Float">
               <ValueFloat>0</ValueFloat>

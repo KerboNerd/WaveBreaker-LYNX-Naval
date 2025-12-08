@@ -489,22 +489,6 @@ namespace Scripts
             },
             AreaOfDamage = new AreaOfDamageDef // Note AOE is only applied to the Player/Grid it hit (and nearby projectiles) not nearby grids/players.
             {
-                ByBlockHit = new ByBlockHitDef
-                {
-                    Enable = false,
-                    Radius = 5f, // Meters
-                    Damage = 20000f,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
-                    MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
-                    //.Linear drops evenly by distance from center out to max radius
-                    //.Curve drops off damage sharply as it approaches the max radius
-                    //.InvCurve drops off sharply from the middle and tapers to max radius
-                    //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
-                    //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
-                    //.Exponential drops off exponentially.  Does not scale to max radius
-                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
-                },
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
@@ -1085,7 +1069,7 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "S400 Fragmentation", // AmmoRound field of the ammo to spawn.
+                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field of the ammo to spawn.
                 Fragments = 300, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
@@ -1269,51 +1253,6 @@ namespace Scripts
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
-                    },
-                },
-            },
-            AmmoAudio = new AmmoAudioDef
-            {
-                TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "LXN_SmallMissileExplosion",
-                ShotSound = "",
-                ShieldHitSound = "LXN_SmallMissileExplosion",
-                PlayerHitSound = "LXN_SmallMissileExplosion",
-                VoxelHitSound = "",
-                FloatingHitSound = "LXN_SmallMissileExplosion",
-                HitPlayChance = 1f,
-                HitPlayShield = true,
-            },
-        };
-
-
-
-        private AmmoDef LXN_S400_Frags => new AmmoDef // Your ID, for slotting into the Weapon CS
-        {
-            AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "S400 Fragmentation", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
-            BaseDamage = 20000,
-            Mass = 25f,
-            NoGridOrArmorScaling = true, 
-
-            Trajectory = new TrajectoryDef
-            {
-                MaxLifeTime = 60,
-                MaxTrajectory = 200f,
-                DesiredSpeed = 300,
-            },
-            AmmoGraphics = new GraphicDef
-            {
-                VisualProbability = 1f,
-                Lines = new LineDef
-                {
-                    Tracer = new TracerBaseDef
-                    {
-                        Enable = true,
-                        Length = 20f,
-                        Width = 0.2f,
-                        Color = Color(red: 5, green: 2, blue: 1f, alpha: 1),
-                        Textures = new[] {"ProjectileTrailLine",},
                     },
                 },
             },

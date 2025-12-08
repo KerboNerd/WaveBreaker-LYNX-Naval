@@ -217,7 +217,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_S400_Primary, LXN_S400_Secondary, LXN_S400_Secondary2, LXN_S400_Cruise, LXN_S400_Frags,
+                LXN_S400_Primary, LXN_S400_Secondary, LXN_S400_Secondary2, LXN_S400_Cruise, LXN_HeavyAntiAir_FRAG,
             },
             Animations = LXN_S400x4_Anim,
             //Upgrades = UpgradeModules,

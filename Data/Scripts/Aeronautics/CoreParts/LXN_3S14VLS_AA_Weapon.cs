@@ -194,7 +194,16 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_S400_Secondary, LXN_S400_Secondary2, LXN_S400_Cruise, LXN_S400_Frags, LXN_9M330_HOT, LXN_9M330_Cruise, LXN_9M330_Frags, LXN_RIM174_SM6_Secondary, LXN_RIM174_SM6_Secondary2, LXN_RIM174_SM6_Cruise, LXN_RIM174_SM6_Frags,
+                LXN_S400_Secondary,
+                LXN_S400_Secondary2,
+                LXN_S400_Cruise,
+                LXN_9M330_HOT,
+                LXN_9M330_Cruise,
+                LXN_RIM174_SM6_Secondary,
+                LXN_RIM174_SM6_Secondary2,
+                LXN_RIM174_SM6_Cruise,
+                LXN_HeavyAntiAir_FRAG,
+                LXN_MediumAntiAir_FRAG
             },
             Animations = LXN_3S14VLS_Anim,
             //Upgrades = UpgradeModules,

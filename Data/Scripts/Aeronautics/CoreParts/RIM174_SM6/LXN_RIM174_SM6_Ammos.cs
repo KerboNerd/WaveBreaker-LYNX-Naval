@@ -815,9 +815,9 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "RIM174_SM6 Fragmentation", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
-                Fragments = 200, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
-                Degrees = 160, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
+                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
+                Fragments = 300, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
+                Degrees = 360, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
@@ -832,11 +832,11 @@ namespace Scripts
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 80, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
+                    Proximity = 20, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
                     ParentDies = true, // Parent dies once after it spawns its last child (triggers fragmentation).
                     PointAtTarget = true, // Start fragment direction pointing at Target
                     PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
-                    DirectAimCone = 160f, //Aim cone used for Direct fire, in degrees
+                    DirectAimCone = 360f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 0, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
                 },
@@ -908,9 +908,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 15f, // Radius of AOE effect, in meters.
-                    Damage = 5000,
-                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 10f, // Radius of AOE effect, in meters.
+                    Damage = 10000,
+                    Depth = 10f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
@@ -1531,43 +1531,6 @@ namespace Scripts
                 FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
-            },
-        };
-
-        private AmmoDef LXN_RIM174_SM6_Frags => new AmmoDef
-        {
-            AmmoMagazine = "Energy",
-            AmmoRound = "RIM174_SM6 Fragmentation",
-            BaseDamage = 25000,
-            // BaseDamageCutoff = 0,
-            Mass = 15f,
-            NoGridOrArmorScaling = true,
-
-            Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
-            {
-                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
-            },
-            Trajectory = new TrajectoryDef
-            {
-                MaxLifeTime = 60, // Increased lifetime for fragments to reach more missiles
-                MaxTrajectory = 300f, // Increased range for better coverage of missile clusters
-                DesiredSpeed = 300, // Higher speed for better hit probability against fast-moving missiles
-            },
-            AmmoGraphics = new GraphicDef
-            {
-                VisualProbability = 1f,
-                Lines = new LineDef
-                {
-                    Tracer = new TracerBaseDef
-                    {
-                        Enable = true,
-                        Length = 20f,
-                        Width = 0.2f,
-                        Color = Color(red: 5, green: 2, blue: 1f, alpha: 1),
-                        Textures = new[] {"ProjectileTrailLine",},
-                    },
-                },
             },
         };
 
