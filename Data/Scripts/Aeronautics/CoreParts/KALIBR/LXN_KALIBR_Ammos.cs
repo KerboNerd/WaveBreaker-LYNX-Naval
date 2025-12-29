@@ -341,7 +341,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "KALIBR Fragmentation", // AmmoRound field of the ammo to spawn.
-                Fragments = 200, // Number of projectiles to spawn.
+                Fragments = 30, // Number of projectiles to spawn.
                 Degrees = 180, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
@@ -387,10 +387,10 @@ namespace Scripts
                 },
                 Armor = new ArmorDef
                 {
-                    Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
-                    Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
-                    NonArmor = -1f, // Multiplier for damage against every else.
+                    Armor = 1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
+                    Light = 0.7f, // Multiplier for damage against light armor.
+                    Heavy = 1f, // Multiplier for damage against heavy armor.
+                    NonArmor = 0.3f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
                 {
@@ -959,7 +959,7 @@ namespace Scripts
             AmmoMagazine = "Energy",
             AmmoRound = "KALIBR Fragmentation",
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 5000, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1000, // Direct damage; one steel plate is worth 100.
             Mass = 50, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             EnergyMagazineSize = 1, // For energy weapons, how many shots to fire before reloading.

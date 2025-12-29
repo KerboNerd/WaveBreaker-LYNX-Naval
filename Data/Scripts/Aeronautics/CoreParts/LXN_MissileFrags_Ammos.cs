@@ -132,14 +132,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 1.5f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -488,14 +488,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 1.5f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -844,14 +844,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 1.5f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -1200,14 +1200,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 2.5f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -1556,14 +1556,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 2f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -1919,7 +1919,7 @@ namespace Scripts
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -2353,10 +2353,10 @@ namespace Scripts
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = Emp, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
-                Strength = 100000f,
-                Radius = 5000f, // Meters
-                Duration = 15 * 60, // In Ticks
-                StackDuration = false, // Combined Durations
+                Strength = 10000f,
+                Radius = 500f, // Meters
+                Duration = 10 * 60, // In Ticks
+                StackDuration = true, // Combined Durations
                 Depletable = false,
                 MaxStacks = 1, // Max Debuffs at once
                 NoHitParticle = false,
@@ -3088,14 +3088,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = -1f, // Multiplier for damage against large grids.
+                    Large = 2f, // Multiplier for damage against large grids.
                     Small = -1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
                     NonArmor = -1f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -3357,7 +3357,7 @@ namespace Scripts
             AmmoRound = "DepthCharge Small", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 0, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 1000, // Direct damage; one steel plate is worth 100.
             Mass = 0f, // In kilograms; how much force the impact will apply to the target.
             Health = 5, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
@@ -3502,7 +3502,7 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
+                    Enable = true,
                     Radius = 5f, // Radius of AOE effect, in meters.
                     Damage = 500f,
                     Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
@@ -3530,8 +3530,8 @@ namespace Scripts
                 Type = Dot, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Field, // Effect , Field
                 Strength = 100f,
-                Radius = 12f, // Meters
-                Duration = 1, // In Ticks
+                Radius = 15f, // Meters
+                Duration = 10, // In Ticks
                 StackDuration = false, // Combined Durations
                 Depletable = false,
                 MaxStacks = 1, // Max Debuffs at once

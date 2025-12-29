@@ -43,7 +43,7 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "LXN_HeavyAntiAir_FRAG",
-            BaseDamage = 10000,
+            BaseDamage = 2500,
             // BaseDamageCutoff = 0,
             Mass = 20f,
             NoGridOrArmorScaling = true,
@@ -91,7 +91,7 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "LXN_MediumAntiAir_FRAG",
-            BaseDamage = 5000,
+            BaseDamage = 1500,
             // BaseDamageCutoff = 0,
             Mass = 5f,
             NoGridOrArmorScaling = true,
