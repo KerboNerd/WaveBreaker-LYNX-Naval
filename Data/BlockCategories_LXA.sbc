@@ -7,7 +7,7 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>WB Naval Division</DisplayName>
+      <DisplayName>   WB Naval SYS</DisplayName>
       <Name>WBLYNX_Nav</Name>
       <ItemIds>
 
@@ -16,21 +16,7 @@
         <string>Thrust/LXN_VectorProp_01</string>
         <string>Thrust/LXN_ShipProp_01</string>
 
-        <string>OxygenTank/LXN_JetFuelTank_1x1</string>
-        <string>OxygenTank/LXN_JetFuelTank_1x2</string>
-        <string>OxygenTank/LXN_JetFuelTank_1x4</string>
-        <string>OxygenTank/LXN_JetFuelTank_2x2</string>
-        <string>OxygenTank/LXN_JetFuelTank_2x3</string>
-        <string>OxygenTank/LXN_JetFuelTank_2x5</string>
 
-        <string>Conveyor/LXN_SmallConveyor_Straight</string>
-        <string>Conveyor/LXN_SmallConveyor_Corner</string>
-        <string>Conveyor/LXN_SmallConveyor_Junction</string>
-        <string>Conveyor/LXN_SmallConveyor_JunctionT</string>
-        <string>Conveyor/LXN_SmallConveyor_JunctionX</string>
-        <string>Conveyor/LXN_SmallConveyor_CornerCurved</string>
-        <string>Conveyor/LXN_SmallConveyor_Straightx3</string>
-        <string>Conveyor/LXN_SmallConveyor_Straightx5</string>
 
         <string>ConveyorSorter/LXN_RadarTower_1</string>
         
@@ -38,30 +24,7 @@
         <string>CubeBlock/LXN_CarrierRamp_02</string>
         <string>CubeBlock/LXN_CarrierRamp_03</string>
 
-        <string>CubeBlock/LXN_SGWindow_1_1</string>
-        <string>CubeBlock/LXN_SGWindow_1_2</string>
-        <string>CubeBlock/LXN_SGWindow_1_3</string>
-        <string>CubeBlock/LXN_SGWindow_1_4</string>
-        <string>CubeBlock/LXN_SGWindow_1_5</string>
-        <string>CubeBlock/LXN_SGWindow_1_5invert</string>
-        <string>CubeBlock/LXN_SGWindow_1_6</string>
-        <string>CubeBlock/LXN_SGWindow_2_1</string>
-        <string>CubeBlock/LXN_SGWindow_2_2</string>
-        <string>CubeBlock/LXN_SGWindow_2_3</string>
-        <string>CubeBlock/LXN_SGWindow_2_4</string>
-        <string>CubeBlock/LXN_SGWindow_2_5</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block1</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block2</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block3</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block4</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block5</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Block6</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope1</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope2</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope3</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope4</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope5</string>
-        <string>CubeBlock/LXN_SGWindowCAP_Slope6</string>
+
 
         <string>HydrogenEngine/LXN_KGS_TankEngine_01</string>
 
@@ -85,7 +48,18 @@
         <string>CubeBlock/LXN_SmallBlockMantlet_07</string>
         <string>CubeBlock/LXN_SmallBlockMantlet_08</string>
 		
-        <string>LargeMissileTurret/TTMK37Director</string>   		
+        <string>LargeMissileTurret/TTMK37Director</string>   	
+
+        <string>ConveyorSorter/TTMK6ChargeRack</string>
+
+        <string>ConveyorSorter/TTMK15</string>
+        <string>ConveyorSorter/TTMK15Triple</string>
+
+        <string>ConveyorSorter/TTMK15Square</string>
+        <string>ConveyorSorter/TTMK15Sloped</string>
+        <string>ConveyorSorter/TTMK15Sloped1x2</string>        
+
+        <string>ConveyorSorter/TTMK6ChargeRack</string>     		
         
       </ItemIds>
     </Category>
@@ -95,7 +69,7 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>WB Jet Systems</DisplayName>
+      <DisplayName>   WB Aircraft SYS</DisplayName>
       <Name>WBLYNX_Jet</Name>
       <ItemIds>
 
@@ -163,19 +137,6 @@
         <string>CubeBlock/LXN_MigIntake_03</string>
         <string>CubeBlock/LXN_MigIntake_04</string>
         <string>CubeBlock/LXN_MigIntake_05</string>
-        
-        <string>ConveyorSorter/LXN_SideByelkaRadar_01</string>
-        <string>ConveyorSorter/LXN_EOTS_01</string>
-
-        <string>CubeBlock/LXN_RedStarDeco_01</string>
-
-        <string>ConveyorSorter/LXN_L256M10_pylon</string>
-        <string>ConveyorSorter/LXN_L256M10offset_pylon</string>
-        <string>ConveyorSorter/LXN_L256M10offset2_pylon</string>
-        <string>ConveyorSorter/LXN_SkyShadowPod_pylon</string>
-        <string>ConveyorSorter/LXN_IntegratedECM_System</string>
-
-        <string>ConveyorSorter/LXN_SniperPod_01</string>
 
         <string>MotorSuspension/LXN_LGearSuspension_01</string>
         <string>MotorSuspension/LXN_LGearSuspension_01bigger</string>
@@ -192,6 +153,48 @@
         <string>LXN_Aero_SukhoiCanard_01</string>
         <string>LXN_Aero_SukhoiCanard_02</string>
         <string>LXN_Aero_SukhoiCanard_03</string>
+		
+        <string>OxygenTank/LXN_JetFuelTank_1x1</string>
+        <string>OxygenTank/LXN_JetFuelTank_1x2</string>
+        <string>OxygenTank/LXN_JetFuelTank_1x4</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x2</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x3</string>
+        <string>OxygenTank/LXN_JetFuelTank_2x5</string>
+
+        <string>Conveyor/LXN_SmallConveyor_Straight</string>
+        <string>Conveyor/LXN_SmallConveyor_Corner</string>
+        <string>Conveyor/LXN_SmallConveyor_Junction</string>
+        <string>Conveyor/LXN_SmallConveyor_JunctionT</string>
+        <string>Conveyor/LXN_SmallConveyor_JunctionX</string>
+        <string>Conveyor/LXN_SmallConveyor_CornerCurved</string>
+        <string>Conveyor/LXN_SmallConveyor_Straightx3</string>
+        <string>Conveyor/LXN_SmallConveyor_Straightx5</string>
+		
+		<string>CubeBlock/LXN_SGWindow_1_1</string>
+        <string>CubeBlock/LXN_SGWindow_1_2</string>
+        <string>CubeBlock/LXN_SGWindow_1_3</string>
+        <string>CubeBlock/LXN_SGWindow_1_4</string>
+        <string>CubeBlock/LXN_SGWindow_1_5</string>
+        <string>CubeBlock/LXN_SGWindow_1_5invert</string>
+        <string>CubeBlock/LXN_SGWindow_1_6</string>
+        <string>CubeBlock/LXN_SGWindow_2_1</string>
+        <string>CubeBlock/LXN_SGWindow_2_2</string>
+        <string>CubeBlock/LXN_SGWindow_2_3</string>
+        <string>CubeBlock/LXN_SGWindow_2_4</string>
+        <string>CubeBlock/LXN_SGWindow_2_5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block1</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block2</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block3</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block4</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Block6</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope1</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope2</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope3</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope4</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope5</string>
+        <string>CubeBlock/LXN_SGWindowCAP_Slope6</string>
+		
       </ItemIds>
     </Category>
 
@@ -200,7 +203,7 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>WB Missile Systems</DisplayName>
+      <DisplayName>   WB Missile SYS</DisplayName>
       <Name>WBLYNX_Mis</Name>
       <ItemIds>
 
@@ -267,32 +270,19 @@
 		
 		<string>ConveyorSorter/LXN_JetRadar_Zaslon_1</string>
 		<string>ConveyorSorter/LXN_GravestoneRadar_01</string>
+		
+		<string>ConveyorSorter/LXN_L256M10_pylon</string>
+        <string>ConveyorSorter/LXN_L256M10offset_pylon</string>
+        <string>ConveyorSorter/LXN_L256M10offset2_pylon</string>
+        <string>ConveyorSorter/LXN_SkyShadowPod_pylon</string>
+        <string>ConveyorSorter/LXN_IntegratedECM_System</string>
+		
+        <string>ConveyorSorter/LXN_SideByelkaRadar_01</string>
+        <string>ConveyorSorter/LXN_EOTS_01</string>		
+        <string>ConveyorSorter/LXN_SniperPod_01</string>
         
-      </ItemIds>
-    </Category>
-	
-		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
-      <Id>
-        <TypeId>GuiBlockCategoryDefinition</TypeId>
-        <SubtypeId/>
-      </Id>
-        <DisplayName>WB Torpedo Systems</DisplayName>
-      <Name>WBTT_Torp</Name>
-      <ItemIds>
-        <string>ConveyorSorter/TTMK6ChargeRack</string>
-
-        <string>ConveyorSorter/TTMK15</string>
-        <string>ConveyorSorter/TTMK15Triple</string>
-
-        <string>ConveyorSorter/TTMK15Square</string>
-        <string>ConveyorSorter/TTMK15Sloped</string>
-        <string>ConveyorSorter/TTMK15Sloped1x2</string>        
-
-        <string>ConveyorSorter/TTMK6ChargeRack</string>     
-
-              <string>ConveyorSorter/TTPYLONMK13</string>
-              <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
-
+        <string>ConveyorSorter/TTPYLONMK13</string>
+        <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
       </ItemIds>
     </Category>
 
