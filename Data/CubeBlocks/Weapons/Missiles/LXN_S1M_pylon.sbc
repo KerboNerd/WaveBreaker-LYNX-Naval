@@ -19,9 +19,9 @@
 			<Model>Models\Small\LXN_S1M_pylon.mwm</Model>
 			<Components>
 				<Component Subtype="Construction" Count="8" />
-				<Component Subtype="Computer" Count="3" />
 				<Component Subtype="Motor" Count="3" />
 				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="Computer" Count="3" />
 				<Component Subtype="SteelPlate" Count="8" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />

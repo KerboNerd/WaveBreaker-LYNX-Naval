@@ -45,7 +45,7 @@ namespace Scripts
             BaseDamage = 400f, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.B8M1_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.B8M1_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 15000f, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 7500f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
 			       //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
 			       //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)

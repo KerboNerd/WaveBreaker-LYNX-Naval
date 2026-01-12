@@ -18,10 +18,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Weapons\Missiles\LXN_R77_Bay2.mwm</Model>
 			<Components>
-				<Component Subtype="Construction" Count="2" />
-				<Component Subtype="Computer" Count="2" />
-				<Component Subtype="SmallTube" Count="1" />
-				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SteelPlate" Count="6" />
+				<Component Subtype="Construction" Count="3" />
+				<Component Subtype="Motor" Count="3" />
+				<Component Subtype="SmallTube" Count="2" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="SteelPlate" Count="8" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BuildProgressModels>

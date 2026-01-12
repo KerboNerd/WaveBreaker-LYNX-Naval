@@ -34,14 +34,14 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_AGM84Mag</SubtypeId>
             </Id>
-            <DisplayName>AGM-84 Missile</DisplayName>
+            <DisplayName>AGM-84H Missile</DisplayName>
             <Icon>Textures\Icons\LXN_AGM84_pylon.dds</Icon>
             <Size>
                 <X>0.24</X>
                 <Y>0.2</Y>
                 <Z>0.2</Z>
             </Size>
-            <Mass>674.5</Mass>
+            <Mass>550</Mass>
             <Volume>410</Volume>
             <Model>Models\Small\LXN_AGM84_missile.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
@@ -61,7 +61,7 @@
                 <TypeId>BlueprintDefinition</TypeId>
                 <SubtypeId>LXN_AGM84_BP</SubtypeId>
             </Id>
-            <DisplayName>AGM-84 Missile</DisplayName>
+            <DisplayName>AGM-84H Missile</DisplayName>
             <Icon>Textures\Icons\LXN_AGM84_pylon.dds</Icon>
             <Prerequisites>
                 <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
@@ -76,7 +76,6 @@
 	</Blueprints>
 
     <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AGM84_CompBP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AGM84_BP" />
     </BlueprintClassEntries>
 

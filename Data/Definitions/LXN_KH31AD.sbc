@@ -41,7 +41,7 @@
                 <Y>0.2</Y>
                 <Z>0.2</Z>
             </Size>
-            <Mass>715</Mass>
+            <Mass>615</Mass>
             <Volume>540</Volume>
             <Model>Models\Small\LXN_KH31AD_missile1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
@@ -77,7 +77,6 @@
 	</Blueprints>
 
     <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KH31AD_CompBP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_KH31AD_BP" />
     </BlueprintClassEntries>
 
