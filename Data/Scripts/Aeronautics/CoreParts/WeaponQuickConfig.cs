@@ -11,9 +11,9 @@ public static class MissileConfig
     public static float AGM84SLAMMER_Health = 65; // Health of the AGM-84 SLAMMER missile
     public static int AGM84SLAMMER_BoosterTime = 4; // Seconds
     public static float AGM84SLAMMER_BoosterAccel = 43; // Meters Per Second
-    public static float AGM84SLAMMER_SkimmingAltitude = 50f; // Meters
-    public static float AGM84SLAMMER_TerminalApproachAltitude = 10f; // Meters
-    public static float AGM84SLAMMER_TerminalApproachDistance = 300f; // Meters
+    public static float AGM84SLAMMER_SkimmingAltitude = 80f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachAltitude = 15f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachDistance = 600f; // Meters
     public static float AGM84SLAMMER_MaxRange = 8000f; // Max Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MinRange = 3000f; // Min Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MaxSpeed = 300f; // Max Speed of the AGM-84 SLAMMER missile
@@ -110,10 +110,10 @@ public static class MissileConfig
     public static float RVVAEPD_Inventory = 0.113f * inventoryMultiplier; // Inventory capacity in kL.
     public static float RVVAEPD_Mass = 190f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float AIM260_Health = 150; // Health of the AIM-120 missile
-    public static float AIM260_MaxRange = 15000f; // Max Range of the AIM-120 missile
-    public static float AIM260_MinRange = 5000f; // Min Range of the AIM-120 missile
-    public static float AIM260_MaxSpeed = 1543f * speedLimiterFactor; // Max Speed of the AIM-120 missile
+    public static float AIM260_Health = 150; // Health of the AIM-260 missile
+    public static float AIM260_MaxRange = 20000f; // Max Range of the AIM-260 missile
+    public static float AIM260_MinRange = 5000f; // Min Range of the AIM-260 missile
+    public static float AIM260_MaxSpeed = 1843f * speedLimiterFactor; // Max Speed of the AIM-260 missile
     public static float AIM260_Inventory = 0.100f * inventoryMultiplier; // Inventory capacity in kL.
     public static float AIM260_Mass = 180f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
