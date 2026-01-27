@@ -42,7 +42,7 @@
                 <Z>0.92</Z>
             </Size>
             <Mass>3750</Mass>
-            <Volume>4800</Volume>
+            <Volume>3800</Volume>
             <Model>Models\9M723_Iskander\LXN_9M723_Missile_2.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>

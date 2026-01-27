@@ -9,7 +9,7 @@
 			<DisplayName>R-73M SRAAM [BAY-2M]</DisplayName>
 			<Description>Improved version with enhanced infrared counter-countermeasures and increased range, providing better performance in close air combat.
 				Does NOT require a radar lock!
-				5,000m max range, 300m minimum range.
+				3,500m max range, 300m minimum range.
 			</Description>
 			<Icon>Textures\Icons\Weapons\Missiles\LXN_R73M_bay2mirror.dds</Icon>
 			<CubeSize>Small</CubeSize>

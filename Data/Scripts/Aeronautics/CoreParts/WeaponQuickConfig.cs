@@ -11,9 +11,9 @@ public static class MissileConfig
     public static float AGM84SLAMMER_Health = 65; // Health of the AGM-84 SLAMMER missile
     public static int AGM84SLAMMER_BoosterTime = 4; // Seconds
     public static float AGM84SLAMMER_BoosterAccel = 43; // Meters Per Second
-    public static float AGM84SLAMMER_SkimmingAltitude = 80f; // Meters
-    public static float AGM84SLAMMER_TerminalApproachAltitude = 15f; // Meters
-    public static float AGM84SLAMMER_TerminalApproachDistance = 600f; // Meters
+    public static float AGM84SLAMMER_SkimmingAltitude = 50f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachAltitude = 20f; // Meters
+    public static float AGM84SLAMMER_TerminalApproachDistance = 300f; // Meters
     public static float AGM84SLAMMER_MaxRange = 8000f; // Max Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MinRange = 3000f; // Min Range of the AGM-84 SLAMMER missile
     public static float AGM84SLAMMER_MaxSpeed = 300f; // Max Speed of the AGM-84 SLAMMER missile
@@ -79,21 +79,21 @@ public static class MissileConfig
     public static float R27ET_Mass = 348f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float R77_Health = 75; // Health of the R-77 missile
-    public static float R77_MaxRange = 10000f; // Max Range of the R-77 missile
+    public static float R77_MaxRange = 15000f; // Max Range of the R-77 missile
     public static float R77_MinRange = 5000f; // Min Range of the R-77 missile
     public static float R77_MaxSpeed = 1372f * speedLimiterFactor; // Max Speed of the R-77 missile
     public static float R77_Inventory = 0.113f * inventoryMultiplier; // Inventory capacity in kL.
     public static float R77_Mass = 175f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Meteor_Health = 80; // Health of the Meteor missile
-    public static float Meteor_MaxRange = 12000f; // Max Range of the Meteor missile
+    public static float Meteor_MaxRange = 17000f; // Max Range of the Meteor missile
     public static float Meteor_MinRange = 5000f; // Min Range of the Meteor missile
     public static float Meteor_MaxSpeed = 1372f * speedLimiterFactor; // Max Speed of the Meteor missile
     public static float Meteor_Inventory = 0.090f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Meteor_Mass = 190f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float AIM120_Health = 80; // Health of the AIM-120 missile
-    public static float AIM120_MaxRange = 10000f; // Max Range of the AIM-120 missile
+    public static float AIM120_MaxRange = 15000f; // Max Range of the AIM-120 missile
     public static float AIM120_MinRange = 3500f; // Min Range of the AIM-120 missile
     public static float AIM120_MaxSpeed = 1772f * speedLimiterFactor; // Max Speed of the AIM-120 missile
     public static float AIM120_Inventory = 0.090f * inventoryMultiplier; // Inventory capacity in kL.
@@ -104,7 +104,7 @@ public static class MissileConfig
     // Long Range Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float RVVAEPD_Health = 130; // Health of the RVV-AE-PD missile
-    public static float RVVAEPD_MaxRange = 12000f; // Max Range of the RVV-AE-PD missile
+    public static float RVVAEPD_MaxRange = 17000f; // Max Range of the RVV-AE-PD missile
     public static float RVVAEPD_MinRange = 6500f; // Min Range of the RVV-AE-PD missile
     public static float RVVAEPD_MaxSpeed = 1543f * speedLimiterFactor; // Max Speed of the RVV-AE-PD missile
     public static float RVVAEPD_Inventory = 0.113f * inventoryMultiplier; // Inventory capacity in kL.
@@ -118,7 +118,7 @@ public static class MissileConfig
     public static float AIM260_Mass = 180f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float R37M_Health = 130; // Health of the R-37M missile
-    public static float R37M_MaxRange = 15000f; // Max Range of the R-37M missile
+    public static float R37M_MaxRange = 18000f; // Max Range of the R-37M missile
     public static float R37M_MinRange = 8000f; // Min Range of the R-37M missile
     public static float R37M_MaxSpeed = 2058f * speedLimiterFactor; // Max Speed of the R-37M missile - MACH 6
     public static float R37M_Inventory = 0.500f * inventoryMultiplier; // Inventory capacity in kL.
@@ -181,7 +181,7 @@ public static class MissileConfig
     // Anti-Ship Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Zircon_Health = 50; // Health of the Zircon missile
-    public static float Zircon_MaxRange = 8000f; // Max Range of the Zircon missile
+    public static float Zircon_MaxRange = 13000f; // Max Range of the Zircon missile
     public static float Zircon_MinRange = 5500f; // Min Range of the Zircon missile
     public static float Zircon_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the Zircon missile - MACH 9
     public static float Zircon_Inventory = 3.460f * inventoryMultiplier; // Inventory capacity in kL.
@@ -190,12 +190,12 @@ public static class MissileConfig
     public static float Oniks_Health = 100; // Health of the Oniks missile
     public static int Oniks_BoosterTime = 8; // Seconds
     public static float Oniks_BoosterAccel = 15; // Meters Per Second
-    public static float Oniks_SkimmingAltitude = 15f; // Meters
-    public static float Oniks_TerminalApproachAltitude = 10f; // Meters
-    public static float Oniks_TerminalApproachDistance = 500f; // Meters
-    public static float Oniks_MaxRange = 8000f; // Max Range of the Oniks missile
+    public static float Oniks_SkimmingAltitude = 25f; // Meters
+    public static float Oniks_TerminalApproachAltitude = 15f; // Meters
+    public static float Oniks_TerminalApproachDistance = 400f; // Meters
+    public static float Oniks_MaxRange = 9000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 3000f; // Min Range of the Oniks missile
-    public static float Oniks_MaxSpeed = 800f * speedLimiterFactor; // Max Speed of the Oniks missile
+    public static float Oniks_MaxSpeed = 1200f * speedLimiterFactor; // Max Speed of the Oniks missile
     public static float Oniks_Inventory = 3.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -216,7 +216,7 @@ public static class MissileConfig
     public static float Moskit_SkimmingAltitude = 20f; // Meters
     public static float Moskit_TerminalApproachAltitude = 10f; // Meters
     public static float Moskit_TerminalApproachDistance = 500f; // Meters
-    public static float Moskit_MaxRange = 8000f; // Max Range of the Moskit missile
+    public static float Moskit_MaxRange = 10000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
     public static float Moskit_MaxSpeed = 1100f * speedLimiterFactor; // Max Speed of the Moskit missile
     public static float Moskit_Inventory = 3.720f * inventoryMultiplier; // Inventory capacity in kL.
