@@ -70,6 +70,7 @@
                 <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
                 <Item Amount="120" TypeId="Ingot" SubtypeId="Uranium" />
+				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_9M723Mag" />
             <BaseProductionTimeInSeconds>15000</BaseProductionTimeInSeconds>

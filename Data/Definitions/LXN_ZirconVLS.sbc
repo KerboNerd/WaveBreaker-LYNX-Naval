@@ -70,7 +70,8 @@
                 <Item Amount="50" TypeId="Ingot" SubtypeId="Silicon" />
                 <Item Amount="30" TypeId="Ingot" SubtypeId="Magnesium" />
                 <Item Amount="60" TypeId="Ingot" SubtypeId="Uranium" />
-                <Item Amount="50" TypeId="Ingot" SubtypeId="Cobalt" />                
+                <Item Amount="50" TypeId="Ingot" SubtypeId="Cobalt" />    
+				<Item Amount="20" TypeId="Ingot" SubtypeId="Platinum" /> 
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_ZirconVLSMag" />
             <BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>

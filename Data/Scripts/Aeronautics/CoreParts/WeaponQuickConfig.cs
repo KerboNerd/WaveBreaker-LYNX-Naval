@@ -185,17 +185,17 @@ public static class MissileConfig
     public static float Zircon_MinRange = 5500f; // Min Range of the Zircon missile
     public static float Zircon_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the Zircon missile - MACH 9
     public static float Zircon_Inventory = 3.460f * inventoryMultiplier; // Inventory capacity in kL.
-    public static float Zircon_Mass = 1800f; // Mass in kg.
+    public static float Zircon_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Oniks_Health = 100; // Health of the Oniks missile
     public static int Oniks_BoosterTime = 8; // Seconds
     public static float Oniks_BoosterAccel = 15; // Meters Per Second
     public static float Oniks_SkimmingAltitude = 25f; // Meters
     public static float Oniks_TerminalApproachAltitude = 15f; // Meters
-    public static float Oniks_TerminalApproachDistance = 400f; // Meters
+    public static float Oniks_TerminalApproachDistance = 350f; // Meters
     public static float Oniks_MaxRange = 9000f; // Max Range of the Oniks missile
     public static float Oniks_MinRange = 3000f; // Min Range of the Oniks missile
-    public static float Oniks_MaxSpeed = 1200f * speedLimiterFactor; // Max Speed of the Oniks missile
+    public static float Oniks_MaxSpeed = 1300f * speedLimiterFactor; // Max Speed of the Oniks missile
     public static float Oniks_Inventory = 3.410f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Oniks_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -205,20 +205,20 @@ public static class MissileConfig
     public static float Kalibr_SkimmingAltitude = 50f; // Meters
     public static float Kalibr_TerminalApproachAltitude = 10f; // Meters
     public static float Kalibr_TerminalApproachDistance = 300f; // Meters
-    public static float Kalibr_MaxRange = 8000f; // Max Range of the Kalibr missile
+    public static float Kalibr_MaxRange = 10000f; // Max Range of the Kalibr missile
     public static float Kalibr_MinRange = 3000f; // Min Range of the Kalibr missile
-    public static float Kalibr_MaxSpeed = 1000f * speedLimiterFactor; // Max Speed of the Kalibr missile
+    public static float Kalibr_MaxSpeed = 900f * speedLimiterFactor; // Max Speed of the Kalibr missile
     public static float Kalibr_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Moskit_Health = 65; // Health of the Moskit missile
+    public static float Moskit_Health = 75; // Health of the Moskit missile
     public static int Moskit_BoosterTime = 4; // Seconds
     public static float Moskit_BoosterAccel = 128; // Meters Per Second
     public static float Moskit_SkimmingAltitude = 20f; // Meters
-    public static float Moskit_TerminalApproachAltitude = 10f; // Meters
-    public static float Moskit_TerminalApproachDistance = 500f; // Meters
-    public static float Moskit_MaxRange = 10000f; // Max Range of the Moskit missile
+    public static float Moskit_TerminalApproachAltitude = 15f; // Meters
+    public static float Moskit_TerminalApproachDistance = 350f; // Meters
+    public static float Moskit_MaxRange = 8000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
-    public static float Moskit_MaxSpeed = 1100f * speedLimiterFactor; // Max Speed of the Moskit missile
+    public static float Moskit_MaxSpeed = 1200f * speedLimiterFactor; // Max Speed of the Moskit missile
     public static float Moskit_Inventory = 3.720f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Moskit_Mass = 4000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
