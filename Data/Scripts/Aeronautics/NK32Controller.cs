@@ -84,7 +84,7 @@ namespace ware_LNX_Jet_Systems
             {
                 ((IMyThrust)block).PowerConsumptionMultiplier = 4f;
                 MyCubeGrid grid = block.CubeGrid;
-                Vector3D force = block.WorldMatrix.Backward * block.BlockDefinition.ForceMagnitude * block.CurrentStrength * 0.52;
+                Vector3D force = block.WorldMatrix.Backward * block.BlockDefinition.ForceMagnitude * block.CurrentStrength * 0.66;
                 grid.Physics.AddForce(MyPhysicsForceType.APPLY_WORLD_FORCE, force, grid.Physics.CenterOfMassWorld, null);
             }
 

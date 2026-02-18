@@ -10,7 +10,7 @@
 			<Description>Turbo-Fan thruster that requires oxygen input
 				Use with Intakes set to depressurize
 				Oxygen input: 1,200L/s
-			Max Dry Thrust: 178,000N, Max Wet Thrust: 270,000N</Description>
+			Max thrust 20t Dry and 30t Wet</Description>
 			<Icon>Textures\Icons\Jet Engines\Cubes\LNX_SATURN_AL41F1_Thruster_2.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

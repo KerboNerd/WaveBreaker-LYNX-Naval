@@ -10,6 +10,7 @@
 			<Description>Solovyev D30F6 Turbofan Thruster designed for optimal performance with oxygen intake.
 				Configure Intakes to Depressurize mode for efficient operation.
 				Oxygen Intake: 1,500L/s
+				Max thrust 25t Dry and 40t Wet
 			Max Thrust: 2.4MW</Description>
 			<Icon>Textures\Icons\Jet Engines\LXN_D30F6_Thruster.dds</Icon>
 			<CubeSize>Small</CubeSize>
@@ -34,8 +35,8 @@
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-			<!-- 30 TONS OF THRUST -->
-			<ForceMagnitude>294300</ForceMagnitude>
+			<!-- 25 TONS OF THRUST -->
+			<ForceMagnitude>245166</ForceMagnitude>
 			<FuelConverter>
 				<FuelId>
 					<TypeId>GasProperties</TypeId>

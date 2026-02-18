@@ -355,11 +355,11 @@
 					<TypeId>Thrust</TypeId>
 					<SubtypeId>LXN_NK32_01_Thruster</SubtypeId>
 				</Id>
-				<DisplayName>Turbo-Fan Thruster NK32 22t(Dry) to 47t(Wet)</DisplayName>
+				<DisplayName>Turbo-Fan Thruster NK32 </DisplayName>
 				<Description>Turbo-Fan thruster that requires oxygen input
 					Use with Intakes set to depressurize
 					Oxygen input: 1,200L/s
-				Max Dry Thrust: 220,000N, Max Wet Thrust: 444,820N</Description>
+				Max thrust 25t Dry and 40t Wet </Description>
 				<Icon>Textures\Icons\LXN_NK32_01_Thruster.dds</Icon>
 				<CubeSize>Small</CubeSize>
 				<BlockTopology>TriangleMesh</BlockTopology>
@@ -387,7 +387,8 @@
 				<EdgeType>Light</EdgeType>
 				<BuildTimeSeconds>10</BuildTimeSeconds>
 				<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-				<ForceMagnitude>225000</ForceMagnitude>
+				<!-- 30 TONS OF THRUST -->
+				<ForceMagnitude>294,199</ForceMagnitude>
 				<FuelConverter>
 					<FuelId>
 						<TypeId>GasProperties</TypeId>
