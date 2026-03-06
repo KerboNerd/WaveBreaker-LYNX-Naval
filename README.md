@@ -21,44 +21,8 @@
 
 ---
 
-## 📋 Requirements
-
-- Space Engineers (v. latest)
-- No external dependencies required — **standalone mod**.
-- Recommended: SSD for optimal texture loading performance.
-
----
-
-## ⚠️ Known Issues & Workarounds
-
-See [FIXES.md](./FIXES.md) for detailed troubleshooting instructions and community-contributed solutions.
-
----
-
-## 🔧 Configuration Options
-
-Edit the following files to customize your experience:
-
-```bash
-Data/WeaponsConfig.json      # Missile damage ranges, velocities  
-Models/config.yaml           # Ship hitbox adjustments  
-Textures/materials.cfg       # Visual fidelity settings
-```
-
----
-
-## 🛡️ Credits
-
-**Developer:** KerboNerd (LYNX Naval Division)  
-**Design Inspiration:** Real-world Russian naval doctrine (2015–present)  
-**Testing Team:** Volunteer crew from LYNX Command  
-
-> "The sea does not forgive weakness." — Admiral Nakhimov
-
----
-
 <div align="center">
 
-🔥 **Join the discussion on Steam Community or Discord.** 🔥
+🚢 **WaveBreaker – Dominate the seas.** ⚓
 
 </div>
