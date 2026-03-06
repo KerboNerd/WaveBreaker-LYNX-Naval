@@ -388,7 +388,7 @@
 				<BuildTimeSeconds>10</BuildTimeSeconds>
 				<ResourceSinkGroup>Thrust</ResourceSinkGroup>
 				<!-- 30 TONS OF THRUST -->
-				<ForceMagnitude>294,199</ForceMagnitude>
+				<ForceMagnitude>294199</ForceMagnitude>
 				<FuelConverter>
 					<FuelId>
 						<TypeId>GasProperties</TypeId>
