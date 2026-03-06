@@ -21,32 +21,6 @@
 
 ---
 
-## 📦 Installation
-
-1. Navigate to your Space Engineers `Mod` folder:  
-   `%LOCALAPPDATA%\SpaceEngineers\Mods` (Windows) or `$HOME/.local/share/Steam/steamapps/common/SpaceEngineears/Mods` (Linux/Mac)
-
-2. Download and extract the mod pack into a subfolder named `WaveBreaker-LYNX-Naval`.
-
-3. Launch Steam → Properties → Verify Integrity of Game Files.
-
-4. Start Space Engineers → Mods Workshop → Enable **WaveBreaker**.
-
-5. Enter Creative Mode / Sandbox and access new content from the Build Menu under **"Weapons & Components"**.
-
----
-
-## 🚢 Featured Ship Classes
-
-| Class            | Type          | Role                    | Armament                  |
-|------------------|---------------|-------------------------|----------------------------|
-| Kirov-class      | Battlecruiser | Fleet Command           | 16x SS-N-22 Sunburn, AK-130 |
-| Slava-class      | Cruiser       | Anti-Surface Warfare    | P-800 Oniks, Pantsir-M     |
-| Sovremenny-class | Destroyer     | Escort/Assault          | URPK-5 Metit, RBU-6000     |
-| Krivak-class     | Frigate       | Reconnaissance          | 4x Kalibr, Kashtan         |
-
----
-
 ## 📋 Requirements
 
 - Space Engineers (v. latest)
