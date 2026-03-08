@@ -135,11 +135,11 @@
 					<TypeId>Thrust</TypeId>
 					<SubtypeId>LXA_GENX8_Thruster</SubtypeId>
 				</Id>
-				<DisplayName>Turbo-Fan Thruster 47t(GeNX8)</DisplayName>
+				<DisplayName>Turbo-Fan Thruster 50t(GeNX8)</DisplayName>
 				<Description>Turbo-Fan thruster that requires oxygen input
 					Use with Intakes set to depressurize
 					Oxygen input: 10,073L/s
-				Max Thrust: 467,278N</Description>
+				Max Thrust: 50 tons</Description>
 				<Icon>Textures\Icons\LXA_GENX8_Thruster.dds</Icon>
 				<CubeSize>Small</CubeSize>
 				<BlockTopology>TriangleMesh</BlockTopology>
@@ -168,7 +168,7 @@
 				<EdgeType>Light</EdgeType>
 				<BuildTimeSeconds>10</BuildTimeSeconds>
 				<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-				<ForceMagnitude>467278</ForceMagnitude>
+				<ForceMagnitude>497278</ForceMagnitude>
 				<FuelConverter>
 					<FuelId>
 						<TypeId>GasProperties</TypeId>
@@ -359,7 +359,7 @@
 				<Description>Turbo-Fan thruster that requires oxygen input
 					Use with Intakes set to depressurize
 					Oxygen input: 1,200L/s
-				Max thrust 25t Dry and 40t Wet </Description>
+				Max thrust 30t Dry and 50t Wet </Description>
 				<Icon>Textures\Icons\LXN_NK32_01_Thruster.dds</Icon>
 				<CubeSize>Small</CubeSize>
 				<BlockTopology>TriangleMesh</BlockTopology>
