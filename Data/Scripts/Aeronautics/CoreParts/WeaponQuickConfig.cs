@@ -140,8 +140,8 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float S400_Health = 130; // Health of the S-400 missile
     public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
-    public static float S400_MinRange = 500f; // Min Range of the S-400 missile
-    public static float S400_MaxSpeed = 2200f * speedLimiterFactor; // Max Speed of the S-400 missile
+    public static float S400_MinRange = 1200f; // Min Range of the S-400 missile
+    public static float S400_MaxSpeed = 1950f * speedLimiterFactor; // Max Speed of the S-400 missile
     public static int S400_BoosterTime = 12; // Seconds
     public static float S400_BoosterAccel = 60; // Meters Per Second
     public static float S400_Inventory = 1.410f * SAM_InventoryMultiplier; // Inventory capacity in kL.
@@ -149,8 +149,8 @@ public static class MissileConfig
     public static float S400_Mass = 1900f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float RIM174_SM6_Health = 140; // Health of the RIM-174 SM6 missile
-    public static float RIM174_SM6_MaxRange = 8500f; // Max Range of the RIM-174 SM6 missile
-    public static float RIM174_SM6_MinRange = 300f; // Min Range of the RIM-174 SM6 missile
+    public static float RIM174_SM6_MaxRange = 8000f; // Max Range of the RIM-174 SM6 missile
+    public static float RIM174_SM6_MinRange = 800f; // Min Range of the RIM-174 SM6 missile
     public static float RIM174_SM6_MaxSpeed = 1700f * speedLimiterFactor; // Max Speed of the RIM-174 SM6 missile
     public static int RIM174_SM6_BoosterTime = 10; // Seconds
     public static float RIM174_SM6_BoosterAccel = 100; // Meters Per Second
@@ -160,7 +160,7 @@ public static class MissileConfig
     public static float Prometheus_77N6_Health = 120; // Health of the 77N6 "Prometheus" missile
     public static float Prometheus_77N6_MaxRange = 10000f; // Max Range of the 77N6 "Prometheus" missile
     public static float Prometheus_77N6_MinRange = 1500f; // Min Range of the 77N6 "Prometheus" missile
-    public static float Prometheus_77N6_MaxSpeed = 2500f * speedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
+    public static float Prometheus_77N6_MaxSpeed = 2600f * speedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
     public static int Prometheus_77N6_BoosterTime = 10; // Seconds
     public static float Prometheus_77N6_BoosterAccel = 120; // Meters Per Second
     public static float Prometheus_77N6_Mass = 1893f; // Mass in kg.
@@ -241,9 +241,9 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // 9M330 Missile
     public static float TOR_9M330_Health = 90;
-    public static float TOR_9M330_MaxRange = 8000f; // Meters
-    public static float TOR_9M330_MinRange = 1000f; // Meters
-    public static float TOR_9M330_MaxSpeed = 1000f * speedLimiterFactor; // m/s
+    public static float TOR_9M330_MaxRange = 4000f; // Meters
+    public static float TOR_9M330_MinRange = 500f; // Meters
+    public static float TOR_9M330_MaxSpeed = 1800f * speedLimiterFactor; // m/s
     public static float TOR_9M330_Inventory = 0.12f * 3 * SAM_InventoryMultiplier; // kL
     public static float TOR_9M330_Mass = 165f; // Kilograms
     public static int TOR_9M330_BoosterBurnTime = 5 * 60; // Seconds (Tick Conversion: 1 second = 60 ticks)

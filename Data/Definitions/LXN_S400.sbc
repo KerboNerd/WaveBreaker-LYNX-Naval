@@ -62,7 +62,7 @@
                 <Z>0.2</Z>  
             </Size>
             <Mass>1900</Mass>
-            <Volume>1410</Volume>
+            <Volume>1400</Volume>
             <Model>Models\Small\LXN_S400_missile1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
