@@ -34,7 +34,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_NAVAL220HEMag</SubtypeId>
             </Id>
-            <DisplayName>220mm Naval HE Magazine</DisplayName>
+            <DisplayName>220mm HE Magazine</DisplayName>
             <Icon>Textures\icons\LXN_JetFuelTank_1x1.dds</Icon>
             <Model></Model>
             <Size>
@@ -45,6 +45,7 @@
             <Mass>350</Mass>
             <Volume>200</Volume>
             <Capacity>50</Capacity>
+			<Model>Models\AK130M\LXN_NAVAL130MM_1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL220HEAmmo" />
 

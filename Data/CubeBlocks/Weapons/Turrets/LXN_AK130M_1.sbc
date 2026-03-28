@@ -13,11 +13,11 @@
 				fire control systems and automated loading mechanisms. Designed for long-range engagement of surface targets,
 				coastal installations, and naval vessels, the AK-130M delivers exceptional accuracy and destructive capability.
 				The system features enhanced targeting computers and stabilization for improved performance in rough seas.
-				Max engagement range: 6500m
+				Max engagement range: 3000m
 				Rate of Fire: 40 rounds/minute
 				Ammo: 
-				- 130mm HE Ammo box
-				- 130mm AA Ammo box
+				- 130mm HE Magazine
+				- 130mm AA Magazine
 			</Description>
 			<Icon>Textures\Icons\AK130M\Cubes\LXN_AK130M_1.dds</Icon>
 			<CubeSize>Large</CubeSize>

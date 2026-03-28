@@ -59,7 +59,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_NAVAL130HEMag</SubtypeId>
             </Id>
-            <DisplayName>130mm Naval HE Magazine</DisplayName>
+            <DisplayName>130mm HE Magazine</DisplayName>
             <Icon>Textures\icons\LXN_JetFuelTank_1x1.dds</Icon>
             <Model></Model>
             <Size>
@@ -70,6 +70,7 @@
             <Mass>350</Mass>
             <Volume>130</Volume>
             <Capacity>75</Capacity>
+			<Model>Models\AK130M\LXN_NAVAL130MM_1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL130HEAmmo" />
 
@@ -84,7 +85,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_NAVAL130AAMag</SubtypeId>
             </Id>
-            <DisplayName>130mm Naval AA Magazine</DisplayName>
+            <DisplayName>130mm AA Magazine</DisplayName>
             <Icon>Textures\icons\LXN_JetFuelTank_1x1.dds</Icon>
             <Model></Model>
             <Size>
@@ -95,6 +96,7 @@
             <Mass>350</Mass>
             <Volume>130</Volume>
             <Capacity>75</Capacity>
+			<Model>Models\AK130M\LXN_NAVAL130MM_1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <AmmoDefinitionId Subtype="LXN_NAVAL130AAAmmo" />
 
