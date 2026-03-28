@@ -41,7 +41,7 @@
                 <Y>0.533</Y>
                 <Z>0.533</Z>
             </Size>
-            <Mass>2300</Mass>
+            <Mass>1500</Mass>
             <Volume>900</Volume>
             <Model>Models\Weapons\Missiles\LXN_RIM174_SM6_STAGE1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>

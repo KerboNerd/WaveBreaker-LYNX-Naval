@@ -41,7 +41,7 @@
                 <Y>0.2</Y>
                 <Z>0.2</Z>  
             </Size>
-            <Mass>86</Mass>
+            <Mass>250</Mass>
             <Volume>400</Volume>
             <Model>Models\Ammo\TT9M331L.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
