@@ -54,7 +54,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_S400Mag</SubtypeId>
             </Id>
-            <DisplayName>S-400(48N6DM) Missile</DisplayName>
+            <DisplayName>S-400 48N6DM Missile</DisplayName>
             <Icon>Textures\Icons\LXN_S400_missile1.dds</Icon>
             <Size>
                 <X>0.24</X>

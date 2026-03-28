@@ -34,7 +34,7 @@
                 <TypeId>AmmoMagazine</TypeId>
                 <SubtypeId>LXN_RIM174_SM6Mag</SubtypeId>
             </Id>
-            <DisplayName>RIM-174 "Standard Missile 6" Multi-Role SAM</DisplayName>
+            <DisplayName>RIM-174 Standard Missile 6 SAM</DisplayName>
             <Icon>Textures\Icons\Weapons\Missiles\Cubes\LXN_RIM174_SM6_STAGE1.dds</Icon>
             <Size>
                 <X>8.22</X>
@@ -42,7 +42,7 @@
                 <Z>0.533</Z>
             </Size>
             <Mass>2300</Mass>
-            <Volume>1915</Volume>
+            <Volume>900</Volume>
             <Model>Models\Weapons\Missiles\LXN_RIM174_SM6_STAGE1.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
