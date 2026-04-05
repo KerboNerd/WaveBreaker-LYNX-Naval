@@ -10,7 +10,7 @@
 			<Description>Intake unit designed for the Solovyev NX-Industra Turbofan Generator. Optimizes air intake for
 				maximum combustion efficiency.
 				Set to Depressurize mode when used with Turbo-Fan Thrusters for optimal performance.
-			Max Intake Capacity: 2,500L/s</Description>
+			Max Intake Capacity: 2,000L/s</Description>
 			<Icon>Textures\Icons\Jet Engines\LXN_IndustrialJet_Intake.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -38,9 +38,9 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<ResourceSourceGroup>Battery</ResourceSourceGroup>
 			<ResourceSinkGroup>Factory</ResourceSinkGroup>
-			<OperationalPowerConsumption>0.75</OperationalPowerConsumption>
-			<StandbyPowerConsumption>0.75</StandbyPowerConsumption>
-			<VentilationCapacityPerSecond>2500.5</VentilationCapacityPerSecond>
+			<OperationalPowerConsumption>2</OperationalPowerConsumption>
+			<StandbyPowerConsumption>2</StandbyPowerConsumption>
+			<VentilationCapacityPerSecond>2000.5</VentilationCapacityPerSecond>
 			<RotationSpeed>50</RotationSpeed>
 			<SpinUpSpeed>2</SpinUpSpeed>
 			<SpinDownSpeed>1</SpinDownSpeed>

@@ -82,7 +82,7 @@
         <string>AirVent/LXN_IndustrialJet_Intake</string>
         <string>Thrust/LXN_IndustrialJet_Thruster</string>
 
-        <string>HydrogenEngine/LNX_NK32_01_Generator</string>
+        <string>HydrogenEngine/LXN_NK32_01</string>
         <string>AirVent/LXN_NK32_01_Intake</string>
         <string>Thrust/LXN_NK32_01_Thruster</string>
 

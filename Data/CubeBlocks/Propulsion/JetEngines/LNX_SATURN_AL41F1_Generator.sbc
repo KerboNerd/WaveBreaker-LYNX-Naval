@@ -8,9 +8,9 @@
 					<SubtypeId>LNX_SATURN_AL41F1_Generator</SubtypeId>
 				</Id>
 				<DisplayName>Turbo-Fan Generator (AL-41)</DisplayName>
-				<Description>NK-32 Generator
-					Max Power: 2MW
-				Max Input: 1,200L/s</Description>
+				<Description>AL-41 Generator
+					Max Power: 1.5MW
+					Max Consumption: 225L/s</Description>
 				<Icon>Textures\Icons\Jet Engines\Cubes\LNX_SATURN_AL41F1_Generator.dds</Icon>
 				<CubeSize>Small</CubeSize>
 				<BlockTopology>TriangleMesh</BlockTopology>
@@ -58,7 +58,7 @@
 				<BuildTimeSeconds>40</BuildTimeSeconds>
 				<ResourceSinkGroup>Generators</ResourceSinkGroup>
 				<ResourceSourceGroup>Reactors</ResourceSourceGroup>
-				<MaxPowerOutput>3</MaxPowerOutput>
+				<MaxPowerOutput>1.5</MaxPowerOutput>
 				<FuelCapacity>20000</FuelCapacity>
 				<IsAirTight>false</IsAirTight>
 				<InventorySize>

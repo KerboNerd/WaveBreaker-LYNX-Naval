@@ -82,7 +82,7 @@ namespace ware_LNX_Jet_Systems
             float halfThrust = (((IMyThrust)block).MaxThrust / 2f);
             if (afterBurner.Value && ((IMyThrust)block).Enabled && ((IMyThrust)block).CurrentThrust > halfThrust)
             {
-                ((IMyThrust)block).PowerConsumptionMultiplier = 4f;
+                ((IMyThrust)block).PowerConsumptionMultiplier = 3.75f;
                 MyCubeGrid grid = block.CubeGrid;
                 Vector3D force = block.WorldMatrix.Backward * block.BlockDefinition.ForceMagnitude * block.CurrentStrength * 0.66;
                 grid.Physics.AddForce(MyPhysicsForceType.APPLY_WORLD_FORCE, force, grid.Physics.CenterOfMassWorld, null);

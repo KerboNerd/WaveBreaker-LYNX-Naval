@@ -9,7 +9,7 @@
 			<DisplayName>Solovyev NX-Industra Turbofan Thruster</DisplayName>
 			<Description>Solovyev NX-Industra Turbofan Thruster designed for optimal performance with oxygen intake.
 				Configure Intakes to Depressurize mode for efficient operation.
-				Oxygen Intake: 2,500L/s
+				Oxygen Intake: 2.000L/s
 				Max thrust 40t Dry and 60t Wet
 			</Description>
 			<Icon>Textures\Icons\Jet Engines\LXN_IndustrialJet_Thruster.dds</Icon>
@@ -39,8 +39,8 @@
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-			<!-- 40t of Thrust -->
-			<ForceMagnitude>390500</ForceMagnitude>
+			<!-- 30t of Thrust -->
+			<ForceMagnitude>294199</ForceMagnitude>
 			<FuelConverter>
 				<FuelId>
 					<TypeId>GasProperties</TypeId>
@@ -48,7 +48,7 @@
 				</FuelId>
 				<Efficiency>1</Efficiency>
 			</FuelConverter>
-			<MaxPowerConsumption>0.4</MaxPowerConsumption>
+			<MaxPowerConsumption>0.6</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
 			<SlowdownFactor>1</SlowdownFactor>
 			<MinPlanetaryInfluence>0.1</MinPlanetaryInfluence>

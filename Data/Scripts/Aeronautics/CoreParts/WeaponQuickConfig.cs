@@ -140,7 +140,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float S400_Health = 130; // Health of the S-400 missile
     public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
-    public static float S400_MinRange = 1200f; // Min Range of the S-400 missile
+    public static float S400_MinRange = 2000f; // Min Range of the S-400 missile
     public static float S400_MaxSpeed = 1950f * speedLimiterFactor; // Max Speed of the S-400 missile
     public static int S400_BoosterTime = 12; // Seconds
     public static float S400_BoosterAccel = 60; // Meters Per Second
@@ -231,8 +231,8 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float VLS3S14_MaxRange = 10000f; // Max Range of the 3S14 VLS
     public static float VLS3S14_MinRange = 1000f; // Min Range of the 3S14 VLS
-    public static float VLS3S14_AA_MaxRange = 8000f; // Max Range of the 3S14 AA VLS
-    public static float VLS3S14_AA_MinRange = 1500; // Min Range of the 3S14 AA VLS
+    public static float VLS3S14_AA_MaxRange = 10000f; // Max Range of the 3S14 AA VLS
+    public static float VLS3S14_AA_MinRange = 500f; // Min Range of the 3S14 AA VLS
     public static float VLS3S14_Inventory = 20.000f * inventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float SubVLS_MaxRange = 8000f; // Max Range of the SubVLS
