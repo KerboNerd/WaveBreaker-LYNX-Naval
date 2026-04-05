@@ -33,8 +33,8 @@
 			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<ResourceSourceGroup>Battery</ResourceSourceGroup>
 			<ResourceSinkGroup>Factory</ResourceSinkGroup>
-			<OperationalPowerConsumption>1.5</OperationalPowerConsumption>
-			<StandbyPowerConsumption>1.5</StandbyPowerConsumption>
+			<OperationalPowerConsumption>1</OperationalPowerConsumption>
+			<StandbyPowerConsumption>1</StandbyPowerConsumption>
 			<VentilationCapacityPerSecond>1500.5</VentilationCapacityPerSecond>
 			<RotationSpeed>50</RotationSpeed>
 			<SpinUpSpeed>2</SpinUpSpeed>
