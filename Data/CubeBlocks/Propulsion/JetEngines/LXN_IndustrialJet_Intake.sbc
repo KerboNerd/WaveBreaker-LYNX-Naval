@@ -18,11 +18,12 @@
 			<ModelOffset x="0" y="0" z="0" />
 			<Model>Models\Propulsion\Jets\LXN_IndustrialJet_Intake.mwm</Model>
 			<Components>
-				<Component Subtype="InteriorPlate" Count="20" />
-				<Component Subtype="Computer" Count="50" />
-				<Component Subtype="Motor" Count="32" />
-				<Component Subtype="Construction" Count="50" />
-				<Component Subtype="InteriorPlate" Count="80" />
+				<Component Subtype="InteriorPlate" Count="12" />
+				<Component Subtype="Computer" Count="6" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="InteriorPlate" Count="26" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>

@@ -19,10 +19,10 @@
 			<Model>Models\LXNAVAL\Propulsion\JetEngines\LNX_SATURN_AL41F1_Thruster.mwm</Model>
 			<Components>
 				<Component Subtype="InteriorPlate" Count="10" />
-				<Component Subtype="Construction" Count="15" />
-				<Component Subtype="LargeTube" Count="15" />
-				<Component Subtype="MetalGrid" Count="20" />
-				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="MetalGrid" Count="4" />
+				<Component Subtype="Construction" Count="8" />
 				<Component Subtype="InteriorPlate" Count="15" />
 			</Components>
 			<CriticalComponent Subtype="LargeTube" Index="0" />
