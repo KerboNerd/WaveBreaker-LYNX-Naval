@@ -82,7 +82,7 @@ namespace Scripts {
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such.
                     TurretController = false, // Whether this weapon can physically control the turret's movement.
                     PrimaryTracking = true, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
-                    LockOnFocus = true, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
+                    LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected AND locked onto by pressing Numpad 0.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
                     OverrideLeads = true, // Disable target leading on fixed weapons, or allow it for turrets.
                     DefaultLeadGroup = 0, // Default LeadGroup setting, range 0-5, 0 is disables lead group.  Only useful for fixed weapons or weapons set to OverrideLeads.

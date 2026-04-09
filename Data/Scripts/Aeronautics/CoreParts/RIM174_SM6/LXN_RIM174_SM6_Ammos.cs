@@ -816,10 +816,10 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
-                Fragments = 100, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
+                Fragments = 50, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
+                DropVelocity = true, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
@@ -832,11 +832,11 @@ namespace Scripts
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 15, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
+                    Proximity = 12.5, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
                     ParentDies = true, // Parent dies once after it spawns its last child (triggers fragmentation).
                     PointAtTarget = true, // Start fragment direction pointing at Target
                     PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
-                    DirectAimCone = 360f, //Aim cone used for Direct fire, in degrees
+                    DirectAimCone = 270f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 0, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
                 },
@@ -908,8 +908,8 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 15f, // Radius of AOE effect, in meters.
-                    Damage = 10000,
+                    Radius = 18f, // Radius of AOE effect, in meters.
+                    Damage = 15000,
                     Depth = 7f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius

@@ -279,17 +279,17 @@ public static class BombsConfig
 {
     static float inventoryMultiplier = 1;
 
-    public static float FAB500_Health = 200; // Health of the FAB-500 bomb
+    public static float FAB500_Health = 100; // Health of the FAB-500 bomb
     public static float FAB500_Inventory = 0.190f * inventoryMultiplier; // Inventory capacity in kL.
     public static float FAB500_Mass = 500f; // Mass in kg.
 
-    public static float KAB500KR_Health = 200; // Health of the KAB-500KR bomb
+    public static float KAB500KR_Health = 100; // Health of the KAB-500KR bomb
     public static float KAB500KR_MaxRange = 12000f; // Max Range of the KAB-500KR bomb
     public static float KAB500KR_MinRange = 0f; // Min Range of the KAB-500KR bomb
     public static float KAB500KR_Inventory = 0.310f * inventoryMultiplier; // Inventory capacity in kL.
     public static float KAB500KR_Mass = 500f; // Mass in kg.
 
-    public static float KAB1500SM_Health = 220; // Health of the KAB-1500SM bomb
+    public static float KAB1500SM_Health = 150; // Health of the KAB-1500SM bomb
     public static float KAB1500SM_Inventory = 1.160f * inventoryMultiplier; // Inventory capacity in kL.
     public static float KAB1500SM_Mass = 1500f; // Mass in kg.
 

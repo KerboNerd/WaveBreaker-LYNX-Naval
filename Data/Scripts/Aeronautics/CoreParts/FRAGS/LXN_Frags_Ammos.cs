@@ -43,7 +43,7 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "LXN_HeavyAntiAir_FRAG",
-            BaseDamage = 2500,
+            BaseDamage = 4000,
             // BaseDamageCutoff = 0,
             Mass = 20f,
             NoGridOrArmorScaling = true,
@@ -51,11 +51,11 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
+                Diameter = 150, // Large collision size for better hit probability against missiles in clusters
             },
             Trajectory = new TrajectoryDef
             {
-                MaxLifeTime = 60, // Increased lifetime for fragments to reach more missiles
+                MaxLifeTime = 90, // Increased lifetime for fragments to reach more missiles
                 MaxTrajectory = 300f, // Increased range for better coverage of missile clusters
                 DesiredSpeed = 300, // Higher speed for better hit probability against fast-moving missiles
             },
@@ -91,9 +91,9 @@ namespace Scripts
         {
             AmmoMagazine = "Energy",
             AmmoRound = "LXN_MediumAntiAir_FRAG",
-            BaseDamage = 1500,
+            BaseDamage = 2000,
             // BaseDamageCutoff = 0,
-            Mass = 5f,
+            Mass = 10f,
             NoGridOrArmorScaling = true,
 
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
