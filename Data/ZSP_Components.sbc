@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Components>
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>ZSP_30mm_Casing</SubtypeId>
+			</Id>
+			<DisplayName>[ZSP] 30mm Casing</DisplayName>
+			<Icon>Textures\GUI\Icons\Ammo\30mm_Empty_Shell.dds</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>1</Mass>
+			<Volume>1</Volume>
+			<Model>Models\Cubes\small\30mm\30mm_Empty_Shell.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<MaxIntegrity>1</MaxIntegrity>
+			<DropProbability>0</DropProbability>
+			<Health>1</Health>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</Component>	
+
+
+		<Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>ZSP_57mm_Shell</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 57mm Empty Shell</DisplayName>
+			<Icon>Textures\GUI\Icons\Ammo\57mm_Empty_Shell.dds</Icon>
+            <Size>
+                <X>0.0285</X>
+                <Y>0.1725</Y>
+                <Z>0.0285</Z>
+            </Size>
+            <Mass>3</Mass>
+            <Volume>10</Volume>
+            <Model>Models\Cubes\small\57mm_Empty_Shell.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </Component>
+
+
+		<Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>ZSP_105mm_Shell</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 105mm Empty Shell</DisplayName>
+			<Icon>Textures\GUI\Icons\Ammo\105mm_Empty_Shell.dds</Icon>
+            <Size>
+                <X>0.0525</X>
+                <Y>0.385</Y>
+                <Z>0.0525</Z>
+            </Size>
+            <Mass>7</Mass>
+            <Volume>25</Volume>
+            <Model>Models\Cubes\small\105mm_Empty_Shell.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </Component>	
+		
+		<Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>ZSP_Missile_Cap</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] Missile Cap</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\AntiShip_HyperVelocity_Missile_Cap.dds</Icon>
+            <Size>
+                <X>0.0525</X>
+                <Y>0.385</Y>
+                <Z>0.0525</Z>
+            </Size>
+            <Mass>100</Mass>
+            <Volume>500</Volume>
+            <Model>Models\Cubes\small\AntiShip_HyperVelocity_Missile_Cap.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </Component>
+			
+		
+	</Components>
+</Definitions>

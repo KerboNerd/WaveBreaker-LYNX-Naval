@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>SU27_Probe</SubtypeId>
+			</Id>
+			<DisplayName>Giant Aerial Refueling Probe</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\SU27_Probe.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SU27_Probe.mwm</Model>
+			<Components>
+                <Component Subtype="InteriorPlate" Count="2" />
+                <Component Subtype="Construction" Count="4" />
+                <Component Subtype="Motor" Count="1" />
+                <Component Subtype="InteriorPlate" Count="2" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SU27_Probe</BlockPairName>
+			
+			<MirroringX>HalfZ</MirroringX>
+			<MirroringY>MinusHalfZ</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<BuildTimeSeconds>7</BuildTimeSeconds>
+			<IsAirTight>false</IsAirTight>
+			<AutoUnlockTime_Min>0</AutoUnlockTime_Min>
+			<AutoUnlockTime_Max>3600</AutoUnlockTime_Max>
+			<TieredUpdateTimes>
+				<unsignedInt>80</unsignedInt>
+				<unsignedInt>160</unsignedInt>
+				<unsignedInt>320</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+	
+	
+		
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>SU27_Aerial_Refueling_Probe_1x4</SubtypeId>
+			</Id>
+			<DisplayName>Aerial Refueling Probe 1x4</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\SU27_Aerial_Refueling_Probe_1x4.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SU27_Aerial_Refueling_Probe_1x4.mwm</Model>
+			<Components>
+                <Component Subtype="InteriorPlate" Count="2" />
+                <Component Subtype="Construction" Count="4" />
+                <Component Subtype="Motor" Count="1" />
+                <Component Subtype="InteriorPlate" Count="1" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SU27_Aerial_Refueling_Probe_1x4</BlockPairName>
+			
+			<MirroringX>HalfZ</MirroringX>
+			<MirroringY>MinusHalfZ</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<BuildTimeSeconds>7</BuildTimeSeconds>
+			<IsAirTight>false</IsAirTight>
+			<AutoUnlockTime_Min>0</AutoUnlockTime_Min>
+			<AutoUnlockTime_Max>3600</AutoUnlockTime_Max>
+			<TieredUpdateTimes>
+				<unsignedInt>80</unsignedInt>
+				<unsignedInt>160</unsignedInt>
+				<unsignedInt>320</unsignedInt>
+			</TieredUpdateTimes>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>ShipConnector</TypeId>
+					<SubtypeId>SU27_Aerial_Refueling_Probe_1x4</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>ShipConnector</TypeId>
+					<SubtypeId>SU27_Aerial_Refueling_Probe_1x6</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>SU27_Aerial_Refueling_Probe_1x6</SubtypeId>
+			</Id>
+			<DisplayName>Aerial Refueling Probe 1x6</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\SU27_Aerial_Refueling_Probe.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SU27_Aerial_Refueling_Probe_1x6.mwm</Model>
+			<Components>
+                <Component Subtype="InteriorPlate" Count="2" />
+                <Component Subtype="Construction" Count="4" />
+                <Component Subtype="Motor" Count="1" />
+                <Component Subtype="InteriorPlate" Count="1" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SU27_Aerial_Refueling_Probe_1x6</BlockPairName>
+			
+			<MirroringX>HalfZ</MirroringX>
+			<MirroringY>MinusHalfZ</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<BuildTimeSeconds>7</BuildTimeSeconds>
+			<IsAirTight>false</IsAirTight>
+			<AutoUnlockTime_Min>0</AutoUnlockTime_Min>
+			<AutoUnlockTime_Max>3600</AutoUnlockTime_Max>
+			<TieredUpdateTimes>
+				<unsignedInt>80</unsignedInt>
+				<unsignedInt>160</unsignedInt>
+				<unsignedInt>320</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+		
+		
+		
+	</CubeBlocks>
+</Definitions>

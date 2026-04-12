@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>Reliable_Jet_Engine_Mount</SubtypeId>
+			</Id>
+			<DisplayName>Reliable Jet Engine Mount</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\Reliable_Jet_Engine_MountLeft.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Reliable_Jet_Engine_Mount.mwm</Model>
+			<Components>
+                <Component Subtype="InteriorPlate" Count="12" />
+                <Component Subtype="Construction" Count="8" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="InteriorPlate" Count="6" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>Reliable_Jet_Engine_Mount</BlockPairName>
+			<BuildTimeSeconds>7</BuildTimeSeconds>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>X</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

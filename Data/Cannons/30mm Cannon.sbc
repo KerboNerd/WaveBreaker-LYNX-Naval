@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>30mm_Cannon</SubtypeId>
+			</Id>
+			<DisplayName>30mm Rotary Cannon</DisplayName>
+			<Description>
+			>Range: 2750m
+			>RPM: 3900
+			>Speed: 750m/s-800m/s
+			>Ammo:
+				> Standart: HEI (High Explosive Incendiary) 
+				> Secondary: API (Armor Piercing Incendiary)
+			Seven-barrelled, 30mm, hydraulically driven Gatling-style rotary cannon. 
+			It was designed specifically for the anti-tank role, its uranium depleted rounds easily piercing armour.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\30mm Cannon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\30mm\30mm_Cannon.mwm</Model>
+			<Components>
+                <Component Subtype="SteelPlate" Count="3" />
+                <Component Subtype="Construction" Count="5" />
+                <Component Subtype="MetalGrid" Count="3" />
+				<Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="SmallTube" Count="7" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="SteelPlate" Count="2" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>30mm Cannon</BlockPairName>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.1</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<IsAirTight>false</IsAirTight>
+			
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>30mm_Cannon</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CargoContainer</TypeId>
+					<SubtypeId>30mm_Drum</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>30mm_Drum_Casing</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

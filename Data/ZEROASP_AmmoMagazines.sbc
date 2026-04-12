@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <AmmoMagazines>
+	
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Energy</SubtypeId>
+			</Id>
+			<DisplayName></DisplayName>
+			<Size>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>1</Mass>
+			<Volume>1</Volume>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+		</AmmoMagazine>
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_Flares_Mag</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] Flares</DisplayName>
+            <Size>
+                <X>0.15</X>
+                <Y>0.15</Y>
+                <Z>0.15</Z>
+            </Size>
+            <Mass>10</Mass>
+            <Volume>30</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>28</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_Flares_Mag_Stealth</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] Flares Stealth</DisplayName>
+            <Size>
+                <X>0.15</X>
+                <Y>0.15</Y>
+                <Z>0.15</Z>
+            </Size>
+            <Mass>10</Mass>
+            <Volume>30</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>24</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_25mm_HEI_Belt</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 25mm HE Belt</DisplayName>
+            <Size>
+                <X>0.15</X>
+                <Y>0.15</Y>
+                <Z>0.132</Z>
+            </Size>
+            <Mass>75</Mass>
+            <Volume>60</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>100</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_30mm_HEI_Belt</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 30mm HEI Belt</DisplayName>
+            <Size>
+                <X>0.15</X>
+                <Y>0.15</Y>
+                <Z>0.132</Z>
+            </Size>
+            <Mass>125</Mass>
+            <Volume>90</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>150</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_30mm_API_Belt</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 30mm API Belt</DisplayName>
+            <Size>
+                <X>0.15</X>
+                <Y>0.15</Y>
+                <Z>0.132</Z>
+            </Size>
+            <Mass>150</Mass>
+            <Volume>100</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>150</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+				
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_57mm_HE_Round</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 57mm HE Round</DisplayName>
+            <Size>
+                <X>0.0285</X>
+                <Y>0.1725</Y>
+                <Z>0.0285</Z>
+            </Size>
+            <Mass>5</Mass>
+            <Volume>5</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_57mm_AP_Round</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 57mm AP Round</DisplayName>
+            <Size>
+                <X>0.0285</X>
+                <Y>0.1725</Y>
+                <Z>0.0285</Z>
+            </Size>
+            <Mass>6</Mass>
+            <Volume>5</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_57mm_Shell</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 57mm Empty Shell</DisplayName>
+            <Size>
+                <X>0.0285</X>
+                <Y>0.1725</Y>
+                <Z>0.0285</Z>
+            </Size>
+            <Mass>3</Mass>
+            <Volume>3</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_105mm_HE_Round</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 105mm HE Round</DisplayName>
+            <Size>
+                <X>0.0525</X>
+                <Y>0.245</Y>
+                <Z>0.0525</Z>
+            </Size>
+            <Mass>10</Mass>
+            <Volume>8</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		<AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ZSP_105mm_Shell</SubtypeId>
+            </Id>
+            <DisplayName>[ZSP] 105mm Empty Shell</DisplayName>
+            <Size>
+                <X>0.0525</X>
+                <Y>0.385</Y>
+                <Z>0.0525</Z>
+            </Size>
+            <Mass>5</Mass>
+            <Volume>6</Volume>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>200</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+		
+		
+		
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Laser_Guided_Atgm</SubtypeId>
+			</Id>
+			<DisplayName>[ZSP] Laser-Guided ATGM</DisplayName>
+			<Size>
+				<X>0.25</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>50</Mass>
+			<Volume>100</Volume>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="ZEROASP_GenericAmmo" />
+		</AmmoMagazine>
+	</AmmoMagazines>
+</Definitions>

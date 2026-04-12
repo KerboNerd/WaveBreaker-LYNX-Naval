@@ -1,3 +1,4 @@
 LXN_Aero_SukhoiCanard_01.sbc
 LXN_Aero_SukhoiCanard_02.sbc
 LXN_Aero_SukhoiCanard_03.sbc
+ZSP_TFX.xml

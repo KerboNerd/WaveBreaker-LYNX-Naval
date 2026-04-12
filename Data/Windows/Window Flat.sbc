@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Window Flat</SubtypeId>
+			</Id>
+			<DisplayName>Window Flat</DisplayName>
+			<Description>{LOC:Description_Window Flat}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Window Flat.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Windows\Window Flat.mwm</Model>
+			<Components>
+				<Component Subtype="BulletproofGlass" Count="1"/>
+			</Components>
+			<CriticalComponent Subtype="BulletproofGlass" Index="0"/>
+			<BlockPairName>Window Flat</BlockPairName>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Half</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Angled 45</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Angled 30</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Angled 30 Mirror</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Angled 15</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Flat Angled 15 Mirror</SubtypeId>
+				</BlockVariant>		
+			</BlockVariants>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

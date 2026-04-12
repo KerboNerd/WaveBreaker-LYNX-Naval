@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Window_30Deg_Transition</SubtypeId>
+			</Id>
+			<DisplayName>Window Transition 30</DisplayName>
+			<Description>{LOC:Window_30Deg_Transition}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Window_30Deg_Transition.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Windows\Window_30Deg_Transition.mwm</Model>
+			<Components>
+				<Component Subtype="BulletproofGlass" Count="2"/>
+			</Components>
+			<CriticalComponent Subtype="BulletproofGlass" Index="0"/>
+			<BlockPairName>Window_30Deg_Transition</BlockPairName>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window_30Deg_Transition</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window_30Deg_Transition_Mirror</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+			<MirroringBlock>Window_30Deg_Transition_Mirror</MirroringBlock>
+		</Definition>
+		
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Window_30Deg_Transition_Mirror</SubtypeId>
+			</Id>
+			<DisplayName>Window Transition 30 (M)</DisplayName>
+			<Description>{LOC:Window_30Deg_Transition_Mirror}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Window_30Deg_Transition_Mirror.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Windows\Window_30Deg_Transition_Mirror.mwm</Model>
+			<Components>
+				<Component Subtype="BulletproofGlass" Count="2"/>
+			</Components>
+			<CriticalComponent Subtype="BulletproofGlass" Index="0"/>
+			<BlockPairName>Window_30Deg_Transition_Mirror</BlockPairName>
+			<MirroringBlock>Window_30Deg_Transition</MirroringBlock>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

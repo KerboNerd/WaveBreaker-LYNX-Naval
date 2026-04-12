@@ -1,0 +1,69 @@
+﻿<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+	<!--Vanilla-->
+	<!-- LG -->
+  
+
+	<!-- All settings -->
+  
+
+	<!-- Simple when just using particles -->
+	
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		<Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>Bomber_Engine</SubtypeId>
+		</Id>
+		<ModExtensions>
+			<ModComponents>
+				<GameLogicComponent Name="MwiComponent"/>
+			</ModComponents>
+			<Group Name="ThrusterCompData">
+                    
+				<Text Name="ID" Value="Bomber_Engine"/><!--REQUIRED! No specific value required Debugging  -->
+				<Boolean Name="hideVanillaFlame" Value="true"/><!-- Hide Vanilla Flame-->
+                    
+				<Text Name="EmitterSetup" Value="	
+				
+					Particle : ZSP_Travel_Jet_Large;
+					Type: PARTICLE;
+                    AtmoOnly: FALSE ;
+                    ThrustMin : 0.01;
+                    ThrustMax : 0.90;
+                    Size:0.8;
+                    Offset:0;
+                    Dummies : thruster_flame_1;
+					CullingTime : 30
+
+					=
+				
+				
+					Particle : ZSP_Jet_Mach_Rings_Large;
+					Type: PARTICLE;
+                    AtmoOnly: FALSE ;
+                    ThrustMin : 0.91;
+                    ThrustMax : 1;
+                    Size:0.8;
+                    Offset:0;
+                    Dummies : thruster_flame_1;
+					CullingTime : 0
+                    =
+					
+					Particle : ZSP_Burner_Effect_Large;
+					Type: PARTICLE;
+                    AtmoOnly: FALSE ;
+                    ThrustMin : 0.91;
+                    ThrustMax : 1;
+                    Size:0.8;
+                    Offset:0;
+                    Dummies : thruster_flame_1;
+					CullingTime : 0
+                    "/>
+                    
+                    
+			</Group>
+		</ModExtensions>
+	</Definition>
+
+
+</Definitions>

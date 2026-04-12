@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>Reliable_Jet_Engine_Intake</SubtypeId>
+			</Id>
+			<DisplayName>Reliable Jet Engine Intake</DisplayName>
+			<Description>
+			>Input Rate: 500 L/s
+			>Power Consumption Idle: 100 kW
+			>Power Consumption Operational: 500 kW
+			Extremely reliable and easy to maintain jet engine intake
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Reliable_Jet_Engine_Intake.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Reliable_Jet_Engine_Intake.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="MetalGrid" Count="4"/>
+				<Component Subtype="LargeTube" Count="1"/>
+				<Component Subtype="Motor" Count="7"/>
+				<Component Subtype="Construction" Count="8"/>
+				<Component Subtype="InteriorPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<BlockPairName>Reliable_Jet_Engine_Intake</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>12</BuildTimeSeconds>
+			<ResourceSourceGroup>Battery</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.1</StandbyPowerConsumption>
+			<VentilationCapacityPerSecond>500.5</VentilationCapacityPerSecond>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<PressurizeSound>BlockAirVentExhale</PressurizeSound>
+			<DepressurizeSound>BlockAirVentDepressurize</DepressurizeSound>
+			<IdleSound>BlockAirVentIdle</IdleSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<UseModelIntersection>true</UseModelIntersection>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

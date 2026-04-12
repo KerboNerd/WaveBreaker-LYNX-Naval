@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>Reliable_Jet_Engine</SubtypeId>
+			</Id>
+			<DisplayName>Reliable Jet Engine</DisplayName>
+			<Description>
+			>Thrust: 15 Tonnes
+			>Oxygen Consumption Idle: 100L/s
+			>Oxygen Consumption Operational: 350L/s
+			Extremely reliable and easy to maintain jet engine nozzle
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Reliable_Jet_Engine.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Reliable_Jet_Engine.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="MetalGrid" Count="4"/>
+				<Component Subtype="LargeTube" Count="1"/>
+				<Component Subtype="Construction" Count="8"/>
+				<Component Subtype="InteriorPlate" Count="15"/>
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0"/>
+			<BlockPairName>Reliable_Jet_Engine</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<UseModelIntersection>true</UseModelIntersection>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>12</BuildTimeSeconds>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>148500</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Oxygen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.35</MaxPowerConsumption>
+			<MinPowerConsumption>0.1</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.1</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>0.95</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0</FlameDamageLengthScale>
+			<FlameLengthScale>0</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>LargeGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>0</FlameVisibilityDistance>
+			<FlameGlareQuerySize>1</FlameGlareQuerySize>
+			<PrimarySound></PrimarySound>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>Reliable_Jet_Engine</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>AirVent</TypeId>
+					<SubtypeId>Reliable_Jet_Engine_Intake</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Reliable_Jet_Engine_Mantlet</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Conveyor</TypeId>
+					<SubtypeId>Reliable_Jet_Engine_Mount</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+			<Id>
+				<TypeId>LargeMissileTurret</TypeId>
+				<SubtypeId>57mm_Gumbal_Turret</SubtypeId>
+			</Id>
+			<DisplayName>57mm Gimbal Turret</DisplayName>
+			<Description>
+			>Range: 3500m
+			>RPM: 70
+			>Ammo:
+				> Standart: HE (High Explosive) 
+				> Secondary: API (Armor Piercing)
+			>Azimuth: +-22 Degrees
+			>Elevation: +-22 Degrees
+			Medium calliber gun, designed for Anti-Tank role.
+			Uses gimbal mount for free rotation!
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\57mm_Gumbal_Turret.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\57mm_Gumbal_Turret.mwm</Model>
+			<Components>
+                <Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Motor" Count="8" />						
+                <Component Subtype="Computer" Count="5" />
+                <Component Subtype="SteelPlate" Count="30" />
+            </Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>57mm_Gumbal_Turret</BlockPairName>
+			<WeaponDefinitionId Subtype="ZSPGenericWeapon" />
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<InventoryMaxVolume>0.150</InventoryMaxVolume>
+			<DamageEffectId>213</DamageEffectId>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MinElevationDegrees>0</MinElevationDegrees>
+			<MaxElevationDegrees>45</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<IdleRotation>false</IdleRotation>
+			<MaxRangeMeters>1200</MaxRangeMeters>
+			<RotationSpeed>0.002</RotationSpeed>
+			<ElevationSpeed>0.002 </ElevationSpeed>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<MinFov>0.12</MinFov>
+			<MaxFov>1.1</MaxFov>
+			<PCU>100</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

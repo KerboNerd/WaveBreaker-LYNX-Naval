@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>Engine_Connector</SubtypeId>
+			</Id>
+			<DisplayName>Engine Converter</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\Engine_Connector.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Engine_Connector.mwm</Model>
+			<Components>
+                <Component Subtype="InteriorPlate" Count="12" />
+                <Component Subtype="Construction" Count="8" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="InteriorPlate" Count="6" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>Engine_Connector</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Conveyor</TypeId>
+					<SubtypeId>Engine_Connector</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Conveyor</TypeId>
+					<SubtypeId>Engine_Connector_Small</SubtypeId>
+				</BlockVariant>	
+			</BlockVariants>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

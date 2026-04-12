@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>ZSP_Helicopter_Blades</SubtypeId>
+			</Id>
+			<DisplayName>Helicopter Blades</DisplayName>
+			<Description>
+			>Thrust: 22 Tonnes
+			>Power Consumption Idle: 0.2Mw
+			>Power Consumption Operational: 0.75Mw
+				Composite high-strength, large-diameter blades designed for use on fixed-rotor aircraft.
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\ZSP_Helicopter_Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\ZSP_Helicopter_Blades.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="6"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="MetalGrid" Count="5"/>
+				<Component Subtype="Motor" Count="25"/>
+				<Component Subtype="LargeTube" Count="3"/>
+				<Component Subtype="SmallTube" Count="2"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="InteriorPlate" Count="7"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>ZSP_Helicopter_Blades</BlockPairName>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>ZSP_Helicopter_Blades</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>ZSP_Helicopter_Blades_WithMantlet</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>ZSP_Helicopter_Radar</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>215000</ForceMagnitude>
+			<MaxPowerConsumption>0.075</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0</FlameDamageLengthScale>
+			<FlameDamage>0</FlameDamage>
+			<FlameLengthScale>0</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>LargeGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>0</FlameVisibilityDistance>
+			<FlameGlareQuerySize>0</FlameGlareQuerySize>
+			<PropellerUsesPropellerSystem>false</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName></PropellerSubpartEntityName>
+			<PropellerRoundsPerSecondOnFullSpeed>5</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.1</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>10</PropellerAccelerationTime>
+			<PropellerDecelerationTime>2</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>3000</PropellerMaxVisibleDistance>
+			<PrimarySound></PrimarySound>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>true</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>ZSP_Helicopter_Blades_WithMantlet</SubtypeId>
+			</Id>
+			<DisplayName>Helicopter Blades (Mantlet)</DisplayName>
+			<Description>
+			>Thrust: 22 Tonnes
+			>Power Consumption Idle: 0.2Mw
+			>Power Consumption Operational: 0.75Mw
+			Composite high-strength, large-diameter blades designed for use on fixed-rotor aircraft.
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\ZSP_Helicopter_Blades_WithMantlet.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\ZSP_Helicopter_Blades_WithMantlet.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="6"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="MetalGrid" Count="5"/>
+				<Component Subtype="Motor" Count="25"/>
+				<Component Subtype="LargeTube" Count="3"/>
+				<Component Subtype="SmallTube" Count="2"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="InteriorPlate" Count="7"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>ZSP_Helicopter_Blades_WithMantlet</BlockPairName>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>215000</ForceMagnitude>
+			<MaxPowerConsumption>0.075</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0</FlameDamageLengthScale>
+			<FlameDamage>0</FlameDamage>
+			<FlameLengthScale>0</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<W>0</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>LargeGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>0</FlameVisibilityDistance>
+			<FlameGlareQuerySize>0</FlameGlareQuerySize>
+			<PropellerUsesPropellerSystem>false</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName></PropellerSubpartEntityName>
+			<PropellerRoundsPerSecondOnFullSpeed>5</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.1</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>10</PropellerAccelerationTime>
+			<PropellerDecelerationTime>2</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>3000</PropellerMaxVisibleDistance>
+			<PrimarySound></PrimarySound>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>true</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+			<TargetingGroups>
+				<string>Propulsion</string>
+			</TargetingGroups>
+			<UseModelIntersection>true</UseModelIntersection>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

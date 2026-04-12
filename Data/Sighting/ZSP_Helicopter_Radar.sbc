@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>ZSP_Helicopter_Radar</SubtypeId>
+			</Id>
+			<DisplayName>Helicopter Radar</DisplayName>
+			<Description>
+			Range: 5000m
+			>Max Targets: 3
+			>Azimuth: 360 Degrees
+			>MinElevation: -15 Degrees
+			>MaxElevation: 90 Degrees
+			Millimeter wave fire control radar (FCR) and radar frequency interferometer (RFI) system, which are housed in a dome designed to be placed above the rotor.
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\ZSP_Helicopter_Radar.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\ZSP_Helicopter_Radar.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="4" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="Detector" Count="4" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Display" Count="1" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>ZSP_Helicopter_Radar</BlockPairName>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.1</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

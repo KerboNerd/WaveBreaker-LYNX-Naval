@@ -195,6 +195,38 @@
         <string>CubeBlock/LXN_SGWindowCAP_Slope5</string>
         <string>CubeBlock/LXN_SGWindowCAP_Slope6</string>
 		
+		<string>ConveyorSorter/LXN_FlareLauncher_01</string>
+		<string>ConveyorSorter/LXN_FlareLauncher_02</string>
+		<string>ConveyorSorter/LXN_MigFlareLauncher_01</string>
+		
+		<string>LargeMissileTurret/Heli_Optics</string>
+		
+		<string>Thrust/Bomber_Engine</string>
+		<string>Conveyor/Engine_Connector</string>
+		
+		<string>Thrust/Vertical_Lift_Thruster</string>
+		<string>Thrust/Reliable_Jet_Engine</string>
+		
+		<string>Thrust/ZSP_Helicopter_Blades</string>
+		<string>ConveyorSorter/ZSP_Helicopter_Radar</string>
+		<string>AirVent/Helicopter_Vent</string>
+		
+		<string>ConveyorSorter/Arrestor_Hook_Stealth</string>
+		<string>ShipConnector/SU27_Aerial_Refueling_Probe_1x4</string>
+		<string>CubeBlock/Illuminator_Flat</string>
+		
+		<string>ConveyorSorter/25mm_Rotary_Cannon</string>
+		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth</string>		
+		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth_1x6</string>
+		<string>ConveyorSorter/30mm_Cannon</string>
+		
+		<string>LargeMissileTurret/25mm_Rotary_Cannon_Gimbal</string>
+		<string>ConveyorSorter/57mm_Cannon</string>
+		<string>CubeBlock/57mm_Cannon_Shroud</string>
+
+		<string>ConveyorSorter/ZSP_Flare_Dispenser</string>		
+		<string>LargeMissileTurret/30mm_Autocannon_Turret</string>
+		
       </ItemIds>
     </Category>
 
@@ -277,12 +309,18 @@
         <string>ConveyorSorter/LXN_SkyShadowPod_pylon</string>
         <string>ConveyorSorter/LXN_IntegratedECM_System</string>
 		
+		<string>ConveyorSorter/LXN_FlareLauncher_01</string>
+		<string>ConveyorSorter/LXN_FlareLauncher_02</string>
+		<string>ConveyorSorter/LXN_MigFlareLauncher_01</string>
+		
+		
         <string>ConveyorSorter/LXN_SideByelkaRadar_01</string>
         <string>ConveyorSorter/LXN_EOTS_01</string>		
         <string>ConveyorSorter/LXN_SniperPod_01</string>
         
         <string>ConveyorSorter/TTPYLONMK13</string>
         <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
+
       </ItemIds>
     </Category>
 

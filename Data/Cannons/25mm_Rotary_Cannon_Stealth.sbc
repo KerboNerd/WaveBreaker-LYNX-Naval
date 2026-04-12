@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>25mm_Rotary_Cannon_Stealth</SubtypeId>
+			</Id>
+			<DisplayName>Retractable 25mm Rotary Cannon</DisplayName>
+			<Description>
+			>Range: 2500m
+			>RPM: 1750
+			>Speed: 800m/s
+			Four-barrelled, electrically driven Gatling style autocannon, chambered for the HE 25mm rounds.
+			Due to casing overheats faster, than open variant.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\25mm_Rotary_Cannon_Stealth.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="4"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\25mm_Rotary_Cannon_Stealth.mwm</Model>
+			<Components>
+                <Component Subtype="SteelPlate" Count="1" />
+                <Component Subtype="Construction" Count="2" />
+                <Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="Motor" Count="1" />
+                <Component Subtype="SmallTube" Count="4" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="InteriorPlate" Count="3" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>25mm_Rotary_Cannon_Stealth</BlockPairName>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			
+			<MirroringX>HalfZ</MirroringX>
+			<MirroringY>MinusHalfZ</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.1</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<IsAirTight>true</IsAirTight>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>25mm_Rotary_Cannon_Stealth</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>25mm_Rotary_Cannon_Stealth_1x6</SubtypeId>
+				</BlockVariant>	
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>25mm_Rotary_Cannon</SubtypeId>
+				</BlockVariant>		
+			</BlockVariants>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>25mm_Rotary_Cannon_Stealth_1x6</SubtypeId>
+			</Id>
+			<DisplayName>Retractable 25mm Rotary Cannon</DisplayName>
+			<Description>
+			>Range: 2500m
+			>RPM: 1750
+			>Speed: 800m/s
+			Four-barrelled, electrically driven Gatling style autocannon, chambered for the HE 25mm rounds.
+			Due to casing overheats faster, than open variant.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\25mm_Rotary_Cannon_Stealth_1x6.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\25mm_Rotary_Cannon_Stealth_1x6.mwm</Model>
+			<Components>
+                <Component Subtype="SteelPlate" Count="1" />
+                <Component Subtype="Construction" Count="2" />
+                <Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="Motor" Count="1" />
+                <Component Subtype="SmallTube" Count="4" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="InteriorPlate" Count="3" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>25mm_Rotary_Cannon_Stealth_1x6</BlockPairName>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			
+			<MirroringX>HalfZ</MirroringX>
+			<MirroringY>MinusHalfZ</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0.1</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

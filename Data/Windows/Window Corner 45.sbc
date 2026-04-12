@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Window Corner 45</SubtypeId>
+			</Id>
+			<DisplayName>Window Corner 45</DisplayName>
+			<Description>{LOC:Description_Window Corner 45}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Window Corner 45.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Windows\Window Corner 45.mwm</Model>
+			<Components>
+				<Component Subtype="BulletproofGlass" Count="1"/>
+			</Components>
+			<CriticalComponent Subtype="BulletproofGlass" Index="0"/>
+			<BlockPairName>Window Corner 45</BlockPairName>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Corner 45</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Corner 30</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Corner 15</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Corner 15 Mirror</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>Window Corner 30 2x2</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

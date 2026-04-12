@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Sounds>
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSPFlaresShot</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1000</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="200" Distance="400" Sound="ZSPFlaresShot_Far"/>
+			</DistantSounds>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Flare_Shot_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Flare_Shot_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Flare_Shot_3.wav</Start>
+                </Wave>	
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSPFlaresShot_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1000</MaxDistance>
+			
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Flare_Shot_1_Far.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Flare_Shot_2_Far.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Flare_Shot_3_Far.wav</Start>
+                </Wave>
+				
+				
+            </Waves>
+        </Sound>
+		
+		
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>ZSP_25mmShot_Loop</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>1250</MaxDistance>
+			<Volume>8</Volume>
+			<pitch>2</pitch>
+			<Loopable>true</Loopable>
+			
+			<!-- <DistantSounds>
+				<DistantSound DistanceCrossfade="120" Distance="1200" Sound="ZSP_25mmShotLoop_Far" />
+            </DistantSounds> -->    
+			
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\Rotary\25mm_Rotary_Shot_start.wav</Start>
+                    <Loop>Audio\Rotary\25mm_Rotary_Shot_Loop.wav</Loop>
+                    <End>Audio\Rotary\25mm_Rotary_Shot_end.wav</End>
+				</Wave>
+				
+			</Waves>
+		</Sound>
+		
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>ZSP_25mmMotor_Loop</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>750</MaxDistance>
+			<Volume>3</Volume>
+			<pitch>2</pitch>
+			<Loopable>true</Loopable>
+			
+			<!-- <DistantSounds>
+				<DistantSound DistanceCrossfade="120" Distance="1200" Sound="ZSP_25mmShotLoop_Far" />
+            </DistantSounds> -->    
+			
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\Rotary\25mm_Rotary_Motor_Start.wav</Start>
+                    <Loop>Audio\Rotary\25mm_Rotary_Motor_Loop.wav</Loop>
+                    <End>Audio\Rotary\25mm_Rotary_Motor_End.wav</End>
+				</Wave>
+				
+			</Waves>
+		</Sound>
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>ZSP_30mmShotLoop</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>1500</MaxDistance>
+			<Volume>11</Volume>
+			<pitch>2</pitch>
+			<Loopable>true</Loopable>
+			
+			<!-- <DistantSounds>
+				<DistantSound DistanceCrossfade="120" Distance="1200" Sound="ZSP_25mmShotLoop_Far" />
+            </DistantSounds> -->    
+			
+			<Waves>
+				<Wave Type="D3">
+					<Start>Audio\Rotary\30mmRotaryCannonStart.wav</Start>
+                    <Loop>Audio\Rotary\30mmRotaryCannon.wav</Loop>
+                    <End>Audio\Rotary\30mmRotaryCannonEnd.wav</End>
+				</Wave>
+				
+			</Waves>
+		</Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSPBombDrop</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Bombs\500kg_Bomb_Drop.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSPBombImpact</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2500</MaxDistance>
+            <DistantSounds>	
+				<DistantSound DistanceCrossfade="25" Distance="150" Sound="ZSPBombImpact_Far"/>
+			</DistantSounds>
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Bombs\500kg_Bomb_Explosion.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSPBombImpact_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2500</MaxDistance>
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\Bombs\500kg_Bomb_Explosion_Far1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\Bombs\500kg_Bomb_Explosion_Far2.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_EXSRAAM_Start</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <Volume>4</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\EXSRAAM\EXSRAAM_Start.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_EXSRAAM_Impact</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2000</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="200" Distance="500" Sound="ZSP_EXSRAAM_Impact_Far"/>
+			</DistantSounds>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\EXSRAAM\EXSRAAM_explosion_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\EXSRAAM\EXSRAAM_explosion_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_EXSRAAM_Impact_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2000</MaxDistance>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\EXSRAAM\EXSRAAM_explosion_far.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_MRAAM_Start</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MRAAM\MRAAM_Start.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_MRAAM_Impact</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="200" Distance="750" Sound="ZSP_MRAAM_Impact_Far"/>
+			</DistantSounds>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MRAAM\MRAAM_explosion_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\MRAAM\MRAAM_explosion_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_MRAAM_Impact_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MRAAM\MRAAM_explosion_far.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_CAGM_Start</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\CAGM\CAGM_Start.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		<Sound>
+			<Id>
+				<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+				<SubtypeId>ZSP_CAGM_Travel</SubtypeId>
+			</Id>
+			<Category>SHOT</Category>
+			<MaxDistance>1000</MaxDistance>
+			<Volume>3</Volume>
+			<pitch>2</pitch>
+			<Loopable>true</Loopable>
+
+
+			<Waves>
+				<Wave Type="D3">
+                    <Loop>Audio\CAGM\CAGM_travel.wav</Loop>
+				</Wave>
+				
+			</Waves>
+		</Sound>
+		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_CAGM_Explosion</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>150</MaxDistance>
+			
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\CAGM\CAGM_Explosion_Release.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_CAGM_Explosion_Secondary</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1500</MaxDistance>
+			
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="25" Distance="150" Sound="ZSP_CAGM_Explosion_Secondary_Far"/>
+			</DistantSounds>
+			
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\CAGM\CAGM_Explosion_Secondary_01.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\CAGM\CAGM_Explosion_Secondary_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_CAGM_Explosion_Secondary_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1500</MaxDistance>
+			
+            <Volume>5</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\CAGM\CAGM_Explosion_Secondary_far.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_57mm_Shot</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1750</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="200" Distance="400" Sound="ZSP_57mm_Shot_Far"/>
+			</DistantSounds>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_3.wav</Start>
+                </Wave>	
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_57mm_Shot_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1750</MaxDistance>
+			
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_far_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_far_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\57mm\57mm_shot_far_3.wav</Start>
+                </Wave>
+				
+				
+            </Waves>
+        </Sound>
+		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_105mm_Shot</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="200" Distance="750" Sound="ZSP_105mm_Shot_Far"/>
+			</DistantSounds>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_3.wav</Start>
+                </Wave>	
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_105mm_Shot_Far</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>3000</MaxDistance>
+			
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_far_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_far_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Shot_far_3.wav</Start>
+                </Wave>
+				
+				
+            </Waves>
+        </Sound>
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_105mm_Impact</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2500</MaxDistance>
+			<DistantSounds>	
+				<DistantSound DistanceCrossfade="25" Distance="600" Sound="ZSPBombImpact_Far"/>
+			</DistantSounds>
+            <Volume>8</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\105mm\105mm_Hit.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>		
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_ATGM_Start</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>100</MaxDistance>
+            <Volume>4</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\ATGM\ATGM_Missile_Start.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+		
+		
+		<Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>ZSP_30mm_Autocannon_Shot</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <Volume>3</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\30mm Autocannon\30mm_Autocannon_Shot_1.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\30mm Autocannon\30mm_Autocannon_Shot_2.wav</Start>
+                </Wave>
+				<Wave Type="D3">
+                    <Start>Audio\30mm Autocannon\30mm_Autocannon_Shot_3.wav</Start>
+                </Wave>
+				
+            </Waves>
+        </Sound>
+		
+	</Sounds>
+
+</Definitions>

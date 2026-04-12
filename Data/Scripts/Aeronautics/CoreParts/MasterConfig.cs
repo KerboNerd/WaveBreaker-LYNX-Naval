@@ -77,13 +77,30 @@ namespace Scripts
                 LXN_9M723_1,
                 LXN_AK220M_1,
                 LXN_SubVLS_1,
+
                 TTMK15,
                 TTMK15Triple,
                 TTMK15Sub,
                 TTPYLONMK13,
                 TTMK37Director,
                 TTMK6ChargeRack,
-                TTMKXIDC
+                TTMKXIDC,
+                
+                ZSP_Retractable_ATGM,
+                
+                ZSP_Flare_Dispenser,
+                
+                ZSP_25mm4Barrel,
+                ZSP_25mm4Barrel_Stealth,
+                ZSP_25mm4Barrel_Gimbal,
+                ZSP_30mm_Rotory_Cannon,
+                
+                ZSP_57mm_Gumbal_Turret,
+                ZSP_105mm_Gimbal_Turret,
+                ZSP_30mm_Autocannon_Turret,
+
+                ZSP_Heli_Optics,
+                ZSP_Helicopter_Radar
             );
         }
     }

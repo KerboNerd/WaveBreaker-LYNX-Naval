@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Bomber_Intake_Mantlet2</SubtypeId>
+			</Id>
+			<DisplayName>Bomber Intake Mantlet (2)</DisplayName>
+			<Description></Description>
+			<Icon>Textures\GUI\Icons\Cubes\Bomber_Intake_Mantlet2.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="-0.5" z="0.25"/>
+			<Model>Models\Cubes\small\Bomber_Intake_Mantlet2.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BlockPairName>Bomber_Intake_Mantlet2</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
