@@ -76,33 +76,5 @@
             <MaximumOrderAmount>200</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
         </Component>	
-		
-		<Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>ZSP_Missile_Cap</SubtypeId>
-            </Id>
-            <DisplayName>[ZSP] Missile Cap</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\AntiShip_HyperVelocity_Missile_Cap.dds</Icon>
-            <Size>
-                <X>0.0525</X>
-                <Y>0.385</Y>
-                <Z>0.0525</Z>
-            </Size>
-            <Mass>100</Mass>
-            <Volume>500</Volume>
-            <Model>Models\Cubes\small\AntiShip_HyperVelocity_Missile_Cap.mwm</Model>
-            <PhysicalMaterial>Ammo</PhysicalMaterial>
-            <Capacity>1</Capacity>
-            
-
-            <MinimumOfferAmount>10</MinimumOfferAmount>
-            <MaximumOfferAmount>100</MaximumOfferAmount>
-            <MinimumOrderAmount>10</MinimumOrderAmount>
-            <MaximumOrderAmount>200</MaximumOrderAmount>
-            <CanPlayerOrder>true</CanPlayerOrder>
-        </Component>
-			
-		
 	</Components>
 </Definitions>
