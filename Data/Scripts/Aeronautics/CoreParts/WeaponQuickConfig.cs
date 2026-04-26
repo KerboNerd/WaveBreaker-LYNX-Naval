@@ -23,7 +23,7 @@ public static class MissileConfig
     public static float Brimstone_Health = 40; // Health of the Brimstone missile
     public static float Brimstone_MaxRange = 5000f; // Max Range of the Brimstone missile
     public static float Brimstone_MinRange = 500f; // Min Range of the Brimstone missile
-    public static float Brimstone_MaxSpeed = 450f * speedLimiterFactor; // Max Speed of the Brimstone missile
+    public static float Brimstone_MaxSpeed = 700f * speedLimiterFactor; // Max Speed of the Brimstone missile
     public static float Brimstone_Inventory = 0.046f * inventoryMultiplier; // Inventory capacity in kL.
     public static float Brimstone_Mass = 46f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
