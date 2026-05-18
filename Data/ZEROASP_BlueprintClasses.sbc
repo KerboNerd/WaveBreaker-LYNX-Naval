@@ -2,9 +2,7 @@
  <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
    <BlueprintClassEntries> 
 		<!--AMMUNITION-->		
-	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZEROASP_ATGM_BP" />
-	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_Flares_Stealth" />
-	
+	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZEROASP_ATGM_BP" />	
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_25mm_HEI_Belt_AMMOBP" />
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_30mm_HEI_Belt_AMMOBP" />
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_30mm_API_Belt_AMMOBP" />
@@ -14,7 +12,6 @@
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_105mm_HE_AMMOBP" />
 	
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_Flares" />
-	<Entry Class="EliteConsumables" BlueprintSubtypeId="ZSP_Flares_Stealth" />
 
    </BlueprintClassEntries>
 </Definitions>

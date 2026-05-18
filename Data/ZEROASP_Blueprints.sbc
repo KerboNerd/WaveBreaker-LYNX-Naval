@@ -32,23 +32,7 @@
       <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="ZSP_Flares_Mag" />
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
     </Blueprint>
-	
-	<Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>ZSP_Flares_Stealth</SubtypeId>
-      </Id>
-      <DisplayName>[ZSP] Flares Stealth</DisplayName>
-      <Icon>Textures\GUI\Icons\Ammo\Flare_Canister.dds</Icon>
-      <Prerequisites>
-        <Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />		
-        <Item Amount="0.6" TypeId="Ingot" SubtypeId="Magnesium" />
-      </Prerequisites>
-      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="ZSP_Flares_Mag_Stealth" />
-      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
-    </Blueprint>
-	
-	
+
 	<Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
