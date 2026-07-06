@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+				<Id>
+						<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMK141</SubtypeId>
+			</Id>
+			<DisplayName>MK-141 RGM-84 Harpoon</DisplayName>
+			<Description> 
+			Max engagement range: 8000
+			Reload Time: 30 Seconds
+			Ammo: Harpoon Missile
+
+			It was first used in 1977 and is still in use on warships today.
+			Used on. (almost) all ships using the harpoon missile.
+			</Description>
+			<Icon>Textures\GUI\Icons\TTMK141.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMK141.mwm</Model>
+			<Components>
+					<Component Count="60" Subtype="SteelPlate"/>
+					<Component Count="40" Subtype="Construction"/>
+					<Component Count="20" Subtype="LargeTube" />
+					<Component Count="10" Subtype="MetalGrid" />
+					<Component Count="30" Subtype="Computer"/>
+					<Component Count="10" Subtype="Motor"/>
+					<Component Count="20" Subtype="Construction"/>
+					<Component Count="60" Subtype="SteelPlate"/>
+			</Components>
+						<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>TTMK141</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>45</BuildTimeSeconds>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<RequiredPowerInput>0.00002</RequiredPowerInput>
+			<PCU>50</PCU>
+			            <TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

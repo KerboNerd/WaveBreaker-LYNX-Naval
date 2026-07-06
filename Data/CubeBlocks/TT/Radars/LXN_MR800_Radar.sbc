@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+				<Id>
+						<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LXN_MR800_Radar</SubtypeId>
+			</Id>
+			<DisplayName>MR-800 Radar</DisplayName>
+			<Description>
+			A Voskhod MR-800 3D Air Search Radar.
+			Used on Slava Class cruisers in the Soviet Navy.
+			"By Lynx"
+			Range: 15 km
+			Radar Channel: USSR
+			360 Degrees detection
+			</Description>
+			<Icon>Textures\GUI\Icons\LXN_MR800_Radar.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="6" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Large\LXN_MR800_Radar.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="1.50" EndX="1.00" EndY="4.50"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="1.50" EndX="1.00" EndY="4.50"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="1.50" EndX="1.00" EndY="4.50"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="1.50" EndX="1.00" EndY="4.50"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>LXN_MR800_Radar</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

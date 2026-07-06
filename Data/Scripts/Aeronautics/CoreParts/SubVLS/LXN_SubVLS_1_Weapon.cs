@@ -52,8 +52,8 @@ namespace Scripts {
                 MinTargetDistance = MissileConfig.SubVLS_MinRange, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 1, // Maximum number of targets to randomize between; 0 = unlimited.
                 CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
-                TopBlocks = 0, // Maximum number of blocks to randomize between; 0 = unlimited.
-                CycleBlocks = 0, // Number of blocks to "cycle" per acquire attempt.
+                TopBlocks = 3, // Maximum number of blocks to randomize between; 0 = unlimited.
+                CycleBlocks = 2, // Number of blocks to "cycle" per acquire attempt.
                 StopTrackingSpeed = 70, // Do not track threats traveling faster than this speed; 0 = unlimited.
                 UniqueTargetPerWeapon = false, // only applies to multi-weapon blocks 
                 MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one
@@ -132,11 +132,11 @@ namespace Scripts {
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 5, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = MissileConfig.SubVLS_ROF, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 720, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = MissileConfig.SubVLS_ReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 300, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.

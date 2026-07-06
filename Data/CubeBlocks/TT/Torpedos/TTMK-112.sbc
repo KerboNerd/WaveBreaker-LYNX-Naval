@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMK112</SubtypeId>
+			</Id>
+			<DisplayName>RUR 5 Asroc</DisplayName>
+			<Description>
+			Max engagement range: 6000m (min 1000m)
+			Reload Time: 60 Seconds
+			Ammo: Mark 44 Torpedo
+			**Requires a Sonar**	
+
+			The RUR-5 ASROC (for "Anti-Submarine Rocket") is an all-weather, 
+			all sea-conditions anti-submarine missile system.
+			</Description>
+			<Icon>Textures\GUI\Icons\TTMK-112.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMK-112.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="150" />
+				<Component Subtype="Construction" Count="100" />
+				<Component Subtype="SmallTube" Count="15" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="Motor" Count="25" />
+				<Component Subtype="Computer" Count="50" />
+				<Component Subtype="SteelPlate" Count="150" />
+			</Components>
+			<CriticalComponent Index="0" Subtype="Computer"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>TTMK-112</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<UseModelIntersection>true</UseModelIntersection>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>75</BuildTimeSeconds>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>200</PCU>
+						<IsAirTight>true</IsAirTight>
+						            <TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

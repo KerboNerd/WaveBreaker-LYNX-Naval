@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTS1850MRadar</SubtypeId>
+			</Id>
+			<DisplayName>S1850 Radar</DisplayName>
+			<Description>S1850M is manufactured by Thales and BAE Systems Integrated System Technologies (formerly AMS UK).
+			 It is a modified version of the Thales Nederland SMART-L radar.
+			The S1850M is advertised as being capable of fully automatic detection, track initiation			
+			
+			Range: 15 km
+			Radar Channel: NATO
+			360 Degrees detection
+			</Description>
+			<Icon>Textures\GUI\Icons\TTS1850MRadar.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTS1850MRadar.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>TTS1850MRadar</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

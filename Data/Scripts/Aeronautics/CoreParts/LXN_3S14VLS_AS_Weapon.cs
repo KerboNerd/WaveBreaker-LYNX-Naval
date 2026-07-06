@@ -122,11 +122,11 @@ namespace Scripts {
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 10, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = MissileConfig.VLS3S14_ROF, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 1800, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = MissileConfig.VLS3S14_ReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 8, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.
@@ -194,7 +194,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_OniksLG_Secondary, LXN_OniksLG_Frags, LXN_KALIBR_Secondary, LXN_KALIBR_Frags
+                LXN_OniksLG_Secondary, LXN_OniksLG_Frags, LXN_KALIBR_Secondary, LXN_KALIBR_Frags, VLS_Tomahawk_Ammo, ASHM_he_fragment_Ammo
             },
             Animations = LXN_3S14VLS_Anim,
             //Upgrades = UpgradeModules,

@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+	<!-- TT WW2 Weapons -->
+    <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTMK15Torpedo</SubtypeId>
+        </Id>
+        <DisplayName>Mark 15 torpedo</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTMK15Torpedo.dds</Icon>
+        <Prerequisites>
+          <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+          <Item Amount="2" TypeId="Ingot" SubtypeId="Silver" />
+          <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK15Torpedo" />
+        <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+      </Blueprint>
+
+    <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTMK13Torpedo</SubtypeId>
+        </Id>
+        <DisplayName>Mark 13 torpedo</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTMK13Torpedo.dds</Icon>
+        <Prerequisites>
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
+          <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK13Torpedo" />
+        <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+      </Blueprint>
+
+    <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTMKVIDC</SubtypeId>
+        </Id>
+        <DisplayName>Mark XI DC</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTMKVIIDCAIR.dds</Icon>
+        <Prerequisites>
+          <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMKVIDC" />
+        <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+      </Blueprint>
+
+    <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTMK6DepthCharge</SubtypeId>
+        </Id>
+        <DisplayName>Mark 6 Depth Charge</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTMK6DepthCharge.dds</Icon>
+        <Prerequisites>
+          <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK6DepthCharge" />
+        <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+      </Blueprint>
+	  
+    <!-- TT Moderns Weapons -->
+    <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TT35mm_ahead_round</SubtypeId>
+        </Id>
+        <DisplayName>35mm AHEAD ammo box</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\35mm_ciwsammobox.dds</Icon>
+        <Prerequisites>
+          <Item Amount="80" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="30" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="35" TypeId="Ingot" SubtypeId="Magnesium" />
+
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TT35mm_ahead_round" />
+        <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+      </Blueprint>
+
+      <Blueprint>
+          <Id>
+            <TypeId>BlueprintDefinition</TypeId>
+            <SubtypeId>TT76mm_shell</SubtypeId>
+          </Id>
+          <DisplayName>76mm Shell</DisplayName>
+          <Icon>Textures\GUI\Icons\Ammo\76mm_Autocannon_Shell.dds</Icon>
+          <Prerequisites>
+            <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+            <Item Amount="3" TypeId="Ingot" SubtypeId="Nickel" />
+            <Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
+            <Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
+          </Prerequisites>
+          <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TT76mm_shell" />
+          <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+          <Id>
+            <TypeId>BlueprintDefinition</TypeId>
+            <SubtypeId>TT127mm_shell</SubtypeId>
+          </Id>
+          <DisplayName>127mm Shell</DisplayName>
+          <Icon>Textures\GUI\Icons\Ammo\127mm_Autocannon_Shell.dds</Icon>
+          <Prerequisites>
+            <Item Amount="7" TypeId="Ingot" SubtypeId="Iron" />
+            <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
+            <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+            <Item Amount="3" TypeId="Ingot" SubtypeId="Cobalt" />
+          </Prerequisites>
+          <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TT127mm_shell" />
+          <BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+	    <Blueprint>
+		  <Id>
+			<TypeId>BlueprintDefinition</TypeId>
+			<SubtypeId>TTVLS_RIM66_Missile</SubtypeId>
+		  </Id>
+		  <DisplayName>RIM-66 Missile</DisplayName>
+		  <Icon>Textures\GUI\Icons\Ammo\TTRIM66Missile.dds</Icon>
+		  <Prerequisites>
+			<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+			<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+			<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+			<Item Amount="15" TypeId="Ingot" SubtypeId="Silicon" />
+		  </Prerequisites>
+		  <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTVLS_RIM66_Missile" />
+		  <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+          <Id>
+            <TypeId>BlueprintDefinition</TypeId>
+            <SubtypeId>TTRGM_harpoon_Missile</SubtypeId>
+          </Id>
+          <DisplayName>Harpoon Missile</DisplayName>
+          <Icon>Textures\GUI\Icons\Ammo\TTHarpoonB.dds</Icon>
+          <Prerequisites>
+            <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+            <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
+            <Item Amount="125" TypeId="Ingot" SubtypeId="Magnesium" />
+            <Item Amount="30" TypeId="Ingot" SubtypeId="Silicon" />
+          </Prerequisites>
+          <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTRGM_harpoon_Missile" />
+          <BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTVLS_Tomahawk_missile</SubtypeId>
+        </Id>
+        <DisplayName>Tomahawk Block V TLAM</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTVLSTomahawkG.dds</Icon>
+        <Prerequisites>
+          <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="275" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+          <Item Amount="3" TypeId="Ingot" SubtypeId="Platinum" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTVLS_Tomahawk_missile" />
+        <BaseProductionTimeInSeconds>45</BaseProductionTimeInSeconds>
+      </Blueprint>
+		
+		<Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TTMK44_Torpedo</SubtypeId>
+        </Id>
+        <DisplayName>Mark 44 torpedo</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TTMK44G.dds</Icon>
+        <Prerequisites>
+          <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="75" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+          <Item Amount="1" TypeId="Ingot" SubtypeId="Platinum" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTMK44_Torpedo" />
+        <BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
+      </Blueprint>
+	  
+	  <Blueprint>
+        <Id>
+          <TypeId>BlueprintDefinition</TypeId>
+          <SubtypeId>TT90R</SubtypeId>
+        </Id>
+        <DisplayName>90R Rocket Depth Charge</DisplayName>
+        <Icon>Textures\GUI\Icons\Ammo\TT90R.dds</Icon>
+        <Prerequisites>
+          <Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+          <Item Amount="10" TypeId="Ingot" SubtypeId="Nickel" />
+          <Item Amount="20" TypeId="Ingot" SubtypeId="Magnesium" />
+          <Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
+        </Prerequisites>
+        <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TT90R" />
+        <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+      </Blueprint>
+
+  </Blueprints>
+</Definitions>

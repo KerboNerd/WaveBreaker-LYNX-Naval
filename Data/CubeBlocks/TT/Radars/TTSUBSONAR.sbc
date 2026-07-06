@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTSUBSONAR</SubtypeId>
+			</Id>
+			<DisplayName>Submarine Sonar Array</DisplayName>
+			<Description>A special sonar array for operation onboard submarines,
+			Required for guided torpedo's to recieve targetting data.
+
+			Make sure to put the right side up.
+			Only functions under water. 
+
+			Range: 10 km
+			Radar Channel: SONAR
+			240 Degrees detection	
+			</Description>
+			<Icon>Textures\GUI\Icons\TTSUBSONAR.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTSUBSONAR.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="2.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="2.00" EndX="2.00" EndY="2.40"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.60" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="2.00" EndX="1.00" EndY="2.40"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.60" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>TTSUBSONAR</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

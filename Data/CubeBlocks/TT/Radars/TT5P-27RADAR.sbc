@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TT5P-27RADAR</SubtypeId>
+			</Id>
+			<DisplayName>5P-27 Furke-4</DisplayName>
+			<Description>The 5P-27 "Furke" is a ship-based 3D air and surface search radar system 
+			designed and produced by the VNIIRT (as a part of Almaz-Antey) for the Russian Navy. 
+			It is designed for detection, tracking, identification and targeting of air and sea vehicles, 
+			including low-flying aircraft and sea-skimming cruise missiles.
+			
+			Range: 15 km
+			Radar Channel: USSR
+			360 Degrees detection
+			</Description>
+			<Icon>Textures\GUI\Icons\TT5P-27RADAR.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TT5P-27RADAR.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>TT5P-27RADAR</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

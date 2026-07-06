@@ -75,8 +75,8 @@ namespace Scripts
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 5000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
-                MinTargetDistance = 200, // Minimum distance at which targets will be automatically shot at.
+                MaxTargetDistance = MissileConfig.STRELA_MaxRange, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MinTargetDistance = MissileConfig.STRELA_MinRange, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 4, // Maximum number of targets to randomize between; 0 = unlimited.
                 CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
                 TopBlocks = 8, // Maximum number of blocks to randomize between; 0 = unlimited.
@@ -91,16 +91,16 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "STRELA-M", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.001f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 1f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 15f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Basic, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
 
                 Ui = new UiDef
                 {
-                    RateOfFire = true, // Enables terminal slider for changing rate of fire.
+                    RateOfFire = false, // Enables terminal slider for changing rate of fire.
                     DamageModifier = false, // Enables terminal slider for changing damage per shot.
                     ToggleGuidance = false, // Enables terminal option to disable smart projectile guidance.
                     EnableOverload = false, // Enables terminal option to turn on Overload; this allows energy weapons to double damage per shot, at the cost of quadrupled power draw and heat gain, and 2% self damage on overheat.
@@ -125,7 +125,7 @@ namespace Scripts
                     MaxElevation = 30,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 30, // Default resting elevation
-                    InventorySize = 1.175f, // Inventory capacity in kL.
+                    InventorySize = MissileConfig.STRELA_Inventory, // Inventory capacity in kL.
                     IdlePower = 0.4f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
@@ -152,11 +152,11 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = MissileConfig.STRELA_ROF, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = (int)MissileConfig.STRELA_M_ReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = (int)MissileConfig.STRELA_ReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 25, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 15, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 3, // Heat generated per shot.

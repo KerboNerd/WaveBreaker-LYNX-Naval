@@ -1,6 +1,6 @@
 // This file contains the quick-configuration for guns.
 
-public static class GunConfig
+public static class Legacy_GunConfig
 {
     static float inventoryMultiplier = 1;
 

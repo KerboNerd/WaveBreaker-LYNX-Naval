@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTDaringRadar</SubtypeId>
+			</Id>
+			<DisplayName>SAMPSON AESA RADAR</DisplayName>
+			<Description>The SAMPSON is a multi-function dual-face active electronically scanned array radar
+				produced by BAE Systems Maritime. Currently in use on the Type 45 Daring class Destroyer in the UK Navy.
+				Range: 15 km
+				Radar Channel: NATO
+				360 Degrees detection
+			</Description>
+			<Icon>Textures\GUI\Icons\TTDaringRadar.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTDaringRadar.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="1.00" StartY="1.00" EndX="2.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>TTDaringRadar</BlockPairName>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTDaringRadar_small</SubtypeId>
+			</Id>
+			<DisplayName>SAMPSON AESA RADAR Mini</DisplayName>
+			<Description>
+			Mini Version
+			The SAMPSON is a multi-function dual-face active electronically scanned array radar
+				produced by BAE Systems Maritime. Currently in use on the Type 45 Daring class Destroyer in the UK Navy.
+	
+			</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTDaringRadar_small.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="1.00" StartY="1.00" EndX="2.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>TTDaringRadar_small</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

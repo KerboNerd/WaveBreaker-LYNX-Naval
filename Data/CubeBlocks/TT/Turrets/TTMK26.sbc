@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMK26</SubtypeId>
+			</Id>
+			<DisplayName>MK-26 Dual launcher</DisplayName>
+			<Description>
+			Max engagement range: 8000m
+			Rate of Fire: 75
+			Reload Time: 11 seconds
+			Ammo: RIM-66 AA, RGM-84 Harpoon ASHM 			
+			
+			The Mark 26 Guided Missile Launching System (GMLS) 
+			was a United States Navy fully automated system that stows, handles, 
+			and launches a variety of missiles. 
+			The Mark 26 had the shortest reaction time and the fastest firing rate 
+			of any comparable dual arm shipboard launching system at the time. 
+			</Description>
+			<Icon>Textures\GUI\Icons\TTMK26.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMK26.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="Construction" Count="120" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="30" />
+				<Component Subtype="MetalGrid" Count="30" />
+				<Component Subtype="SmallTube" Count="20" />
+				<Component Subtype="Computer" Count="350" />
+				<Component Subtype="Motor" Count="40" />
+				<Component Subtype="SteelPlate" Count="200" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.05" EndX="3.00" EndY="0.95"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>TTMK26</BlockPairName>
+			<MirroringY>X</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			  <BuildTimeSeconds>90</BuildTimeSeconds>
+			  <WeaponDefinitionId Subtype="Blank"/>
+			  <InventoryMaxVolume>0.150</InventoryMaxVolume>
+			  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			  <DamagedSound>ParticleWeapExpl</DamagedSound>
+			  <ResourceSinkGroup>Defense</ResourceSinkGroup>
+			  <MinElevationDegrees>-15</MinElevationDegrees>
+			  <MaxElevationDegrees>85</MaxElevationDegrees>
+			  <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			  <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			  <RotationSpeed>0.04</RotationSpeed>
+			  <ElevationSpeed>0.04</ElevationSpeed>
+			  <IdleRotation>false</IdleRotation>
+			  <MaxRangeMeters>2200</MaxRangeMeters>
+			  <AiEnabled>false</AiEnabled>
+			  <MinFov>0.1</MinFov>
+			  <MaxFov>1.24719755</MaxFov>
+			  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+			  <InventoryFillFactorMin>.384</InventoryFillFactorMin>
+      		  <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+			  <IdlePower>.5</IdlePower>
+			  <UsePower>130</UsePower>
+			  <EmissiveColorPreset>Default</EmissiveColorPreset>
+			  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			  <DestroySound>WepSmallWarheadExpl</DestroySound>
+			  <PCU>225</PCU>	
+		</Definition>
+	</CubeBlocks>
+</Definitions>

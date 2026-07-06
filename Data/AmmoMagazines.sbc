@@ -82,7 +82,186 @@
      <Capacity>1</Capacity>
      <AmmoDefinitionId Subtype="Blank" />
    </AmmoMagazine>
+   
+    <AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TT35mm_ahead_round</SubtypeId>
+      </Id>
+      <DisplayName>35mm AHEAD ammo box</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\35mm_ciwsammobox.dds</Icon>
+      <Size>
+      <X>0.25</X>
+      <Y>0.2</Y>
+      <Z>0.2</Z>
+      </Size>
+      <Mass>250</Mass>
+      <Volume>250</Volume>
+      <Model>Models\Ammo\30mm_ciwsammobox.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>250</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TT76mm_shell</SubtypeId>
+      </Id>
+      <DisplayName>76 mm Shell</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\76mm_Autocannon_Shell.dds</Icon>
+      <Size>
+      <X>0.35</X>
+      <Y>0.1</Y>
+      <Z>0.1</Z>
+      </Size>
+      <Mass>30</Mass>
+      <Volume>5</Volume>
+      <Model>Models\Ammo\Autocannon_76mm.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TT127mm_shell</SubtypeId>
+      </Id>
+      <DisplayName>127mm Shell</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\127mm_Autocannon_Shell.dds</Icon>
+      <Size>
+      <X>0.83</X>
+      <Y>0.12</Y>
+      <Z>0.12</Z>
+      </Size>
+      <Mass>30</Mass>
+      <Volume>5</Volume>
+      <Model>Models\Ammo\Autocannon_127mm.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+     <Id>
+     <TypeId>AmmoMagazine</TypeId>
+     <SubtypeId>TTVLS_RIM66_Missile</SubtypeId>
+     </Id>
+     <DisplayName>RIM-66 Missile</DisplayName>
+     <Icon>Textures\GUI\Icons\Ammo\TTRIM66Missile.dds</Icon>
+     <Size>
+     <X>2.0</X>
+     <Y>0.20</Y>
+     <Z>0.20</Z>
+     </Size>
+     <Mass>630</Mass>
+     <Volume>1000</Volume>
+     <Model>Models\Ammo\TTRIM66Missile.mwm</Model>
+     <PhysicalMaterial>Ammo</PhysicalMaterial>
+     <Capacity>1</Capacity>
+     <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+
+    <AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TTRGM_harpoon_Missile</SubtypeId>
+      </Id>
+      <DisplayName>RGM-84 Harpoon ASM</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\TTHarpoonB.dds</Icon>
+      <Size>
+      <X>4.6</X>
+      <Y>0.17</Y>
+      <Z>0.17</Z>
+      </Size>
+      <Mass>691</Mass>
+      <Volume>1000</Volume>
+      <Model>Models\Ammo\TTHarpoonB.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+ 
+    <AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TTVLS_Tomahawk_missile</SubtypeId>
+      </Id>
+      <DisplayName>Tomahawk Block V TLAM</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\TTVLSTomahawkG.dds</Icon>
+      <Size>
+      <X>6.0</X>
+      <Y>0.25</Y>
+      <Z>0.25</Z>
+      </Size>
+      <Mass>2200</Mass>
+      <Volume>1000</Volume>
+      <Model>Models\Ammo\TTVLSTomahawkL.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+	
+	<AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TTMK44_Torpedo</SubtypeId>
+      </Id>
+      <DisplayName>Mark 44 torpedo</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\TTMK44G.dds</Icon>
+      <Size>
+      <X>5.8</X>
+      <Y>0.53</Y>
+      <Z>0.53</Z>
+      </Size>
+      <Mass>196</Mass>
+      <Volume>1000</Volume>
+      <Model>Models\Ammo\TTMK44G.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+	
+<!--<AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TTMK48_Torpedo</SubtypeId>
+      </Id>
+      <DisplayName>Mark 48 torpedo</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\TTMK48Torpedo.dds</Icon>
+      <Size>
+      <X>5.8</X>
+      <Y>0.53</Y>
+      <Z>0.53</Z>
+      </Size>
+      <Mass>1676</Mass>
+      <Volume>4000</Volume>
+      <Model>Models\Ammo\TTMK48Torpedo.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine> -->
+
+	<AmmoMagazine>
+      <Id>
+      <TypeId>AmmoMagazine</TypeId>
+      <SubtypeId>TT90R</SubtypeId>
+      </Id>
+      <DisplayName>90R Rocket Depth Charge</DisplayName>
+      <Icon>Textures\GUI\Icons\Ammo\TT90R.dds</Icon>
+      <Size>
+      <X>1.8</X>
+      <Y>0.21</Y>
+      <Z>0.21</Z>
+      </Size>
+      <Mass>113</Mass>
+      <Volume>180</Volume>
+      <Model>Models\Ammo\TT90R.mwm</Model>
+      <PhysicalMaterial>Ammo</PhysicalMaterial>
+      <Capacity>1</Capacity>
+      <AmmoDefinitionId Subtype="Blank" />
+    </AmmoMagazine>
+	
   </AmmoMagazines>
-
-
 </Definitions>

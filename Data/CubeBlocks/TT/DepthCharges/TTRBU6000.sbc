@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTRBU6000</SubtypeId>
+			</Id>
+			<DisplayName>RBU-6000</DisplayName>
+			<Description>
+			Launches full salvo to surround its target.
+			Max engagement range: 4000m (min 1000m)
+			Reload Time: 30 Seconds
+			Ammo: 90R
+			**Requires a Sonar**	
+			(cannot be affected by decoys)
+			The RBU-6000 Smerch-2 is a 213 mm caliber Soviet anti-submarine rocket launcher.
+			The system entered service in 1960–1961 and is fitted to a wide range of Russian surface vessels. 
+			It consists of a horseshoe-shaped arrangement of twelve launch barrels, 
+			that are remotely directed by the Burya fire control system
+			</Description>
+			<Icon>Textures\GUI\Icons\TTRBU6000.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTRBU6000.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="75" />
+				<Component Subtype="Construction" Count="80" />
+				<Component Subtype="SmallTube" Count="10" />
+				<Component Subtype="LargeTube" Count="6" />
+				<Component Subtype="MetalGrid" Count="6" />
+				<Component Subtype="Motor" Count="15" />
+				<Component Subtype="Computer" Count="25" />
+				<Component Subtype="SteelPlate" Count="75" />
+			</Components>
+			<CriticalComponent Index="0" Subtype="Computer"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>TTRBU6000</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+									<BuildTimeSeconds>120</BuildTimeSeconds>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+						<RequiredPowerInput>0.00002</RequiredPowerInput>
+					            <PCU>150</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

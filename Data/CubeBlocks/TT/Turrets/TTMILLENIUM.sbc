@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMILLENIUM</SubtypeId>
+			</Id>
+			<DisplayName>Rheinmetall Oerlikon Millennium Gun</DisplayName>
+			<Description>The Rheinmetall Oerlikon Millennium Gun or Rheinmetall GDM-008 is a close-in weapon system designed by
+				Rheinmetall Air Defence AG (formerly known as Oerlikon Contraves) for mounting on ships.
+				It is based on the 35/1000 revolver gun land-based air defense system and
+				uses Advanced Hit Efficiency And Destruction (AHEAD) ammunition.
+
+				Max engagement range: 2000
+				Rate of Fire: 1050 ( 5 round burst )
+				Reload Time: 3 Seconds
+				Ammo: 35MM Ahead ammo box
+			</Description>
+			<Icon>Textures\GUI\Icons\TTMILLENIUM.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMILLENIUM.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="Detector" Count="20" />
+				<Component Subtype="RadioCommunication" Count="20" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>TTMILLENIUM</BlockPairName>
+			<MirroringY>X</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<UseModelIntersection>true</UseModelIntersection>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<WeaponDefinitionId Subtype="Blank"/>
+			<InventoryMaxVolume>0.384</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<MinElevationDegrees>0</MinElevationDegrees>
+			<MaxElevationDegrees>90</MaxElevationDegrees>
+			<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+			<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+			<RotationSpeed>0.05</RotationSpeed>
+			<ElevationSpeed>0.03</ElevationSpeed>
+			<IdleRotation>false</IdleRotation>
+			<MaxRangeMeters>1400</MaxRangeMeters>
+			<AiEnabled>false</AiEnabled>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.24719755</MaxFov>
+			<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+			<InventoryFillFactorMin>.384</InventoryFillFactorMin>
+			<InventoryFillFactorMax>.5</InventoryFillFactorMax>
+			<IdlePower>.10</IdlePower>
+			<UsePower>120</UsePower>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>225</PCU>
+			            <TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

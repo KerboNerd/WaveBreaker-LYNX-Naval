@@ -570,7 +570,7 @@ namespace Scripts
                         AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                         AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
                         ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                        TrackingDistance = 100, // Minimum travel distance before projectile begins racing to heading
+                        TrackingDistance = 10, // Minimum travel distance before projectile begins racing to heading
                         DesiredElevation = MissileConfig.Oniks_SkimmingAltitude, // The desired elevation relative to reference position
                         // Storage Values
                         StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
@@ -578,7 +578,7 @@ namespace Scripts
                         StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                         StoredEndType = Target,
                         // Controls the leading behavior
-                        LeadDistance = 200, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                        LeadDistance = 250, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                         PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                         // Modify speed and acceleration ratios while this approach is active
@@ -678,7 +678,7 @@ namespace Scripts
                         AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                         AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
                         ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                        TrackingDistance = 50, // Minimum travel distance before projectile begins racing to heading
+                        TrackingDistance = 5, // Minimum travel distance before projectile begins racing to heading
                         DesiredElevation = MissileConfig.Oniks_SkimmingAltitude, // The desired elevation relative to reference position
                         // Storage Values
                         StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
@@ -686,11 +686,11 @@ namespace Scripts
                         StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                         StoredEndType = Target,
                         // Controls the leading behavior
-                        LeadDistance = 250, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                        LeadDistance = 200, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                         PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                         // Modify speed and acceleration ratios while this approach is active
-                        AccelMulti = 4f, // Very high acceleration for the main boost phase
+                        AccelMulti = 2f, // Very high acceleration for the main boost phase
                         DeAccelMulti = 0, // Modifies your default deacceleration by this factor
                         TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
                         SpeedCapMulti = 1.0f, // Allow full speed during boost
@@ -750,7 +750,7 @@ namespace Scripts
                         ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.
 
                         // Start/End conditions
-                        StartCondition1 = Spawn, // Each condition type is either >= or <= the corresponding value defined below.
+                        StartCondition1 = RelativeLifetime, // Each condition type is either >= or <= the corresponding value defined below.
                                                     // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
                                                     // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
                                                     // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
@@ -762,9 +762,9 @@ namespace Scripts
                         EndCondition2 = Ignore,
                         EndCondition3 = Ignore,
                         // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                        Start1Value = 0,
+                        Start1Value = MissileConfig.Oniks_BoosterTime * 60,
                         Start2Value = 0,
-                        End1Value = 3000,
+                        End1Value = 500, // Begin terminal approach when within range of target
                         End2Value = 0,
                         End3Value = 0,
                         // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -803,7 +803,7 @@ namespace Scripts
                         StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                         StoredEndType = Target,
                         // Controls the leading behavior
-                        LeadDistance = 300, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                        LeadDistance = 150, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                         PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                         // Modify speed and acceleration ratios while this approach is active
@@ -860,7 +860,7 @@ namespace Scripts
                        ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.
 
                        // Start/End conditions
-                       StartCondition1 = Spawn, // Each condition type is either >= or <= the corresponding value defined below.
+                       StartCondition1 = DistanceFromTarget, // Each condition type is either >= or <= the corresponding value defined below.
                                                    // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
                                                    // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
                                                    // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
@@ -868,11 +868,11 @@ namespace Scripts
                                                    // RelativeHealthLost[>=], HealthRemaining[<=],
                                                    // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
                        StartCondition2 = Ignore,
-                       EndCondition1 = DistanceToTarget,
+                       EndCondition1 = DistanceFromTarget,
                        EndCondition2 = Ignore,
                        EndCondition3 = Ignore,
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                       Start1Value = 0,
+                       Start1Value = 500,
                        Start2Value = 0,
                        End1Value = MissileConfig.Oniks_TerminalApproachDistance,
                        End2Value = 0,
@@ -901,7 +901,7 @@ namespace Scripts
                        AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                        AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
                        ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                       TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
+                       TrackingDistance = 1, // Minimum travel distance before projectile begins racing to heading
                        DesiredElevation = MissileConfig.Oniks_TerminalApproachAltitude, // The desired elevation relative to reference position
                        // Storage Values
                        StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
@@ -909,7 +909,7 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 150, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active
@@ -920,7 +920,7 @@ namespace Scripts
 
                        // Other
                        NoTimedSpawns = false, // When true timedSpawns will not be triggered while this approach is active.
-                       DisableAvoidance = false, // Disable futureIntersect.
+                       DisableAvoidance = true, // Disable futureIntersect.
                        IgnoreAntiSmart = false, // If set to true, antismart cannot change this approaches target.
                        HeatRefund = 0, // how much heat to refund when related EndEvent/StartEvent is met.
                        ReloadRefund = false, // Refund a reload (for max reload).
@@ -1298,7 +1298,7 @@ namespace Scripts
                 DesiredSpeed = 200, // voxel phasing if you go above 5100
                 MaxTrajectory = 200, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
-                GravityMultiplier = 10f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
+                GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 SpeedVariance = Random(start: 0, end: 80), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 60), // subtracts value from MaxTrajectory

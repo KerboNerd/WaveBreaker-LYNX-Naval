@@ -549,7 +549,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 400, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 50, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.Zircon_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.Zircon_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -563,8 +563,8 @@ namespace Scripts
                 {
                     SteeringLimit = 20, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 3f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0.1f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 0.1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    Aggressiveness = 1f, // controls how responsive tracking is, recommended value 3-5.
+                    MaxLateralThrust = 5f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                     TrackingDelay = 10, // Measured in Shape diameter units traveled.
                     AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
@@ -906,7 +906,7 @@ namespace Scripts
                     SteeringLimit = 0, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 8f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 10f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 10f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    MaxLateralThrust = 15f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
@@ -955,7 +955,7 @@ namespace Scripts
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                        Start1Value = 0,
                        Start2Value = 0,
-                       End1Value = 5000,
+                       End1Value = 4000,
                        End2Value = 0,
                        End3Value = 0,
                        // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -1101,7 +1101,7 @@ namespace Scripts
                        AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                        AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
                        ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-                       TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
+                       TrackingDistance = 2, // Minimum travel distance before projectile begins racing to heading
                        DesiredElevation = 50, // The desired elevation relative to reference position
                        // Storage Values
                        StoredStartId = 0, // Which approach id the the start storage was saved in, if any.

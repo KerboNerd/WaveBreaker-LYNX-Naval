@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>TTMK45Mod4</SubtypeId>
+			</Id>
+			<DisplayName>Mk-45 Mod 4</DisplayName>
+			<Description>
+			The latest Mk-45 Mod. 4 (5-inch/62-caliber) version consist of a longer barrel L62 Mark 36 gun fitted on the same Mark 45 mount.
+			The gun is designed for use against surface warships and shore bombardment to support amphibious operations.
+
+			Max engagement range: 5000m
+			Rate of Fire: 20
+			Reload Time: 8 Seconds
+			Ammo: mark45 127mm Shell
+			</Description>
+			<Icon>Textures\GUI\Icons\TTMK45Mod4.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\TTMK45Mod4.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="350" />
+				<Component Subtype="Construction" Count="100" />
+				<Component Subtype="SmallTube" Count="15" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="Motor" Count="35" />
+				<Component Subtype="Computer" Count="60" />
+				<Component Subtype="SteelPlate" Count="350" />
+			</Components>
+			<CriticalComponent Index="0" Subtype="Computer"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>TTMK45Mod4</BlockPairName>
+			<UseModelIntersection>true</UseModelIntersection>
+			<EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>75</BuildTimeSeconds>
+	  <OverlayTexture>Textures\turret_overlay.dds</OverlayTexture>
+	  <WeaponDefinitionId Subtype="Blank"/>
+      <InventoryMaxVolume>0.384</InventoryMaxVolume>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+	  <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+	  <MaxElevationDegrees>55</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.03</RotationSpeed>
+      <ElevationSpeed>0.03</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>4000</MaxRangeMeters>
+	  <AiEnabled>false</AiEnabled>
+	  <MinFov>0.1</MinFov>
+	  <MaxFov>1.24719755</MaxFov>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+	  <InventoryFillFactorMin>.384</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	  <IdlePower>.10</IdlePower>
+	  <UsePower>200</UsePower>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>225</PCU>
+						            <TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

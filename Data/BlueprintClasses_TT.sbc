@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+ <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <BlueprintClassEntries>
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK15Torpedo" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK13Torpedo" />
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK6DepthCharge" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMKVIDC" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK15Torpedo" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK13Torpedo" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK6DepthCharge" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMKVIDC" />
+
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/TTMK37Director" />
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK15" />
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK15Triple" />
+
+  <Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/TTMK6ChargeRack" />
+
+  <Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/TTPYLONMK13" />
+  <Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/TTPYLONMKVIIDCAIR" />
+  
+  
+	<Entry Class="EliteConsumables" BlueprintSubtypeId="TT35mm_ahead_round" />
+
+	<Entry Class="EliteConsumables" BlueprintSubtypeId="TT76mm_shell" />
+	<Entry Class="EliteConsumables" BlueprintSubtypeId="TT127mm_shell" />
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTVLS_RIM66_Missile" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTRGM_harpoon_Missile" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTVLS_Tomahawk_missile" />
+
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK44_Torpedo" />
+<!--  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK48_Torpedo" /> -->
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TT90R" />
+  
+	<Entry Class="Ammo" BlueprintSubtypeId="TT35mm_ahead_round" />
+
+	<Entry Class="Ammo" BlueprintSubtypeId="TT76mm_shell" />
+	<Entry Class="Ammo" BlueprintSubtypeId="TT127mm_shell" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTVLS_RIM66_Missile" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTRGM_harpoon_Missile" />
+  <Entry Class="Ammo" BlueprintSubtypeId="TTVLS_Tomahawk_missile" />
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TTMK44_Torpedo" />
+<!--  <Entry Class="Ammo" BlueprintSubtypeId="TTMK48_Torpedo" /> -->
+
+  <Entry Class="Ammo" BlueprintSubtypeId="TT90R" />
+
+   </BlueprintClassEntries>
+</Definitions>

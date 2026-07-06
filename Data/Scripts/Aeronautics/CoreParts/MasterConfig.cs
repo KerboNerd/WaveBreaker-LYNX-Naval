@@ -23,8 +23,6 @@ namespace Scripts
                 LXN_R73M_bay2,
                 LXN_R73M_bay3,
                 LXN_R73M_bay2mirror,
-                LXN_AGM84, 
-                LXN_AIM120,
                 LXN_AIM260, 
                 LXN_Meteor,
                 LXN_IRIST, 
@@ -42,7 +40,6 @@ namespace Scripts
                 LXN_KAB1500SE_bay1,
                 LXN_KAB500KR, 
                 LXN_FAB500,
-                LXN_YAB10,
                 LXN_RadarTower_01,
                 LXN_ByelkaSideRadar_01,
                 LXN_EOTS_01,
@@ -56,11 +53,6 @@ namespace Scripts
                 LXN_KH31PK,
                 LXN_ZirconVLS,
                 LXN_OniksVLS,
-                LXN_Futlyar_01,
-                LXN_FutlyarShip_01,
-                LXN_FutlyarShip_02,
-                LXN_RBU6000_01,
-                LXN_MAWS,
                 LXN_SniperPod_01,
                 LXN_b8m1,
                 LXN_GravestoneRadar_01,
@@ -78,6 +70,8 @@ namespace Scripts
                 LXN_AK220M_1,
                 LXN_SubVLS_1,
 
+                LXA_Awacs,
+
                 TTMK15,
                 TTMK15Triple,
                 TTMK15Sub,
@@ -85,7 +79,18 @@ namespace Scripts
                 TTMK37Director,
                 TTMK6ChargeRack,
                 TTMKXIDC,
-                
+
+                TTMILLENIUM,
+                TTOTO76,
+                TTMK45Mod4,
+                TTMK141,
+                TTRBU6000,
+                TTMK13,
+                TTMK26,
+                TTMK112,
+                TTSUBSONAR,
+                TTSHIPSONAR,
+
                 ZSP_Retractable_ATGM,
                 
                 ZSP_Flare_Dispenser,

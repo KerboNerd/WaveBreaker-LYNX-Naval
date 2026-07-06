@@ -1,0 +1,156 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+        <Id>
+          <TypeId>GuiBlockCategoryDefinition</TypeId>
+          <SubtypeId/>
+        </Id>
+        <DisplayName>Terran Titans</DisplayName>
+        <Name>TT_pos0_header</Name>
+        <ItemIds>
+          <string>ConveyorSorter/TTMILLENIUM</string>
+          <string>ConveyorSorter/TTOTO76</string>
+
+          <string>ConveyorSorter/TTMK45Mod4</string>
+          <string>ConveyorSorter/TTMK141</string>
+          <string>ConveyorSorter/TTRBU6000</string>
+          <string>ConveyorSorter/TTMK13</string>
+          <string>ConveyorSorter/TTMK26</string>
+        <string>ConveyorSorter/TTS1850MRadar</string>
+        <string>ConveyorSorter/TTDaringRadar</string>
+        <string>ConveyorSorter/TT5P-27RADAR</string>
+        <string>ConveyorSorter/LXA_AWACS_Dish_01</string>
+        <string>ConveyorSorter/LXN_MR800_Radar</string>
+		
+        </ItemIds>
+      </Category>
+
+
+	<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+        <DisplayName>   Radar / Sonar Systems</DisplayName>
+        <Name>TT_pos41_radar</Name>
+      <ItemIds>
+        <string>ConveyorSorter/TTS1850MRadar</string>
+        <string>ConveyorSorter/TTDaringRadar</string>
+        <string>ConveyorSorter/TT5P-27RADAR</string>
+        <string>ConveyorSorter/TTBASERADAR</string>
+        <string>ConveyorSorter/TTANSPY6PANELANGLED</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x1Slope</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x2Cube</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x2HalfCube</string>
+        <string>ConveyorSorter/TT5KP20PanelANGLED</string>
+        <string>ConveyorSorter/TT5KP20Panel2x1Slope</string>
+        <string>ConveyorSorter/TT5KP20Panel2x2Cube</string>
+        <string>ConveyorSorter/TT5KP20Panel2x2HalfCube</string>
+
+        <string>ConveyorSorter/TTANSPY6PANELANGLEDLA</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x1SlopeLA</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x2CubeLA</string>
+        <string>ConveyorSorter/TTANSPY6PANEL2x2HalfCubeLA</string>
+        <string>ConveyorSorter/TT5KP20PanelANGLEDLA</string>
+        <string>ConveyorSorter/TT5KP20Panel2x1SlopeLA</string>
+        <string>ConveyorSorter/TT5KP20Panel2x2CubeLA</string>
+        <string>ConveyorSorter/TT5KP20Panel2x2HalfCubeLA</string>
+
+
+        <string>ConveyorSorter/LXA_AWACS_Dish_01</string>
+        <string>ConveyorSorter/LXN_MR800_Radar</string>
+        
+              <string>ConveyorSorter/TTSUBSONAR</string>
+              <string>ConveyorSorter/TTSHIPSONAR</string>
+              <string>UpgradeModule/TT_CIC_Processor</string>
+              <string>UpgradeModule/TT_CIC_Processor_SG</string>
+      </ItemIds>
+    </Category>
+
+
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+              <TypeId>GuiBlockCategoryDefinition</TypeId>
+              <SubtypeId/>
+            </Id>
+        <DisplayName>   Small Grid</DisplayName>
+        <Name>TT_pos51_sg</Name>
+            <ItemIds>
+              <string>ConveyorSorter/TTPYLONAGM185C</string>
+              <string>ConveyorSorter/TTPYLONHARPOON</string>
+              <string>ConveyorSorter/TTS400SOLO</string>
+              <string>ConveyorSorter/TTS400QUAD</string>
+        <string>ConveyorSorter/TTMAWSsg</string>
+            </ItemIds>
+          </Category>
+
+
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+            <Id>
+              <TypeId>GuiBlockCategoryDefinition</TypeId>
+              <SubtypeId/>
+            </Id>
+        <DisplayName>   WIP</DisplayName>
+        <Name>TT_pos99_wip</Name>
+            <ItemIds>
+
+              <string>ConveyorSorter/TTRBU12000</string>
+
+
+
+
+
+              <string>ConveyorSorter/TTCLUBNRDR16</string>
+              <string>ConveyorSorter/TTCLUBNRDR32</string>
+
+
+              <string>ConveyorSorter/TTANSQL32</string>
+              <string>Cockpit/CommandControl</string>
+
+              <string>ConveyorSorter/TTMK8MOD1</string>
+
+
+
+
+              <string>UpgradeModule/TT_FireControl</string>
+              <string>UpgradeModule/TT_FireControl_Missile</string>
+              <string>UpgradeModule/TT_MissileDefence</string>
+            </ItemIds>
+          </Category>
+
+
+
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+  	  <Id>
+  		<TypeId>GuiBlockCategoryDefinition</TypeId>
+  		<SubtypeId/>
+  	  </Id>
+			<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+            <Name>ShipWeapons</Name>
+  		<SearchBlocks>false</SearchBlocks>
+            <SearchBlocks>false</SearchBlocks>
+            <IsShipCategory>true</IsShipCategory>
+            <IsBlockCategory>false</IsBlockCategory>
+            <IsToolCategory>true</IsToolCategory>
+  	  <ItemIds>
+
+          <string>ConveyorSorter/TTMILLENIUM</string>
+
+          <string>ConveyorSorter/TTMK45Mod4</string>
+
+          <string>ConveyorSorter/TTMK141</string>
+          <string>ConveyorSorter/TTMK13</string>
+          <string>ConveyorSorter/TTMK26</string>
+
+          <string>ConveyorSorter/TTRBU6000</string>
+
+  	</ItemIds>
+  	</Category>
+
+  </CategoryClasses>
+
+
+</Definitions>
