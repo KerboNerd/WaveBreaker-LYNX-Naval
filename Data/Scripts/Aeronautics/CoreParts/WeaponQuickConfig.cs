@@ -251,8 +251,8 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Harpoon_Health = 120; // Health of the Harpoon missile
     public static float Harpoon_BoostAltitude = 400f; // Meters    
-    public static float Harpoon_SkimmingAltitude = 100f; // Meters    
-    public static float Harpoon_TerminalApproachAltitude = 20f; // Meters 
+    public static float Harpoon_SkimmingAltitude = 75f; // Meters    
+    public static float Harpoon_TerminalApproachAltitude = 25f; // Meters 
     public static float Harpoon_MaxRange = 7000f; // Max Range of the Harpoon missile
     public static float Harpoon_MinRange = 1500f; // Min Range of the Harpoon missile
     public static float Harpoon_MaxSpeed = 1200f * SpeedLimiterFactor; // Max Speed of the Harpoon missile

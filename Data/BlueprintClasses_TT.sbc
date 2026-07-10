@@ -32,7 +32,6 @@
 	<Entry Class="EliteConsumables" BlueprintSubtypeId="TT127mm_shell" />
 
   <Entry Class="EliteConsumables" BlueprintSubtypeId="TTVLS_RIM66_Missile" />
-  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTRGM_harpoon_Missile" />
   <Entry Class="EliteConsumables" BlueprintSubtypeId="TTVLS_Tomahawk_missile" />
 
   <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK44_Torpedo" />
@@ -46,7 +45,6 @@
 	<Entry Class="Ammo" BlueprintSubtypeId="TT127mm_shell" />
 
   <Entry Class="Ammo" BlueprintSubtypeId="TTVLS_RIM66_Missile" />
-  <Entry Class="Ammo" BlueprintSubtypeId="TTRGM_harpoon_Missile" />
   <Entry Class="Ammo" BlueprintSubtypeId="TTVLS_Tomahawk_missile" />
 
   <Entry Class="Ammo" BlueprintSubtypeId="TTMK44_Torpedo" />

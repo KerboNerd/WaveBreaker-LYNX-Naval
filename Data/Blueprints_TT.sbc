@@ -143,23 +143,6 @@
 		</Blueprint>
 		
 		<Blueprint>
-          <Id>
-            <TypeId>BlueprintDefinition</TypeId>
-            <SubtypeId>TTRGM_harpoon_Missile</SubtypeId>
-          </Id>
-          <DisplayName>Harpoon Missile</DisplayName>
-          <Icon>Textures\GUI\Icons\Ammo\TTHarpoonB.dds</Icon>
-          <Prerequisites>
-            <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
-            <Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
-            <Item Amount="125" TypeId="Ingot" SubtypeId="Magnesium" />
-            <Item Amount="30" TypeId="Ingot" SubtypeId="Silicon" />
-          </Prerequisites>
-          <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="TTRGM_harpoon_Missile" />
-          <BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
-		</Blueprint>
-		
-		<Blueprint>
         <Id>
           <TypeId>BlueprintDefinition</TypeId>
           <SubtypeId>TTVLS_Tomahawk_missile</SubtypeId>

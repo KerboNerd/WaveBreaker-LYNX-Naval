@@ -162,26 +162,6 @@
      <Capacity>1</Capacity>
      <AmmoDefinitionId Subtype="Blank" />
     </AmmoMagazine>
-
-    <AmmoMagazine>
-      <Id>
-      <TypeId>AmmoMagazine</TypeId>
-      <SubtypeId>TTRGM_harpoon_Missile</SubtypeId>
-      </Id>
-      <DisplayName>RGM-84 Harpoon ASM</DisplayName>
-      <Icon>Textures\GUI\Icons\Ammo\TTHarpoonB.dds</Icon>
-      <Size>
-      <X>4.6</X>
-      <Y>0.17</Y>
-      <Z>0.17</Z>
-      </Size>
-      <Mass>691</Mass>
-      <Volume>1000</Volume>
-      <Model>Models\Ammo\TTHarpoonB.mwm</Model>
-      <PhysicalMaterial>Ammo</PhysicalMaterial>
-      <Capacity>1</Capacity>
-      <AmmoDefinitionId Subtype="Blank" />
-    </AmmoMagazine>
  
     <AmmoMagazine>
       <Id>
