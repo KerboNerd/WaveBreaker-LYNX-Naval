@@ -37,7 +37,7 @@
   <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK44_Torpedo" />
 <!--  <Entry Class="EliteConsumables" BlueprintSubtypeId="TTMK48_Torpedo" /> -->
 
-  <Entry Class="Ammo" BlueprintSubtypeId="TT90R" />
+  <Entry Class="EliteConsumables" BlueprintSubtypeId="TT90R" />
   
 	<Entry Class="Ammo" BlueprintSubtypeId="TT35mm_ahead_round" />
 
