@@ -75,11 +75,6 @@
         </Blueprint>
 	</Blueprints>
 
-    <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_RBU6000_CompBP" />
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_RBU6000_BP" />
-    </BlueprintClassEntries>
-
 	<Weapons>
 		<Weapon>
             <Id>

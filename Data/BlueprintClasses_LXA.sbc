@@ -54,8 +54,6 @@
         <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_Diesel_Recipe" />
         <Entry Class="GARG_OilHydrotreatment" BlueprintSubtypeId="LXN_GasOil_Recipe" />
 
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AGM84_BP" />
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_AIM120_BP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_Brimstone_BP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_FAB500_BP" />
         <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_IRIST_BP" />

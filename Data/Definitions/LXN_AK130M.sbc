@@ -142,9 +142,4 @@
             <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
-
-    <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_NAVAL130HE_BP" />
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_NAVAL130AAMag_BP" />
-    </BlueprintClassEntries>
 </Definitions>

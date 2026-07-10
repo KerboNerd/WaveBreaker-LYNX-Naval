@@ -76,7 +76,4 @@
         </Blueprint>
 	</Blueprints>
 
-    <BlueprintClassEntries>
-        <Entry Class="EliteConsumables" BlueprintSubtypeId="LXN_NAVAL220HE_BP" />
-    </BlueprintClassEntries>
 </Definitions>
