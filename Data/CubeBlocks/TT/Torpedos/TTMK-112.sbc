@@ -6,11 +6,11 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>TTMK112</SubtypeId>
 			</Id>
-			<DisplayName>RUR 5 Asroc</DisplayName>
+			<DisplayName>MK-112 Launcher Asroc</DisplayName>
 			<Description>
-			Max engagement range: 6000m (min 1000m)
+			Max engagement range: 7000m (With Harpoons)
 			Reload Time: 60 Seconds
-			Ammo: Mark 44 Torpedo
+			Ammo: Mark 44 Torpedo, AGM 84 Harpoon
 			**Requires a Sonar**	
 
 			The RUR-5 ASROC (for "Anti-Submarine Rocket") is an all-weather, 

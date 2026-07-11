@@ -6,11 +6,11 @@
 						<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>TTMK141</SubtypeId>
 			</Id>
-			<DisplayName>MK-141 RGM-84 Harpoon</DisplayName>
+			<DisplayName>MK-141 Harpoon Launcher</DisplayName>
 			<Description> 
-			Max engagement range: 8000
+			Max engagement range: 7000
 			Reload Time: 30 Seconds
-			Ammo: Harpoon Missile
+			Ammo: AGM-84 Harpoon
 
 			It was first used in 1977 and is still in use on warships today.
 			Used on. (almost) all ships using the harpoon missile.
