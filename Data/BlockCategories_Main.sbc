@@ -24,42 +24,23 @@
         <string>CubeBlock/LXN_CarrierRamp_02</string>
         <string>CubeBlock/LXN_CarrierRamp_03</string>
 
-
-
         <string>HydrogenEngine/LXN_KGS_TankEngine_01</string>
 
         <string>Reactor/LXN_NavalReactor_01</string> 
 
         <string>OxygenFarm/LXN_HydrogenGenerator_01</string>
-
-        <string>ConveyorSorter/LXN_CIWS30_01</string>
-		<string>ConveyorSorter/LXN_PALASHM_1</string>
-		<string>ConveyorSorter/LXN_STRELAM_1</string>
-		<string>ConveyorSorter/LXN_AK130M_1</string>
-		<string>ConveyorSorter/LXN_AK130M_2</string>
-		<string>ConveyorSorter/LXN_RBU6000</string>
-		
-        <string>CubeBlock/LXN_SmallBlockMantlet_01</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_02</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_03</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_04</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_05</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_06</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_07</string>
-        <string>CubeBlock/LXN_SmallBlockMantlet_08</string>
-		
-        <string>LargeMissileTurret/TTMK37Director</string>   	
-
-        <string>ConveyorSorter/TTMK6ChargeRack</string>
-
-        <string>ConveyorSorter/TTMK15</string>
-        <string>ConveyorSorter/TTMK15Triple</string>
-
-        <string>ConveyorSorter/TTMK15Square</string>
-        <string>ConveyorSorter/TTMK15Sloped</string>
-        <string>ConveyorSorter/TTMK15Sloped1x2</string>        
-
-        <string>ConveyorSorter/TTMK6ChargeRack</string>     		
+		  
+        <string>LargeMissileTurret/TTMK37Director</string>  
+        <string>ConveyorSorter/TTS1850MRadar</string>
+        <string>ConveyorSorter/TTDaringRadar</string>
+        <string>ConveyorSorter/TT5P-27RADAR</string>
+        <string>ConveyorSorter/LXN_MR800_Radar</string>
+        
+              <string>ConveyorSorter/TTSUBSONAR</string>
+              <string>ConveyorSorter/TTSHIPSONAR</string>
+              <string>UpgradeModule/TT_CIC_Processor</string>
+              <string>UpgradeModule/TT_CIC_Processor_SG</string>
+ 		
         
       </ItemIds>
     </Category>
@@ -195,12 +176,6 @@
         <string>CubeBlock/LXN_SGWindowCAP_Slope5</string>
         <string>CubeBlock/LXN_SGWindowCAP_Slope6</string>
 		
-		<string>ConveyorSorter/LXN_FlareLauncher_01</string>
-		<string>ConveyorSorter/LXN_FlareLauncher_02</string>
-		<string>ConveyorSorter/LXN_MigFlareLauncher_01</string>
-		
-		<string>LargeMissileTurret/Heli_Optics</string>
-		
 		<string>Thrust/Bomber_Engine</string>
 		<string>Conveyor/Engine_Connector</string>
 		
@@ -215,17 +190,7 @@
 		<string>ShipConnector/SU27_Aerial_Refueling_Probe_1x4</string>
 		<string>CubeBlock/Illuminator_Flat</string>
 		
-		<string>ConveyorSorter/25mm_Rotary_Cannon</string>
-		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth</string>		
-		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth_1x6</string>
-		<string>ConveyorSorter/30mm_Cannon</string>
-		
-		<string>LargeMissileTurret/25mm_Rotary_Cannon_Gimbal</string>
-		<string>ConveyorSorter/57mm_Cannon</string>
-		<string>CubeBlock/57mm_Cannon_Shroud</string>
-
-		<string>ConveyorSorter/ZSP_Flare_Dispenser</string>		
-		<string>LargeMissileTurret/30mm_Autocannon_Turret</string>
+        <string>ConveyorSorter/LXA_AWACS_Dish_01</string>
 		
       </ItemIds>
     </Category>
@@ -235,7 +200,7 @@
         <TypeId>GuiBlockCategoryDefinition</TypeId>
         <SubtypeId />
       </Id>
-      <DisplayName>   WB Missile SYS</DisplayName>
+      <DisplayName>   WB Combat SYS</DisplayName>
       <Name>WBLYNX_Mis</Name>
       <ItemIds>
 
@@ -317,10 +282,75 @@
         <string>ConveyorSorter/LXN_SideByelkaRadar_01</string>
         <string>ConveyorSorter/LXN_EOTS_01</string>		
         <string>ConveyorSorter/LXN_SniperPod_01</string>
+		
+		<string>ConveyorSorter/LXN_FlareLauncher_01</string>
+		<string>ConveyorSorter/LXN_FlareLauncher_02</string>
+		<string>ConveyorSorter/LXN_MigFlareLauncher_01</string>
+		
+        <string>ConveyorSorter/LXN_CIWS30_01</string>
+		<string>ConveyorSorter/LXN_PALASHM_1</string>
+		<string>ConveyorSorter/LXN_STRELAM_1</string>
+		<string>ConveyorSorter/LXN_AK130M_1</string>
+		<string>ConveyorSorter/LXN_AK130M_2</string>
+		<string>ConveyorSorter/LXN_RBU6000</string>
+		
+        <string>ConveyorSorter/LXN_RadarTower_1</string>
+        <string>ConveyorSorter/LXA_AWACS_Dish_01</string>
+		
+		<string>LargeMissileTurret/Heli_Optics</string>
+		
+		<string>ConveyorSorter/ZSP_Flare_Dispenser</string>		
+		<string>LargeMissileTurret/30mm_Autocannon_Turret</string>
+		
+		<string>ConveyorSorter/25mm_Rotary_Cannon</string>
+		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth</string>		
+		<string>ConveyorSorter/25mm_Rotary_Cannon_Stealth_1x6</string>
+		<string>ConveyorSorter/30mm_Cannon</string>
+		
+		<string>LargeMissileTurret/25mm_Rotary_Cannon_Gimbal</string>
+		<string>ConveyorSorter/57mm_Cannon</string>
+		<string>CubeBlock/57mm_Cannon_Shroud</string>	
+		
+		<string>ConveyorSorter/ZSP_Helicopter_Radar</string>
         
         <string>ConveyorSorter/TTPYLONMK13</string>
         <string>ConveyorSorter/TTPYLONMKVIIDCAIR</string>
+		
+        <string>LargeMissileTurret/TTMK37Director</string>   	
 
+        <string>ConveyorSorter/TTMK6ChargeRack</string>
+
+        <string>ConveyorSorter/TTMK15</string>
+        <string>ConveyorSorter/TTMK15Triple</string>
+
+        <string>ConveyorSorter/TTMK15Square</string>
+        <string>ConveyorSorter/TTMK15Sloped</string>
+        <string>ConveyorSorter/TTMK15Sloped1x2</string>        
+
+        <string>ConveyorSorter/TTMK6ChargeRack</string>   
+
+        <string>ConveyorSorter/TTMILLENIUM</string>
+        <string>ConveyorSorter/TTOTO76</string>
+
+        <string>ConveyorSorter/TTMK45Mod4</string>
+        <string>ConveyorSorter/TTMK141</string>
+        <string>ConveyorSorter/TTRBU6000</string>
+        <string>ConveyorSorter/TTMK13</string>
+        <string>ConveyorSorter/TTMK26</string>
+		  
+        <string>LargeMissileTurret/TTMK37Director</string>  
+        <string>ConveyorSorter/TTS1850MRadar</string>
+        <string>ConveyorSorter/TTDaringRadar</string>
+        <string>ConveyorSorter/TT5P-27RADAR</string>
+        <string>ConveyorSorter/LXN_MR800_Radar</string>
+        
+              <string>ConveyorSorter/TTSUBSONAR</string>
+              <string>ConveyorSorter/TTSHIPSONAR</string>
+              <string>UpgradeModule/TT_CIC_Processor</string>
+              <string>UpgradeModule/TT_CIC_Processor_SG</string>
+              <string>UpgradeModule/TT_FireControl</string>
+              <string>UpgradeModule/TT_FireControl_Missile</string>
+              <string>UpgradeModule/TT_MissileDefence</string>
       </ItemIds>
     </Category>
 
