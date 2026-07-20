@@ -89,15 +89,15 @@ namespace Scripts
                 // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
                 Grids = new GridSizeDef
                 {
-                    Large = 1.5f, // Multiplier for damage against large grids.
-                    Small = 1f, // Multiplier for damage against small grids.
+                    Large = 1f, // Multiplier for damage against large grids.
+                    Small = 0.5f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = -1f, // Multiplier for damage against light armor.
-                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
-                    NonArmor = -1f, // Multiplier for damage against every else.
+                    Heavy = 1f, // Multiplier for damage against heavy armor.
+                    NonArmor = 0.7f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
                 {
@@ -151,9 +151,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 15f, // Radius of AOE effect, in meters.
-                    Damage = 10000f,
-                    Depth = 10f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 12.5f, // Radius of AOE effect, in meters.
+                    Damage = 7500f,
+                    Depth = 7.5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius

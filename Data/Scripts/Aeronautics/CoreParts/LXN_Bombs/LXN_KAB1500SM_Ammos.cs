@@ -574,15 +574,15 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = 1.5f, // Multiplier for damage against large grids.
-                    Small = 1f, // Multiplier for damage against small grids.
+                    Large = 1f, // Multiplier for damage against large grids.
+                    Small = 0.5f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = 1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = 1f, // Multiplier for damage against light armor.
                     Heavy = 1f, // Multiplier for damage against heavy armor.
-                    NonArmor = 1f, // Multiplier for damage against every else.
+                    NonArmor = 0.7f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
                 {
@@ -642,10 +642,10 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 30f, // Radius of AOE effect, in meters.
-                    Damage = 25000,
-                    Depth = 15f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Damage = 15000,
+                    Depth = 10f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -659,7 +659,7 @@ namespace Scripts
                     ParticleScale = 1,
                     CustomParticle = "LXN_BombExplosion_01", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "ArcLXN_Missile_Explosion_01", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
+                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
             Ewar = new EwarDef
