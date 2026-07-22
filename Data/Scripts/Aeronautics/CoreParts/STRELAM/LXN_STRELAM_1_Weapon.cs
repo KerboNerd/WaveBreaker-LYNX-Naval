@@ -95,7 +95,7 @@ namespace Scripts
                 AimingTolerance = 15f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Basic, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
-                AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
+                AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
 
                 Ui = new UiDef
@@ -121,8 +121,8 @@ namespace Scripts
                     ElevateRate = 0.02f, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
-                    MinElevation = -0,
-                    MaxElevation = 30,
+                    MinElevation = -5,
+                    MaxElevation = 70,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 30, // Default resting elevation
                     InventorySize = MissileConfig.STRELA_Inventory, // Inventory capacity in kL.
