@@ -71,10 +71,11 @@
                 <Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
                 <Item Amount="200" TypeId="Ingot" SubtypeId="Cobalt" />
                 <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum" />
-                <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
+                <Item Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_77N6_PrometheusMag" />
-            <BaseProductionTimeInSeconds>450</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>3600</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

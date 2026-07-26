@@ -42,7 +42,7 @@
                 <Z>0.2</Z>
             </Size>
             <Mass>9800</Mass>
-            <Volume>3950</Volume>
+            <Volume>3900</Volume>
             <Model>Models\Small\LXN_MOAB_missile.mwm</Model>
             <PhysicalMaterial>Ammo</PhysicalMaterial>
             <Capacity>1</Capacity>
@@ -68,10 +68,11 @@
                 <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel" />
                 <Item Amount="300" TypeId="Ingot" SubtypeId="Magnesium" />
                 <Item Amount="100" TypeId="Ingot" SubtypeId="Cobalt" />
-                <Item Amount="50" TypeId="Ingot" SubtypeId="Uranium" />
+				<Item Amount="50" TypeId="Ingot" SubtypeId="Uranium" />
+                <Item Amount="5" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_MOABMag1" />
-            <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>9000</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

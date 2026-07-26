@@ -14,7 +14,7 @@
             <Item Amount="10" TypeId="Ingot" SubtypeId="Uranium" />
         </Prerequisites>
         <Result Amount="1" TypeId="Component" SubtypeId="LXN_EnrichedUranium_01" />
-        <BaseProductionTimeInSeconds>10000</BaseProductionTimeInSeconds>
+        <BaseProductionTimeInSeconds>9000</BaseProductionTimeInSeconds>
     </Blueprint>
 
 

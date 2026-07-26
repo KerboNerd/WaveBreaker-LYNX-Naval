@@ -134,7 +134,7 @@ namespace Scripts
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 270, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 2, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 45, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 3, // Heat generated per shot.
                     MaxHeat = 2750, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .70f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95

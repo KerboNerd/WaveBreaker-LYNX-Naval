@@ -72,7 +72,7 @@
                 <Item Amount="120" TypeId="Ingot" SubtypeId="Cobalt" />
             </Prerequisites>
             <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LXN_RIM174_SM6Mag" />
-            <BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+            <BaseProductionTimeInSeconds>800</BaseProductionTimeInSeconds>
         </Blueprint>
 	</Blueprints>
 

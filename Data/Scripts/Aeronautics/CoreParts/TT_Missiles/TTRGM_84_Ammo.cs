@@ -525,7 +525,7 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = 1f, // Multiplier for damage against large grids.
-                    Small = -1f, // Multiplier for damage against small grids.
+                    Small = 0.4f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
@@ -585,11 +585,11 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5f, // Meters
+                    Radius = 8f, // Meters
                     Damage = 7500f,
-                    Depth = 3f, // Meters
+                    Depth = 5f, // Meters
                     MaxAbsorb = 0f,
-                    Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
+                    Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
                     //.Curve drops off damage sharply as it approaches the max radius
                     //.InvCurve drops off sharply from the middle and tapers to max radius
@@ -1160,13 +1160,13 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = 1f, // Multiplier for damage against large grids.
-                    Small = -1f, // Multiplier for damage against small grids.
+                    Small = 0.3f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = 1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = 1f, // Multiplier for damage against light armor.
-                    Heavy = 1f, // Multiplier for damage against heavy armor.
+                    Heavy = 1.3f, // Multiplier for damage against heavy armor.
                     NonArmor = 0.5f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
