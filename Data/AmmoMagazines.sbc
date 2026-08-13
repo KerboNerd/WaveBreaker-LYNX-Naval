@@ -115,8 +115,8 @@
       <Y>0.1</Y>
       <Z>0.1</Z>
       </Size>
-      <Mass>30</Mass>
-      <Volume>5</Volume>
+      <Mass>50</Mass>
+      <Volume>40</Volume>
       <Model>Models\Ammo\Autocannon_76mm.mwm</Model>
       <PhysicalMaterial>Ammo</PhysicalMaterial>
       <Capacity>1</Capacity>
@@ -135,8 +135,8 @@
       <Y>0.12</Y>
       <Z>0.12</Z>
       </Size>
-      <Mass>30</Mass>
-      <Volume>5</Volume>
+      <Mass>80</Mass>
+      <Volume>70</Volume>
       <Model>Models\Ammo\Autocannon_127mm.mwm</Model>
       <PhysicalMaterial>Ammo</PhysicalMaterial>
       <Capacity>1</Capacity>
