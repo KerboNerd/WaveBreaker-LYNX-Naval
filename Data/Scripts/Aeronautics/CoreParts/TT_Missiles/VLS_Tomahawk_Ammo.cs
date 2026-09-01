@@ -478,7 +478,7 @@ namespace Scripts
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                        Start1Value = 0,
                        Start2Value = 0,
-                       End1Value = 4000,
+                       End1Value = 1500,
                        End2Value = 0,
                        End3Value = 0,
                        // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -508,7 +508,7 @@ namespace Scripts
                        // Tweaks to vantagepoint behavior
                        AngleOffset = 0f, // value 0 - 1, rotates the Updir and ForwardDir
                        AngleVariance = Random(0, 0f), // added to AngleOffset above, values of 0,0 disables feature
-                       ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
+                       ElevationTolerance = 2, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
                        TrackingDistance = 5, // Minimum travel distance before projectile begins racing to heading
                        DesiredElevation = MissileConfig.Tomahawk_SkimmingAltitude, // The desired elevation relative to reference position
                        // Storage Values
@@ -517,7 +517,7 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 150, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active
@@ -593,7 +593,7 @@ namespace Scripts
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
                        Start1Value = 0,
                        Start2Value = 0,
-                       End1Value = 200,
+                       End1Value = 250,
                        End2Value = 0,
                        End3Value = 0,
                        // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
@@ -623,7 +623,7 @@ namespace Scripts
                        // Tweaks to vantagepoint behavior
                        AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
                        AngleVariance = Random(0, 0), // added to AngleOffset above, values of 0,0 disables feature
-                       ElevationTolerance = 5, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
+                       ElevationTolerance = 2, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
                        TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
                        DesiredElevation = MissileConfig.Tomahawk_TerminalApproachAltitude, // The desired elevation relative to reference position
                        // Storage Values
@@ -632,7 +632,7 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 150, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active

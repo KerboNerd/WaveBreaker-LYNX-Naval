@@ -54,7 +54,7 @@ namespace Scripts {
                 CycleTargets = 0, // Number of targets to "cycle" per acquire attempt.
                 TopBlocks = 3, // Maximum number of blocks to randomize between; 0 = unlimited.
                 CycleBlocks = 2, // Number of blocks to "cycle" per acquire attempt.
-                StopTrackingSpeed = 70, // Do not track threats traveling faster than this speed; 0 = unlimited.
+                StopTrackingSpeed = 100, // Do not track threats traveling faster than this speed; 0 = unlimited.
                 UniqueTargetPerWeapon = false, // only applies to multi-weapon blocks 
                 MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one
                 ShootBlanks = false, // Do not generate projectiles when shooting
@@ -83,11 +83,11 @@ namespace Scripts {
                 },
                 Ai = new AiDef
                 {
-                    TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+                    TrackTargets = true, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = false, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
-                    LockOnFocus = false, // If enabled, weapon will only fire at targets that have been HUD selected.
+                    LockOnFocus = true, // If enabled, weapon will only fire at targets that have been HUD selected.
                     SuppressFire = false, // If enabled, weapon can only be fired manually.
                     OverrideLeads = true, // Disable target leading on fixed weapons, or allow it for turrets.
                     DefaultLeadGroup = 0, // Default LeadGroup setting, range 0-5, 0 is disables lead group.  Only useful for fixed weapons or weapons set to OverrideLeads.
@@ -138,7 +138,7 @@ namespace Scripts {
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = MissileConfig.SubVLS_ReloadTime, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 300, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 240, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.
                     MaxHeat = 70000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .95f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95

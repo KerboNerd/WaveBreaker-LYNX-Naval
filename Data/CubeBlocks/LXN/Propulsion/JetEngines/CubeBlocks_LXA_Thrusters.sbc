@@ -383,7 +383,7 @@
 				<Description>Turbo-Fan thruster that requires oxygen input
 					Use with Intakes set to depressurize
 					Oxygen input: 3000L/s
-				Max thrust 30t Dry and 50t Wet </Description>
+				Max thrust 40t Dry and 60t Wet </Description>
 				<Icon>Textures\Icons\LXN_NK32_01_Thruster.dds</Icon>
 				<CubeSize>Small</CubeSize>
 				<BlockTopology>TriangleMesh</BlockTopology>

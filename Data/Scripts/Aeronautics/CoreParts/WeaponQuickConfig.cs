@@ -212,7 +212,7 @@ public static class MissileConfig
     public static float Zircon_Inventory = 3.460f * InventoryMultiplier; // Inventory capacity in kL.
     public static float Zircon_Mass = 3000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Oniks_Health = 130; // Health of the Oniks missile
+    public static float Oniks_Health = 140; // Health of the Oniks missile
     public static int Oniks_BoosterTime = 8; // Seconds
     public static float Oniks_BoosterAccel = 35; // Meters Per Second
     public static float Oniks_SkimmingAltitude = 30f; // Meters
@@ -229,7 +229,7 @@ public static class MissileConfig
     public static float Kalibr_BoosterAccel = 45; // Meters Per Second
     public static float Kalibr_SkimmingAltitude = 50f; // Meters
     public static float Kalibr_TerminalApproachAltitude = 8f; // Meters
-    public static float Kalibr_TerminalApproachDistance = 100f; // Meters
+    public static float Kalibr_TerminalApproachDistance = 400f; // Meters
     public static float Kalibr_MaxRange = 10000f; // Max Range of the Kalibr missile
     public static float Kalibr_MinRange = 3000f; // Min Range of the Kalibr missile
     public static float Kalibr_MaxSpeed = 900f * SpeedLimiterFactor; // Max Speed of the Kalibr missile
@@ -240,7 +240,7 @@ public static class MissileConfig
     public static float Moskit_BoosterAccel = 128; // Meters Per Second
     public static float Moskit_SkimmingAltitude = 30f; // Meters
     public static float Moskit_TerminalApproachAltitude = 10f; // Meters
-    public static float Moskit_TerminalApproachDistance = 100f; // Meters
+    public static float Moskit_TerminalApproachDistance = 300f; // Meters
     public static int Moskit_ROF = 5; // Rate of Fire of the Millenium gun
     public static int Moskit_ReloadTime = 20 * 60; // Reload time in ticks multiplied to Seconds
     public static float Moskit_MaxRange = 8000f; // Max Range of the Moskit missile
@@ -249,8 +249,8 @@ public static class MissileConfig
     public static float Moskit_Inventory = 3.720f * InventoryMultiplier; // Inventory capacity in kL.
     public static float Moskit_Mass = 4000f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float Harpoon_Health = 120; // Health of the Harpoon missile
-    public static float Harpoon_BoostAltitude = 400f; // Meters    
+    public static float Harpoon_Health = 90; // Health of the Harpoon missile
+    public static float Harpoon_BoostAltitude = 300f; // Meters    
     public static float Harpoon_SkimmingAltitude = 75f; // Meters    
     public static float Harpoon_TerminalApproachAltitude = 25f; // Meters 
     public static float Harpoon_MaxRange = 7000f; // Max Range of the Harpoon missile
@@ -260,7 +260,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Tomahawk_Health = 170; // Health of the Tomahawk missile
     public static float Tomahawk_BoostAltitude = 100f; // Meters    
-    public static float Tomahawk_SkimmingAltitude = 60f; // Meters    
+    public static float Tomahawk_SkimmingAltitude = 50f; // Meters    
     public static float Tomahawk_TerminalApproachAltitude = 10f; // Meters    
     public static float Tomahawk_MaxRange = 10000f; // Max Range of the Tomahawk missile
     public static float Tomahawk_MinRange = 3000f; // Min Range of the Tomahawk missile
@@ -276,15 +276,15 @@ public static class MissileConfig
     public static float VLS3S14_MinRange = 1000f; // Min Range of the 3S14 VLS
     public static float VLS3S14_Inventory = 20.000f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static int SubVLS_ROF = 5; // Rate of Fire of the Millenium gun
-    public static int SubVLS_ReloadTime = 12 * 60; // Reload time in ticks multiplied to Seconds
+    public static int SubVLS_ROF = 30; // Rate of Fire of the Millenium gun
+    public static int SubVLS_ReloadTime = 15 * 60; // Reload time in ticks multiplied to Seconds
     public static float SubVLS_MaxRange = 8000f; // Max Range of the SubVLS
     public static float SubVLS_MinRange = 500f; // Min Range of the SubVLS
-    public static float SubVLS_Inventory = 20.000f * InventoryMultiplier; // Inventory capacity in kL.
+    public static float SubVLS_Inventory = 2.500f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // MK-141 Harpoon
-    public static int MK141_ROF = 30; // Rate of Fire of the Millenium gun
-    public static int MK141_ReloadTime = 30 * 60; // Reload time in ticks multiplied to Seconds
+    public static int MK141_ROF = 20; // Rate of Fire of the Millenium gun
+    public static int MK141_ReloadTime = 40 * 60; // Reload time in ticks multiplied to Seconds
     public static float MK141_MaxRange = 7000f; // Max Range of the SubVLS
     public static float MK141_MinRange = 500f; // Min Range of the SubVLS
     public static float MK141_Inventory = 4f * InventoryMultiplier; // Inventory capacity in kL.

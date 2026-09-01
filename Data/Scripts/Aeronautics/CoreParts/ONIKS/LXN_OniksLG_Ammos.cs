@@ -138,7 +138,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 30, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 100, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 50f, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.Oniks_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.Oniks_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -151,10 +151,10 @@ namespace Scripts
                 TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 0, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
-                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 0f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 130, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    Inaccuracy = 3f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
+                    MaxLateralThrust = 5f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                     TrackingDelay = 20, // Measured in Shape diameter units traveled.
                     AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
@@ -496,7 +496,7 @@ namespace Scripts
                     MaxChaseTime = 3600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                     CheckFutureIntersection = true, // Utilize obstacle avoidance for drones/smarts
-                    FutureIntersectionRange = 300, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
+                    FutureIntersectionRange = 500, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
                     MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
@@ -750,7 +750,7 @@ namespace Scripts
                         ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.
 
                         // Start/End conditions
-                        StartCondition1 = RelativeLifetime, // Each condition type is either >= or <= the corresponding value defined below.
+                        StartCondition1 = Spawn, // Each condition type is either >= or <= the corresponding value defined below.
                                                     // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
                                                     // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
                                                     // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
@@ -762,7 +762,7 @@ namespace Scripts
                         EndCondition2 = Ignore,
                         EndCondition3 = Ignore,
                         // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                        Start1Value = MissileConfig.Oniks_BoosterTime * 60,
+                        Start1Value = 0,
                         Start2Value = 0,
                         End1Value = 1000, // Begin terminal approach when within range of target
                         End2Value = 0,
@@ -860,7 +860,7 @@ namespace Scripts
                        ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.
 
                        // Start/End conditions
-                       StartCondition1 = DistanceFromTarget, // Each condition type is either >= or <= the corresponding value defined below.
+                       StartCondition1 = Spawn, // Each condition type is either >= or <= the corresponding value defined below.
                                                    // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
                                                    // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
                                                    // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
@@ -872,7 +872,7 @@ namespace Scripts
                        EndCondition2 = Ignore,
                        EndCondition3 = Ignore,
                        // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-                       Start1Value = 1000,
+                       Start1Value = 0,
                        Start2Value = 0,
                        End1Value = MissileConfig.Oniks_TerminalApproachDistance,
                        End2Value = 0,
@@ -909,7 +909,7 @@ namespace Scripts
                        StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
                        StoredEndType = Target,
                        // Controls the leading behavior
-                       LeadDistance = 50, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
+                       LeadDistance = 150, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
                        PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
 
                        // Modify speed and acceleration ratios while this approach is active
@@ -920,7 +920,7 @@ namespace Scripts
 
                        // Other
                        NoTimedSpawns = false, // When true timedSpawns will not be triggered while this approach is active.
-                       DisableAvoidance = true, // Disable futureIntersect.
+                       DisableAvoidance = false, // Disable futureIntersect.
                        IgnoreAntiSmart = false, // If set to true, antismart cannot change this approaches target.
                        HeatRefund = 0, // how much heat to refund when related EndEvent/StartEvent is met.
                        ReloadRefund = false, // Refund a reload (for max reload).
@@ -958,41 +958,41 @@ namespace Scripts
                    },
 
                     // TERMINAL ATTACK
-                    new ApproachDef
-                    {
-                        StartCondition1 = RelativeLifetime,
-                        Start1Value = 1,
-                        EndCondition1 = Ignore,
-                        PositionC = Target,
-                        AdjustPositionC = true,
-                        AccelMulti = 1f,
-                        TargetAvoidance = false,
+                    // new ApproachDef
+                    // {
+                    //     StartCondition1 = RelativeLifetime,
+                    //     Start1Value = 1,
+                    //     EndCondition1 = Ignore,
+                    //     PositionC = Target,
+                    //     AdjustPositionC = true,
+                    //     AccelMulti = 1f,
+                    //     TargetAvoidance = false,
 
-                       // Audio/Visual Section
-                       AlternateParticle = new ParticleDef // if blank it will use default, must be a default version for this to be useable.
-                       {
-                           Name = "LXN_SmokeTrail_01",
-                           Offset = Vector(x: 0, y: 0, z: 3f),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
-                           Extras = new ParticleOptionDef
-                           {
-                               Scale = 0.5f,
-                           },
-                       },
-                       StartParticle = new ParticleDef // Optional particle to play when this stage begins
-                       {
-                           Name = "",
-                           Offset = Vector(x: 0, y: 0, z: 0),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
-                           Extras = new ParticleOptionDef
-                           {
-                               Scale = 1,
-                           },
-                       },
-                       AlternateModel = "\\Models\\Weapons\\Missiles\\LXN_OniksMissileLG_stage3.mwm", // Define only if you want to switch to an alternate model in this phase
-                       AlternateSound = "", // if blank it will use default, must be a default version for this to be useable.
-                       ModelRotateTime = 0, // If this value is greater than 0 then the projectile model will rotate to face the target, a value of 1 is instant (in ticks).
-                    },
+                    //    // Audio/Visual Section
+                    //    AlternateParticle = new ParticleDef // if blank it will use default, must be a default version for this to be useable.
+                    //    {
+                    //        Name = "LXN_SmokeTrail_01",
+                    //        Offset = Vector(x: 0, y: 0, z: 3f),
+                    //        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                    //        Extras = new ParticleOptionDef
+                    //        {
+                    //            Scale = 0.5f,
+                    //        },
+                    //    },
+                    //    StartParticle = new ParticleDef // Optional particle to play when this stage begins
+                    //    {
+                    //        Name = "",
+                    //        Offset = Vector(x: 0, y: 0, z: 0),
+                    //        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                    //        Extras = new ParticleOptionDef
+                    //        {
+                    //            Scale = 1,
+                    //        },
+                    //    },
+                    //    AlternateModel = "\\Models\\Weapons\\Missiles\\LXN_OniksMissileLG_stage3.mwm", // Define only if you want to switch to an alternate model in this phase
+                    //    AlternateSound = "", // if blank it will use default, must be a default version for this to be useable.
+                    //    ModelRotateTime = 0, // If this value is greater than 0 then the projectile model will rotate to face the target, a value of 1 is instant (in ticks).
+                    // },
 
                 },
             },
