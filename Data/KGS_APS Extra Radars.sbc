@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>KGS_APSRadar_1_Offset_3</SubtypeId>
+			</Id>
+			<DisplayName>APS Radar Offset Down Far</DisplayName>
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="-0.375" z="0"/>
+			<Model>Models\KONTAKT\Radar\KGS_APSRadar_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />	
+				<Component Subtype="Detector" Count="5" />				
+				<Component Subtype="RadioCommunication" Count="5" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="2"/>		
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>KGS_APSRadar_1_Offset_3</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<BuildTimeSeconds>4</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>      
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+            <IsAirTight>false</IsAirTight>
+		
+			<!-- <BlockVariants>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1</SubtypeId>
+				</BlockVariant>				
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1_Offset</SubtypeId>
+				</BlockVariant>	
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1_Offset_2</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1_Offset_3</SubtypeId>
+				</BlockVariant>	
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1_Offset_4</SubtypeId>
+				</BlockVariant>	
+				<BlockVariant>
+					<TypeId>ConveyorSorter</TypeId>
+					<SubtypeId>KGS_APSRadar_1_Offset_5</SubtypeId>
+				</BlockVariant>	
+			</BlockVariants> -->
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>KGS_APSRadar_1_Offset_4</SubtypeId>
+			</Id>
+			<DisplayName>APS Radar Offset Back Far</DisplayName>
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0.5"/>
+			<Model>Models\KONTAKT\Radar\KGS_APSRadar_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />	
+				<Component Subtype="Detector" Count="5" />				
+				<Component Subtype="RadioCommunication" Count="5" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="2"/>		
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>KGS_APSRadar_1_Offset_5</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<BuildTimeSeconds>4</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>      
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+            <IsAirTight>false</IsAirTight>			
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>KGS_APSRadar_1_Offset_5</SubtypeId>
+			</Id>
+			<DisplayName>APS Radar Offset Back And Down</DisplayName>
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="-0.125" z="0.5"/>
+			<Model>Models\KONTAKT\Radar\KGS_APSRadar_1.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />	
+				<Component Subtype="Detector" Count="5" />				
+				<Component Subtype="RadioCommunication" Count="5" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="2"/>		
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<BlockPairName>KGS_APSRadar_1_Offset_4</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<BuildTimeSeconds>4</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<ResourceSinkGroup>Defense</ResourceSinkGroup>
+			<InventoryMaxVolume>0</InventoryMaxVolume>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>25</PCU>      
+			<TargetingGroups>
+				<string>Weapons</string>
+			</TargetingGroups>
+            <IsAirTight>false</IsAirTight>			
+		</Definition>
+				
+	</CubeBlocks>
+</Definitions>

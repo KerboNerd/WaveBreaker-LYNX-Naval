@@ -122,7 +122,7 @@ namespace Scripts {
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 0f, // Inventory capacity in kL.
-                    IdlePower = 0.3f, // Constant base power draw in MW.
+                    IdlePower = 0.5f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -137,7 +137,7 @@ namespace Scripts {
                 },
                 Other = new OtherDef
                 {
-                    ConstructPartCap = 0, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
+                    ConstructPartCap = 1, // Maximum number of blocks with this weapon on a grid; 0 = unlimited.
                     RotateBarrelAxis = 0, // For spinning barrels, which axis to spin the barrel around; 0 = none.
                     EnergyPriority = 0, // Deprecated.
                     MuzzleCheck = false,

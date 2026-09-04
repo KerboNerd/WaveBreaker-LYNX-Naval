@@ -19,9 +19,9 @@ namespace Scripts {
                     new MountPointDef {
                         SubtypeId = "LXA_AWACS_Dish_01",
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
-                        MuzzlePartId = "eletrack", // The subpart where your muzzle empties are located.
+                        MuzzlePartId = "dish", // The subpart where your muzzle empties are located.
                         AzimuthPartId = "azitrack",
-                        ElevationPartId = "eletrack",
+                        ElevationPartId = "dish",
                         DurabilityMod = 1f,
                         IconName = "TestIcon.dds"
                     },
@@ -45,7 +45,7 @@ namespace Scripts {
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum radius of threat to engage.
                 MaximumDiameter = 0, // Maximum radius of threat to engage; 0 = unlimited.
-                MaxTargetDistance = 0, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
+                MaxTargetDistance = 20000, // Maximum distance at which targets will be automatically shot at; 0 = unlimited.
                 MinTargetDistance = 0, // Minimum distance at which targets will be automatically shot at.
                 TopTargets = 8, // Maximum number of targets to randomize between; 0 = unlimited.
                 TopBlocks = 1, // Maximum number of blocks to randomize between; 0 = unlimited.
@@ -70,7 +70,7 @@ namespace Scripts {
                 },
                 Ai = new AiDef
                 {
-                    TrackTargets = false, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
+                    TrackTargets = true, // Whether this weapon tracks its own targets, or (for multiweapons) relies on the weapon with PrimaryTracking enabled for target designation. Turrets Need this set to True.
                     TurretAttached = false, // Whether this weapon is a turret and should have the UI and API options for such. Turrets Need this set to True.
                     TurretController = false, // Whether this weapon can physically control the turret's movement. Turrets Need this set to True.
                     PrimaryTracking = true, // For multiweapons: whether this weapon should designate targets for other weapons on the platform without their own tracking.
@@ -89,7 +89,7 @@ namespace Scripts {
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 0f, // Inventory capacity in kL.
-                    IdlePower = 0.025f, // Constant base power draw in MW.
+                    IdlePower = 1.0f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom
