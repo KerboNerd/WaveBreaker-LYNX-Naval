@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Blueprints>
+  
+	<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>KGS_T4_APDS_AMMOBP</SubtypeId>
+      </Id>
+      <DisplayName>Type-4 APDS Shell</DisplayName>
+      <Icon>Textures\GUI\Icons\KONTAKT\Ammo\KGS_Type_4_APDS.dds</Icon>
+      <Prerequisites>
+        <Item Amount="35" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="3" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="3" TypeId="Ingot" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="KGS_Type_4_APDS_Magazine" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
   	
     <Blueprint>
       <Id>

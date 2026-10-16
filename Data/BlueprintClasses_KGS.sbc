@@ -3,6 +3,9 @@
    <BlueprintClassEntries> 
 		<!--AMMUNITION-->	
 		
+	<Entry Class="Ammo" BlueprintSubtypeId="KGS_T4_APDS_AMMOBP" />
+	
+	<Entry Class="EliteConsumables" BlueprintSubtypeId="KGS_T4_APDS_AMMOBP" />	
 		
     <Entry Class="Ammo" BlueprintSubtypeId="KGS_T6_HESH_AMMOBP" />
 	
