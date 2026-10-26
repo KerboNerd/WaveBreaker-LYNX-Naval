@@ -815,7 +815,7 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
+                AmmoRound = "RIM174 Cruise", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
                 Fragments = 30, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
@@ -928,7 +928,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 90f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things. Set to 3600 (60 seconds) for cruise stage.
+                MaxLifeTime = MissileConfig.RIM174_SM6_BoosterTime * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things. Set to 3600 (60 seconds) for cruise stage.
                 AccelPerSec = MissileConfig.RIM174_SM6_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.RIM174_SM6_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.RIM174_SM6_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -1249,7 +1249,7 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "RIM174_SM6 Fragmentation", // AmmoRound field of the ammo to spawn.
+                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field of the ammo to spawn.
                 Fragments = 50, // Number of projectiles to spawn.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
@@ -1382,12 +1382,12 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                DesiredSpeed = 0, // Set to 0 to prevent speed matching - inherits booster velocity and slows via drag
+                DesiredSpeed = MissileConfig.RIM174_SM6_MaxSpeed, // Set to 0 to prevent speed matching - inherits booster velocity and slows via drag
                 MaxTrajectory = MissileConfig.RIM174_SM6_MaxRange, // Max Distance the projectile or beam can Travel.
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 90f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 300, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 0, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 DragPerSecond = 20f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative

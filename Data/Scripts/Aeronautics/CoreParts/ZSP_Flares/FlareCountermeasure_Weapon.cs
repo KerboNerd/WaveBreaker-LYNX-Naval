@@ -128,7 +128,7 @@ namespace Scripts {
                     MaxElevation = 0,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
-                    InventorySize = 0.05f, // Inventory capacity in kL.
+                    InventorySize = 0.03f, // Inventory capacity in kL.
                     IdlePower = 0.025f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
@@ -176,6 +176,8 @@ namespace Scripts {
                     SpinFree = false, // Spin barrel while not firing.
                     StayCharged = false, // Will start recharging whenever power cap is not full.
                     MaxActiveProjectiles = 0, // Maximum number of drones in flight (only works for drone launchers)
+                    InventoryFillAmount = 1.0f, // 0.00-1.00f as a % of inventory volume that a weapon will try to fill up to when requesting magazines from the conveyor system (0.75f = 75%)
+                    InventoryLowAmount = 0.25f, // 0.00-1.00f as a % of inventory volume.  If the current inventory is below this value, ammo magazines will be requested from the conveyor system (0.25f = 25%)
                     MaxReloads = 0, // Maximum number of reloads in the LIFETIME of a weapon
                 },
                 Audio = new HardPointAudioDef

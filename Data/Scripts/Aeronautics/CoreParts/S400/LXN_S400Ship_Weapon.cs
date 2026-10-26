@@ -97,7 +97,7 @@ namespace Scripts {
                     MaxElevation = 0,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
-                    InventorySize = MissileConfig.S400_Inventory, // Inventory capacity in kL.
+                    InventorySize = MissileConfig.S400Ship_Inventory, // Inventory capacity in kL.
                     IdlePower = 0.01f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
@@ -198,7 +198,6 @@ namespace Scripts {
                 LXN_S400_Secondary,
                 LXN_S400_Secondary2,
                 LXN_S400_Cruise,
-                LXN_HeavyAntiAir_FRAG,
                 LXN_MediumAntiAir_FRAG,
                 LXN_77N6_Prometheus_Primary,
                 LXN_77N6_Prometheus_Secondary,

@@ -181,6 +181,8 @@ namespace Scripts {
                     SpinFree = false, // Spin barrel while not firing.
                     StayCharged = false, // Will start recharging whenever power cap is not full.
                     MaxActiveProjectiles = 0, // Maximum number of drones in flight (only works for drone launchers)
+                    InventoryFillAmount = 1.0f, // 0.00-1.00f as a % of inventory volume that a weapon will try to fill up to when requesting magazines from the conveyor system (0.75f = 75%)
+                    InventoryLowAmount = 0.25f, // 0.00-1.00f as a % of inventory volume.  If the current inventory is below this value, ammo magazines will be requested from the conveyor system (0.25f = 25%)
                     MaxReloads = 0, // Maximum number of reloads in the LIFETIME of a weapon
                 },
                 Audio = new HardPointAudioDef

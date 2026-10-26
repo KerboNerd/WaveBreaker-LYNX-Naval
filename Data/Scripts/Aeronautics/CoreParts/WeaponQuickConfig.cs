@@ -10,7 +10,7 @@ public static class GunConfig
     public static int Millenium_ReloadTime = 8 * 60; // Reload time in ticks multiplied to Seconds
     public static float Millenium_MaxRange = 3000f; // Max Range of the Millenium gun
     public static float Millenium_MinRange = 100f; // Min Range of the Millenium gun
-    public static float Millenium_Inventory = 0.300f * InventoryMultiplier; // Inventory capacity in kL.
+    public static float Millenium_Inventory = 1.00f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static int OTO76_ROF = 80; // Rate of Fire of the OTO76 gun
     public static int OTO76_ReloadTime = 20 * 60; // Reload time in ticks multiplied to Seconds
@@ -127,16 +127,6 @@ public static class MissileConfig
     public static float R37M_MaxSpeed = 2058f * SpeedLimiterFactor; // Max Speed of the R-37M missile - MACH 6
     public static float R37M_Inventory = 0.500f * InventoryMultiplier; // Inventory capacity in kL.
     public static float R37M_Mass = 600f; // Mass in kg.
-    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    // High Performance Missiles
-    public static float S1M_Health = 120; // Health of the S-1M missile
-    public static float S1M_MaxRange = 10000f; // Max Range of the S-1M missile
-    public static float S1M_MinRange = 6000f; // Min Range of the S-1M missile  
-    public static float S1M_MaxSpeed = 1100f * SpeedLimiterFactor; // Max Speed of the S-1M missile
-    public static float S1M_Inventory = 1.200f * InventoryMultiplier; // Inventory capacity in kL.
-    public static float S1M_Mass = 2500f; // Mass in kg.
-    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Surface to Air Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -146,10 +136,10 @@ public static class MissileConfig
     public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
     public static float S400_MinRange = 2000f; // Min Range of the S-400 missile
     public static float S400_MaxSpeed = 1950f * SpeedLimiterFactor; // Max Speed of the S-400 missile
-    public static int S400_BoosterTime = 12; // Seconds
-    public static float S400_BoosterAccel = 60; // Meters Per Second
-    public static float S400_Inventory = 1.410f * SAM_InventoryMultiplier; // Inventory capacity in kL.
-    public static float S400x4_Inventory = 4 * 1.410f * SAM_InventoryMultiplier;
+    public static int S400_BoosterTime = 5; // Seconds
+    public static float S400_BoosterAccel = 130; // Meters Per Second
+    public static float S400_Inventory = 2.800f * SAM_InventoryMultiplier; // Inventory capacity in kL.
+    public static float S400Ship_Inventory = 20.000f * InventoryMultiplier; // Inventory capacity in kL.
     public static float S400_Mass = 1900f; // Mass in kg.
     public static float S400_HealthHit = 110; // How much damage the missile does to other projectiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -157,8 +147,8 @@ public static class MissileConfig
     public static float RIM174_SM6_MaxRange = 8000f; // Max Range of the RIM-174 SM6 missile
     public static float RIM174_SM6_MinRange = 800f; // Min Range of the RIM-174 SM6 missile
     public static float RIM174_SM6_MaxSpeed = 1700f * SpeedLimiterFactor; // Max Speed of the RIM-174 SM6 missile
-    public static int RIM174_SM6_BoosterTime = 10; // Seconds
-    public static float RIM174_SM6_BoosterAccel = 100; // Meters Per Second
+    public static int RIM174_SM6_BoosterTime = 4; // Seconds 
+    public static float RIM174_SM6_BoosterAccel = 160; // Meters Per Second
     public static float RIM174_SM6_Mass = 1500f; // Mass in kg.
     public static float RIM174_SM6_HealthHit = 100; // How much damage the missile does to other projectiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -248,6 +238,13 @@ public static class MissileConfig
     public static float Moskit_MaxSpeed = 1300f * SpeedLimiterFactor; // Max Speed of the Moskit missile
     public static float Moskit_Inventory = 3.720f * InventoryMultiplier; // Inventory capacity in kL.
     public static float Moskit_Mass = 4000f; // Mass in kg.
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public static float S1M_Health = 150; // Health of the S-1M missile
+    public static float S1M_MaxRange = 8000f; // Max Range of the S-1M missile
+    public static float S1M_MinRange = 4000f; // Min Range of the S-1M missile  
+    public static float S1M_MaxSpeed = 1200f * SpeedLimiterFactor; // Max Speed of the S-1M missile
+    public static float S1M_Inventory = 1.200f * InventoryMultiplier; // Inventory capacity in kL.
+    public static float S1M_Mass = 2500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float Harpoon_Health = 90; // Health of the Harpoon missile
     public static float Harpoon_BoostAltitude = 300f; // Meters    
