@@ -219,7 +219,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_R77_Primary, LXN_R77_Secondary, LXN_R77_Cruise, LXN_MRAAM_Frags, LXN_R77_MADDOG_Primary, LXN_R77_MADDOG_Secondary,
+                LXN_R77_Primary, LXN_R77_Secondary, LXN_R77_Cruise, LXN_MRAAM_Frags,
             },
             Animations = LXN_R77_bay2_Anim,
             //Upgrades = UpgradeModules,

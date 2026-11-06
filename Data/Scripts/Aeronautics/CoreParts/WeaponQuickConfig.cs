@@ -6,7 +6,7 @@ public static class GunConfig
 
     // Naval Guns
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static int Millenium_ROF = 750; // Rate of Fire of the Millenium gun
+    public static int Millenium_ROF = 750; // Rate of Fire in Rounds Per Minute
     public static int Millenium_ReloadTime = 8 * 60; // Reload time in ticks multiplied to Seconds
     public static float Millenium_MaxRange = 3000f; // Max Range of the Millenium gun
     public static float Millenium_MinRange = 100f; // Min Range of the Millenium gun
@@ -131,7 +131,7 @@ public static class MissileConfig
     // Surface to Air Missiles
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float S400_Health = 130; // Health of the S-400 missile
-    public static int S400_ROF = 10; // Rate of Fire of the Millenium gun
+    public static int S400_ROF = 10; // Rate of Fire in Rounds Per Minute
     public static int S400_ReloadTime = 60 * 60; // Reload time in ticks multiplied to Seconds
     public static float S400_MaxRange = 10000f; // Max Range of the S-400 missile
     public static float S400_MinRange = 2000f; // Min Range of the S-400 missile
@@ -157,7 +157,7 @@ public static class MissileConfig
     public static float Prometheus_77N6_MaxRange = 10000f; // Max Range of the 77N6 "Prometheus" missile
     public static float Prometheus_77N6_MinRange = 1500f; // Min Range of the 77N6 "Prometheus" missile
     public static float Prometheus_77N6_MaxSpeed = 2600f * SpeedLimiterFactor; // Max Speed of the 77N6 "Prometheus" missile
-    public static int Prometheus_77N6_BoosterTime = 10; // Seconds
+    public static int Prometheus_77N6_BoosterTime = 8; // Seconds
     public static float Prometheus_77N6_BoosterAccel = 120; // Meters Per Second
     public static float Prometheus_77N6_Mass = 1893f; // Mass in kg.
     public static float Prometheus_77N6_HealthHit = 160; // How much damage the missile does to other projectiles
@@ -231,8 +231,8 @@ public static class MissileConfig
     public static float Moskit_SkimmingAltitude = 30f; // Meters
     public static float Moskit_TerminalApproachAltitude = 10f; // Meters
     public static float Moskit_TerminalApproachDistance = 300f; // Meters
-    public static int Moskit_ROF = 5; // Rate of Fire of the Millenium gun
-    public static int Moskit_ReloadTime = 20 * 60; // Reload time in ticks multiplied to Seconds
+    public static int Moskit_ROF = 8; // Rate of Fire in Rounds Per Minute
+    public static int Moskit_ReloadTime = 25 * 60; // Reload time in ticks multiplied to Seconds
     public static float Moskit_MaxRange = 8000f; // Max Range of the Moskit missile
     public static float Moskit_MinRange = 3000f; // Min Range of the Moskit missile
     public static float Moskit_MaxSpeed = 1300f * SpeedLimiterFactor; // Max Speed of the Moskit missile
@@ -241,7 +241,7 @@ public static class MissileConfig
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float S1M_Health = 150; // Health of the S-1M missile
     public static float S1M_MaxRange = 8000f; // Max Range of the S-1M missile
-    public static float S1M_MinRange = 4000f; // Min Range of the S-1M missile  
+    public static float S1M_MinRange = 3000f; // Min Range of the S-1M missile  
     public static float S1M_MaxSpeed = 1200f * SpeedLimiterFactor; // Max Speed of the S-1M missile
     public static float S1M_Inventory = 1.200f * InventoryMultiplier; // Inventory capacity in kL.
     public static float S1M_Mass = 2500f; // Mass in kg.
@@ -267,20 +267,20 @@ public static class MissileConfig
 
     // Static Launchers
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static int VLS3S14_ROF = 15; // Rate of Fire of the Millenium gun
+    public static int VLS3S14_ROF = 15; // Rate of Fire in Rounds Per Minute
     public static int VLS3S14_ReloadTime = 60 * 60; // Reload time in ticks multiplied to Seconds
     public static float VLS3S14_MaxRange = 10000f; // Max Range of the 3S14 VLS
     public static float VLS3S14_MinRange = 1000f; // Min Range of the 3S14 VLS
     public static float VLS3S14_Inventory = 20.000f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static int SubVLS_ROF = 30; // Rate of Fire of the Millenium gun
+    public static int SubVLS_ROF = 30; // Rate of Fire in Rounds Per Minute
     public static int SubVLS_ReloadTime = 15 * 60; // Reload time in ticks multiplied to Seconds
     public static float SubVLS_MaxRange = 8000f; // Max Range of the SubVLS
     public static float SubVLS_MinRange = 500f; // Min Range of the SubVLS
     public static float SubVLS_Inventory = 2.500f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // MK-141 Harpoon
-    public static int MK141_ROF = 20; // Rate of Fire of the Millenium gun
+    public static int MK141_ROF = 20; // Rate of Fire in Rounds Per Minute
     public static int MK141_ReloadTime = 40 * 60; // Reload time in ticks multiplied to Seconds
     public static float MK141_MaxRange = 7000f; // Max Range of the SubVLS
     public static float MK141_MinRange = 500f; // Min Range of the SubVLS
@@ -289,21 +289,21 @@ public static class MissileConfig
     // Arm Launchers
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // STRELA-M CIWS
-    public static int STRELA_ROF = 55; // Rate of Fire of the Millenium gun
+    public static int STRELA_ROF = 55; // Rate of Fire in Rounds Per Minute
     public static uint STRELA_ReloadTime = 15 * 60; // Reload time in ticks multiplied to Seconds
     public static float STRELA_MaxRange = 3500f; // Max Range of the Millenium gun
     public static float STRELA_MinRange = 300f; // Min Range of the Millenium gun
     public static float STRELA_Inventory = 1.175f * InventoryMultiplier; // Inventory capacity in kL.
 
     // MK-13 Single Arm,
-    public static int MK13_ROF = 25; // Rate of Fire of the Millenium gun
+    public static int MK13_ROF = 25; // Rate of Fire in Rounds Per Minute
     public static int MK13_ReloadTime = 10 * 60; // Reload time in ticks multiplied to Seconds
     public static float MK13_MaxRange = 7000f; // Max Range of the Millenium gun
     public static float MK13_MinRange = 500f; // Min Range of the Millenium gun
     public static float MK13_Inventory = 1f * InventoryMultiplier; // Inventory capacity in kL.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // MK-26 Dual Arm
-    public static int MK26_ROF = 60; // Rate of Fire of the Millenium gun
+    public static int MK26_ROF = 60; // Rate of Fire in Rounds Per Minute
     public static int MK26_ReloadTime = 12 * 60; // Reload time in ticks multiplied to Seconds
     public static float MK26_MaxRange = 7000f; // Max Range of the Millenium gun
     public static float MK26_MinRange = 500f; // Min Range of the Millenium gun
@@ -313,7 +313,7 @@ public static class MissileConfig
     // Anti-Submarine
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float RBU6000_Health = 20; // Health of the RBU-6000 missile
-    public static int RBU6000_ROF = 75; // Rate of Fire of the Millenium gun
+    public static int RBU6000_ROF = 75; // Rate of Fire in Rounds Per Minute
     public static int RBU6000_ReloadTime = 20 * 60; // Reload time in ticks multiplied to Seconds    
     public static float RBU6000_MaxRange = 1500f; // Max Range of the RBU-6000 missile
     public static float RBU6000_MinRange = 200f; // Min Range of the RBU-6000 missile
@@ -321,7 +321,7 @@ public static class MissileConfig
     public static float RBU6000_Inventory = 0.640f * InventoryMultiplier; // Inventory capacity in kL.
     public static float RBU6000_Mass = 110f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static int ASROC_ROF = 30; // Rate of Fire of the Millenium gun
+    public static int ASROC_ROF = 30; // Rate of Fire in Rounds Per Minute
     public static int ASROC_ReloadTime = 40 * 60; // Reload time in ticks multiplied to Seconds    
     public static float ASROC_MaxRange = 7000f; // Max Range of the ASROC missile
     public static float ASROC_MinRange = 500f; // Min Range of the ASROC missile
@@ -342,25 +342,35 @@ public static class MissileConfig
 public static class BombsConfig
 {
     static float InventoryMultiplier = 1;
+    static float SpeedLimiterFactor = 0.5f;
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float FAB500_Health = 100; // Health of the FAB-500 bomb
+    public static float FAB500_Health = 50; // Health of the FAB-500 bomb
+    public static int FAB500_ReloadTime = 1200 * 60; // Reload time in ticks multiplied to Seconds
+    public static float FAB500_MaxRange = 8000f; // Max Range of the FAB-500 bomb
+    public static float FAB500_MaxSpeed = 400 * SpeedLimiterFactor; // Max Speed of the FAB500 Bomb
     public static float FAB500_Inventory = 0.190f * InventoryMultiplier; // Inventory capacity in kL.
     public static float FAB500_Mass = 500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public static float KAB500KR_Health = 70; // Health of the KAB-500KR bomb
-    public static float KAB500KR_MaxRange = 10000f; // Max Range of the KAB-500KR bomb
-    public static float KAB500KR_MinRange = 0f; // Min Range of the KAB-500KR bomb
+    public static float KAB500KR_Health = 50; // Health of the KAB-500KR bomb
+    public static int KAB500KR_ReloadTime = 1800 * 60; // Reload time in ticks multiplied to Seconds 
+    public static float KAB500KR_MaxRange = 8000f; // Max Range of the KAB-500KR bomb
+    public static float KAB500KR_MaxSpeed = 400 * SpeedLimiterFactor; // Max Speed of the KAB500KR Bomb
     public static float KAB500KR_Inventory = 0.310f * InventoryMultiplier; // Inventory capacity in kL.
     public static float KAB500KR_Mass = 500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float KAB1500SM_Health = 70; // Health of the KAB-1500SM bomb
+    public static int KAB1500SM_ROF = 4; // Rate of Fire for KAB1500 Bay in Rounds Per Minute
+    public static int KAB1500SM_ReloadTime = 2600 * 60 ; // Reload time in ticks multiplied to Seconds
+    public static float KAB1500SM_MaxRange = 10000f; // Max Range of the KAB-1500SM bomb
+    public static float KAB1500SM_MaxSpeed = 400 * SpeedLimiterFactor; // Max Speed of the KAB1500SM Bmomb
     public static float KAB1500SM_Inventory = 1.160f * InventoryMultiplier; // Inventory capacity in kL.
     public static float KAB1500SM_Mass = 1500f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public static float MOAB_Health = 200; // Health of the MOAB bomb
+    public static int MOAB_ReloadTime = 3600 * 60; // Reload time in ticks multiplied to Seconds
+    public static float MOAB_MaxRange = 10000f; // Max Range of the MOAB bomb
+    public static float MOAB_MaxSpeed = 360 * SpeedLimiterFactor; // Max Speed of the MOAB Bomb
     public static float MOAB_Inventory = 3.950f * InventoryMultiplier; // Inventory capacity in kL.
     public static float MOAB_Mass = 9800f; // Mass in kg.
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 }
-

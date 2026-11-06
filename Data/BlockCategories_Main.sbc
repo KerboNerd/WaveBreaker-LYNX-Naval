@@ -180,6 +180,7 @@
 		<string>Conveyor/Engine_Connector</string>
 		
 		<string>Thrust/Vertical_Lift_Thruster</string>
+		<string>Thrust/3_Bearing_Swivel_Nozzle</string>
 		<string>Thrust/Reliable_Jet_Engine</string>
 		
 		<string>Thrust/ZSP_Helicopter_Blades</string>
@@ -263,8 +264,6 @@
 
         <string>Conveyor/LXN_Pylon_01</string>
 		
-		<string>ConveyorSorter/LXN_RBU6000</string>
-		
 		<string>ConveyorSorter/LXN_JetRadar_Zaslon_1</string>
 		<string>ConveyorSorter/LXN_GravestoneRadar_01</string>
 		
@@ -290,9 +289,6 @@
         <string>ConveyorSorter/LXN_CIWS30_01</string>
 		<string>ConveyorSorter/LXN_PALASHM_1</string>
 		<string>ConveyorSorter/LXN_STRELAM_1</string>
-		<string>ConveyorSorter/LXN_AK130M_1</string>
-		<string>ConveyorSorter/LXN_AK130M_2</string>
-		<string>ConveyorSorter/LXN_RBU6000</string>
 		
         <string>ConveyorSorter/LXN_RadarTower_1</string>
         <string>ConveyorSorter/LXA_AWACS_Dish_01</string>

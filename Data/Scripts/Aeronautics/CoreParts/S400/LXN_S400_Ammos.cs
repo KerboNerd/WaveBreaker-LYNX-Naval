@@ -89,7 +89,7 @@ namespace Scripts
                     Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
                     PointAtTarget = false, // Start fragment direction pointing at Target
-                    PointType = Predict, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
+                    PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
                     DirectAimCone = 0f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 0, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
@@ -211,7 +211,7 @@ namespace Scripts
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
-                DragPerSecond = 300f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
+                DragPerSecond = 0, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
                     SteeringLimit = 150, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
@@ -1046,8 +1046,8 @@ namespace Scripts
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
             BaseDamage = 1, // Direct damage; one steel plate is worth 100.
-            Mass = MissileConfig.S400_Mass * 0.6f, // In kilograms; how much force the impact will apply to the target.
-            Health = MissileConfig.S400_Health * 0.8f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Mass = MissileConfig.S400_Mass, // In kilograms; how much force the impact will apply to the target.
+            Health = MissileConfig.S400_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -1070,7 +1070,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field of the ammo to spawn.
-                Fragments = 40, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
+                Fragments = 30, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
@@ -1179,7 +1179,7 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                DesiredSpeed = MissileConfig.S400_MaxSpeed * 0.8f, // voxel phasing if you go above 5100
+                DesiredSpeed = MissileConfig.S400_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.S400_MaxRange, // Max Distance the projectile or beam can Travel.
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0f, // Degrees, Is pointed forward
@@ -1187,10 +1187,10 @@ namespace Scripts
                 MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 5, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
-                DragPerSecond = 20f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
+                DragPerSecond = 0, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 30, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 50, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 0.3f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     MaxChaseTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).

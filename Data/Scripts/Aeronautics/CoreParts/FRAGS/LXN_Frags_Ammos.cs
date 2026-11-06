@@ -51,7 +51,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 150, // Large collision size for better hit probability against missiles in clusters
+                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
             },
             Trajectory = new TrajectoryDef
             {
@@ -99,12 +99,12 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
+                Diameter = 75, // Large collision size for better hit probability against missiles in clusters
             },
             Trajectory = new TrajectoryDef
             {
                 MaxLifeTime = 60, // Increased lifetime for fragments to reach more missiles
-                MaxTrajectory = 300f, // Increased range for better coverage of missile clusters
+                MaxTrajectory = 200f, // Increased range for better coverage of missile clusters
                 DesiredSpeed = 300, // Higher speed for better hit probability against fast-moving missiles
             },
             AmmoGraphics = new GraphicDef

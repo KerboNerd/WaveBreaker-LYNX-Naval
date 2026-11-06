@@ -128,7 +128,7 @@ namespace ware_LNX_Jet_Systems
             base.UpdateOnceBeforeFrame(); CreateReverseThrustControlls();
 
             ushort comChannel = 8792; // the mod communication channel
-            string ModName = "L.Y.N.X - Aeronautics"; // this will show up as the sender for any chat message notifications
+            string ModName = "WB CombatSys"; // this will show up as the sender for any chat message notifications
 
 
             if (!NetworkAPI.IsInitialized)

@@ -3,7 +3,7 @@
   <ParticleEffects>
     <ParticleEffect xsi:type="ParticleEffect">
       <Id Type="MyObjectBuilder_ParticleEffect" Subtype="ZSP_Jet_Mach_Rings" />
-      <ParticleId>-324643401</ParticleId>
+      <ParticleId>-324643402</ParticleId>
       <Length>1</Length>
       <Preload>0</Preload>
       <LowRes>false</LowRes>

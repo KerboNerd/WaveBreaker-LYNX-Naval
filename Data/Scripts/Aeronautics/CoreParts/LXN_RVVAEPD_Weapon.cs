@@ -217,7 +217,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_RVVAEPD_Primary, LXN_RVVAEPD_Secondary, LXN_RVVAEPD_Cruise, LXN_MRAAM_Frags, LXN_RVVAEPD_MADDOG_Primary, LXN_RVVAEPD_MADDOG_Secondary,
+                LXN_RVVAEPD_Primary, LXN_RVVAEPD_Secondary, LXN_RVVAEPD_Cruise, LXN_MRAAM_Frags,
             },
             Animations = LXN_RVVAEPD_Anim,
             //Upgrades = UpgradeModules,

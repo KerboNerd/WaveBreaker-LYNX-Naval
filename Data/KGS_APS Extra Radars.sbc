@@ -9,8 +9,8 @@
 			</Id>
 			<DisplayName>APS Radar Offset Down Far</DisplayName>
 			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_DownMarker.dds</Icon>				
 			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -76,8 +76,8 @@
 			</Id>
 			<DisplayName>APS Radar Offset Back Far</DisplayName>
 			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_DownMarker.dds</Icon>				
 			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -116,8 +116,8 @@
 			</Id>
 			<DisplayName>APS Radar Offset Back And Down</DisplayName>
 			<Icon>Textures\GUI\Icons\KONTAKT\KGS_APSRadar.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_OffsetMarker.dds</Icon>	
-			<Icon>Textures\GUI\Icons\KONTAKT\ArmourLevels\KGS_DownMarker.dds</Icon>				
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_OffsetMarker.dds</Icon>	
+			<Icon>Textures\GUI\Icons\KONTAKT\KGS_DownMarker.dds</Icon>				
 			<Description>A compact radar system designed for armoured vehicles. Detects projectiles within 500m and sends firing signals to all Active Protection Systems on the armoured vehicle. Has a 45 degree view cone.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

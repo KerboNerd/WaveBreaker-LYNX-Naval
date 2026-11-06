@@ -249,11 +249,11 @@ namespace Scripts
                 },
                 Field = new FieldDef
                 {
-                    Interval = 6, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
-                    PulseChance = 50, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    Interval = 30, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
+                    PulseChance = 25, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
                     GrowTime = 180, // How many ticks it should take the field to grow to full size.
                     HideModel = true, // Hide the default bubble, or other model if specified.
-                    ShowParticle = true, // Show Block damage effect.
+                    ShowParticle = false, // Show Block damage effect.
                     TriggerRange = 1000f, //range at which fields are triggered
                     Particle = new ParticleDef // Particle effect to generate at the field's position.
                     {
