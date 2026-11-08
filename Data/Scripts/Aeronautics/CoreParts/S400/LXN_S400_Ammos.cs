@@ -45,7 +45,7 @@ namespace Scripts
             AmmoRound = "S-400 COLD", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 100, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 2000, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.S400_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.S400_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -211,7 +211,7 @@ namespace Scripts
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 TotalAcceleration = 0, // 0 means no limit, something to do due with a thing called delta and something called v.
-                DragPerSecond = 0, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
+                DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
                     SteeringLimit = 150, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
@@ -350,12 +350,12 @@ namespace Scripts
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "",
+                HitSound = "LXN_SmallMissileExplosion",
                 ShotSound = "",
-                ShieldHitSound = "",
-                PlayerHitSound = "",
+                ShieldHitSound = "LXN_SmallMissileExplosion",
+                PlayerHitSound = "LXN_SmallMissileExplosion",
                 VoxelHitSound = "",
-                FloatingHitSound = "",
+                FloatingHitSound = "LXN_SmallMissileExplosion",
                 HitPlayChance = 1f,
                 HitPlayShield = true,
             },
@@ -367,7 +367,7 @@ namespace Scripts
             AmmoRound = "S-400 HOT", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 2000, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.S400_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.S400_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -588,7 +588,7 @@ namespace Scripts
                         DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1.5f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef
@@ -698,7 +698,7 @@ namespace Scripts
             AmmoRound = "S-400 Secondary2", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 2000, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.S400_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.S400_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -715,7 +715,7 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
@@ -863,7 +863,7 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 90f, // Degrees, Is pointed forward
+                TargetLossDegree = 180f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = MissileConfig.S400_BoosterTime * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = MissileConfig.S400_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
@@ -887,7 +887,7 @@ namespace Scripts
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
                     CheckFutureIntersection = true, // Utilize obstacle avoidance for drones/smarts
-                    FutureIntersectionRange = 0, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
+                    FutureIntersectionRange = 100, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
                     MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
@@ -935,12 +935,12 @@ namespace Scripts
                         DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1.5f,
+                            Scale = 1f,
                         },
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
                         DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
@@ -1045,7 +1045,7 @@ namespace Scripts
             AmmoRound = "S-400 Cruise", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 2000, // Direct damage; one steel plate is worth 100.
             Mass = MissileConfig.S400_Mass, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.S400_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
@@ -1164,14 +1164,14 @@ namespace Scripts
                     Enable = true,
                     Radius = 30f, // Radius of AOE effect, in meters.
                     Damage = 20000,
-                    Depth = 15f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Depth = 30f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
-                    ParticleScale = 1.5f,
+                    ParticleScale = 1f,
                     CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
@@ -1187,12 +1187,12 @@ namespace Scripts
                 MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 5, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
-                DragPerSecond = 0, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
+                DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
                     SteeringLimit = 50, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 0.3f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    MaxLateralThrust = 1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     MaxChaseTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 },
             },
@@ -1238,7 +1238,7 @@ namespace Scripts
                         DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1.5f,
+                            Scale = 1f,
                             HitPlayChance = 1f,
                         },
                     },

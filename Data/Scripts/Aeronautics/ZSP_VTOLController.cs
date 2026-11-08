@@ -1,13 +1,14 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Game.Entities;
+using Sandbox.Game.EntityComponents;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using VRage.Game;
 using VRage.Game.Components;
+using VRage.Game.ObjectBuilders.Definitions;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRageMath;
@@ -17,7 +18,7 @@ using SENetworkAPI;
 
 namespace ware_LNX_Jet_Systems
 {
-    // First-pass controller for the ZSP 3 Bearing Swivel Nozzle.
+    // Controller for the ZSP 3 Bearing Swivel Nozzle.
     // Keeps the block as a vanilla MyObjectBuilder_Thrust.
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_Thrust), false, "3_Bearing_Swivel_Nozzle")]
     public class ZSP_VTOLController : MyGameLogicComponent
@@ -26,13 +27,12 @@ namespace ware_LNX_Jet_Systems
         private const ushort NETWORK_CHANNEL = 8792;
         private const string MOD_NAME = "WB Combat Sys";
 
-        // Placeholder animation: the root model's first visible section stays fixed.
+        // Nozzle animation: the root model's first visible section stays fixed.
         // The first two nested attachment transforms carry visible sections 2 and 3.
         private const string PART_1_NAME = "Nozzle_Part1";
         private const string PART_2_NAME = "Nozzle_Part2";
         private const string PART_3_NAME = "Nozzle_Part3";
 
-        private static readonly Vector3 PART_1_AXIS = Vector3.UnitZ;
         private static readonly Vector3 PART_2_AXIS = Vector3.Normalize(new Vector3(0f, -0.41f, 1f));
         private static readonly Vector3 PART_3_AXIS = Vector3.Normalize(new Vector3(0f, 0.41f, 1f));
 
@@ -40,11 +40,11 @@ namespace ware_LNX_Jet_Systems
         private const int ANIMATION_LENGTH_TICKS = 150;
         private const double VTOL_FORCE_MULTIPLIER = 1.0;
 
-        // VTOL oxygen demand while actively requesting lift.
-        private const float VTOL_OXYGEN_CONSUMPTION_LPS = 1200f;
-
-        // SBC idle consumption for this nozzle, based on its current definition.
-        private const float SBC_IDLE_OXYGEN_CONSUMPTION_LPS = 100f;
+        // Direct resource-sink multiplier used while actively requesting VTOL lift.
+        // Tuned against the Oxygen sink's measured demand (approximately 1200).
+        private const float VTOL_OXYGEN_CONSUMPTION_MULTIPLIER = 310736.9f;
+        private static readonly MyDefinitionId OXYGEN_RESOURCE_ID =
+            new MyDefinitionId(typeof(MyObjectBuilder_GasProperties), "Oxygen");
 
         private static bool terminalControlsCreated;
 
@@ -57,6 +57,7 @@ namespace ware_LNX_Jet_Systems
         private const string BURNER_PARTICLE_ID = "ZSP_Burner_Effect_Large";
 
         private const float JET_MIN_FORWARD_THRUST_FRACTION = 0.01f;
+        private const float JET_MAX_FORWARD_THRUST_FRACTION = 0.91f;
         private const float HIGH_THRUST_EFFECT_FRACTION = 0.91f;
         private const float JET_PARTICLE_SCALE = 0.60f;
         private const float JET_PARTICLE_OFFSET = 0.26f;
@@ -73,7 +74,6 @@ namespace ware_LNX_Jet_Systems
 
         private readonly List<Sandbox.ModAPI.Ingame.IMyShipController> shipControllers =
             new List<Sandbox.ModAPI.Ingame.IMyShipController>();
-        private Vector3 lastControllerMoveIndicator;
 
         // Track the user's normal thruster state while fully in forward mode.
         // Never interpret our own temporary VTOL disablement as the user's preference.
@@ -86,12 +86,13 @@ namespace ware_LNX_Jet_Systems
         private double vtolMaxEffectiveThrust;
         private float originalPowerConsumptionMultiplier;
         private bool originalPowerConsumptionMultiplierCaptured;
+        private bool oxygenSinkMissingLogged;
+        private MyResourceSinkComponent oxygenSink;
+        private bool vtolLiftCommandActive;
 
-        private MyEntitySubpart nozzlePart1;
         private MyEntitySubpart nozzlePart2;
         private MyEntitySubpart nozzlePart3;
 
-        private Matrix part1RestMatrix;
         private Matrix part2RestMatrix;
         private Matrix part3RestMatrix;
         private bool subpartsCached;
@@ -99,10 +100,6 @@ namespace ware_LNX_Jet_Systems
 
         // 0 = conventional forward thrust; 1 = fully deployed VTOL.
         private float animationProgress;
-
-        private int diagnosticTick;
-        private int rotationDiagnosticTick;
-        private int lastRotationDiagnosticBucket = -1;
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -117,6 +114,16 @@ namespace ware_LNX_Jet_Systems
 
             if (!NetworkAPI.IsInitialized)
                 NetworkAPI.Init(NETWORK_CHANNEL, MOD_NAME);
+
+            // A server/world restart reinitialises this component in Forward mode,
+            // but the block's terminal override can persist from its previous VTOL state.
+            // Clear that stale override before the controller captures any forward-mode state.
+            if (IsServer() && block != null)
+            {
+                Sandbox.ModAPI.IMyThrust thrustBlock =
+                    (Sandbox.ModAPI.IMyThrust)block;
+                thrustBlock.ThrustOverride = 0f;
+            }
 
             vtolMode = new NetSync<bool>(this, TransferType.Both, false, limitToSyncDistance: true);
             CreateTerminalControls();
@@ -146,6 +153,7 @@ namespace ware_LNX_Jet_Systems
             // Thruster root (visible section 1) -> Nozzle_Part1 (visible section 2)
             // -> Nozzle_Part2 (visible section 3) -> Nozzle_Part3 (terminal attachment).
             // MyEntitySubpart inherits MyEntity, so each child is retrieved from its parent.
+            MyEntitySubpart nozzlePart1;
             bool found1 = block.TryGetSubpart(PART_1_NAME, out nozzlePart1);
             bool found2 = found1 && nozzlePart1.TryGetSubpart(PART_2_NAME, out nozzlePart2);
             bool found3 = found2 && nozzlePart2.TryGetSubpart(PART_3_NAME, out nozzlePart3);
@@ -166,7 +174,6 @@ namespace ware_LNX_Jet_Systems
 
             // Store the original local transforms once. Each frame is calculated from these,
             // preventing cumulative rotation drift.
-            part1RestMatrix = nozzlePart1.PositionComp.LocalMatrixRef;
             part2RestMatrix = nozzlePart2.PositionComp.LocalMatrixRef;
             part3RestMatrix = nozzlePart3.PositionComp.LocalMatrixRef;
             subpartsCached = true;
@@ -194,8 +201,7 @@ namespace ware_LNX_Jet_Systems
             float radians = MathHelper.ToRadians(
                 NOZZLE_ROTATION_DEGREES * animationProgress);
 
-            // Use the exact axes exercised by the individual diagnostic tests.
-            // Part 2 rotates clockwise (+); Part 3 counter-clockwise (-).
+            // Part 2 and Part 3 rotate in opposite directions to preserve alignment.
             Matrix part2Matrix = BuildAnimatedLocalMatrix(
                 part2RestMatrix, PART_2_AXIS, -radians);
             Matrix part3Matrix = BuildAnimatedLocalMatrix(
@@ -205,31 +211,12 @@ namespace ware_LNX_Jet_Systems
             // exactly at its model-defined transform throughout this animation.
             nozzlePart2.PositionComp.SetLocalMatrix(ref part2Matrix);
             nozzlePart3.PositionComp.SetLocalMatrix(ref part3Matrix);
-
-            int diagnosticBucket = (int)Math.Round(animationProgress * 5f);
-            if (diagnosticBucket != lastRotationDiagnosticBucket)
-            {
-                lastRotationDiagnosticBucket = diagnosticBucket;
-
-                Matrix p1World = nozzlePart1.PositionComp.WorldMatrixRef;
-                Matrix p2World = nozzlePart2.PositionComp.WorldMatrixRef;
-                Matrix p3World = nozzlePart3.PositionComp.WorldMatrixRef;
-
-                MyLog.Default.WriteLineAndConsole(
-                    "[ZSP_VTOLController] Two-section placeholder: Progress=" +
-                    animationProgress +
-                    ", Part2Degrees=" + (-NOZZLE_ROTATION_DEGREES * animationProgress) +
-                    ", Part3Degrees=" + (NOZZLE_ROTATION_DEGREES * animationProgress) +
-                    ", Part1World=" + p1World.Translation +
-                    ", Part2World=" + p2World.Translation +
-                    ", Part3World=" + p3World.Translation);
-            }
         }
 
         private static Matrix BuildAnimatedLocalMatrix(
             Matrix restLocalMatrix, Vector3 localAxis, float radians)
         {
-            // BSL's rotate operation acts on the subpart's own local coordinate
+            // Rotation is applied in the subpart's own local coordinate
             // frame. Post-multiplication applies that local-axis rotation while
             // retaining the original pivot translation.
             Matrix localRotation = Matrix.CreateFromAxisAngle(localAxis, radians);
@@ -279,10 +266,6 @@ namespace ware_LNX_Jet_Systems
                         : currentNominalThrust;
 
                     lastVtolMode = true;
-                    MyLog.Default.WriteLineAndConsole(
-                        "[ZSP_VTOLController] Entered VTOL: SavedForwardEnabled=" +
-                        originalEnabledState + ", CurrentEnabled=" + thrustBlock.Enabled +
-                        ", CachedThrust=" + vtolMaxEffectiveThrust);
                 }
 
                 // Keep the thruster enabled in VTOL, but clamp its vanilla
@@ -301,8 +284,6 @@ namespace ware_LNX_Jet_Systems
             {
                 lastVtolMode = false;
                 restoreThrusterWhenForward = true;
-                MyLog.Default.WriteLineAndConsole(
-                    "[ZSP_VTOLController] Leaving VTOL: holding thrust until nozzle is forward.");
             }
 
             if (animationProgress <= 0f)
@@ -315,14 +296,11 @@ namespace ware_LNX_Jet_Systems
                         thrustBlock.ThrustOverride = originalThrustOverride;
                     restoreThrusterWhenForward = false;
 
-                    MyLog.Default.WriteLineAndConsole(
-                        "[ZSP_VTOLController] Forward position reached: restored Enabled=" +
-                        thrustBlock.Enabled + ", ThrustOverride=" + thrustBlock.ThrustOverride);
                     
                     if (originalPowerConsumptionMultiplierCaptured)
                     {
-                        thrustBlock.PowerConsumptionMultiplier =
-                            originalPowerConsumptionMultiplier;
+                        SetPowerConsumptionMultiplier(
+                            thrustBlock, originalPowerConsumptionMultiplier);
                     }
                 }
                 else
@@ -342,21 +320,18 @@ namespace ware_LNX_Jet_Systems
                 thrustBlock.ThrustOverride = 1f;
                 if (originalPowerConsumptionMultiplierCaptured)
                 {
-                    thrustBlock.PowerConsumptionMultiplier =
-                        originalPowerConsumptionMultiplier;
+                    SetPowerConsumptionMultiplier(
+                        thrustBlock, originalPowerConsumptionMultiplier);
                 }
             }
         }
 
         private bool IsLiftInputActive(MyCubeGrid grid)
         {
-            // Read the ship controller's synchronized movement input on the server.
-            // This avoids relying on local keyboard polling or a custom client->server
-            // NetSync value, which remained false in the dedicated-server logs.
+            // Read the synchronized movement input from controlled ship controllers.
+            // This avoids local keyboard polling or a separate client->server input sync.
             var terminalSystem = MyAPIGateway.TerminalActionsHelper
                 .GetTerminalSystemForGrid(grid);
-
-            lastControllerMoveIndicator = Vector3.Zero;
 
             if (terminalSystem == null)
                 return false;
@@ -369,8 +344,8 @@ namespace ware_LNX_Jet_Systems
             {
                 // MoveIndicator.Y is the ship's vertical movement axis:
                 // positive values correspond to the UP control (Space by default).
-                lastControllerMoveIndicator = shipControllers[i].MoveIndicator;
-                if (lastControllerMoveIndicator.Y > 0.1f)
+                Vector3 moveIndicator = shipControllers[i].MoveIndicator;
+                if (moveIndicator.Y > 0.1f)
                     return true;
             }
 
@@ -379,55 +354,69 @@ namespace ware_LNX_Jet_Systems
 
         private void ApplyVtolLift()
         {
-            if (!IsServer())
+            // Evaluate the VTOL command once per simulation update. Particle handling
+            // reuses this result instead of rescanning ship controllers and the oxygen sink.
+            vtolLiftCommandActive = false;
+
+            if (vtolMode == null || !vtolMode.Value)
                 return;
 
+            bool isServer = IsServer();
             Sandbox.ModAPI.IMyThrust thrustBlock =
                 (Sandbox.ModAPI.IMyThrust)block;
 
-            if (!vtolMode.Value)
-                return;
-
             MyCubeGrid grid = block.CubeGrid;
-            if (grid == null || grid.Physics == null)
-                return;
-
-            bool liftRequested = IsLiftInputActive(grid);
-
-            // No additional Oxygen consumption or lift during deployment.
-            if (animationProgress < 1f)
+            if (grid == null || (isServer && grid.Physics == null))
             {
-                if (originalPowerConsumptionMultiplierCaptured)
-                {
-                    thrustBlock.PowerConsumptionMultiplier =
-                        originalPowerConsumptionMultiplier;
-                }
+                if (isServer)
+                    RestorePowerConsumptionMultiplier(thrustBlock);
                 return;
             }
 
-            // Stop the additional consumption immediately when UP is released.
-            if (!liftRequested || !block.IsFunctional ||
-                vtolMaxEffectiveThrust <= 0.0)
+            // Skip controller discovery until the nozzle is deployed and the
+            // thruster can actually respond to a lift request.
+            if (animationProgress < 1f || !block.IsFunctional || !thrustBlock.Enabled)
             {
-                if (originalPowerConsumptionMultiplierCaptured)
-                {
-                    thrustBlock.PowerConsumptionMultiplier =
-                        originalPowerConsumptionMultiplier;
-                }
+                if (isServer)
+                    RestorePowerConsumptionMultiplier(thrustBlock);
                 return;
             }
 
-            float consumptionMultiplier =
-                VTOL_OXYGEN_CONSUMPTION_LPS /
-                SBC_IDLE_OXYGEN_CONSUMPTION_LPS;
+            if (!IsLiftInputActive(grid))
+            {
+                if (isServer)
+                    RestorePowerConsumptionMultiplier(thrustBlock);
+                return;
+            }
 
-            thrustBlock.PowerConsumptionMultiplier = consumptionMultiplier;
+            // The server owns resource demand and physics. Clients still evaluate
+            // availability locally so their particle effects follow the same gate.
+            if (isServer)
+            {
+                if (vtolMaxEffectiveThrust <= 0.0)
+                {
+                    RestorePowerConsumptionMultiplier(thrustBlock);
+                    return;
+                }
 
-            // Apply lift only when the Oxygen resource is available.
-            // This check still needs validation against the actual sink arrangement
-            // used by this thruster in your Torch build.
+                // Keep elevated demand active while UP is held, even if supply is
+                // insufficient; otherwise restoring idle demand could create a
+                // feedback loop in the availability check.
+                SetPowerConsumptionMultiplier(
+                    thrustBlock, VTOL_OXYGEN_CONSUMPTION_MULTIPLIER);
+            }
 
-            Vector3D liftDirection = grid.WorldMatrix.Up;
+            if (!HasVtolOxygenSupply())
+                return;
+
+            vtolLiftCommandActive = true;
+
+            if (!isServer)
+                return;
+
+            // Use the thruster block's own Up axis, not the grid's Up axis.
+            // Mounting the block upside down therefore reverses the scripted lift.
+            Vector3D liftDirection = block.WorldMatrix.Up;
             liftDirection.Normalize();
 
             double liftForceMagnitude = vtolMaxEffectiveThrust *
@@ -443,6 +432,52 @@ namespace ware_LNX_Jet_Systems
                 null);
         }
 
+        private void RestorePowerConsumptionMultiplier(
+            Sandbox.ModAPI.IMyThrust thrustBlock)
+        {
+            if (originalPowerConsumptionMultiplierCaptured)
+            {
+                SetPowerConsumptionMultiplier(
+                    thrustBlock, originalPowerConsumptionMultiplier);
+            }
+        }
+
+        private static void SetPowerConsumptionMultiplier(
+            Sandbox.ModAPI.IMyThrust thrustBlock, float multiplier)
+        {
+            // Avoid repeatedly notifying the resource sink when the value is unchanged.
+            if (thrustBlock.PowerConsumptionMultiplier != multiplier)
+                thrustBlock.PowerConsumptionMultiplier = multiplier;
+        }
+
+        private bool HasVtolOxygenSupply()
+        {
+            // Retrieve the sink from the entity component container. In Torch,
+            // block.ResourceSink was null even though the component was present.
+            if (oxygenSink == null)
+                oxygenSink = block.Components.Get<MyResourceSinkComponent>();
+
+            MyResourceSinkComponent sink = oxygenSink;
+
+            if (sink == null)
+            {
+                if (!oxygenSinkMissingLogged)
+                {
+                    MyLog.Default.WriteLineAndConsole(
+                        "[ZSP_VTOLController] Oxygen gate: no MyResourceSinkComponent found; VTOL lift blocked.");
+                    oxygenSinkMissingLogged = true;
+                }
+
+                return false;
+            }
+
+            float requiredOxygen =
+                sink.RequiredInputByType(OXYGEN_RESOURCE_ID);
+
+            return requiredOxygen > 0f &&
+                   sink.IsPowerAvailable(OXYGEN_RESOURCE_ID, requiredOxygen);
+        }
+
         private bool IsParticleCommandActive()
         {
             Sandbox.ModAPI.Ingame.IMyThrust thrustBlock =
@@ -451,42 +486,43 @@ namespace ware_LNX_Jet_Systems
             if (!block.IsFunctional || !thrustBlock.Enabled)
                 return false;
 
-            // In VTOL, UP input is the engine activation signal. Lift is applied
-            // manually, so CurrentThrust is not a valid VTOL activation measure.
+            // ApplyVtolLift evaluates this once per frame for both physics and effects.
             if (vtolMode != null && vtolMode.Value)
-            {
-                if (animationProgress < 1f)
-                    return false;
-
-                MyCubeGrid grid = block.CubeGrid;
-                return grid != null && IsLiftInputActive(grid);
-            }
+                return vtolLiftCommandActive;
 
             return animationProgress <= 0f;
         }
 
-        private bool ShouldPlayJetParticle()
+        private bool ShouldPlayJetParticle(bool commandActive)
         {
-            if (!IsParticleCommandActive())
+            if (!commandActive)
                 return false;
 
+            // VTOL uses the high-thrust effects, regardless of the vanilla 1 N override.
             if (vtolMode != null && vtolMode.Value)
-                return true;
+                return false;
 
             Sandbox.ModAPI.Ingame.IMyThrust thrustBlock =
                 (Sandbox.ModAPI.Ingame.IMyThrust)block;
 
-            return thrustBlock.MaxThrust > 0f &&
-                   thrustBlock.CurrentThrust >
-                   thrustBlock.MaxThrust * JET_MIN_FORWARD_THRUST_FRACTION;
+            if (thrustBlock.MaxThrust <= 0f)
+                return false;
+
+            float thrustFraction =
+                thrustBlock.CurrentThrust / thrustBlock.MaxThrust;
+
+            return thrustFraction >= JET_MIN_FORWARD_THRUST_FRACTION &&
+                thrustFraction < JET_MAX_FORWARD_THRUST_FRACTION;
         }
 
-        private bool ShouldPlayHighThrustParticles()
+        private bool ShouldPlayHighThrustParticles(bool commandActive)
         {
-            if (!IsParticleCommandActive())
+            if (!commandActive)
                 return false;
 
-            // A VTOL lift command is treated as the high-thrust condition.
+            // VTOL lift is applied manually; vanilla CurrentThrust stays near 1 N.
+            // Treat an active VTOL command as high thrust instead of checking the
+            // normal-flight CurrentThrust / MaxThrust threshold.
             if (vtolMode != null && vtolMode.Value)
                 return true;
 
@@ -494,7 +530,7 @@ namespace ware_LNX_Jet_Systems
                 (Sandbox.ModAPI.Ingame.IMyThrust)block;
 
             return thrustBlock.MaxThrust > 0f &&
-                   thrustBlock.CurrentThrust >
+                   thrustBlock.CurrentThrust >=
                    thrustBlock.MaxThrust * HIGH_THRUST_EFFECT_FRACTION;
         }
 
@@ -503,32 +539,37 @@ namespace ware_LNX_Jet_Systems
             if (nozzlePart3 == null || !subpartsCached)
                 return;
 
-            // Base position and orientation of the nozzle attachment.
             MatrixD particleMatrix = nozzlePart3.WorldMatrix;
             Vector3D particlePosition = particleMatrix.Translation;
+            Vector3D particleOffset = particleMatrix.Backward * JET_PARTICLE_OFFSET;
 
-            // Give the main jet effect its own offset.
+            // Evaluate the common activation state and high-thrust condition once.
+            bool commandActive = IsParticleCommandActive();
+            bool playJet = ShouldPlayJetParticle(commandActive);
+            bool playHighThrust = ShouldPlayHighThrustParticles(commandActive);
+
+            // Travel Jet: offset 0.26f.
             MatrixD jetParticleMatrix = particleMatrix;
-            Vector3D jetParticlePosition = particlePosition;
-
-            jetParticlePosition += nozzlePart3.WorldMatrix.Backward *
-                                JET_PARTICLE_OFFSET;
-
+            Vector3D jetParticlePosition = particlePosition + particleOffset;
             jetParticleMatrix.Translation = jetParticlePosition;
 
             UpdateParticleEffect(ref jetParticle, JET_PARTICLE_ID, JET_PARTICLE_SCALE,
-                ShouldPlayJetParticle(), ref jetParticleCreationFailedLogged,
-                ref jetParticleMatrix, ref jetParticlePosition);
+                playJet, ref jetParticleCreationFailedLogged,
+                jetParticleMatrix, jetParticlePosition);
 
-            // Mach rings remain at the original nozzle position.
+            // Mach Rings: retain the original nozzle position.
             UpdateParticleEffect(ref machParticle, MACH_PARTICLE_ID, MACH_PARTICLE_SCALE,
-                ShouldPlayHighThrustParticles(), ref machParticleCreationFailedLogged,
-                ref particleMatrix, ref particlePosition);
+                playHighThrust, ref machParticleCreationFailedLogged,
+                particleMatrix, particlePosition);
 
-            // Burner also remains at the original nozzle position.
+            // Burner: also offset 0.26f, just like the Travel Jet.
+            MatrixD burnerParticleMatrix = particleMatrix;
+            Vector3D burnerParticlePosition = particlePosition + particleOffset;
+            burnerParticleMatrix.Translation = burnerParticlePosition;
+
             UpdateParticleEffect(ref burnerParticle, BURNER_PARTICLE_ID, BURNER_PARTICLE_SCALE,
-                ShouldPlayHighThrustParticles(), ref burnerParticleCreationFailedLogged,
-                ref particleMatrix, ref particlePosition);
+                playHighThrust, ref burnerParticleCreationFailedLogged,
+                burnerParticleMatrix, burnerParticlePosition);
         }
 
         private void UpdateParticleEffect(
@@ -537,8 +578,8 @@ namespace ware_LNX_Jet_Systems
             float scale,
             bool shouldPlay,
             ref bool creationFailedLogged,
-            ref MatrixD particleMatrix,
-            ref Vector3D particlePosition)
+            MatrixD particleMatrix,
+            Vector3D particlePosition)
         {
             if (effect == null)
             {
@@ -663,7 +704,6 @@ namespace ware_LNX_Jet_Systems
             action.Enabled = TerminalVisibility;
             action.ValidForGroups = true;
             MyAPIGateway.TerminalControls.AddAction<Sandbox.ModAPI.Ingame.IMyThrust>(action);
-
         }
 
         private void StopAndClearParticle(ref MyParticleEffect effect)
@@ -696,16 +736,14 @@ namespace ware_LNX_Jet_Systems
                 
                 if (originalPowerConsumptionMultiplierCaptured)
                 {
-                    thrustBlock.PowerConsumptionMultiplier =
-                        originalPowerConsumptionMultiplier;
+                    SetPowerConsumptionMultiplier(
+                        thrustBlock, originalPowerConsumptionMultiplier);
                 }
             }
 
             // Restore the model's original transforms when the logic component is removed.
             if (subpartsCached)
             {
-                if (nozzlePart1 != null)
-                    nozzlePart1.PositionComp.SetLocalMatrix(ref part1RestMatrix);
                 if (nozzlePart2 != null)
                     nozzlePart2.PositionComp.SetLocalMatrix(ref part2RestMatrix);
                 if (nozzlePart3 != null)
