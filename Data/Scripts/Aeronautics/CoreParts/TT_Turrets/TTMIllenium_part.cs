@@ -56,7 +56,7 @@ namespace Scripts {
             {
                 PartName = "Rheinmetall Oerlikon Millennium Gun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0.2f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 2.5f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                AimingTolerance = 1.0f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
@@ -85,8 +85,8 @@ namespace Scripts {
                     ElevateRate = 0.06f, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -180,
                     MaxAzimuth = 180,
-                    MinElevation = -5,
-                    MaxElevation = 90,
+                    MinElevation = -15,
+                    MaxElevation = 85,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = GunConfig.Millenium_Inventory, // Inventory capacity in kL.
@@ -128,8 +128,8 @@ namespace Scripts {
                     Cooldown = .70f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 70, // Amount of heat lost per second.
                     DegradeRof = true, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 10, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
-                    DelayAfterBurst = 30, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ShotsInBurst = 12, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    DelayAfterBurst = 20, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // Visual only, 0 disables and uses RateOfFire.

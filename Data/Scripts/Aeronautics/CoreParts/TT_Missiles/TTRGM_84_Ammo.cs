@@ -46,7 +46,7 @@ namespace Scripts
             AmmoRound = "RGM-84 Harpoon", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.00000000001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 7000f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 5000f, // Direct damage; one steel plate is worth 100.
             Mass = 500f, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Harpoon_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
@@ -59,7 +59,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 2, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -135,7 +135,7 @@ namespace Scripts
                 },
                 Shields = new ShieldDef
                 {
-                    Modifier = 4f, // Multiplier for damage against shields.
+                    Modifier = 1f, // Multiplier for damage against shields.
                     Type = Default, // Damage vs healing against shields; Default, Heal
                     BypassModifier = -1f, // If greater than zero, the percentage of damage that will penetrate the shield.
                 },
@@ -447,7 +447,7 @@ namespace Scripts
             AmmoRound = "RGM-84 Harpoon Cruise", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.00000000001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 7000f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 5000f, // Direct damage; one steel plate is worth 100.
             Mass = 500f, // In kilograms; how much force the impact will apply to the target.
             Health = MissileConfig.Harpoon_Health, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
@@ -460,7 +460,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 3f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -571,7 +571,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Meters
-                    Damage = 7500f,
+                    Damage = 5000f,
                     Depth = 3f, // Meters
                     MaxAbsorb = 0f,
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -586,7 +586,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Meters
-                    Damage = 7500f,
+                    Damage = 5000f,
                     Depth = 5f, // Meters
                     MaxAbsorb = 0f,
                     Falloff = Curve, //.NoFalloff applies the same damage to all blocks in radius
@@ -836,7 +836,7 @@ namespace Scripts
                        {
                            Name = "Cruise_Missile_Trail",
                            Offset = Vector(x: 0, y: 0, z: -1.5f),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                           DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                            Extras = new ParticleOptionDef
                            {
                                Scale = 1,
@@ -846,7 +846,7 @@ namespace Scripts
                        {
                            Name = "",
                            Offset = Vector(x: 0, y: 0, z: 0),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                           DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                            Extras = new ParticleOptionDef
                            {
                                Scale = 1,
@@ -951,7 +951,7 @@ namespace Scripts
                        {
                            Name = "Cruise_Missile_Trail",
                            Offset = Vector(x: 0, y: 0, z: -1.5f),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                           DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                            Extras = new ParticleOptionDef
                            {
                                Scale = 0.5f,
@@ -961,7 +961,7 @@ namespace Scripts
                        {
                            Name = "",
                            Offset = Vector(x: 0, y: 0, z: 0),
-                           DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                           DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                            Extras = new ParticleOptionDef
                            {
                                Scale = 1,
@@ -1109,7 +1109,7 @@ namespace Scripts
             AmmoRound = "VLS_RGM84_Warhead", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.00000000001f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 7000f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 5000f, // Direct damage; one steel plate is worth 100.
             Mass = 25f, // In kilograms; how much force the impact will apply to the target.
             Health = 20, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
@@ -1123,7 +1123,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -1206,7 +1206,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 3f, // Meters
-                    Damage = 7000f,
+                    Damage = 5000f,
                     Depth = 3f, // Meters
                     MaxAbsorb = 0f,
                     Falloff = NoFalloff, //.NoFalloff applies the same damage to all blocks in radius

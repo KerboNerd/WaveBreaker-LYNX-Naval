@@ -68,7 +68,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -211,7 +211,7 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something when this is true. IE, if shot down, it won't explode.
-                    MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
+                    MinArmingTime = 60, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = true,
                     NoSound = true,
                     ParticleScale = 1,
@@ -287,12 +287,12 @@ namespace Scripts
                 Guidance = None, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 0, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 120, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 1f, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = BombsConfig.FAB500_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = BombsConfig.FAB500_MaxRange, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
-                GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
+                GravityMultiplier = 1.5f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
@@ -362,7 +362,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -373,7 +373,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -385,7 +385,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -855,12 +855,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        Name = "WB_BombTrail", //ShipWelderArc
+                        Offset = Vector(x: 0, y: 0, z: 2f),
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.5f,
+                            Scale = 0.3f,
                         },
                     },
                     Hit = new ParticleDef
@@ -868,7 +868,7 @@ namespace Scripts
                         Name = "LXN_BombExplosion_01",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.5f,
@@ -880,7 +880,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,

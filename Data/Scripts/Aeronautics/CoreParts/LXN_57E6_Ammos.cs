@@ -65,7 +65,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -254,7 +254,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -265,7 +265,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -277,7 +277,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -390,7 +390,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -695,7 +695,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -707,7 +707,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -832,7 +832,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -1067,7 +1067,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1079,7 +1079,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1201,7 +1201,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -1247,14 +1247,14 @@ namespace Scripts
                 },
                 Grids = new GridSizeDef
                 {
-                    Large = 0.3f, // Multiplier for damage against large grids.
-                    Small = 0.5f, // Multiplier for damage against small grids.
+                    Large = 0.2f, // Multiplier for damage against large grids.
+                    Small = 1f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = 0.5f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 0.8f, // Multiplier for damage against heavy armor.
                     NonArmor = 0.3f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -1315,7 +1315,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 5000,
+                    Damage = 3000,
                     Depth = 3f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
@@ -1382,7 +1382,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 5),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.8f,
@@ -1393,7 +1393,7 @@ namespace Scripts
                         Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.2f,
@@ -1405,7 +1405,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1518,8 +1518,8 @@ namespace Scripts
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 70, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -1572,7 +1572,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
                 DamageVoxels = false, // Whether to damage voxels.
                 SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 40f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+                HealthHitModifier = 1f, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
                 VoxelHitModifier = 1, // Voxel damage multiplier; defaults to 1 if zero or less.
                 Characters = 1000f, // Character damage multiplier; defaults to 1 if zero or less.
                 // For the following modifier values: -1 = disabled (higher performance), 0 = no damage, 0.01f = 1% damage, 2 = 200% damage.
@@ -1590,7 +1590,7 @@ namespace Scripts
                 {
                     Armor = -1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
                     Light = 0.5f, // Multiplier for damage against light armor.
-                    Heavy = -1f, // Multiplier for damage against heavy armor.
+                    Heavy = 0.8f, // Multiplier for damage against heavy armor.
                     NonArmor = 0.3f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
@@ -1739,9 +1739,9 @@ namespace Scripts
                 TargetLossDegree = 0, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
-                AccelPerSec = 1500, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
-                DesiredSpeed = 1500, // voxel phasing if you go above 5100
-                MaxTrajectory = 200, // Max Distance the projectile or beam can Travel.
+                AccelPerSec = 800, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
+                DesiredSpeed = 800, // voxel phasing if you go above 5100
+                MaxTrajectory = 50, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // 0 is disabled, a value causes the projectile to come to rest overtime, (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.

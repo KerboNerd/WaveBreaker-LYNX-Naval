@@ -68,7 +68,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -362,7 +362,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -373,7 +373,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -385,7 +385,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -510,7 +510,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -855,7 +855,7 @@ namespace Scripts
                     {
                         Name = "LXN_MissileTrail_01", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.3f,
@@ -866,7 +866,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1.2f,
@@ -878,7 +878,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1003,7 +1003,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -1013,7 +1013,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "LargeAGM Frag", // AmmoRound field of the ammo to spawn.
-                Fragments = 150, // Number of projectiles to spawn.
+                Fragments = 50, // Number of projectiles to spawn.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = false, // fragments will not inherit velocity from parent.
@@ -1068,14 +1068,14 @@ namespace Scripts
                 Grids = new GridSizeDef
                 {
                     Large = 1f, // Multiplier for damage against large grids.
-                    Small = 2f, // Multiplier for damage against small grids.
+                    Small = 0.5f, // Multiplier for damage against small grids.
                 },
                 Armor = new ArmorDef
                 {
                     Armor = 1f, // Multiplier for damage against all armor. This is multiplied with the specific armor type multiplier (light, heavy).
-                    Light = 1.5f, // Multiplier for damage against light armor.
-                    Heavy = 1f, // Multiplier for damage against heavy armor.
-                    NonArmor = 2f, // Multiplier for damage against every else.
+                    Light = 1f, // Multiplier for damage against light armor.
+                    Heavy = 1.5f, // Multiplier for damage against heavy armor.
+                    NonArmor = 0.8f, // Multiplier for damage against every else.
                 },
                 Shields = new ShieldDef
                 {
@@ -1134,9 +1134,9 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 12f, // Radius of AOE effect, in meters.
-                    Damage = 20000f,
-                    Depth = 6f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Radius = 15f, // Radius of AOE effect, in meters.
+                    Damage = 30000f,
+                    Depth = 10f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -1349,7 +1349,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.3f,
@@ -1360,7 +1360,7 @@ namespace Scripts
                         Name = "LXN_BombExplosion_01",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1.2f,
@@ -1372,7 +1372,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,

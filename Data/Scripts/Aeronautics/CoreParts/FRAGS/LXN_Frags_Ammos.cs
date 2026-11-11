@@ -50,8 +50,8 @@ namespace Scripts
 
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 100, // Large collision size for better hit probability against missiles in clusters
+                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 0.1f, // Large collision size for better hit probability against missiles in clusters
             },
             Trajectory = new TrajectoryDef
             {
@@ -98,8 +98,8 @@ namespace Scripts
 
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
-                Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 75, // Large collision size for better hit probability against missiles in clusters
+                Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
+                Diameter = 0.1f, // Large collision size for better hit probability against missiles in clusters
             },
             Trajectory = new TrajectoryDef
             {

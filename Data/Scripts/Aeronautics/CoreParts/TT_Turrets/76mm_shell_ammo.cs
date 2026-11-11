@@ -446,7 +446,7 @@ namespace Scripts
           Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
           {
               Shape = LineShape,
-              Diameter = 0.5,
+              Diameter = 0.5f,
           },
           ObjectsHit = new ObjectsHitDef
           {
@@ -755,7 +755,7 @@ namespace Scripts
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 0.2,
+                Diameter = 0.1f,
             },
             ObjectsHit = new ObjectsHitDef
             {

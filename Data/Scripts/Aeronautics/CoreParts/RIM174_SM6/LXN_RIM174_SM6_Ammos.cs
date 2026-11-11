@@ -65,7 +65,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -320,7 +320,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -331,7 +331,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -343,7 +343,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -456,7 +456,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -485,7 +485,7 @@ namespace Scripts
                     Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
                     PointAtTarget = false, // Start fragment direction pointing at Target
-                    PointType = Predict, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
+                    PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
                     DirectAimCone = 0f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 0, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
@@ -598,7 +598,7 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 180f, // Degrees, Is pointed forward
+                TargetLossDegree = 0f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = 100, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
@@ -686,7 +686,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -698,7 +698,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -811,33 +811,33 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "RIM174 Cruise", // AmmoRound field - spawns fragmentation shrapnel on proximity fuse
-                Fragments = 1, // Number of fragmentation projectiles to spawn. Increased for better coverage of clustered missiles.
-                Degrees = 0, // Cone in which to randomize direction of spawned projectiles - wide cone for maximum coverage
+                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field of the ammo to spawn.
+                Fragments = 30, // Number of projectiles to spawn.
+                Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent for realistic shrapnel behavior.
+                DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
-                ArmWhenHit = true, // Setting this to true will arm the projectile when its shot by other projectiles.
+                ArmWhenHit = false, // Setting this to true will arm the projectile when its shot by other projectiles.
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
-                TimedSpawns = new TimedSpawnDef // Proximity fuse - triggers fragmentation when close to target
+                TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both ki
                 {
                     Enable = false, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments (proximity fuse distance)
-                    ParentDies = true, // Parent dies once after it spawns its last child (triggers fragmentation).
-                    PointAtTarget = false, // Start fragment direction pointing at Target
+                    Proximity = 15, // 15m Proximity Fuse // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    ParentDies = true, // Parent dies once after it spawns its last child.
+                    PointAtTarget = true, // Start fragment direction pointing at Target
                     PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
-                    DirectAimCone = 270f, //Aim cone used for Direct fire, in degrees
-                    GroupSize = 0, // Number of spawns in each group
+                    DirectAimCone = 360f, //Aim cone used for Direct fire, in degrees
+                    GroupSize = 1, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
                 },
             },
@@ -926,9 +926,9 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 180f, // Degrees, Is pointed forward
+                TargetLossDegree = 0f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = MissileConfig.RIM174_SM6_BoosterTime * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things. Set to 3600 (60 seconds) for cruise stage.
+                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things. Set to 3600 (60 seconds) for cruise stage.
                 AccelPerSec = MissileConfig.RIM174_SM6_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.RIM174_SM6_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.RIM174_SM6_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -966,123 +966,6 @@ namespace Scripts
                     NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
                     AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
-
-            //     Approaches = new [] // These approaches move forward and backward in order, once the end condition of the last one is reached it will revert to default behavior.
-            //     {
-            //        // Cruise Stage
-            //        new ApproachDef
-            //        {
-            //            // Start/End behaviors
-            //            RestartCondition = Wait, // Wait*, MoveToPrevious, MoveToNext, ForceRestart -- A restart condition is when the end condition is reached without having met the start condition.
-            //            Operators = StartEnd_And, // Controls how the start and end conditions are matched:  StartEnd_And*, StartEnd_Or, StartAnd_EndOr,StartOr_EndAnd,
-            //            CanExpireOnceStarted = false, // This stages values will continue to apply until the end conditions are met.
-            //            ForceRestart = false, // This forces the ReStartCondition when the end condition is met no matter if the start condition was met or not.
-
-            //            // Start/End conditions
-            //            StartCondition1 = Spawn, // Each condition type is either >= or <= the corresponding value defined below.
-            //                                        // Ignore(skip this condition)*, DistanceFromPositionC[<=], DistanceToPositionC[>=], DistanceFromPositionB[<=], DistanceToPositionB[>=]
-            //                                        // DistanceFromTarget[<=], DistanceToTarget[>=], DistanceFromEndTrajectory[<=], DistanceToEndTrajectory[>=], Lifetime[>=], DeadTime[<=],
-            //                                        // MinTravelRequired[>=], MaxTravelRequired[<=], Spawn(per stage), DesiredElevation(tolerance can be set with ElevationTolerance),
-            //                                        // NextTimedSpawn[<=], SinceTimedSpawn[>=], RelativeLifetime[>=], RelativeDeadTime[<=], RelativeSpawns[>=], EnemyTargetLoss[>=],
-            //                                        // RelativeHealthLost[>=], HealthRemaining[<=],
-            //                                        // *NOTE* DO NOT set start1 and start2 or end1 and end2 to same condition
-            //            StartCondition2 = Ignore,
-            //            EndCondition1 = DistanceFromTarget, // End cruise stage when close to target (triggers terminal stage)
-            //            EndCondition2 = Ignore,
-            //            EndCondition3 = Ignore,
-            //            // Start/End thresholds -- both conditions are evaluated before activation, use Ignore to skip
-            //            Start1Value = 0,
-            //            Start2Value = 0,
-            //            End1Value = 1000, // End cruise when within 1000m of target (transition to terminal)
-            //            End2Value = 0,
-            //            End3Value = 0,
-            //            // Special triggers when the start/end conditions are met (DoNothing*, EndProjectile, EndProjectileOnRestart, StorePositionA, StorePositionB, StorePositionC, Refund)
-            //            StartEvent = DoNothing,
-            //            EndEvent = DoNothing,
-
-            //            // Relative positions and directions (relative to projectile current position aka PositionA)
-            //            Forward = ForwardTargetDirection, // ForwardElevationDirection*, ForwardRelativeToBlock, ForwardRelativeToShooter, ForwardRelativeToGravity, ForwardTargetDirection, ForwardTargetVelocity, ForwardStoredStartPosition, ForwardStoredEndPosition, ForwardStoredStartLocalPosition, ForwardStoredEndLocalPosition, ForwardOriginDirection
-            //            Up = UpRelativeToGravity, // UpRelativeToBlock*, UpRelativeToShooter, UpRelativeToGravity, UpTargetDirection, UpTargetVelocity, UpStoredStartPosition, UpStoredEndPosition, UpStoredStartLocalPosition, UpStoredEndLocalPosition, UpOriginDirection, UpElevationDirection
-            //            PositionB = PositionA, // Origin*, Shooter, Target, Surface, MidPoint, PositionA, Nothing, StoredStartPosition, StoredEndPosition, StoredStartLocalPosition, StoredEndLocalPosition
-            //            PositionC = Target,
-            //            Elevation = Nothing,
-
-            //            // Control if the vantagepoints update every frame or only at start.
-            //            AdjustForward = true, // adjust forwardDir overtime.
-            //            AdjustUp = false, // adjust upDir overtime
-            //            AdjustPositionB = true, // Updated the position overtime.
-            //            AdjustPositionC = true, // Update the position overtime.
-            //            LeadRotateElevatePositionB = true, // Add Lead, Rotation and DesiredElevation to PositionB
-            //            LeadRotateElevatePositionC = true, // Add Lead, Rotation and DesiredElevation to PositionC
-            //            TrajectoryRelativeToB = false, // If true the projectiles immediate trajectory will be relative to PositionB instead of PositionC (e.g. quick response to elevation changes relative to PositionB position assuming that position is closer to PositionA)
-            //            ElevationRelativeToC = false, // If true the projectiles desired elevation will be relative to PositionC instead of PositionB (e.g. quick response to elevation changes relative to PositionC position assuming that position is closer to PositionA)
-            //            // Tweaks to vantagepoint behavior
-            //            AngleOffset = 0, // value 0 - 1, rotates the Updir and ForwardDir
-            //            AngleVariance = Random(0f, 0f), // added to AngleOffset above, values of 0,0 disables feature
-            //            ElevationTolerance = 0, // adds additional tolerance (in meters) to meet the Elevation condition requirement.  *note* collision size is also added to the tolerance
-            //            TrackingDistance = 0, // Minimum travel distance before projectile begins racing to heading
-            //            DesiredElevation = 0, // The desired elevation relative to reference position
-            //            // Storage Values
-            //            StoredStartId = 0, // Which approach id the the start storage was saved in, if any.
-            //            StoredEndId = 0, // Which approach id the the end storage was saved in, if any.
-            //            StoredStartType = PositionA, // Uses same values as PositionB/PositionC/Elevation
-            //            StoredEndType = Target,
-            //            // Controls the leading behavior
-            //            LeadDistance = 250, // Add additional "lead" in meters to the trajectory (project in the future), this will be applied even before TrackingDistance is met.
-            //            PushLeadByTravelDistance = false, // the follow lead position will move in its point direction by an amount equal to the projectiles travel distance.
-
-            //            // Modify speed and acceleration ratios while this approach is active
-            //            AccelMulti = 1, // Modify default acceleration by this factor
-            //            DeAccelMulti = 0, // Modifies your default deacceleration by this factor
-            //            TotalAccelMulti = 0, // Modifies your default totalacceleration by this factor
-            //            SpeedCapMulti = 1.0f, // Limit max speed to this factor, must keep this value BELOW default maxspeed (1).
-
-            //            // navigation behavior
-            //            Orbit = false, // Orbit the Position
-            //            OrbitRadius = 0, // The orbit radius to extend between the projectile and the Position (target volume + this value)
-            //            OffsetMinRadius = 0, // Min Radius to offset from Position.
-            //            OffsetMaxRadius = 0, // Max Radius to offset from Position.
-            //            OffsetTime = 0, // How often to change the offset radius.
-
-            //            // Other
-            //            NoTimedSpawns = false, // When true timedSpawns will not be triggered while this approach is active.
-            //            DisableAvoidance = false, // Disable futureIntersect.
-            //            IgnoreAntiSmart = false, // If set to true, antismart cannot change this approaches target.
-            //            HeatRefund = 0, // how much heat to refund when related EndEvent/StartEvent is met.
-            //            ReloadRefund = false, // Refund a reload (for max reload).
-            //            ToggleIngoreVoxels = false, // Toggles whatever the default IgnoreVoxel value to its opposite.
-            //            SelfAvoidance = true, // If this and FutureIntersect is enabled then projectiles will actively avoid the parent grids.
-            //            TargetAvoidance = false, // If this and FutureIntersect is enabled then projectiles will actively avoid the target.
-            //            SelfPhasing = false, // If enabled the projectiles can phase through the parent grids without doing damage or dying.
-            //            SwapNavigationType = false, // This will swap to other navigation  (i.e. the alternate of what is set in smart, ProNav vs ZeroEffort)
-
-            //            // Audio/Visual Section
-            //            AlternateParticle = new ParticleDef // if blank it will use default, must be a default version for this to be useable.
-            //            {
-            //                Name = "", //LXN_Missile_Afterburner_01
-            //                Offset = Vector(x: 0, y: 0, z: 0.5f),
-            //                DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
-            //                Extras = new ParticleOptionDef
-            //                {
-            //                    Scale = 0f, //0.7f
-            //                },
-            //            },
-            //            StartParticle = new ParticleDef // Optional particle to play when this stage begins
-            //            {
-            //                Name = "",
-            //                Offset = Vector(x: 0, y: 0, z: 0),
-            //                DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
-            //                Extras = new ParticleOptionDef
-            //                {
-            //                    Scale = 1,
-            //                },
-            //            },
-            //            AlternateModel = "\\Models\\Weapons\\Missiles\\LXN_RIM174_SM6_STAGE2.mwm", // Define only if you want to switch to an alternate model in this phase
-            //            AlternateSound = "", // if blank it will use default, must be a default version for this to be useable.
-            //            ModelRotateTime = 0, // If this value is greater than 0 then the projectile model will rotate to face the target, a value of 1 is instant (in ticks).
-            //        },
-            // },
-
             },
             AmmoGraphics = new GraphicDef
             {
@@ -1112,7 +995,7 @@ namespace Scripts
                     {
                         Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 3f),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.7f,
@@ -1123,7 +1006,7 @@ namespace Scripts
                         Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.8f,
@@ -1135,7 +1018,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1239,13 +1122,13 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = SphereShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 10, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -1262,7 +1145,7 @@ namespace Scripts
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
                 TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both ki
                 {
-                    Enable = true, // Enables TimedSpawns mechanism
+                    Enable = false, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
@@ -1376,7 +1259,7 @@ namespace Scripts
                     ParticleScale = 0.8f,
                     CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
+                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
             Trajectory = new TrajectoryDef
@@ -1392,10 +1275,31 @@ namespace Scripts
                 DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 50, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 150, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
-                    MaxChaseTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MaxLateralThrust = 3f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    CheckFutureIntersection = true, // Utilize obstacle avoidance for drones/smarts
+                    FutureIntersectionRange = 100, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
+                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
+                    NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
+                    Roam = false, // Roam current area after target loss
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                    OffsetRatio = 0f, // The ratio to offset the random direction (0 to 1) 
+                    OffsetTime = 60, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
+                    OffsetMinRange = 0, // The range from target at which offsets are no longer active
+                    FocusOnly = false, // only target the constructs Ai's focus target
+                    FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
+                    ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
+                    NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
+                    MinTurnSpeed = 50, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
+                    NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
+                    AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
             },
             AmmoGraphics = new GraphicDef
@@ -1426,7 +1330,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 5),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.8f,
@@ -1437,7 +1341,7 @@ namespace Scripts
                         Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.8f,
@@ -1449,7 +1353,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1465,8 +1369,8 @@ namespace Scripts
 
                     Tracer = new TracerBaseDef
                     {
-                        Enable = false,
-                        Length = 10f, //
+                        Enable = true,
+                        Length = 25f, //
                         Width = 0.1f, //
                         Color = Color(red: 40, green: 35, blue: 19f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         FactionColor = DontUse, // DontUse, Foreground, Background.

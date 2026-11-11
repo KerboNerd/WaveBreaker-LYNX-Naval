@@ -211,7 +211,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                LXN_KAB500KR_Primary, LXN_KAB500KR_Frags,
+                LXN_KAB500KR_Primary, LXN_KAB500KR_Secondary, LXN_KAB500KR_Frags,
             },
             Animations = LXN_KAB500KR_Anim,
             //Upgrades = UpgradeModules,

@@ -65,7 +65,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 0.1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 1f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -254,7 +254,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -265,7 +265,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -277,7 +277,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -390,7 +390,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -419,7 +419,7 @@ namespace Scripts
                     Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
                     PointAtTarget = false, // Start fragment direction pointing at Target
-                    PointType = Predict, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
+                    PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
                     DirectAimCone = 0f, //Aim cone used for Direct fire, in degrees
                     GroupSize = 0, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
@@ -585,7 +585,7 @@ namespace Scripts
                     {
                         Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 2.3f),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1f,
@@ -596,7 +596,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -608,7 +608,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -721,7 +721,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -730,29 +730,29 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "S-400 Cruise", // AmmoRound field of the ammo to spawn.
-                Fragments = 1, // Number of projectiles to spawn.
-                Degrees = 0, // Cone in which to randomize direction of spawned projectiles.
+                AmmoRound = "LXN_HeavyAntiAir_FRAG", // AmmoRound field of the ammo to spawn.
+                Fragments = 30, // Number of projectiles to spawn.
+                Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
-                DropVelocity = false, // fragments will not inherit velocity from parent.
+                DropVelocity = true, // fragments will not inherit velocity from parent.
                 Offset = 0f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
-                ArmWhenHit = true, // Setting this to true will arm the projectile when its shot by other projectiles.
+                ArmWhenHit = false, // Setting this to true will arm the projectile when its shot by other projectiles.
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
-                TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both kinds of frags are active
+                TimedSpawns = new TimedSpawnDef // disables FragOnEnd in favor of info specified below, unless ArmWhenHit or Eol ArmOnlyOnHit is set to true then both ki
                 {
-                    Enable = false, // Enables TimedSpawns mechanism
+                    Enable = true, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
-                    Proximity = 0, // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
+                    Proximity = 20, // 20m Proximity Fuse // Starting distance from target bounding sphere to start spawning fragments, 0 disables this feature.  No spawning outside this distance
                     ParentDies = true, // Parent dies once after it spawns its last child.
-                    PointAtTarget = false, // Start fragment direction pointing at Target
-                    PointType = Predict, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
-                    DirectAimCone = 0f, //Aim cone used for Direct fire, in degrees
-                    GroupSize = 0, // Number of spawns in each group
+                    PointAtTarget = true, // Start fragment direction pointing at Target
+                    PointType = Direct, // Point accuracy, Direct (straight forward), Lead (always fire), Predict (only fire if it can hit)
+                    DirectAimCone = 360f, //Aim cone used for Direct fire, in degrees
+                    GroupSize = 1, // Number of spawns in each group
                     GroupDelay = 0, // Delay between each group.
                 },
             },
@@ -865,7 +865,7 @@ namespace Scripts
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 180f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = MissileConfig.S400_BoosterTime * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                MaxLifeTime = 3600, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = MissileConfig.S400_BoosterAccel, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
                 DesiredSpeed = MissileConfig.S400_MaxSpeed, // voxel phasing if you go above 5100
                 MaxTrajectory = MissileConfig.S400_MaxRange, // Max Distance the projectile or beam can Travel.
@@ -932,7 +932,7 @@ namespace Scripts
                     {
                         Name = "LXN_Missile_Afterburner_01", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 2.3f),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1f,
@@ -943,7 +943,7 @@ namespace Scripts
                         Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -955,7 +955,7 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
@@ -1059,13 +1059,13 @@ namespace Scripts
             Sync = new SynchronizeDef
             {
                 Full = false, // Be careful, do not use on high fire rate weapons or ammos with many simultaneous fragments. This will send position updates twice per second per projectile/fragment and sync target (grid/block) changes.
-                PointDefense = true, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
+                PointDefense = false, // Server will inform clients of what projectiles have died by PD defense and will trigger destruction.
                 OnHitDeath = false, // Server will inform clients when projectiles die due to them hitting something and will trigger destruction.
             },
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
+                Diameter = 5f, // Diameter is minimum length of LineShape or minimum diameter of SphereShape.
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
@@ -1082,7 +1082,7 @@ namespace Scripts
                 AdvOffset = Vector(x: 0, y: 0, z: 0), // advanced offsets the fragment by xyz coordinates relative to parent, value is read from fragment ammo type.
                 TimedSpawns = new TimedSpawnDef // Proximity fuse - triggers fragmentation when close to target
                 {
-                    Enable = true, // Enables TimedSpawns mechanism
+                    Enable = false, // Enables TimedSpawns mechanism
                     Interval = 0, // Time between spawning fragments, in ticks, 0 means every tick, 1 means every other
                     StartTime = 0, // Time delay to start spawning fragments, in ticks, of total projectile life
                     MaxSpawns = 1, // Max number of fragment children to spawn
@@ -1174,7 +1174,7 @@ namespace Scripts
                     ParticleScale = 1f,
                     CustomParticle = "LXN_AAMissileExplosion_1", // Particle SubtypeID, from your Particle SBC
                     CustomSound = "", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
+                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
             Trajectory = new TrajectoryDef
@@ -1190,10 +1190,31 @@ namespace Scripts
                 DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 50, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
-                    Aggressiveness = 3f, // controls how responsive tracking is, recommended value 3-5.
-                    MaxLateralThrust = 1f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
-                    MaxChaseTime = 900, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    SteeringLimit = 120, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Aggressiveness = 5f, // controls how responsive tracking is, recommended value 3-5.
+                    MaxLateralThrust = 3f, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
+                    NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
+                    TrackingDelay = 0, // Measured in Shape diameter units traveled.
+                    AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
+                    MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    CheckFutureIntersection = true, // Utilize obstacle avoidance for drones/smarts
+                    FutureIntersectionRange = 100, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
+                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited
+                    NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
+                    Roam = false, // Roam current area after target loss
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                    OffsetRatio = 0f, // The ratio to offset the random direction (0 to 1) 
+                    OffsetTime = 60, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
+                    OffsetMinRange = 0, // The range from target at which offsets are no longer active
+                    FocusOnly = false, // only target the constructs Ai's focus target
+                    FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target
+                    ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
+                    NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
+                    MinTurnSpeed = 40, // set this to a reasonable value to avoid projectiles from spinning in place or being too aggressive turing at slow speeds 
+                    NoTargetApproach = false, // If true approaches can begin prior to the projectile ever having had a target.
+                    AltNavigation = false, // If true this will swap the default navigation algorithm from ProNav to ZeroEffort Miss.  Zero effort is more direct/precise but less cinematic 
                 },
             },
             AmmoGraphics = new GraphicDef
@@ -1224,7 +1245,7 @@ namespace Scripts
                     {
                         Name = "", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 5),
-                        DisableCameraCulling = true,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false,// If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 0.8f,
@@ -1235,7 +1256,7 @@ namespace Scripts
                         Name = "LXN_AAMissileExplosion_1",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1f,
@@ -1247,12 +1268,73 @@ namespace Scripts
                         Name = "",
                         ApplyToShield = true,
                         Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = true, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
+                        DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
                             Scale = 1,
                             HitPlayChance = 1f,
                         },
+                    },
+                },
+                Lines = new LineDef
+                {
+                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    DropParentVelocity = false, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
+
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 25f, //
+                        Width = 0.1f, //
+                        Color = Color(red: 40, green: 35, blue: 19f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        FactionColor = DontUse, // DontUse, Foreground, Background.
+                        VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
+                        VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
+                        AlwaysDraw = false, // Prevents this tracer from being culled.  Only use if you have a reason too (very long tracers/trails).
+                        Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                            "ProjectileTrailLine", // Please always have this Line set, if this Section is enabled.
+                        },
+                        TextureMode = Normal, // Normal, Cycle, Chaos, Wave
+                        Segmentation = new SegmentDef
+                        {
+                            Enable = false, // If true Tracer TextureMode is ignored
+                            Textures = new[] {
+                                "", // Please always have this Line set, if this Section is enabled.
+                            },
+                            SegmentLength = 0f, // Uses the values below.
+                            SegmentGap = 0f, // Uses Tracer textures and values
+                            Speed = 1f, // meters per second
+                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                            FactionColor = DontUse, // DontUse, Foreground, Background.
+                            WidthMultiplier = 1f,
+                            Reverse = false,
+                            UseLineVariance = true,
+                            WidthVariance = Random(start: 0f, end: 0f),
+                            ColorVariance = Random(start: 0f, end: 0f)
+                        }
+                    },
+                    Trail = new TrailDef
+                    {
+                        Enable = false,
+                        AlwaysDraw = false, // Prevents this tracer from being culled.  Only use if you have a reason too (very long tracers/trails).
+                        Textures = new[] {
+                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                        },
+                        TextureMode = Normal,
+                        DecayTime = 10, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 20, green: 10, blue: 5, alpha: 1),
+                        FactionColor = DontUse, // DontUse, Foreground, Background.
+                        Back = false,
+                        CustomWidth = 0,
+                        UseWidthVariance = false,
+                        UseColorFade = true,
+                    },
+                    OffsetEffect = new OffsetEffectDef
+                    {
+                        MaxOffset = 0,// 0 offset value disables this effect
+                        MinLength = 0.2f,
+                        MaxLength = 3,
                     },
                 },
             },

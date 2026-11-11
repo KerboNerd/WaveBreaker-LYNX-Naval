@@ -99,7 +99,7 @@
       <Volume>250</Volume>
       <Model>Models\Ammo\30mm_ciwsammobox.mwm</Model>
       <PhysicalMaterial>Ammo</PhysicalMaterial>
-      <Capacity>250</Capacity>
+      <Capacity>252</Capacity>
       <AmmoDefinitionId Subtype="Blank" />
     </AmmoMagazine>
 

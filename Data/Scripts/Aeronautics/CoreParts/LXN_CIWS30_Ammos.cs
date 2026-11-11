@@ -56,7 +56,7 @@ namespace Scripts
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 10,
+                Diameter = 0.1f,
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
